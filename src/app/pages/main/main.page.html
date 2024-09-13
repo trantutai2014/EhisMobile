@@ -1,0 +1,142 @@
+<ion-header>
+  <div style="top: 20%; max-width: 450px; margin: auto; display: flex; align-items: center;">
+    <div style="margin-right: 10px;">
+      <img src="../../assets/icon/favicon.ico" alt="">
+    </div>
+    <ion-searchbar (click)="goToDV()" style="flex-grow: 1;"></ion-searchbar>
+  </div>
+</ion-header>
+
+<ion-content class="ion-padding" style="padding-bottom: 70px;">
+  <!-- Nội dung chính -->
+  <div style="max-width: 450px; margin-left: 10px; margin-top: -5px; display: flex; align-items: center;">
+    <img src="../../assets/img/1.png" alt="" style="width: 50px; height: 50px; border-radius: 50%; margin-right: 10px;">
+    <div>
+      <div style="font-size: 16px; font-weight: bold; margin-bottom: 5px;">Xin chào</div>
+      <div style="font-size: 14px;">Lê Minh Hoàng</div>
+    </div>
+  </div>
+
+  <!-- Swiper Container -->
+  <div style="display: flex; justify-content: center; align-items: center;">
+    <swiper-container (slidechange)="swiperSlideChanged($event)" [loop]="true" [pagination]="true"
+      [autoplay]="autoplayConfig" style="width: 100%; max-width: 350px;">
+      <swiper-slide>
+        <img src="../../assets/img/1.png" alt="" style="width: 100%; height: 100%; object-fit: contain;">
+      </swiper-slide>
+      <swiper-slide>
+        <img src="../../assets/img/logo@2x.png" alt="" style="width: 100%; height: 100%; object-fit: contain;">
+      </swiper-slide>
+      <swiper-slide>
+        <img src="../../assets/icon/favicon.ico" alt="" style="width: 100%; height: 100%; object-fit: contain;">
+      </swiper-slide>
+      <div class="swiper-pagination" style="bottom: 50px;"></div>
+    </swiper-container>
+  </div>
+
+  <!-- Buttons Grid -->
+  <div
+    style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; justify-items: center; align-items: center; max-width: 350px; margin: auto;">
+    <!-- Button 1 -->
+    <button
+      style="width: 100%; height: 80px; background-color: #1f81d6; color: white; border: none; border-radius: 10px; font-size: 16px; font-weight: bold; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer; text-align: center;"
+      (click)="goToProFile()">
+      <ion-icon name="book-outline"></ion-icon>
+      <p style="margin: 5px 0 0; padding: 0;">Thông Tin Hành Chính</p>
+    </button>
+
+    <!-- Button 2 -->
+    <button
+      style="width: 100%; height: 80px; background-color: #1f81d6; color: white; border: none; border-radius: 10px; font-size: 16px; font-weight: bold; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer; text-align: center;"
+      (click)="goToThuoc()">
+      <ion-icon name="eyedrop-outline"></ion-icon>
+      <p style="margin: 5px 0 0; padding: 0;">Thông Tin Tiêm Chủng</p>
+    </button>
+
+    <!-- Button 3 -->
+    <button
+      style="width: 100%; height: 80px; background-color: #cd391b; color: white; border: none; border-radius: 10px; font-size: 16px; font-weight: bold; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer; text-align: center;">
+      <ion-icon name="file-tray-full-outline"></ion-icon>
+      <p style="margin: 5px 0 0; padding: 0;">Thông Tin Thẻ Bảo Hiểm Y Tế</p>
+    </button>
+
+    <!-- Button 4 -->
+    <button (click)="goToDotKham()"
+      style="width: 100%; height: 80px; background-color: #cd391b; color: white; border: none; border-radius: 10px; font-size: 16px; font-weight: bold; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer; text-align: center;">
+      <ion-icon name="calendar-outline"></ion-icon>
+      <p style="margin: 5px 0 0; padding: 0;">Danh sách các đợt khám chữa bệnh</p>
+    </button>
+  </div>
+
+  <!-- Services Grid -->
+  <div
+    style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; justify-items: start; align-items: center; max-width: 350px; margin: auto;">
+    <p><strong>Dịch Vụ</strong></p>
+  </div>
+
+  <div
+    style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; justify-items: center; align-items: center; max-width: 350px; margin: auto;">
+    <!-- Service 1 -->
+    <div
+      style="width: 100%; height: 80px; border: none; border-radius: 10px; font-size: 16px; font-weight: bold; display: flex; flex-direction: column; align-items: center; justify-content: top; cursor: pointer; text-align: center;">
+      <ion-icon name="finger-print-outline"></ion-icon>
+      <p style="margin: 5px 0 0; padding: 0;">Cài đặt sinh trắc học</p>
+    </div>
+
+    <!-- Service 2 -->
+    <div
+      style="width: 100%; height: 80px; border: none; border-radius: 10px; font-size: 16px; font-weight: bold; display: flex; flex-direction: column; align-items: center; justify-content: top; cursor: pointer; text-align: center;">
+      <ion-icon name="gift-outline"></ion-icon>
+      <p style="margin: 5px 0 0; padding: 0;">Đổi quà</p>
+    </div>
+
+    <!-- Service 3 -->
+    <div
+      style="width: 100%; height: 80px; border: none; border-radius: 10px; font-size: 16px; font-weight: bold; display: flex; flex-direction: column; align-items: center; justify-content: top; cursor: pointer; text-align: center;"
+      (click)="goToHotLine()">
+      <ion-icon name="call-outline"></ion-icon>
+      <p style="margin: 5px 0 0; padding: 0;">Tư Vấn Trực Tuyến</p>
+    </div>
+
+    <!-- Service 4 -->
+    <div
+      style="width: 100%; height: 80px; border: none; border-radius: 10px; font-size: 16px; font-weight: bold; display: flex; flex-direction: column; align-items: center; justify-content: top; cursor: pointer; text-align: center;">
+      <ion-icon name="newspaper-outline"></ion-icon>
+      <p style="margin: 5px 0 0; padding: 0;">Hóa đơn</p>
+    </div>
+
+    <!-- Service 5 -->
+    <div
+      style="width: 100%; height: 80px; border: none; border-radius: 10px; font-size: 16px; font-weight: bold; display: flex; flex-direction: column; align-items: center; justify-content: top; cursor: pointer; text-align: center;">
+      <ion-icon name="fitness-outline"></ion-icon>
+      <p style="margin: 5px 0 0; padding: 0;">Chuyển tiền từ thiện</p>
+    </div>
+  </div>
+
+</ion-content>
+
+<ion-footer style="background-color: #f0f8ff; height: 70px;">
+  <div style="display: flex; justify-content: space-around; align-items: center; height: 100%; padding: 10px;">
+    <div style="text-align: center;">
+      <ion-icon name="home-outline" style="font-size: 24px;" (click)="goToMain()"></ion-icon>
+      <div>Trang chủ</div>
+    </div>
+    <div style="text-align: center;">
+      <ion-icon name="bag-add-outline" style="font-size: 24px;" (click)="goToHistory()"></ion-icon>
+      <div>Lịch sử</div>
+    </div>
+    <div
+      style="position: relative; width: 70px; height: 70px; display: flex; flex-direction: column; align-items: center; justify-content: center; border-radius: 50%; background-color: #2c8ef6; color: white; font-family: Arial, sans-serif; text-align: center;">
+      <ion-icon name="scan-outline" style="font-size: 36px;"></ion-icon>
+      <div style="font-size: 12px; margin-top: 4px;">Quét QR</div>
+    </div>
+    <div style="text-align: center;">
+      <ion-icon name="person-circle-outline" style="font-size: 24px;" (click)="goToProFile()"></ion-icon>
+      <div>Hồ sơ</div>
+    </div>
+    <div style="text-align: center;">
+      <ion-icon name="settings-outline" style="font-size: 24px;" (click)="goToSetting()"></ion-icon>
+      <div>Cài đặt</div>
+    </div>
+  </div>
+</ion-footer>

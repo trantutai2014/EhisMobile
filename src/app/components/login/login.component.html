@@ -1,0 +1,48 @@
+<ion-content class="ion-padding" [fullscreen]="true">
+  <div style="top: 20%; max-width: 450px; margin: auto;">
+    <div class="text-center">
+      <img src="../../assets/img/logo@2x.png" title="Logo" class="logo" style="max-width: 300px; margin-top: 20%;">
+    </div>
+    <div style="text-align: center; font-weight: bold; font-size: 22px; margin-top: 10px; margin-bottom: 5px;">
+      Đăng Nhập Bằng Tài Khoản
+    </div>
+    <div class="middle">
+      <div class="box">
+        <form #loginForm="ngForm">
+          <ion-item>
+            <ion-label position="floating">Tên Đăng Nhập</ion-label>
+            <ion-input type="text" name="username" #username="ngModel" [(ngModel)]="isLogin.username" required>
+            </ion-input>
+          </ion-item>
+          <ion-item style="display: flex; align-items: center;">
+            <ion-label position="floating">Mật Khẩu</ion-label>
+            <ion-input type="password" name="password" #password="ngModel" [(ngModel)]="isLogin.password" required>
+            </ion-input>
+          </ion-item>
+          <div *ngIf="username.invalid && username.touched">
+            <ion-text color="danger">
+              <h4 style="padding-left: 20px; margin-top: 10px;">Vui lòng nhập tên đăng nhập</h4>
+            </ion-text>
+          </div>
+          <div *ngIf="password.invalid && password.touched">
+            <ion-text color="danger">
+              <h4 style="padding-left: 20px; margin-top: 10px;">Vui lòng nhập mật khẩu</h4>
+            </ion-text>
+          </div>
+          <div style="text-align: right; margin-top: 10px;">
+            <p id="forgetPassword" (click)="goToForget()" style="cursor: pointer; color: #3880ff;">
+              Quên mật khẩu?
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <ion-button (click)="login()" expand="block" style="margin-top: 20px;">Đăng Nhập</ion-button>
+    <ion-button (click)="loginqr()" expand="block" style="margin-top: 10px;">Đăng Nhập Bằng QR</ion-button>
+  </div>
+</ion-content>
+<ion-footer color="white">
+  <ion-toolbar>
+    <p class="copyright">Create by <a>Song An</a></p>
+  </ion-toolbar>
+</ion-footer>
