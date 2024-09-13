@@ -4,16 +4,17 @@ export class UrlConstants {
     static readonly FORBIDDEN = '/forbidden';
     static readonly SEARCH = '/search';
     static readonly BILL = '/bill';
-    static readonly MAIN = '/main';
+    static readonly TRANGCHU = '/trang-chu';
     static readonly PAY = '/pay';
     static readonly SCAN = '/scan';
-    static readonly PROFILE = '/profile';
+    static readonly THONGTINHANHCHINH = '/thong-tin-hanh-chinh';
     static readonly FORGET = '/forget';
-    static readonly HISTORY = '/history';
+    static readonly LICHSU = '/lich-su';
     static readonly SETTING = '/setting';
-    static readonly DICHVU = '/dichvu';
+    static readonly DICHVU = '/dich-vu';
     static readonly HOTLINE = '/hotline';
-    static readonly BENHAN = '/benhan';
-    static readonly THUOC = '/thuoc';
-    static readonly DOTKHAM = '/dotkham';
+    static readonly BENHAN = '/benh-an';
+    static readonly THONGTINTIEMCHUNG = '/thong-tin-tiem-chung';
+    static readonly DSDOTKHAMCHUABENH = '/ds-dot-kham-chua-benh';
+    static readonly THONGTINBHYT = '/thong-tin-bhyt';
 }

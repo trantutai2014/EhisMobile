@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { LoginQR } from './loginQR.page';
+import { LoginQR } from './loginQR.component';
 
 describe('HomePage', () => {
   let component: LoginQR;

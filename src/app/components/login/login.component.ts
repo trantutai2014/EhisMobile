@@ -38,7 +38,7 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    this.router.navigate([UrlConstants.MAIN]);
+    this.router.navigate([UrlConstants.TRANGCHU]);
   }
 
   loginqr() {
@@ -46,7 +46,7 @@ export class LoginComponent implements OnInit {
   }
 
   showPassword() {
-    this.type = !this.type;
+    this.type = !this.type; 
   }
   goToForget() {
     this.router.navigate([UrlConstants.FORGET]);

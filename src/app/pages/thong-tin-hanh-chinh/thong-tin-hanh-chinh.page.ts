@@ -5,8 +5,8 @@ import { UrlConstants } from '../../core/constants/url.constant';
 
 @Component({
   selector: 'app-profile',
-  templateUrl: './profile.page.html',
-  styleUrls: ['./profile.page.scss'],
+  templateUrl: './thong-tin-hanh-chinh.page.html',
+  styleUrls: ['./thong-tin-hanh-chinh.page.scss'],
 })
 export class ProfilePage implements OnInit {
 
@@ -21,11 +21,11 @@ export class ProfilePage implements OnInit {
   }
 
   goToProFile() {
-    this.router.navigate([UrlConstants.PROFILE]);
+    this.router.navigate([UrlConstants.THONGTINHANHCHINH]);
   }
 
   goToMain() {
-    this.router.navigate([UrlConstants.MAIN]);
+    this.router.navigate([UrlConstants.TRANGCHU]);
   }
 
   goToSetting() {
@@ -33,7 +33,10 @@ export class ProfilePage implements OnInit {
   }
 
   goToHistory() {
-    this.router.navigate([UrlConstants.HISTORY]);
+    this.router.navigate([UrlConstants.LICHSU]);
+  }
+  goToDV() {
+    this.router.navigate([UrlConstants.DICHVU]);
   }
 
 }

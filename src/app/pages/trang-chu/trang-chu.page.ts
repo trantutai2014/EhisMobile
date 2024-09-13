@@ -30,7 +30,7 @@ export class MainPage implements OnInit {
   }
 
   goToThuoc() {
-    this.router.navigate([UrlConstants.THUOC]);
+    this.router.navigate([UrlConstants.THONGTINTIEMCHUNG]);
   }
 
   goToBill() {
@@ -38,11 +38,11 @@ export class MainPage implements OnInit {
   }
 
   goToProFile() {
-    this.router.navigate([UrlConstants.PROFILE]);
+    this.router.navigate([UrlConstants.THONGTINHANHCHINH]);
   }
 
   goToMain() {
-    this.router.navigate([UrlConstants.MAIN]);
+    this.router.navigate([UrlConstants.TRANGCHU]);
   }
 
   goToSetting() {
@@ -54,7 +54,7 @@ export class MainPage implements OnInit {
   }
 
   goToHistory() {
-    this.router.navigate([UrlConstants.HISTORY]);
+    this.router.navigate([UrlConstants.LICHSU]);
   }
 
   goToDV() {
@@ -66,7 +66,7 @@ export class MainPage implements OnInit {
   }
 
   goToDotKham() {
-    this.router.navigate([UrlConstants.DOTKHAM]);
+    this.router.navigate([UrlConstants.DSDOTKHAMCHUABENH]);
   }
 }
 

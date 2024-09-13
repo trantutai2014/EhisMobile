@@ -3,11 +3,12 @@ import { Router } from '@angular/router';
 import { UrlConstants } from 'src/app/core/constants/url.constant';
 
 @Component({
-  selector: 'app-setting',
-  templateUrl: './setting.page.html',
-  styleUrls: ['./setting.page.scss'],
+  selector: 'app-thogntinbhyt',
+  templateUrl: './thong-tin-bhyt.page.html',
+  styleUrls: ['./thong-tin-bhyt.page.scss'],
 })
-export class SettingPage implements OnInit {
+export class ThongTinBHYTPage implements OnInit {
+
   constructor(private router: Router) { }
 
   ngOnInit() {
@@ -15,4 +16,5 @@ export class SettingPage implements OnInit {
   goToDV() {
     this.router.navigate([UrlConstants.DICHVU]);
   }
+
 }

@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
-import { MenuComponent } from './menu.component';
 import { IonicModule } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { UrlConstants } from 'src/app/core/constants/url.constant';
+import { ThongBaoComponent } from './thong-bao.component';
 
 
 @NgModule({
@@ -14,27 +14,12 @@ import { UrlConstants } from 'src/app/core/constants/url.constant';
     FormsModule,
     IonicModule,
   ],
-  declarations: [MenuComponent]
+  declarations: [ThongBaoComponent]
 })
-export class MenuModule {
+export class ThongBaoModule {
   constructor(private router: Router) {}
 
   ngOnInit() {
   }
 
-  goToProFile() {
-    this.router.navigate([UrlConstants.PROFILE]);
-  }
-
-  goToMain() {
-    this.router.navigate([UrlConstants.TRANGCHU]);
-  }
-
-  goToSetting() {
-    this.router.navigate([UrlConstants.SETTING]);
-  }
-
-  goToHistory() {
-    this.router.navigate([UrlConstants.LICHSU]);
-  }
  }

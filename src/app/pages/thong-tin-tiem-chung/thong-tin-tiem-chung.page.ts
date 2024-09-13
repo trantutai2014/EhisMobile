@@ -5,10 +5,10 @@ import { itemsWithPrices } from 'src/data/profile';
 
 @Component({
   selector: 'app-thuoc',
-  templateUrl: './thuoc.page.html',
-  styleUrls: ['./thuoc.page.scss'],
+  templateUrl: './thong-tin-tiem-chung.page.html',
+  styleUrls: ['./thong-tin-tiem-chung.page.scss'],
 })
-export class ThuocPage {
+export class ThongTinTiemChungPage {
   items = itemsWithPrices; // Sử dụng dữ liệu từ tệp
   displayedItems = this.items.slice(0, 5); // Hiển thị 5 mục đầu tiên
   selectedItems: { [key: string]: number } = {};

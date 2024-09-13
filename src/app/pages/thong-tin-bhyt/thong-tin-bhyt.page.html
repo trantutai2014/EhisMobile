@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <!-- Sử dụng ion-grid để căn chỉnh nội dung -->
+    <ion-grid class="ion-no-padding ion-align-items-center ion-justify-content-between" style="max-width: 450px; margin: auto;">
+      <ion-row class="ion-align-items-center">
+        <!-- Cột cho thanh tìm kiếm -->
+        <ion-col>
+          <ion-searchbar (click)="goToDV()" placeholder="Tìm kiếm..." class="custom-searchbar"></ion-searchbar>
+        </ion-col>
+        <!-- Cột cho nút thông báo -->
+        <ion-col size="auto">
+          <ion-button fill="clear" id="open-modal"><ion-icon name="notifications-outline"></ion-icon></ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Thẻ thông tin BHYT -->
+  <ion-card class="card-info">
+    <ion-card-header>
+      <ion-card-title class="card-title">Thông tin thẻ BHYT</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="card-content">
+      <div class="card-details">
+        <p class="card-text">TE1111120833749</p>
+        <p class="card-date">20/10/2022 đến 31/10/2028</p>
+      </div>
+      <ion-badge color="light" class="card-badge">11123</ion-badge>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Thẻ thông tin BHYT thứ hai -->
+  <ion-card class="card-info">
+    <ion-card-header>
+      <ion-card-title class="card-title">Thông tin thẻ BHYT</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="card-content">
+      <div class="card-details">
+        <p class="card-text">TE1111120833749</p>
+        <p class="card-date">20/10/2022 đến 31/10/2028</p>
+      </div>
+      <ion-badge color="light" class="card-badge">11123</ion-badge>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

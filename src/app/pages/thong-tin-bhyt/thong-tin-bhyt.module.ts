@@ -3,18 +3,17 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
+import { ThongTinBHYTPageRoutingModule } from './thong-tin-bhyt-routing.module';
+import { ThongTinBHYTPage } from './thong-tin-bhyt.page';
 
-import { ProfilePageRoutingModule } from './profile-routing.module';
-
-import { ProfilePage } from './profile.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ProfilePageRoutingModule
+    ThongTinBHYTPageRoutingModule
   ],
-  declarations: [ProfilePage]
+  declarations: [ThongTinBHYTPage]
 })
-export class ProfilePageModule {}
+export class ThongTinBHYTPageModule { }

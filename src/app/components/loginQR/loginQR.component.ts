@@ -4,8 +4,8 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-loginQR',
-  templateUrl: 'loginQR.page.html',
-  styleUrls: ['loginQR.page.scss'],
+  templateUrl: 'loginQR.component.html',
+  styleUrls: ['loginQR.component.scss'],
 })
 export class LoginQR implements OnInit, OnDestroy {
   qrString: string = '';

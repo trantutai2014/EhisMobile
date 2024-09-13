@@ -1,13 +1,13 @@
 import { Component, NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { MenuComponent } from './menu.component';
+import { ThongBaoComponent } from './thong-bao.component';
 
 
 
 const routes: Routes = [
   {
-    path: 'menu',
-    component: MenuComponent
+    path: 'thong-bao',
+    component: ThongBaoComponent
   }
 ];
 

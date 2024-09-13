@@ -10,7 +10,7 @@ const routes: Routes = [
   },
   {
     path: 'thong-tin-hanh-chinh',
-    loadChildren: () => import('./pages/profile/profile.module').then(m => m.ProfilePageModule)
+    loadChildren: () => import('./pages/thong-tin-hanh-chinh/thong-tin-hanh-chinh.module').then(m => m.ProfilePageModule)
   },
   {
     path: 'trang-chu',
@@ -37,15 +37,15 @@ const routes: Routes = [
     loadChildren: () => import('./components/QRCode/QRCode.module').then(m => m.QrPageModule)
   },
   {
-    path: 'thuoc',
-    loadChildren: () => import('./pages/thuoc/thuoc.module').then(m => m.ThuocPageModule)
+    path: 'thong-tin-tiem-chung',
+    loadChildren: () => import('./pages/thong-tin-tiem-chung/thong-tin-tiem-chung.module').then(m => m.ThongTinTiemChungPageModule)
   },
   {
-    path: 'dichvu',
+    path: 'dich-vu',
     loadChildren: () => import('./pages/dichvu/dichvu.module').then(m => m.DichvuPageModule)
   },
   {
-    path: 'benhan',
+    path: 'benh-an',
     loadChildren: () => import('./pages/benhan/benhan.module').then(m => m.BenhanPageModule)
   },
   {
@@ -53,8 +53,16 @@ const routes: Routes = [
     loadChildren: () => import('./pages/ds-dot-kham/ds-dot-kham.module').then(m => m.DotkhamPageModule)
   },
   {
+    path: 'lich-su',
+    loadChildren: () => import('./pages/lich-su/history.module').then(m => m.HistoryPageModule)
+  },
+  {
     path: 'setting',
     loadChildren: () => import('./pages/setting/setting.module').then(m => m.SettingPageModule)
+  },
+  {
+    path: 'thong-tin-bhyt',
+    loadChildren: () => import('./pages/thong-tin-bhyt/thong-tin-bhyt.module').then(m => m.ThongTinBHYTPageModule)
   },
 
 ];

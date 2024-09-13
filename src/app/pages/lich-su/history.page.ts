@@ -4,22 +4,15 @@ import { UrlConstants } from 'src/app/core/constants/url.constant';
 
 
 @Component({
-  selector: 'app-admin',
-  templateUrl: './admin.page.html',
-  styleUrls: ['./admin.page.scss'],
+  selector: 'app-history',
+  templateUrl: './history.page.html',
+  styleUrls: ['./history.page.scss'],
 })
-export class AdminPage implements OnInit {
+export class HistoryPage implements OnInit {
 
   constructor(private router: Router) { }
 
   ngOnInit() {
-  }
-  goToSearch() {
-    this.router.navigate([UrlConstants.SEARCH]);
-  }
-
-  goToBill() {
-    this.router.navigate([UrlConstants.BILL]);
   }
 
   goToProFile() {
@@ -37,4 +30,5 @@ export class AdminPage implements OnInit {
   goToHistory() {
     this.router.navigate([UrlConstants.LICHSU]);
   }
+
 }

@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { SettingPageRoutingModule } from './setting-routing.module';
 
 import { SettingPage } from './setting.page';
+import { MenuComponent } from 'src/app/layouts/menu/menu.component';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    SettingPageRoutingModule
+    SettingPageRoutingModule,
+   
   ],
   declarations: [SettingPage]
 })

@@ -1,12 +1,21 @@
 <ion-header>
   <ion-toolbar>
-    <ion-grid class="ion-no-padding ion-align-items-center ion-justify-content-center" style="max-width: 450px; margin: auto;">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <!-- Sử dụng ion-grid để căn chỉnh nội dung -->
+    <ion-grid class="ion-no-padding ion-align-items-center ion-justify-content-between" style="max-width: 450px; margin: auto;">
       <ion-row class="ion-align-items-center">
+        <!-- Cột cho nút menu -->
         <ion-col size="auto">
-          <ion-img src="../../assets/icon/favicon.ico" alt="" style="width: 30px;"></ion-img>
         </ion-col>
+        <!-- Cột cho thanh tìm kiếm -->
         <ion-col>
-          <ion-searchbar (click)="goToDV()" placeholder="Search..."></ion-searchbar>
+          <ion-searchbar (click)="goToDV()" placeholder="Tìm kiếm..." class="custom-searchbar"></ion-searchbar>
+        </ion-col>
+        <!-- Cột cho nút thông báo -->
+        <ion-col size="auto">
+          <ion-button fill="clear" id="open-modal"><ion-icon name="notifications-outline"></ion-icon></ion-button>
         </ion-col>
       </ion-row>
     </ion-grid>
@@ -61,7 +70,7 @@
       <ion-col size="6" class="ion-margin-top">
         <ion-button expand="block" color="danger" (click)="goToDotKham()">
           <ion-icon name="calendar-outline" slot="start"></ion-icon>
-          Đợt Khám Chữa Bệnh
+          DS Đợt Khám Chữa Bệnh
         </ion-button>
       </ion-col>
     </ion-row>

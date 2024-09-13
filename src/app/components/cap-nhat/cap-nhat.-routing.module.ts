@@ -1,13 +1,13 @@
 import { Component, NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { MenuComponent } from './menu.component';
+import { CapNhatComponent } from './cap-nhat.component';
 
 
 
 const routes: Routes = [
   {
-    path: 'menu',
-    component: MenuComponent
+    path: 'cap-nhat',
+    component: CapNhatComponent
   }
 ];
 
@@ -15,4 +15,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class MenuRoutingModule {}
+export class CapNhatRoutingModule {}
