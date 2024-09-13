@@ -1,0 +1,91 @@
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" class="ion-text-center">
+        <img src="../../assets/img/nen.jpg" alt="Nen">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-card class="ion-no-margin ion-padding-none"
+    style="margin-top: -50px; height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <ion-grid>
+      <ion-row class="ion-justify-content-center" style="margin-top: 60px;">
+        <ion-col size="auto">
+          <img src="../../assets/img/1.png" alt="Image 1"
+            style="max-width: 100%; max-height: 100%; transform: scale(2);">
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <div class="ion-text-center" style="padding: 55px;">
+      <p class="ion-no-margin" style="font-size: 24px; font-weight: bold;">Cao Thị Xuân</p>
+    </div>
+
+    <ion-grid class="ion-padding-start ion-padding-end">
+      <ion-row>
+        <ion-col size="6" class="ion-text-left" style="font-weight: bold;">Ngày sinh:</ion-col>
+        <ion-col size="6" class="ion-text-right" style="opacity: 0.8;">01/01/1990</ion-col>
+
+        <ion-col size="6" class="ion-text-left" style="font-weight: bold;">Giới tính:</ion-col>
+        <ion-col size="6" class="ion-text-right" style="opacity: 0.8;">Nam</ion-col>
+
+        <ion-col size="6" class="ion-text-left" style="font-weight: bold;">Dân tộc:</ion-col>
+        <ion-col size="6" class="ion-text-right" style="opacity: 0.8;">Kinh</ion-col>
+
+        <ion-col size="6" class="ion-text-left" style="font-weight: bold;">Quốc tịch:</ion-col>
+        <ion-col size="6" class="ion-text-right" style="opacity: 0.8;">Việt Nam</ion-col>
+
+        <ion-col size="6" class="ion-text-left" style="font-weight: bold;">Nghề nghiệp:</ion-col>
+        <ion-col size="6" class="ion-text-right" style="opacity: 0.8;">Kỹ sư</ion-col>
+
+        <ion-col size="6" class="ion-text-left" style="font-weight: bold;">Điện thoại:</ion-col>
+        <ion-col size="6" class="ion-text-right" style="opacity: 0.8;">0123456789</ion-col>
+
+        <ion-col size="6" class="ion-text-left" style="font-weight: bold;">Số ĐDCN/CCCD:</ion-col>
+        <ion-col size="6" class="ion-text-right" style="opacity: 0.8;">123456789</ion-col>
+
+        <ion-col size="6" class="ion-text-left" style="font-weight: bold;">Ngày cấp:</ion-col>
+        <ion-col size="6" class="ion-text-right" style="opacity: 0.8;">01/01/2015</ion-col>
+
+        <ion-col size="6" class="ion-text-left" style="font-weight: bold;">Nơi cấp:</ion-col>
+        <ion-col size="6" class="ion-text-right" style="opacity: 0.8;">Hà Nội</ion-col>
+
+        <ion-col size="6" class="ion-text-left" style="font-weight: bold;">Địa chỉ:</ion-col>
+        <ion-col size="6" class="ion-text-right" style="opacity: 0.8;">123 Đường ABC, Hà Nội</ion-col>
+
+        <ion-col size="6" class="ion-text-left" style="font-weight: bold;">Nơi tạo:</ion-col>
+        <ion-col size="6" class="ion-text-right" style="opacity: 0.8;">Hà Nội</ion-col>
+
+        <ion-col size="6" class="ion-text-left" style="font-weight: bold;">Ngày lập hồ sơ:</ion-col>
+        <ion-col size="6" class="ion-text-right" style="opacity: 0.8;">01/01/2020</ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+</ion-content>
+
+<ion-footer style="background-color: #f0f8ff; height: 70px;">
+  <div style="display: flex; justify-content: space-around; align-items: center; height: 100%; padding: 10px;">
+    <div style="text-align: center;">
+      <ion-icon name="home-outline" style="font-size: 24px;" (click)="goToMain()"></ion-icon>
+      <div>Trang chủ</div>
+    </div>
+    <div style="text-align: center;">
+      <ion-icon name="bag-add-outline" style="font-size: 24px;" (click)="goToHistory()"></ion-icon>
+      <div>Lịch sử</div>
+    </div>
+    <div
+      style="position: relative; width: 70px; height: 70px; display: flex; flex-direction: column; align-items: center; justify-content: center; border-radius: 50%; background-color: #2c8ef6; color: white; font-family: Arial, sans-serif; text-align: center;">
+      <ion-icon name="scan-outline" style="font-size: 36px;"></ion-icon>
+      <div style="font-size: 12px; margin-top: 4px;">Quét QR</div>
+    </div>
+    <div style="text-align: center;">
+      <ion-icon name="person-circle-outline" style="font-size: 24px;" (click)="goToProFile()"></ion-icon>
+      <div>Hồ sơ</div>
+    </div>
+    <div style="text-align: center;">
+      <ion-icon name="settings-outline" style="font-size: 24px;" (click)="goToSetting()"></ion-icon>
+      <div>Cài đặt</div>
+    </div>
+  </div>
+</ion-footer>

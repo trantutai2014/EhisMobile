@@ -1,0 +1,65 @@
+<ion-content class="ion-padding" [fullscreen]="true">
+  <!-- Đoạn chứa logo và thanh tìm kiếm -->
+  <div style="top: 20%; max-width: 450px; margin: auto; display: flex; align-items: center;">
+    <div style="margin-right: 10px;">
+      <img src="../../assets/icon/favicon.ico" alt="">
+    </div>
+    <ion-searchbar (click)="goToSearch()" style="flex-grow: 1;"></ion-searchbar>
+    <!-- <ion-icon name="cart-outline" style="margin-left: 10px;" (click)="goToBill()"></ion-icon> -->
+  </div>
+
+  <div style="display: flex; align-items: center; margin-top: 20px;">
+    <img src="../../assets/img/1.png" alt="" style="width: 50px; height: 50px; border-radius: 50%; margin-right: 10px;">
+    <div>
+      <div style="font-size: 16px; font-weight: bold; margin-bottom: 5px;">Xin chào</div>
+      <div style="font-size: 14px;">Lê Minh Hoàng</div>
+    </div>
+  </div>
+
+  <ion-card style="margin-top: 10px;">
+    <ion-card-header>
+      <div>
+        <img id="logoImage" src="../../assets/img/logo@2x.png" title="Logo" style="max-width: 300px; margin-top: 20%;">
+      </div>
+    </ion-card-header>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <div style="display: flex; justify-content: space-around; align-items: center; height: 100%; padding: 10px;">
+    <div style="text-align: center;">
+      <ion-icon name="home-outline" style="font-size: 24px;" (click)="goToMain()"></ion-icon>
+      <div>Trang chủ</div>
+    </div>
+    <div style="text-align: center;">
+      <ion-icon name="bag-add-outline" style="font-size: 24px;" (click)="goToHistory()"></ion-icon>
+      <div>Lịch sử</div>
+    </div>
+    <div style="
+        position: relative;
+        width: 70px;
+        height: 70px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: #2c8ef6; /* Nền xanh đẹp */
+        color: white; /* Chữ màu trắng để nổi bật trên nền xanh */
+        font-family: Arial, sans-serif; /* Phông chữ dễ đọc */
+        text-align: center; /* Căn giữa văn bản */
+      ">
+      <ion-icon name="scan-outline" style="font-size: 36px;"></ion-icon>
+      <div style="font-size: 12px; margin-top: 4px;">Quét QR</div>
+    </div>
+
+    <div style="text-align: center;">
+      <ion-icon name="person-circle-outline" style="font-size: 24px;" (click)="goToProFile()"></ion-icon>
+      <div>Hồ sơ</div>
+    </div>
+    <div style="text-align: center;">
+      <ion-icon name="settings-outline" style="font-size: 24px;" (click)="goToSetting()"></ion-icon>
+      <div>Cài đặt</div>
+    </div>
+  </div>
+</ion-footer>
