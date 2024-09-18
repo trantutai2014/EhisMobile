@@ -9,6 +9,15 @@ import { UrlConstants } from '../constants/url.constant';
   providedIn: 'root',
 })
 export class LoginService {
+  getLoggedInUser() {
+      throw new Error('Method not implemented.');
+  }
+  refreshToken(refreshToken: any) {
+      throw new Error('Method not implemented.');
+  }
+  saveToken(token: any) {
+      throw new Error('Method not implemented.');
+  }
   private headers = new HttpHeaders();
 
   constructor(private http: HttpClient, private router: Router) {
