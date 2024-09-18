@@ -6,11 +6,17 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { LoginService } from './core/services/login.service';
+
 import { MenuComponent } from './layouts/menu/menu.component';
 import { ProfilePage } from './pages/thong-tin-hanh-chinh/thong-tin-hanh-chinh.page';
 import { ThongBaoComponent } from './layouts/thong-bao/thong-bao.component';
 import { CapNhatComponent } from './components/cap-nhat/cap-nhat.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+import { LoginService } from './core/services/login.service';
+import { ValidatorService } from './core/services/validator.service';
+import { UserRoleModule } from './pages/user-role/user-role.module';
+import { UserRoleComponent } from './pages/user-role/user-role.component';
 
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -19,15 +25,20 @@ import { CapNhatComponent } from './components/cap-nhat/cap-nhat.component';
     MenuComponent,
     ThongBaoComponent,
     CapNhatComponent,
+    UserRoleComponent,
+   
   ],
   imports: [
     BrowserModule, 
     IonicModule.forRoot(), 
     AppRoutingModule,
+    HttpClientModule,
+    UserRoleModule,
 
   ],
   providers: [
     LoginService,
+    ValidatorService,
     {
       provide: RouteReuseStrategy,
       useClass: IonicRouteStrategy

@@ -14,7 +14,7 @@ export class ValidatorConstants {
     static readonly v_gio = '^([0-1][0-9]|(2)[0-3])\:([0-5][0-9])$';
 
     static readonly v_ngaygio = '^([0-2][0-9]|(3)[0-1])(\/|\-)(((0)[0-9])|((1)[0-2]))(\/|\-)\d{4}\s([0-1][0-9]|(2)[0-3])\:([0-5][0-9])$';
-
+    
     static readonly v_bhyt = '(^[A-Za-z]{2}[A-Za-z0-9]{13}$)|(^[0-9]{10}$)|(^[A-Za-z]{2}[A-Za-z0-9]{18}$)';
     static readonly v_huyetap = '^([0-9]){1,3}(\/)([0-9]){1,3}$';
     static readonly v_mach = '^([0-9]){1,3}$';

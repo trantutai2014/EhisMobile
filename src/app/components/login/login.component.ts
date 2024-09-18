@@ -1,12 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { ValidatorConstants } from 'src/app/core/constants/validator.contants';
-import { UrlConstants } from 'src/app/core/constants/url.constant';
-
-
-
+import { LoadingController } from '@ionic/angular';
+import { UrlConstants } from '../../core/constants/url.constant';
+import { ValidatorConstants } from 'src/app/core/constants/validator.constants';
+import { LoginService } from 'src/app/core/services/login.service';
 
 @Component({
   selector: 'app-login',
@@ -14,42 +12,54 @@ import { UrlConstants } from 'src/app/core/constants/url.constant';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
+  formData: FormGroup;
+  public ValidatorConsts = ValidatorConstants;
+  loading: boolean = false;
   error: string | undefined;
 
-  isLogin = {
-    username: "",
-    password: "",
-  };
-  public ValidatorConsts = ValidatorConstants;
-  formData: FormGroup;
-
-  type: boolean = true;
-
   constructor(
+    private fb: FormBuilder,
+    private loginService: LoginService,
     private router: Router,
+    private loadingCtrl: LoadingController
   ) {
-    this.formData = new FormGroup({
-      userName: new FormControl(null, [Validators.required, Validators.pattern(this.ValidatorConsts.v_username)]),
-      password: new FormControl(null, [Validators.required, Validators.pattern(this.ValidatorConsts.v_password)])
+    this.formData = this.fb.group({
+      username: [null, [Validators.required, Validators.pattern(this.ValidatorConsts.v_username)]],
+      password: [null, [Validators.required, Validators.pattern(this.ValidatorConsts.v_password)]],
     });
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
-  login() {
-    this.router.navigate([UrlConstants.TRANGCHU]);
+  async login() {
+    if (this.formData.invalid) {
+      this.formData.markAllAsTouched();
+      return;
+    }
+  
+    const { username, password } = this.formData.value;
+    const loading = await this.loadingCtrl.create({
+      message: 'Đang tải...',
+    });
+    await loading.present();
+  
+    this.loginService.login(username, password)
+      .then((response: any) => {
+        if (response && response.message === 'Đăng nhập thành công') {
+          this.router.navigate([UrlConstants.TRANGCHU]);
+        } else {
+          this.error = 'Đăng nhập không thành công';
+        }
+      })
+      .catch((err: any) => {
+        this.error = err.error.message || 'Đăng nhập không thành công';
+      })
+      .finally(() => {
+        loading.dismiss();
+      });
   }
 
   loginqr() {
-    this.router.navigate([UrlConstants.LOGINQR]);
-  }
-
-  showPassword() {
-    this.type = !this.type; 
-  }
-  goToForget() {
-    this.router.navigate([UrlConstants.FORGET]);
+    // Thực hiện xử lý đăng nhập bằng QR nếu cần
   }
 }
-

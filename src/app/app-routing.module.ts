@@ -64,6 +64,10 @@ const routes: Routes = [
     path: 'thong-tin-bhyt',
     loadChildren: () => import('./pages/thong-tin-bhyt/thong-tin-bhyt.module').then(m => m.ThongTinBHYTPageModule)
   },
+  {
+    path: 'user-role',
+    loadChildren: () => import('./pages/user-role/user-role.module').then(m => m.UserRoleModule)
+  },
 
 ];
 @NgModule({

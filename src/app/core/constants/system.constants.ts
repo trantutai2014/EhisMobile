@@ -1,3 +1,4 @@
 export class SystemConstants {
-    static readonly CURRENT_USER = 'CurrentUser';
+  static readonly MABV = 'MABV';
+  static readonly CURRENT_USER = 'CurrentUser';
 }
