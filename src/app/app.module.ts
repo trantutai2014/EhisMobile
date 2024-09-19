@@ -26,6 +26,7 @@ import { UserRoleComponent } from './pages/user-role/user-role.component';
     ThongBaoComponent,
     CapNhatComponent,
     UserRoleComponent,
+  
    
   ],
   imports: [
@@ -34,6 +35,7 @@ import { UserRoleComponent } from './pages/user-role/user-role.component';
     AppRoutingModule,
     HttpClientModule,
     UserRoleModule,
+    
 
   ],
   providers: [

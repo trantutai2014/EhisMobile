@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './core/guards/auth.guard';
 
 const routes: Routes = [
 
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'trang-chu',
     pathMatch: 'full'
   },
   {
@@ -14,7 +15,8 @@ const routes: Routes = [
   },
   {
     path: 'trang-chu',
-    loadChildren: () => import('./pages/trang-chu/trang-chu.module').then(m => m.MainPageModule)
+    loadChildren: () => import('./pages/trang-chu/trang-chu.module').then(m => m.MainPageModule),
+
   },
   {
     path: 'admin',
@@ -68,6 +70,36 @@ const routes: Routes = [
     path: 'user-role',
     loadChildren: () => import('./pages/user-role/user-role.module').then(m => m.UserRoleModule)
   },
+ 
+  {
+    path: 'thong-tin-dot-kham-chua-benh',
+    loadChildren: () => import('./pages/thong-tin-dot-kham-chua-benh/thong-tin-dot-kham-chua-benh.module').then( m => m.ThongTinDotKhamChuaBenhPageModule)
+  },  {
+    path: 'chuan-doan-xac-dinh-khi-ra-vien',
+    loadChildren: () => import('./pages/chuan-doan-xac-dinh-khi-ra-vien/chuan-doan-xac-dinh-khi-ra-vien.module').then( m => m.ChuanDoanXacDinhKhiRaVienPageModule)
+  },
+  {
+    path: 'chi-so-theo-doi-chinh',
+    loadChildren: () => import('./pages/chi-so-theo-doi-chinh/chi-so-theo-doi-chinh.module').then( m => m.ChiSoTheoDoiChinhPageModule)
+  },
+  {
+    path: 'tom-tat-ho-so-benh-an-tinh-trang-nguoi-benh',
+    loadChildren: () => import('./pages/tom-tat-ho-so-benh-an-tinh-trang-nguoi-benh/tom-tat-ho-so-benh-an-tinh-trang-nguoi-benh.module').then( m => m.TomTatHoSoBenhAnTinhTrangNguoiBenhPageModule)
+  },
+  {
+    path: 'chuan-doan-hinh-anh-tham-do-chuc-nang',
+    loadChildren: () => import('./pages/chuan-doan-hinh-anh-tham-do-chuc-nang/chuan-doan-hinh-anh-tham-do-chuc-nang.module').then( m => m.ChuanDoanHinhAnhThamDoChucNangPageModule)
+  },
+  {
+    path: 'thong-tin-xet-nghiem',
+    loadChildren: () => import('./pages/thong-tin-xet-nghiem/thong-tin-xet-nghiem.module').then( m => m.ThongTinXetNghiemPageModule)
+  },
+  {
+    path: 'phau-thuat-thu-thuat-da-thuc-hien',
+    loadChildren: () => import('./pages/phau-thuat-thu-thuat-da-thuc-hien/phau-thuat-thu-thuat-da-thuc-hien.module').then( m => m.PhauThuatThuThuatDaThucHienPageModule)
+  },
+
+
 
 ];
 @NgModule({

@@ -1,0 +1,23 @@
+.label-left {
+    display: block;
+ padding-top: 10px;
+ font-weight: bold;
+
+}
+
+ion-card-title {
+    font-weight: bold;
+}
+
+ion-list{
+    padding: 0;
+    ion-item{
+        min-height: 30px;
+        ion-label{
+            margin: 0;
+            padding-bottom: 5px;
+
+        }
+    }
+    
+}
