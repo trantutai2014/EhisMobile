@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { SystemConstants } from 'src/app/core/constants/system.constants';
 import { UrlConstants } from 'src/app/core/constants/url.constant';
 
 @Component({
@@ -14,5 +15,9 @@ export class SettingPage implements OnInit {
   }
   goToDV() {
     this.router.navigate([UrlConstants.DICHVU]);
+  }
+  logout() {
+    localStorage.removeItem(SystemConstants.CURRENT_USER);
+    this.router.navigate([UrlConstants.LOGIN]);
   }
 }

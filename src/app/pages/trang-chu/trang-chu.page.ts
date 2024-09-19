@@ -1,33 +1,41 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { UrlConstants } from 'src/app/core/constants/url.constant';
 
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-main',
   templateUrl: './trang-chu.page.html',
   styleUrls: ['./trang-chu.page.scss'],
 })
-export class MainPage implements OnInit {
+export class MainPage implements OnInit, OnDestroy {
   @ViewChild('swiperContainer') swiperContainer: any;
+  username: string = '';
+  private subscriptions: Subscription = new Subscription();
 
   autoplayConfig = {
     delay: 1000,
     disableOnInteraction: true
   };
 
-  swiperSlideChanged(e: any) {
-    console.log('changed:', e)
-  } 
-
   constructor(private router: Router) { }
 
   ngOnInit() {
+
+
     setTimeout(() => {
-      const swiper = this.swiperContainer.swiperRef;
-      swiper.update(); // Cập nhật Swiper để đảm bảo ảnh hiển thị đúng
+      if (this.swiperContainer && this.swiperContainer.swiperRef) {
+        const swiper = this.swiperContainer.swiperRef;
+        swiper.update(); // Update Swiper to ensure images display correctly
+      }
     }, 0);
   }
+
+  ngOnDestroy() {
+    this.subscriptions.unsubscribe();
+  }
+  // ... rest of your navigation methods
 
   goToThuoc() {
     this.router.navigate([UrlConstants.THONGTINTIEMCHUNG]);
@@ -69,4 +77,3 @@ export class MainPage implements OnInit {
     this.router.navigate([UrlConstants.DSDOTKHAMCHUABENH]);
   }
 }
-

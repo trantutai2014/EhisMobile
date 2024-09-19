@@ -9,15 +9,6 @@ import { UrlConstants } from '../constants/url.constant';
   providedIn: 'root',
 })
 export class LoginService {
-  getLoggedInUser() {
-      throw new Error('Method not implemented.');
-  }
-  refreshToken(refreshToken: any) {
-      throw new Error('Method not implemented.');
-  }
-  saveToken(token: any) {
-      throw new Error('Method not implemented.');
-  }
   private headers = new HttpHeaders();
 
   constructor(private http: HttpClient, private router: Router) {
@@ -28,7 +19,11 @@ export class LoginService {
     const body = { username, password };
     try {
       const response: any = await this.http.post(environment.BASE_API + '/api/DangNhap', body, { headers: this.headers }).toPromise();
-      return response;
+      if (response.message === 'Đăng nhập thành công') {
+        localStorage.setItem(SystemConstants.CURRENT_USER, JSON.stringify(response));
+        return true;
+      }
+      return false;
     } catch (error: any) {
       if (error instanceof HttpErrorResponse && error.status === 500) {
         console.error('Server error:', error.error.message || 'Internal Server Error');
@@ -43,5 +38,9 @@ export class LoginService {
   logout() {
     localStorage.removeItem(SystemConstants.CURRENT_USER);
     this.router.navigate([UrlConstants.LOGIN]);
+  }
+
+  isLoggedIn(): boolean {
+    return localStorage.getItem(SystemConstants.CURRENT_USER) !== null;
   }
 }
