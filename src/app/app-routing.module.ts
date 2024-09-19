@@ -1,12 +1,10 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { AuthGuard } from './core/guards/auth.guard';
-
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'trang-chu',
     pathMatch: 'full'
   },
   {
@@ -16,8 +14,7 @@ const routes: Routes = [
   },
   {
     path: 'trang-chu',
-    loadChildren: () => import('./pages/trang-chu/trang-chu.module').then(m => m.MainPageModule),
-    canActivate: [AuthGuard] // Bảo vệ route này
+    loadChildren: () => import('./pages/trang-chu/trang-chu.module').then(m => m.MainPageModule)
   },
   {
     path: 'admin',
@@ -84,6 +81,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/user-role/user-role.module').then(m => m.UserRoleModule),
     canActivate: [AuthGuard] // Bảo vệ route này
   },
+
 ];
 
 @NgModule({
