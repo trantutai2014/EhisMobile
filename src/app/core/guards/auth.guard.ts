@@ -1,23 +1,22 @@
 import { Injectable } from '@angular/core';
-import { CanActivate, Router } from '@angular/router';
+import {  CanActivate, Router} from '@angular/router';
 import { LoginService } from '../services/login.service';
 import { UrlConstants } from '../constants/url.constant';
 
-@Injectable()
-export class AuthGuard implements CanActivate {
-    constructor(private router: Router) { }
-
-    canActivate(_activateRoute: ActivatedRouteSnapshot, routerState: RouterStateSnapshot) {
-        if (localStorage.getItem(SystemConstants.CURRENT_USER)) {
-                return true;
-        } else {
-            this.router.navigate([UrlConstants.LOGIN], {
-                queryParams: {
-                    returnUrl: routerState.url
-                }
-            });
-
-            return false;
-        }
+@Injectable({
+    providedIn: 'root',
+  })
+  export class AuthGuard implements CanActivate {
+    constructor(private loginService: LoginService, private router: Router) {}
+  
+    canActivate(): boolean {
+      const isLoggedIn = this.loginService.isLoggedIn();
+      console.log('isLoggedIn:', isLoggedIn); // Kiểm tra trạng thái đăng nhập từ service
+      if (!isLoggedIn) {
+        this.router.navigate([UrlConstants.LOGIN]);
+        return false;
+      }
+      return true;
     }
-}
+  }
+  

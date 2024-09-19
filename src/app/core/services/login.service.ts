@@ -20,7 +20,7 @@ export class LoginService {
     try {
       const response: any = await this.http.post(environment.BASE_API + '/api/DangNhap', body, { headers: this.headers }).toPromise();
       if (response.message === 'Đăng nhập thành công') {
-        localStorage.setItem(SystemConstants.CURRENT_USER, JSON.stringify(response));
+        localStorage.setItem(SystemConstants.CURRENT_USER, JSON.stringify(response)); // Lưu thông tin người dùng
         return true;
       }
       return false;

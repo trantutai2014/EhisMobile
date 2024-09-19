@@ -5,7 +5,6 @@ import { LoadingController } from '@ionic/angular';
 import { UrlConstants } from '../../core/constants/url.constant';
 import { ValidatorConstants } from 'src/app/core/constants/validator.constants';
 import { LoginService } from 'src/app/core/services/login.service';
-import { SystemConstants } from 'src/app/core/constants/system.constants';
 
 @Component({
   selector: 'app-login',
@@ -44,22 +43,22 @@ export class LoginComponent implements OnInit {
     });
     await loading.present();
   
-    try {
-      const success = await this.loginService.login(username, password);
-      if (success) {
-        console.log('Đăng nhập thành công. Đang lưu thông tin người dùng...');
-        // Kiểm tra localStorage
-        console.log(localStorage.getItem(SystemConstants.CURRENT_USER));
-        this.router.navigate([UrlConstants.TRANGCHU]);
-      } else {
-        this.error = 'Đăng nhập không thành công';
-      }
-    } catch (err: any) {
-      this.error = err.error?.message || 'Đăng nhập không thành công';
-    } finally {
-      loading.dismiss();
-    }
+    this.loginService.login(username, password)
+      .then((success: boolean) => {
+        if (success) {
+          this.router.navigate([UrlConstants.TRANGCHU]);
+        } else {
+          this.error = 'Đăng nhập không thành công';
+        }
+      })
+      .catch((err: any) => {
+        this.error = err.error?.message || 'Đăng nhập không thành công';
+      })
+      .finally(() => {
+        loading.dismiss();
+      });
   }
+
   loginqr() {
     this.router.navigate([UrlConstants.LOGINQR]);
   }
