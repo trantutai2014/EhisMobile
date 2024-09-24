@@ -1,12 +1,12 @@
+C:\Users\PC\Desktop\src\EhisMobile\API\Common\bin\Debug\net8.0\Common.deps.json
+C:\Users\PC\Desktop\src\EhisMobile\API\Common\bin\Debug\net8.0\Common.dll
+C:\Users\PC\Desktop\src\EhisMobile\API\Common\bin\Debug\net8.0\Common.pdb
+C:\Users\PC\Desktop\src\EhisMobile\API\Common\obj\Debug\net8.0\Common.csproj.AssemblyReference.cache
 C:\Users\PC\Desktop\src\EhisMobile\API\Common\obj\Debug\net8.0\Common.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\PC\Desktop\src\EhisMobile\API\Common\obj\Debug\net8.0\Common.AssemblyInfoInputs.cache
 C:\Users\PC\Desktop\src\EhisMobile\API\Common\obj\Debug\net8.0\Common.AssemblyInfo.cs
 C:\Users\PC\Desktop\src\EhisMobile\API\Common\obj\Debug\net8.0\Common.csproj.CoreCompileInputs.cache
 C:\Users\PC\Desktop\src\EhisMobile\API\Common\obj\Debug\net8.0\Common.sourcelink.json
-C:\Users\PC\Desktop\src\EhisMobile\API\Common\bin\Debug\net8.0\Common.deps.json
-C:\Users\PC\Desktop\src\EhisMobile\API\Common\bin\Debug\net8.0\Common.dll
-C:\Users\PC\Desktop\src\EhisMobile\API\Common\bin\Debug\net8.0\Common.pdb
-C:\Users\PC\Desktop\src\EhisMobile\API\Common\obj\Debug\net8.0\Common.csproj.AssemblyReference.cache
 C:\Users\PC\Desktop\src\EhisMobile\API\Common\obj\Debug\net8.0\Common.dll
 C:\Users\PC\Desktop\src\EhisMobile\API\Common\obj\Debug\net8.0\refint\Common.dll
 C:\Users\PC\Desktop\src\EhisMobile\API\Common\obj\Debug\net8.0\Common.pdb

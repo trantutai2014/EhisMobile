@@ -26,6 +26,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "UserRolesController",
+    "Method": "GetAll",
+    "RelativePath": "api/UserRoles/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "DangKyController",
     "Method": "Register",
     "RelativePath": "DangKy/register",
@@ -39,16 +49,6 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "UserRolesController",
-    "Method": "GetAll",
-    "RelativePath": "UserRoles/GetAll",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
     "ReturnTypes": []
   }
 ]

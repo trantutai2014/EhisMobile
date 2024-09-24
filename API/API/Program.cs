@@ -1,8 +1,11 @@
-﻿using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 using API.Services;
 using API.Model;
-using Microsoft.AspNetCore.Identity;
+using Data.EF;
+using System.Reflection;
+using NetCore.AutoRegisterDi;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -36,7 +39,15 @@ builder.Services.AddScoped<DangNhapService, DangNhapService>();
 builder.Services.AddScoped<DangKyService, DangKyService>();
 builder.Services.AddScoped<IPasswordHasher<UserModel>, PasswordHasher<UserModel>>();
 builder.Services.AddScoped<API.Helper.PasswordHelper, API.Helper.PasswordHelper>();
+builder.Services.AddScoped(typeof(IRepository), typeof(Repository));
+var assembliesToScan = new[]
+           {
+                Assembly.GetAssembly(typeof(IUserRoleService))
+            };
 
+builder.Services.RegisterAssemblyPublicNonGenericClasses(assembliesToScan)
+        .Where(c => c.Name.EndsWith("Service"))
+        .AsPublicImplementedInterfaces();
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())

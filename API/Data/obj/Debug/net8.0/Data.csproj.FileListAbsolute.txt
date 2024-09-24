@@ -5,7 +5,6 @@ C:\Users\PC\Desktop\src\EhisMobile\API\Data\obj\Debug\net8.0\Data.AssemblyInfo.c
 C:\Users\PC\Desktop\src\EhisMobile\API\Data\obj\Debug\net8.0\Data.csproj.CoreCompileInputs.cache
 C:\Users\PC\Desktop\src\EhisMobile\API\Data\obj\Debug\net8.0\Data.sourcelink.json
 C:\Users\PC\Desktop\src\EhisMobile\API\Data\bin\Debug\net8.0\Data.deps.json
-C:\Users\PC\Desktop\src\EhisMobile\API\Data\bin\Debug\net8.0\Data.runtimeconfig.json
 C:\Users\PC\Desktop\src\EhisMobile\API\Data\bin\Debug\net8.0\Data.dll
 C:\Users\PC\Desktop\src\EhisMobile\API\Data\bin\Debug\net8.0\Data.pdb
 C:\Users\PC\Desktop\src\EhisMobile\API\Data\bin\Debug\net8.0\Common.dll
@@ -14,5 +13,4 @@ C:\Users\PC\Desktop\src\EhisMobile\API\Data\obj\Debug\net8.0\Data.csproj.Up2Date
 C:\Users\PC\Desktop\src\EhisMobile\API\Data\obj\Debug\net8.0\Data.dll
 C:\Users\PC\Desktop\src\EhisMobile\API\Data\obj\Debug\net8.0\refint\Data.dll
 C:\Users\PC\Desktop\src\EhisMobile\API\Data\obj\Debug\net8.0\Data.pdb
-C:\Users\PC\Desktop\src\EhisMobile\API\Data\obj\Debug\net8.0\Data.genruntimeconfig.cache
 C:\Users\PC\Desktop\src\EhisMobile\API\Data\obj\Debug\net8.0\ref\Data.dll
