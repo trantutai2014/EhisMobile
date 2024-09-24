@@ -76,4 +76,8 @@ export class MainPage implements OnInit, OnDestroy {
   goToDotKham() {
     this.router.navigate([UrlConstants.DSDOTKHAMCHUABENH]);
   }
+
+  goToBHYT() {
+    this.router.navigate([UrlConstants.THONGTINBHYT]);
+  }
 }

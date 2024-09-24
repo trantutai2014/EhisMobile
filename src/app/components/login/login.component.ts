@@ -36,17 +36,17 @@ export class LoginComponent implements OnInit {
       this.formData.markAllAsTouched();
       return;
     }
-  
+
     const { username, password } = this.formData.value;
     const loading = await this.loadingCtrl.create({
       message: 'Đang tải...',
     });
     await loading.present();
-  
+
     this.loginService.login(username, password)
       .then((success: boolean) => {
         if (success) {
-          this.router.navigate([UrlConstants.TRANGCHU]);
+          this.router.navigate([UrlConstants.THONGTINHANHCHINH]);
         } else {
           this.error = 'Đăng nhập không thành công';
         }

@@ -20,4 +20,19 @@ export class SettingPage implements OnInit {
     localStorage.removeItem(SystemConstants.CURRENT_USER);
     this.router.navigate([UrlConstants.LOGIN]);
   }
+  goToProFile() {
+    this.router.navigate([UrlConstants.THONGTINHANHCHINH]);
+  }
+
+  goToMain() {
+    this.router.navigate([UrlConstants.TRANGCHU]);
+  }
+
+  goToSetting() {
+    this.router.navigate([UrlConstants.SETTING]);
+  }
+
+  goToHistory() {
+    this.router.navigate([UrlConstants.LICHSU]);
+  }
 }
