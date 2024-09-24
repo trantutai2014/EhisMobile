@@ -1,10 +1,10 @@
-﻿using API.Services;
+using API.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using Microsoft.IdentityModel.Tokens;
-using API.Model;
 using System.Text;
+using API.Common.Models;
 
 namespace API.Controllers
 {
@@ -24,8 +24,8 @@ namespace API.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(LoginModel model)
         {
-            try
-            {
+      try
+      {
                 var user = await _dangNhapService.LoginAsync(model.Username, model.Password);
 
                 if (user != null)
@@ -37,16 +37,12 @@ namespace API.Controllers
                     return BadRequest(new { message = "Tài khoản hoặc mật khẩu không chính xác" });
                 }
             }
-            catch (Exception ex)
-            {
+            catch (Exception)
+      {
                 return StatusCode(500, new { message = "Lỗi hệ thống" });
             }
         }
     }
 
-        public class LoginModel
-    {
-        public string Username { get; set; }
-        public string Password { get; set; }
-    }
+
 }

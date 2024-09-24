@@ -1,8 +1,11 @@
-﻿using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using API.Services;
-using API.Model;
 using Microsoft.AspNetCore.Identity;
+using System.Reflection;
+using NetCore.AutoRegisterDi;
+using API.Common.Models;
+using Data.EF;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -31,12 +34,20 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<MDPDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("MDPDevConnection")));
 
-builder.Services.AddScoped<UserRoleService, UserRoleService>();
+//builder.Services.AddScoped<UserRoleService, UserRoleService>();
 builder.Services.AddScoped<DangNhapService, DangNhapService>();
 builder.Services.AddScoped<DangKyService, DangKyService>();
+builder.Services.AddScoped(typeof(IRepository), typeof(Repository));
 builder.Services.AddScoped<IPasswordHasher<UserModel>, PasswordHasher<UserModel>>();
 builder.Services.AddScoped<API.Helper.PasswordHelper, API.Helper.PasswordHelper>();
-
+//
+var assembliesToScan = new[]
+        {
+                Assembly.GetAssembly(typeof(IUserRoleService))
+            };
+builder.Services.RegisterAssemblyPublicNonGenericClasses(assembliesToScan)
+        .Where(c => c.Name.EndsWith("Service"))
+        .AsPublicImplementedInterfaces();
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())

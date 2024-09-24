@@ -9,7 +9,7 @@
     "Parameters": [
       {
         "Name": "model",
-        "Type": "API.Controllers.LoginModel",
+        "Type": "API.Common.Models.LoginModel",
         "IsRequired": true
       }
     ],
@@ -26,6 +26,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "UserRolesController",
+    "Method": "GetAll",
+    "RelativePath": "api/UserRoles/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "DangKyController",
     "Method": "Register",
     "RelativePath": "DangKy/register",
@@ -35,20 +45,10 @@
     "Parameters": [
       {
         "Name": "model",
-        "Type": "API.Model.RegisterModel",
+        "Type": "API.Common.Models.RegisterModel",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "UserRolesController",
-    "Method": "GetAll",
-    "RelativePath": "UserRoles/GetAll",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
     "ReturnTypes": []
   }
 ]
