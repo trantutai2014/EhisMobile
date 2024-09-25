@@ -6,8 +6,14 @@ using API.Model;
 using Data.EF;
 using System.Reflection;
 using NetCore.AutoRegisterDi;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using Service;
 
 var builder = WebApplication.CreateBuilder(args);
+
+
 
 // Configure CORS to allow credentials
 builder.Services.AddCors(options =>
@@ -21,7 +27,27 @@ builder.Services.AddCors(options =>
                   .AllowCredentials();
         });
 });
+// Thêm JWT Authentication
+// Khóa bí mật của bạn
+var key = Encoding.UTF8.GetBytes("D8a%6Pz#bQ9x^1vZ3rR4k@tF6vU5eJ7!nM8jH3wD2zQ9bC7uA5eR9gT4wJ1lX8haaaa");
 
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuerSigningKey = true,
+            IssuerSigningKey = new SymmetricSecurityKey(key),
+            ValidateIssuer = false,
+            ValidateAudience = false,
+            RequireExpirationTime = true,
+            ClockSkew = TimeSpan.Zero, // Tùy chọn giảm thiểu độ trễ thời gian
+            ValidAlgorithms = new[] { SecurityAlgorithms.HmacSha512 } // Sử dụng thuật toán HS512
+        };
+    });
+
+// Đăng ký TokenService với DI container
+builder.Services.AddScoped<TokenService>(); // Hoặc AddSingleton(), AddTransient() tùy theo phạm vi sử dụng
 
 
 builder.Services.AddAuthorization();
@@ -55,7 +81,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
     app.UseDeveloperExceptionPage();
-}else
+}
+else
 {
     // For mobile apps, allow http traffic.
     app.UseHttpsRedirection();

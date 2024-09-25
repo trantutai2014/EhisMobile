@@ -17,7 +17,8 @@ import { LoginService } from './core/services/login.service';
 import { ValidatorService } from './core/services/validator.service';
 import { UserRoleModule } from './pages/user-role/user-role.module';
 import { UserRoleComponent } from './pages/user-role/user-role.component';
-
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { JwtInterceptor } from './core/guards/jwt.interceptor';
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   declarations: [
@@ -44,7 +45,10 @@ import { UserRoleComponent } from './pages/user-role/user-role.component';
     {
       provide: RouteReuseStrategy,
       useClass: IonicRouteStrategy
-    }],
+    },
+    { provide: HTTP_INTERCEPTORS,
+       useClass: JwtInterceptor, 
+       multi: true }],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

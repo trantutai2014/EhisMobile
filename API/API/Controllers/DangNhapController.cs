@@ -5,6 +5,7 @@ using System.Security.Claims;
 using Microsoft.IdentityModel.Tokens;
 using API.Model;
 using System.Text;
+using Service;
 
 namespace API.Controllers
 {
@@ -12,13 +13,15 @@ namespace API.Controllers
     [Route("api/[controller]")]
     public class DangNhapController : ControllerBase
     {
+        private readonly TokenService _tokenService;
         private readonly DangNhapService _dangNhapService;
         private readonly IConfiguration _configuration;
 
-        public DangNhapController(DangNhapService dangNhapService, IConfiguration configuration)
+        public DangNhapController(TokenService tokenService, DangNhapService dangNhapService, IConfiguration configuration)
         {
             _dangNhapService = dangNhapService;
             _configuration = configuration;
+            _tokenService = tokenService;
         }
 
         [HttpPost]
@@ -30,7 +33,9 @@ namespace API.Controllers
 
                 if (user != null)
                 {
-                    return Ok(new { message = "Đăng nhập thành công" });
+                    var token = _tokenService.GenerateToken(model.Username);
+                    return Ok(new { token });
+                    // return Ok(new { message = "Đăng nhập thành công" });
                 }
                 else
                 {
@@ -39,12 +44,12 @@ namespace API.Controllers
             }
             catch (Exception ex)
             {
-                return StatusCode(500, new { message = "Lỗi hệ thống" });
+                return StatusCode(500, new { message = $"Lỗi hệ thống: {ex.Message}" });
             }
         }
     }
 
-        public class LoginModel
+    public class LoginModel
     {
         public string Username { get; set; }
         public string Password { get; set; }

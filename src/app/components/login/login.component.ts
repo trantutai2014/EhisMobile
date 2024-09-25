@@ -5,6 +5,7 @@ import { LoadingController } from '@ionic/angular';
 import { UrlConstants } from '../../core/constants/url.constant';
 import { ValidatorConstants } from 'src/app/core/constants/validator.constants';
 import { LoginService } from 'src/app/core/services/login.service';
+import { AuthService } from 'src/app/core/services/auth.service';   
 
 @Component({
   selector: 'app-login',
@@ -22,6 +23,7 @@ export class LoginComponent implements OnInit {
     private loginService: LoginService,
     private router: Router,
     private loadingCtrl: LoadingController,
+    private authService: AuthService
   ) {
     this.formData = this.fb.group({
       username: [null, [Validators.required, Validators.pattern(this.ValidatorConsts.v_username)]],
@@ -43,7 +45,7 @@ export class LoginComponent implements OnInit {
     });
     await loading.present();
 
-    this.loginService.login(username, password)
+    this.authService.login(username, password)
       .then((success: boolean) => {
         if (success) {
           this.router.navigate([UrlConstants.THONGTINHANHCHINH]);

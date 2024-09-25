@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\EhisSongAn\\EhisMobile\\EhisMobile\\API\\API\\API.csproj": {}
+    "D:\\Hocs\\developer\\SongAn\\EhisMobile\\EhisMobile\\API\\API\\API.csproj": {}
   },
   "projects": {
-    "D:\\EhisSongAn\\EhisMobile\\EhisMobile\\API\\API\\API.csproj": {
+    "D:\\Hocs\\developer\\SongAn\\EhisMobile\\EhisMobile\\API\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\EhisSongAn\\EhisMobile\\EhisMobile\\API\\API\\API.csproj",
+        "projectUniqueName": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\EhisMobile\\API\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "D:\\EhisSongAn\\EhisMobile\\EhisMobile\\API\\API\\API.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\EhisSongAn\\EhisMobile\\EhisMobile\\API\\API\\obj\\",
+        "projectPath": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\EhisMobile\\API\\API\\API.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\EhisMobile\\API\\API\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -33,14 +29,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\EhisSongAn\\EhisMobile\\EhisMobile\\API\\Common\\Common.csproj": {
-                "projectPath": "D:\\EhisSongAn\\EhisMobile\\EhisMobile\\API\\Common\\Common.csproj"
+              "D:\\Hocs\\developer\\SongAn\\EhisMobile\\EhisMobile\\API\\Common\\Common.csproj": {
+                "projectPath": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\EhisMobile\\API\\Common\\Common.csproj"
               },
-              "D:\\EhisSongAn\\EhisMobile\\EhisMobile\\API\\Data\\Data.csproj": {
-                "projectPath": "D:\\EhisSongAn\\EhisMobile\\EhisMobile\\API\\Data\\Data.csproj"
+              "D:\\Hocs\\developer\\SongAn\\EhisMobile\\EhisMobile\\API\\Data\\Data.csproj": {
+                "projectPath": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\EhisMobile\\API\\Data\\Data.csproj"
               },
-              "D:\\EhisSongAn\\EhisMobile\\EhisMobile\\API\\Service\\Service.csproj": {
-                "projectPath": "D:\\EhisSongAn\\EhisMobile\\EhisMobile\\API\\Service\\Service.csproj"
+              "D:\\Hocs\\developer\\SongAn\\EhisMobile\\EhisMobile\\API\\Service\\Service.csproj": {
+                "projectPath": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\EhisMobile\\API\\Service\\Service.csproj"
               }
             }
           }
@@ -49,11 +45,62 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            },
+            "NetCore.AutoRegisterDi": {
+              "target": "Package",
+              "version": "[2.2.1, )"
+            },
+            "Portable.BouncyCastle": {
+              "target": "Package",
+              "version": "[1.9.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.7.3, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            },
+            "TourmalineCore.AspNetCore.JwtAuthentication.Identity": {
+              "target": "Package",
+              "version": "[0.1.1, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.8.1, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[5.0.0.2662, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -65,25 +112,29 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\EhisSongAn\\EhisMobile\\EhisMobile\\API\\Common\\Common.csproj": {
+    "D:\\Hocs\\developer\\SongAn\\EhisMobile\\EhisMobile\\API\\Common\\Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\EhisSongAn\\EhisMobile\\EhisMobile\\API\\Common\\Common.csproj",
+        "projectUniqueName": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\EhisMobile\\API\\Common\\Common.csproj",
         "projectName": "Common",
-        "projectPath": "D:\\EhisSongAn\\EhisMobile\\EhisMobile\\API\\Common\\Common.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\EhisSongAn\\EhisMobile\\EhisMobile\\API\\Common\\obj\\",
+        "projectPath": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\EhisMobile\\API\\Common\\Common.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\EhisMobile\\API\\Common\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -104,11 +155,26 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Cryptography.KeyDerivation": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -120,25 +186,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\EhisSongAn\\EhisMobile\\EhisMobile\\API\\Data\\Data.csproj": {
+    "D:\\Hocs\\developer\\SongAn\\EhisMobile\\EhisMobile\\API\\Data\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\EhisSongAn\\EhisMobile\\EhisMobile\\API\\Data\\Data.csproj",
+        "projectUniqueName": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\EhisMobile\\API\\Data\\Data.csproj",
         "projectName": "Data",
-        "projectPath": "D:\\EhisSongAn\\EhisMobile\\EhisMobile\\API\\Data\\Data.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\EhisSongAn\\EhisMobile\\EhisMobile\\API\\Data\\obj\\",
+        "projectPath": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\EhisMobile\\API\\Data\\Data.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\EhisMobile\\API\\Data\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -153,8 +220,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\EhisSongAn\\EhisMobile\\EhisMobile\\API\\Common\\Common.csproj": {
-                "projectPath": "D:\\EhisSongAn\\EhisMobile\\EhisMobile\\API\\Common\\Common.csproj"
+              "D:\\Hocs\\developer\\SongAn\\EhisMobile\\EhisMobile\\API\\Common\\Common.csproj": {
+                "projectPath": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\EhisMobile\\API\\Common\\Common.csproj"
               }
             }
           }
@@ -163,11 +230,38 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Z.EntityFramework.Extensions.EFCore": {
+              "target": "Package",
+              "version": "[8.103.4, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -179,25 +273,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\EhisSongAn\\EhisMobile\\EhisMobile\\API\\Service\\Service.csproj": {
+    "D:\\Hocs\\developer\\SongAn\\EhisMobile\\EhisMobile\\API\\Service\\Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\EhisSongAn\\EhisMobile\\EhisMobile\\API\\Service\\Service.csproj",
+        "projectUniqueName": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\EhisMobile\\API\\Service\\Service.csproj",
         "projectName": "Service",
-        "projectPath": "D:\\EhisSongAn\\EhisMobile\\EhisMobile\\API\\Service\\Service.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\EhisSongAn\\EhisMobile\\EhisMobile\\API\\Service\\obj\\",
+        "projectPath": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\EhisMobile\\API\\Service\\Service.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\EhisMobile\\API\\Service\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -212,11 +307,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\EhisSongAn\\EhisMobile\\EhisMobile\\API\\Common\\Common.csproj": {
-                "projectPath": "D:\\EhisSongAn\\EhisMobile\\EhisMobile\\API\\Common\\Common.csproj"
+              "D:\\Hocs\\developer\\SongAn\\EhisMobile\\EhisMobile\\API\\Common\\Common.csproj": {
+                "projectPath": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\EhisMobile\\API\\Common\\Common.csproj"
               },
-              "D:\\EhisSongAn\\EhisMobile\\EhisMobile\\API\\Data\\Data.csproj": {
-                "projectPath": "D:\\EhisSongAn\\EhisMobile\\EhisMobile\\API\\Data\\Data.csproj"
+              "D:\\Hocs\\developer\\SongAn\\EhisMobile\\EhisMobile\\API\\Data\\Data.csproj": {
+                "projectPath": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\EhisMobile\\API\\Data\\Data.csproj"
               }
             }
           }
@@ -225,6 +320,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -241,7 +341,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
