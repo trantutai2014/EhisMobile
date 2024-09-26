@@ -50,7 +50,14 @@
         </form>
       </div>
     </div>
-    <ion-button (click)="loginqr()" expand="block" style="margin-top: 10px;">Đăng Nhập Bằng QR</ion-button>
+    <div style="top: 20%; max-width: 450px; margin: auto;">
+      <div class="text-center">
+        <ion-button (click)="loginqr()" expand="block" style="margin-top: 10px;">Đăng Nhập Bằng QR</ion-button>
+      </div>
+
+      <!-- Video element for showing the camera feed -->
+      <video #video style="width: 100%; margin-top: 20px;" autoplay></video>
+    </div>
   </div>
 </ion-content>
 

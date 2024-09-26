@@ -1,11 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { LoadingController } from '@ionic/angular';
+import { AlertController, LoadingController } from '@ionic/angular';
 import { UrlConstants } from '../../core/constants/url.constant';
 import { ValidatorConstants } from 'src/app/core/constants/validator.constants';
 import { LoginService } from 'src/app/core/services/login.service';
-import { AuthService } from 'src/app/core/services/auth.service';   
+import { AuthService } from 'src/app/core/services/auth.service';
+import QrScanner from 'qr-scanner';
 
 @Component({
   selector: 'app-login',
@@ -17,13 +18,16 @@ export class LoginComponent implements OnInit {
   public ValidatorConsts = ValidatorConstants;
   loading: boolean = false;
   error: string | undefined;
+  @ViewChild('video', { static: false }) videoElem!: ElementRef;
+  qrScannerInstance!: QrScanner;
 
   constructor(
     private fb: FormBuilder,
     private loginService: LoginService,
     private router: Router,
     private loadingCtrl: LoadingController,
-    private authService: AuthService
+    private authService: AuthService,
+    private alertController: AlertController
   ) {
     this.formData = this.fb.group({
       username: [null, [Validators.required, Validators.pattern(this.ValidatorConsts.v_username)]],
@@ -61,8 +65,31 @@ export class LoginComponent implements OnInit {
       });
   }
 
-  loginqr() {
-    this.router.navigate([UrlConstants.LOGINQR]);
+  async loginqr() {
+    try {
+      // Create the QRScanner instance and pass the video element
+      this.qrScannerInstance = new QrScanner(this.videoElem.nativeElement, (result) => {
+        console.log('Scanned result:', result);
+        this.qrScannerInstance.stop(); // Stop the camera after scanning
+        this.showScannedDataAlert(result); // Show the result to the user
+      });
+
+      // Start scanning (this will request camera access)
+      await this.qrScannerInstance.start();
+    } catch (error) {
+      console.error('Error scanning QR code:', error);
+    }
+  }
+
+  // Show alert with the scanned data
+  async showScannedDataAlert(scannedData: string) {
+    const alert = await this.alertController.create({
+      header: 'Scanned QR Code',
+      message: `Data: ${scannedData}`,
+      buttons: ['OK'],
+    });
+
+    await alert.present();
   }
 
 }
