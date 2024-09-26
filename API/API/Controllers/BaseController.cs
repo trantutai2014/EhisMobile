@@ -1,13 +1,13 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace MDP.API.Controllers
+namespace API.Controllers
 {
-    [Authorize]
-    [ApiController]
-    [Route("api/[controller]")]
-    [Produces("application/json")]
-    public class BaseController : ControllerBase
-    {
-    }
+  [Authorize]
+  [ApiController]
+  [Route("api/[controller]")]
+  [Produces("application/json")]
+  public class BaseController : ControllerBase
+  {
+  }
 }

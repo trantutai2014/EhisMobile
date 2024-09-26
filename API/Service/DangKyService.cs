@@ -1,10 +1,10 @@
-using API.Helper;
-using API.Model;
+using Common.Helpers;
+using Common.Model;
 using Data.EF;
 using Data.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace API.Services
+namespace Service
 {
   public interface IDangKyService
   {

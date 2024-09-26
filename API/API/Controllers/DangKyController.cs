@@ -1,8 +1,8 @@
-using API.Model;
-using API.Services;
+using Common.Model;
 using Data.EF;
 using Microsoft.AspNetCore.Mvc;
 using Org.BouncyCastle.Ocsp;
+using Service;
 
 [ApiController]
 [Route("[controller]")]

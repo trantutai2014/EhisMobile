@@ -1,13 +1,10 @@
-using API.Model;
 using Common.Constants;
 using Common.Extensions;
 using Data.Interfaces;
 using Data.Models;
-using MDP.Data.Models;
-using MDP.Data.Models.SKDT;
+using Data.Models.SKDT;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
-using System;
 using Z.EntityFramework.Extensions;
 
 public class MDPDbContext : DbContext
