@@ -3,6 +3,8 @@ using Common.Constants;
 using Common.Extensions;
 using Data.Interfaces;
 using Data.Models;
+using MDP.Data.Models;
+using MDP.Data.Models.SKDT;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -32,6 +34,14 @@ public class MDPDbContext : DbContext
   public DbSet<RoleNavigationMenu> RoleNavigationMenus { get; set; }
 
   public DbSet<DMCoSo> DMCoSos { get; set; }
+  public DbSet<ThongTinKhamChuaBenh130> ThongTinKhamChuaBenh130s { get; set; }
+  public virtual DbSet<SKDT_HoSo> SKDT_HoSos { get; set; }
+  public virtual DbSet<SKDT_DMNgheNghiep> SKDT_DMNgheNghieps { get; set; }
+  public virtual DbSet<SKDT_DMPhuongXa> SKDT_DMPhuongXas { get; set; }
+  public virtual DbSet<SKDT_DMQuanHuyen> SKDT_DMQuanHuyens { get; set; }
+  public virtual DbSet<SKDT_DMQuocTich> SKDT_DMQuocTichs { get; set; }
+  public virtual DbSet<SKDT_DMTinhThanh> SKDT_DMTinhThanhs { get; set; }
+  public virtual DbSet<SoTheBHYT> SoTheBHYTs { get; set; }
   protected override void OnModelCreating(ModelBuilder modelBuilder)
   {
     ConfigureModel(modelBuilder);
@@ -45,8 +55,20 @@ public class MDPDbContext : DbContext
     var userRole = modelBuilder.Entity<UserRole>();
     var navigationMenu = modelBuilder.Entity<NavigationMenu>();
     var roleNavigationMenu = modelBuilder.Entity<RoleNavigationMenu>();
-
+    var thongtinkcb130 = modelBuilder.Entity<ThongTinKhamChuaBenh130>();
     var dmcoso = modelBuilder.Entity<DMCoSo>();
+    var skdt_hoso = modelBuilder.Entity<SKDT_HoSo>();
+    var skdt_dmnghe = modelBuilder.Entity<SKDT_DMNgheNghiep>();
+    var skdt_dmphuongxa = modelBuilder.Entity<SKDT_DMPhuongXa>();
+    var skdt_dmquanhuyen = modelBuilder.Entity<SKDT_DMQuanHuyen>();
+    var skdt_dmquoctich = modelBuilder.Entity<SKDT_DMQuocTich>();
+    var skdt_dmtinhthanh = modelBuilder.Entity<SKDT_DMTinhThanh>();
+
+
+    skdt_hoso.HasOne(_ => _.SKDT_DMNgheNghiep).WithMany(_ => _.SKDT_HoSos).HasForeignKey(_ => _.MaNgheNghiep);
+    skdt_hoso.HasOne(_ => _.SKDT_DMQuocTich).WithMany(_ => _.SKDT_HoSos).HasForeignKey(_ => _.MaQuocTich);
+    skdt_hoso.HasOne(_ => _.SKDT_DMPhuongXa).WithMany(_ => _.SKDT_HoSos).HasForeignKey(_ => _.MaPhuongXa);
+    skdt_hoso.HasOne(_ => _.SKDT_DMDanToc).WithMany(_ => _.SKDT_HoSos).HasForeignKey(_ => _.MaDanToc);
 
     user.HasIndex(_ => _.Id);
     user.HasIndex(_ => _.Username)
