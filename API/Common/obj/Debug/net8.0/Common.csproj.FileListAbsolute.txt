@@ -24,3 +24,16 @@ D:\Hocs\developer\SongAn\EhisMobile\EhisMobile\API\Common\obj\Debug\net8.0\Commo
 D:\Hocs\developer\SongAn\EhisMobile\EhisMobile\API\Common\obj\Debug\net8.0\refint\Common.dll
 D:\Hocs\developer\SongAn\EhisMobile\EhisMobile\API\Common\obj\Debug\net8.0\Common.pdb
 D:\Hocs\developer\SongAn\EhisMobile\EhisMobile\API\Common\obj\Debug\net8.0\ref\Common.dll
+D:\tt\EhisMB\API\Common\bin\Debug\net8.0\Common.deps.json
+D:\tt\EhisMB\API\Common\bin\Debug\net8.0\Common.dll
+D:\tt\EhisMB\API\Common\bin\Debug\net8.0\Common.pdb
+D:\tt\EhisMB\API\Common\obj\Debug\net8.0\Common.csproj.AssemblyReference.cache
+D:\tt\EhisMB\API\Common\obj\Debug\net8.0\Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\tt\EhisMB\API\Common\obj\Debug\net8.0\Common.AssemblyInfoInputs.cache
+D:\tt\EhisMB\API\Common\obj\Debug\net8.0\Common.AssemblyInfo.cs
+D:\tt\EhisMB\API\Common\obj\Debug\net8.0\Common.csproj.CoreCompileInputs.cache
+D:\tt\EhisMB\API\Common\obj\Debug\net8.0\Common.sourcelink.json
+D:\tt\EhisMB\API\Common\obj\Debug\net8.0\Common.dll
+D:\tt\EhisMB\API\Common\obj\Debug\net8.0\refint\Common.dll
+D:\tt\EhisMB\API\Common\obj\Debug\net8.0\Common.pdb
+D:\tt\EhisMB\API\Common\obj\Debug\net8.0\ref\Common.dll
