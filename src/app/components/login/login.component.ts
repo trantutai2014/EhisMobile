@@ -67,25 +67,38 @@ export class LoginComponent implements OnInit {
 
   async loginqr() {
     try {
-      // Create the QRScanner instance and pass the video element
       this.qrScannerInstance = new QrScanner(this.videoElem.nativeElement, (result) => {
         console.log('Scanned result:', result);
-        this.qrScannerInstance.stop(); // Stop the camera after scanning
-        this.showScannedDataAlert(result); // Show the result to the user
+
+        this.qrScannerInstance.stop();
+
+        this.showScannedDataAlert(result);
       });
 
-      // Start scanning (this will request camera access)
+      // Start scanning the QR code
       await this.qrScannerInstance.start();
     } catch (error) {
       console.error('Error scanning QR code:', error);
+      this.showErrorAlert('Error scanning QR code. Please try again.');
     }
   }
 
-  // Show alert with the scanned data
+  // Function to show the alert with scanned QR code data
   async showScannedDataAlert(scannedData: string) {
     const alert = await this.alertController.create({
       header: 'Scanned QR Code',
       message: `Data: ${scannedData}`,
+      buttons: ['OK'],
+    });
+
+    await alert.present();
+  }
+
+  // Function to show an error alert
+  async showErrorAlert(errorMessage: string) {
+    const alert = await this.alertController.create({
+      header: 'Error',
+      message: errorMessage,
       buttons: ['OK'],
     });
 
