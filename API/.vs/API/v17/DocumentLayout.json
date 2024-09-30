@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "D:\\EhisSongAn\\EhisMobile\\API\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C349B7AB-35F2-4E9F-8BBF-92BE7CBCBADF}|Service\\Service.csproj|d:\\ehissongan\\ehismobile\\api\\service\\qrcodeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C349B7AB-35F2-4E9F-8BBF-92BE7CBCBADF}|Service\\Service.csproj|solutionrelative:service\\qrcodeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{13564404-4BC6-45F6-B3D7-042A4D9CC8F2}|API\\API.csproj|d:\\ehissongan\\ehismobile\\api\\api\\controllers\\qrcodecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{13564404-4BC6-45F6-B3D7-042A4D9CC8F2}|API\\API.csproj|solutionrelative:api\\controllers\\qrcodecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{13564404-4BC6-45F6-B3D7-042A4D9CC8F2}|API\\API.csproj|d:\\ehissongan\\ehismobile\\api\\api\\controllers\\dangnhapcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{13564404-4BC6-45F6-B3D7-042A4D9CC8F2}|API\\API.csproj|solutionrelative:api\\controllers\\dangnhapcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C349B7AB-35F2-4E9F-8BBF-92BE7CBCBADF}|Service\\Service.csproj|d:\\ehissongan\\ehismobile\\api\\service\\qrcodeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C349B7AB-35F2-4E9F-8BBF-92BE7CBCBADF}|Service\\Service.csproj|solutionrelative:service\\qrcodeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B468F22D-8BCC-4C42-A04B-1F40D50731E8}|Data\\Data.csproj|d:\\ehissongan\\ehismobile\\api\\data\\ef\\mdpdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -62,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 15,
+          "SelectedChildIndex": 14,
           "Children": [
             {
               "$type": "Bookmark",
@@ -190,7 +190,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "DangNhapController.cs",
               "DocumentMoniker": "D:\\EhisSongAn\\EhisMobile\\API\\API\\Controllers\\DangNhapController.cs",
               "RelativeDocumentMoniker": "API\\Controllers\\DangNhapController.cs",
@@ -202,25 +202,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "QRCodeService.cs",
               "DocumentMoniker": "D:\\EhisSongAn\\EhisMobile\\API\\Service\\QRCodeService.cs",
               "RelativeDocumentMoniker": "Service\\QRCodeService.cs",
               "ToolTip": "D:\\EhisSongAn\\EhisMobile\\API\\Service\\QRCodeService.cs",
               "RelativeToolTip": "Service\\QRCodeService.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBgAAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBcAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T02:19:42.945Z"
+              "WhenOpened": "2024-09-30T02:19:42.945Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "QRCodeController.cs",
               "DocumentMoniker": "D:\\EhisSongAn\\EhisMobile\\API\\API\\Controllers\\QRCodeController.cs",
               "RelativeDocumentMoniker": "API\\Controllers\\QRCodeController.cs",
               "ToolTip": "D:\\EhisSongAn\\EhisMobile\\API\\API\\Controllers\\QRCodeController.cs",
               "RelativeToolTip": "API\\Controllers\\QRCodeController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAxwBsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAuwBoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-30T02:13:24.779Z",
               "EditorCaption": ""

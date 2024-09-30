@@ -90,8 +90,7 @@
               "RelativeToolTip": "Data\\EF\\MDPDbContext.cs",
               "ViewState": "AgIAADgAAAAAAAAAAAD4vz8AAABpAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T07:13:31.593Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-30T07:13:31.593Z"
             },
             {
               "$type": "Document",
@@ -139,8 +138,7 @@
               "RelativeToolTip": "API\\Program.cs",
               "ViewState": "AgIAADwAAAAAAAAAAAAAAEMAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T03:55:01.546Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-30T03:55:01.546Z"
             },
             {
               "$type": "Document",
@@ -152,8 +150,7 @@
               "RelativeToolTip": "Data\\EF\\Repository.cs",
               "ViewState": "AgIAAGQAAAAAAAAAAAA7wIIAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T02:48:51.034Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-30T02:48:51.034Z"
             },
             {
               "$type": "Document",
@@ -201,8 +198,7 @@
               "RelativeToolTip": "API\\Controllers\\DangNhapController.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAAYwAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T02:35:56.92Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-30T02:35:56.92Z"
             },
             {
               "$type": "Document",
@@ -214,8 +210,7 @@
               "RelativeToolTip": "Service\\QRCodeService.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAQwBgAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T02:19:42.945Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-30T02:19:42.945Z"
             },
             {
               "$type": "Document",
@@ -225,7 +220,7 @@
               "RelativeDocumentMoniker": "API\\Controllers\\QRCodeController.cs",
               "ToolTip": "D:\\EhisSongAn\\EhisMobile\\API\\API\\Controllers\\QRCodeController.cs",
               "RelativeToolTip": "API\\Controllers\\QRCodeController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBYAAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwBsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-30T02:13:24.779Z",
               "EditorCaption": ""
