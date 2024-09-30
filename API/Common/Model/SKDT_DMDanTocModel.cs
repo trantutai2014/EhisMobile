@@ -1,4 +1,4 @@
-namespace API.Model
+namespace Common.Model
 {
   public class SKDT_DMDanTocModel
   {

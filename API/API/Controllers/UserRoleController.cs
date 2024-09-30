@@ -1,8 +1,8 @@
-using API.Services;
-using MDP.API.Controllers;
+using API.Controllers;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Org.BouncyCastle.Ocsp;
+using Service;
 
 public class UserRolesController : BaseController
 {

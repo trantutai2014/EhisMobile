@@ -1,8 +1,6 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
-using API.Services;
-using API.Model;
 using Data.EF;
 using System.Reflection;
 using NetCore.AutoRegisterDi;
@@ -10,6 +8,8 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Service;
+using Common.Model;
+using Common.Helpers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -64,7 +64,7 @@ builder.Services.AddScoped<UserRoleService, UserRoleService>();
 builder.Services.AddScoped<DangNhapService, DangNhapService>();
 builder.Services.AddScoped<DangKyService, DangKyService>();
 builder.Services.AddScoped<IPasswordHasher<UserModel>, PasswordHasher<UserModel>>();
-builder.Services.AddScoped<API.Helper.PasswordHelper, API.Helper.PasswordHelper>();
+builder.Services.AddScoped<PasswordHelper, PasswordHelper>();
 builder.Services.AddScoped(typeof(IRepository), typeof(Repository));
 var assembliesToScan = new[]
            {

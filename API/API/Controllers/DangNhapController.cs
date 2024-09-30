@@ -1,15 +1,9 @@
-﻿using API.Services;
 using Microsoft.AspNetCore.Mvc;
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using Microsoft.IdentityModel.Tokens;
-using API.Model;
-using System.Text;
 using Service;
 
 namespace API.Controllers
 {
-    [ApiController]
+  [ApiController]
     [Route("api/[controller]")]
     public class DangNhapController : ControllerBase
     {
