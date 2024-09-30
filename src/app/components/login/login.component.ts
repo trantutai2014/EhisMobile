@@ -7,7 +7,8 @@ import { ValidatorConstants } from 'src/app/core/constants/validator.constants';
 import { LoginService } from 'src/app/core/services/login.service';
 import { AuthService } from 'src/app/core/services/auth.service';
 import QrScanner from 'qr-scanner';
-import { Camera } from '@capacitor/camera';
+import { Camera, CameraResultType } from '@capacitor/camera'; // Import Capacitor Camera plugin
+import { Capacitor } from '@capacitor/core'; // Import Capacitor core for platform detection
 
 @Component({
   selector: 'app-login',
@@ -68,25 +69,32 @@ export class LoginComponent implements OnInit {
 
   async loginqr() {
     try {
-      // Check if Camera permission is granted
-      const permissionStatus = await Camera.requestPermissions();
+      // Check if we are running on a native platform (Android/iOS) or web
+      if (Capacitor.isNativePlatform()) {
+        // Handle QR code scanning on native platforms using Capacitor Camera
+        const cameraPermission = await Camera.requestPermissions();
+        if (cameraPermission.camera === 'granted') {
+          const image = await Camera.getPhoto({
+            quality: 90,
+            allowEditing: false,
+            resultType: CameraResultType.Base64, // or use CameraResultType.Uri if needed
+          });
 
-      if (permissionStatus.camera === 'granted') {
-        // Initialize the QR scanner instance with the video element and the scan result callback
+          // Handle the image data here, e.g., send it to a server for processing.
+          this.showScannedDataAlert(image.base64String!); // Show the base64 string result
+        } else {
+          this.showErrorAlert('Camera permission is required to scan QR codes.');
+        }
+      } else {
+        // Handle QR code scanning on the web using the QrScanner library
         this.qrScannerInstance = new QrScanner(this.videoElem.nativeElement, (result) => {
           console.log('Scanned result:', result);
-
-          // Stop the QR scanner after getting the result
           this.qrScannerInstance.stop();
-
-          // Show the scanned data in an alert
           this.showScannedDataAlert(result);
         });
 
         // Start scanning the QR code
         await this.qrScannerInstance.start();
-      } else {
-        this.showErrorAlert('Camera permission is required to scan QR codes.');
       }
     } catch (error) {
       console.error('Error scanning QR code:', error);
@@ -115,5 +123,4 @@ export class LoginComponent implements OnInit {
 
     await alert.present();
   }
-
 }
