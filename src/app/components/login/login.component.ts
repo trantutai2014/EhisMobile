@@ -7,6 +7,7 @@ import { ValidatorConstants } from 'src/app/core/constants/validator.constants';
 import { LoginService } from 'src/app/core/services/login.service';
 import { AuthService } from 'src/app/core/services/auth.service';
 import QrScanner from 'qr-scanner';
+import { Camera } from '@capacitor/camera';
 
 @Component({
   selector: 'app-login',
@@ -67,16 +68,26 @@ export class LoginComponent implements OnInit {
 
   async loginqr() {
     try {
-      this.qrScannerInstance = new QrScanner(this.videoElem.nativeElement, (result) => {
-        console.log('Scanned result:', result);
+      // Check if Camera permission is granted
+      const permissionStatus = await Camera.requestPermissions();
 
-        this.qrScannerInstance.stop();
+      if (permissionStatus.camera === 'granted') {
+        // Initialize the QR scanner instance with the video element and the scan result callback
+        this.qrScannerInstance = new QrScanner(this.videoElem.nativeElement, (result) => {
+          console.log('Scanned result:', result);
 
-        this.showScannedDataAlert(result);
-      });
+          // Stop the QR scanner after getting the result
+          this.qrScannerInstance.stop();
 
-      // Start scanning the QR code
-      await this.qrScannerInstance.start();
+          // Show the scanned data in an alert
+          this.showScannedDataAlert(result);
+        });
+
+        // Start scanning the QR code
+        await this.qrScannerInstance.start();
+      } else {
+        this.showErrorAlert('Camera permission is required to scan QR codes.');
+      }
     } catch (error) {
       console.error('Error scanning QR code:', error);
       this.showErrorAlert('Error scanning QR code. Please try again.');
