@@ -1,5 +1,7 @@
+using Common.Exceptions;
 using Data.Abstract;
 using Data.Interfaces;
+using Data.Models.SKDT;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System;
@@ -11,91 +13,92 @@ using Z.EntityFramework.Extensions;
 
 namespace Data.EF
 {
-    public interface IRepository : IDisposable
-    {
-        #region Get
+  public interface IRepository : IDisposable
+  {
+    #region Get
 
-        TEntity Get<TEntity>(string id, params Expression<Func<TEntity, object>>[] propertySelectors) where TEntity : BaseEntity;
+    TEntity Get<TEntity>(string id, params Expression<Func<TEntity, object>>[] propertySelectors) where TEntity : BaseEntity;
 
-        TEntity Get<TEntity>(Expression<Func<TEntity, bool>> predicate, params Expression<Func<TEntity, object>>[] propertySelectors) where TEntity : BaseEntity;
+    TEntity Get<TEntity>(Expression<Func<TEntity, bool>> predicate, params Expression<Func<TEntity, object>>[] propertySelectors) where TEntity : BaseEntity;
 
-        Task<TEntity> GetAsync<TEntity>(string id, params Expression<Func<TEntity, object>>[] propertySelectors) where TEntity : BaseEntity;
+    Task<TEntity> GetAsync<TEntity>(string id, params Expression<Func<TEntity, object>>[] propertySelectors) where TEntity : BaseEntity;
 
-        Task<TEntity> GetAsync<TEntity>(Expression<Func<TEntity, bool>> predicate, params Expression<Func<TEntity, object>>[] propertySelectors) where TEntity : BaseEntity;
+    Task<TEntity> GetAsync<TEntity>(Expression<Func<TEntity, bool>> predicate, params Expression<Func<TEntity, object>>[] propertySelectors) where TEntity : BaseEntity;
 
-        #endregion Get
+    TEntity GetFirt<TEntity>(Expression<Func<TEntity, bool>> predicate, params Expression<Func<TEntity, object>>[] propertySelectors) where TEntity : class;
 
-        #region GetAll
+    TEntity GetByCCCD<TEntity>(string CCCD) where TEntity : class;
+    Task<SKDT_HoSo> GetByCCCD(string CCCD);
+    #endregion Get
 
-        IQueryable<TEntity> GetAll<TEntity>() where TEntity : BaseEntity;
+    #region GetAll
 
-        IQueryable<TEntity> GetAll<TEntity>(params Expression<Func<TEntity, object>>[] propertySelectors) where TEntity : BaseEntity;
+    IQueryable<TEntity> GetAll<TEntity>() where TEntity : BaseEntity;
 
-        IQueryable<TEntity> GetAll<TEntity>(Expression<Func<TEntity, bool>> predicate, params Expression<Func<TEntity, object>>[] propertySelectors) where TEntity : BaseEntity;
+    IQueryable<TEntity> GetAll<TEntity>(params Expression<Func<TEntity, object>>[] propertySelectors) where TEntity : BaseEntity;
 
-        #endregion GetAll
+    IQueryable<TEntity> GetAll<TEntity>(Expression<Func<TEntity, bool>> predicate, params Expression<Func<TEntity, object>>[] propertySelectors) where TEntity : BaseEntity;
+    IQueryable<TEntity> GetAllNoBase<TEntity>() where TEntity : class;
+    IQueryable<TEntity> GetAllNoBase<TEntity>(Expression<Func<TEntity, bool>> predicate, params Expression<Func<TEntity, object>>[] propertySelectors) where TEntity : class;
+    IQueryable<TEntity> GetAllNoBase<TEntity>(params Expression<Func<TEntity, object>>[] propertySelectors) where TEntity : class;
+    #endregion GetAll
 
-        #region Insert
+    #region Insert
 
-        TEntity Insert<TEntity>(TEntity entity) where TEntity : BaseEntity;
+    TEntity Insert<TEntity>(TEntity entity) where TEntity : BaseEntity;
 
-        void Insert<TEntity>(List<TEntity> entities) where TEntity : BaseEntity;
+    void Insert<TEntity>(List<TEntity> entities) where TEntity : BaseEntity;
 
-        Task<TEntity> InsertAsync<TEntity>(TEntity entity) where TEntity : BaseEntity;
+    Task<TEntity> InsertAsync<TEntity>(TEntity entity) where TEntity : BaseEntity;
 
-        Task InsertAsync<TEntity>(List<TEntity> entities) where TEntity : BaseEntity;
+    Task InsertAsync<TEntity>(List<TEntity> entities) where TEntity : BaseEntity;
 
-        Task<bool> BulkInsertAsync<TEntity>(List<TEntity> entities) where TEntity : BaseEntity;
+    Task<bool> BulkInsertAsync<TEntity>(List<TEntity> entities) where TEntity : BaseEntity;
 
-        #endregion Insert
+    #endregion Insert
 
-        #region Update
+    #region Update
 
-        TEntity Update<TEntity>(TEntity entity) where TEntity : BaseEntity;
+    TEntity Update<TEntity>(TEntity entity) where TEntity : BaseEntity;
 
-        void Update<TEntity>(List<TEntity> entities) where TEntity : BaseEntity;
+    void Update<TEntity>(List<TEntity> entities) where TEntity : BaseEntity;
 
-        #endregion Update
+    #endregion Update
 
-        #region Delete
+    #region Delete
 
-        TEntity Delete<TEntity>(string id) where TEntity : BaseEntity;
+    TEntity Delete<TEntity>(string id) where TEntity : BaseEntity;
 
-        TEntity Delete<TEntity>(TEntity entity) where TEntity : BaseEntity;
+    TEntity Delete<TEntity>(TEntity entity) where TEntity : BaseEntity;
 
-        void Delete<TEntity>(List<TEntity> entities) where TEntity : BaseEntity;
+    void Delete<TEntity>(List<TEntity> entities) where TEntity : BaseEntity;
 
-        #endregion Delete
+    #endregion Delete
 
-        #region Other
+    #region Other
 
-        /// <summary>
-        /// Lấy giá trị lớn nhất của cột SortOrder
-        /// </summary>
-        int GetMaxStt<TEntity>(Expression<Func<TEntity, int>> exp) where TEntity : BaseEntity;
+    /// <summary>
+    /// Lấy giá trị lớn nhất của cột SortOrder
+    /// </summary>
+    int GetMaxStt<TEntity>(Expression<Func<TEntity, int>> exp) where TEntity : BaseEntity;
 
     #endregion Other
     MDPDbContext GetDbContext();
-        DbSet<TEntity> GetDbSet<TEntity>() where TEntity : class;
-    }
-
+    DbSet<TEntity> GetDbSet<TEntity>() where TEntity : class;
+  }
     public class Repository : IRepository
     {
         private readonly MDPDbContext _dbContext;
 
-        public Repository(MDPDbContext dbContext)
+
+    public Repository(MDPDbContext dbContext)
         {
             _dbContext = dbContext;
 
         }
-       
-        //get dbcontext
-        public MDPDbContext GetDbContext()
-        {
-            return _dbContext;
-        }
 
-        public DbSet<TEntity> GetDbSet<TEntity>() where TEntity : class
+    //get dbcontext
+    public DbSet<TEntity> GetDbSet<TEntity>() where TEntity : class
         {
             return _dbContext.Set<TEntity>();
         }
@@ -111,6 +114,10 @@ namespace Data.EF
         {
             return GetAll(predicate, propertySelectors).FirstOrDefault();
         }
+        public TEntity GetFirt<TEntity>(Expression<Func<TEntity, bool>> predicate, params Expression<Func<TEntity, object>>[] propertySelectors) where TEntity : class
+        {
+          return GetAllNoBase(predicate, propertySelectors).FirstOrDefault();
+        }
 
         public async Task<TEntity> GetAsync<TEntity>(string id, params Expression<Func<TEntity, object>>[] propertySelectors) where TEntity : BaseEntity
         {
@@ -121,20 +128,34 @@ namespace Data.EF
         {
             return await GetAll(predicate, propertySelectors).FirstOrDefaultAsync();
         }
+        public TEntity GetByCCCD<TEntity>(string CCCD) where TEntity : class
+        {
+            return _dbContext.Set<TEntity>().Find(CCCD);
+        }
+    public async Task<SKDT_HoSo> GetByCCCD(string CCCD)
+        {
+            return await _dbContext.Set<SKDT_HoSo>().FirstOrDefaultAsync(x => x.CCCD == CCCD);
+        }
 
-        #endregion Get
+    #endregion Get
 
-        #region GetAll
+    #region GetAll
 
-        public IQueryable<TEntity> GetAll<TEntity>() where TEntity : BaseEntity
+    public IQueryable<TEntity> GetAll<TEntity>() where TEntity : BaseEntity
         {
             if (typeof(TEntity).GetInterfaces().Contains(typeof(IHasSoftDelete)))
                 return _dbContext.Set<TEntity>().Where(x => ((IHasSoftDelete)x).IsDeleted == false);
 
             return _dbContext.Set<TEntity>();
         }
+    public IQueryable<TEntity> GetAllNoBase<TEntity>() where TEntity : class
+    {
+      if (typeof(TEntity).GetInterfaces().Contains(typeof(IHasSoftDelete)))
+        return _dbContext.Set<TEntity>().Where(x => ((IHasSoftDelete)x).IsDeleted == false);
 
-        public IQueryable<TEntity> GetAll<TEntity>(params Expression<Func<TEntity, object>>[] propertySelectors) where TEntity : BaseEntity
+      return _dbContext.Set<TEntity>();
+    }
+    public IQueryable<TEntity> GetAll<TEntity>(params Expression<Func<TEntity, object>>[] propertySelectors) where TEntity : BaseEntity
         {
             var query = GetAll<TEntity>();
 
@@ -151,13 +172,28 @@ namespace Data.EF
         {
             return GetAll(propertySelectors).Where(predicate);
         }
+    public IQueryable<TEntity> GetAllNoBase<TEntity>(params Expression<Func<TEntity, object>>[] propertySelectors) where TEntity : class
+    {
+      var query = GetAllNoBase<TEntity>();
 
+      if (propertySelectors != null)
+      {
+        foreach (var includeProperty in propertySelectors)
+          query = query.Include(includeProperty);
+      }
 
-        #endregion GetAll
+      return query;
+    }
+    public IQueryable<TEntity> GetAllNoBase<TEntity>(Expression<Func<TEntity, bool>> predicate, params Expression<Func<TEntity, object>>[] propertySelectors) where TEntity : class
+    {
+      return GetAllNoBase(propertySelectors).Where(predicate);
+    }
+
+    #endregion GetAll
 
         #region Insert
 
-        public TEntity Insert<TEntity>(TEntity entity) where TEntity : BaseEntity
+    public TEntity Insert<TEntity>(TEntity entity) where TEntity : BaseEntity
         {
             return _dbContext.Set<TEntity>().Add(entity).Entity;
         }
@@ -271,6 +307,11 @@ namespace Data.EF
             return 0;
         }
 
-        #endregion Other
+      public MDPDbContext GetDbContext()
+      {
+        throw new NotImplementedException();
+      }
+
+      #endregion Other
     }
 }

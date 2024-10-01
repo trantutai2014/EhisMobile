@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "d:\\tt\\EhisMB\\API\\API\\API.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "d:\\tt\\EhisMB\\API\\API\\API.csproj",
         "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
         "outputPath": "d:\\tt\\EhisMB\\API\\API\\obj\\",
+=======
+    "D:\\EhisSongAn\\EhisMobile\\API\\API\\API.csproj": {}
+  },
+  "projects": {
+    "D:\\EhisSongAn\\EhisMobile\\API\\API\\API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\EhisSongAn\\EhisMobile\\API\\API\\API.csproj",
+        "projectName": "API",
+        "projectPath": "D:\\EhisSongAn\\EhisMobile\\API\\API\\API.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "D:\\EhisSongAn\\EhisMobile\\API\\API\\obj\\",
+>>>>>>> 991201cda0f38e56e298942fa6beb5ab22653af8
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,6 +47,7 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+<<<<<<< HEAD
               "d:\\tt\\EhisMB\\API\\Common\\Common.csproj": {
                 "projectPath": "d:\\tt\\EhisMB\\API\\Common\\Common.csproj"
               },
@@ -41,6 +56,16 @@
               },
               "d:\\tt\\EhisMB\\API\\Service\\Service.csproj": {
                 "projectPath": "d:\\tt\\EhisMB\\API\\Service\\Service.csproj"
+=======
+              "D:\\EhisSongAn\\EhisMobile\\API\\Common\\Common.csproj": {
+                "projectPath": "D:\\EhisSongAn\\EhisMobile\\API\\Common\\Common.csproj"
+              },
+              "D:\\EhisSongAn\\EhisMobile\\API\\Data\\Data.csproj": {
+                "projectPath": "D:\\EhisSongAn\\EhisMobile\\API\\Data\\Data.csproj"
+              },
+              "D:\\EhisSongAn\\EhisMobile\\API\\Service\\Service.csproj": {
+                "projectPath": "D:\\EhisSongAn\\EhisMobile\\API\\Service\\Service.csproj"
+>>>>>>> 991201cda0f38e56e298942fa6beb5ab22653af8
               }
             }
           }
@@ -121,6 +146,7 @@
         }
       }
     },
+<<<<<<< HEAD
     "d:\\tt\\EhisMB\\API\\Common\\Common.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -129,6 +155,16 @@
         "projectPath": "d:\\tt\\EhisMB\\API\\Common\\Common.csproj",
         "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
         "outputPath": "d:\\tt\\EhisMB\\API\\Common\\obj\\",
+=======
+    "D:\\EhisSongAn\\EhisMobile\\API\\Common\\Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\EhisSongAn\\EhisMobile\\API\\Common\\Common.csproj",
+        "projectName": "Common",
+        "projectPath": "D:\\EhisSongAn\\EhisMobile\\API\\Common\\Common.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "D:\\EhisSongAn\\EhisMobile\\API\\Common\\obj\\",
+>>>>>>> 991201cda0f38e56e298942fa6beb5ab22653af8
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -197,6 +233,7 @@
         }
       }
     },
+<<<<<<< HEAD
     "d:\\tt\\EhisMB\\API\\Data\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -205,6 +242,16 @@
         "projectPath": "d:\\tt\\EhisMB\\API\\Data\\Data.csproj",
         "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
         "outputPath": "d:\\tt\\EhisMB\\API\\Data\\obj\\",
+=======
+    "D:\\EhisSongAn\\EhisMobile\\API\\Data\\Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\EhisSongAn\\EhisMobile\\API\\Data\\Data.csproj",
+        "projectName": "Data",
+        "projectPath": "D:\\EhisSongAn\\EhisMobile\\API\\Data\\Data.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "D:\\EhisSongAn\\EhisMobile\\API\\Data\\obj\\",
+>>>>>>> 991201cda0f38e56e298942fa6beb5ab22653af8
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -226,8 +273,13 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+<<<<<<< HEAD
               "d:\\tt\\EhisMB\\API\\Common\\Common.csproj": {
                 "projectPath": "d:\\tt\\EhisMB\\API\\Common\\Common.csproj"
+=======
+              "D:\\EhisSongAn\\EhisMobile\\API\\Common\\Common.csproj": {
+                "projectPath": "D:\\EhisSongAn\\EhisMobile\\API\\Common\\Common.csproj"
+>>>>>>> 991201cda0f38e56e298942fa6beb5ab22653af8
               }
             }
           }
@@ -289,6 +341,7 @@
         }
       }
     },
+<<<<<<< HEAD
     "d:\\tt\\EhisMB\\API\\Service\\Service.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -297,6 +350,16 @@
         "projectPath": "d:\\tt\\EhisMB\\API\\Service\\Service.csproj",
         "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
         "outputPath": "d:\\tt\\EhisMB\\API\\Service\\obj\\",
+=======
+    "D:\\EhisSongAn\\EhisMobile\\API\\Service\\Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\EhisSongAn\\EhisMobile\\API\\Service\\Service.csproj",
+        "projectName": "Service",
+        "projectPath": "D:\\EhisSongAn\\EhisMobile\\API\\Service\\Service.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "D:\\EhisSongAn\\EhisMobile\\API\\Service\\obj\\",
+>>>>>>> 991201cda0f38e56e298942fa6beb5ab22653af8
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -318,11 +381,19 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+<<<<<<< HEAD
               "d:\\tt\\EhisMB\\API\\Common\\Common.csproj": {
                 "projectPath": "d:\\tt\\EhisMB\\API\\Common\\Common.csproj"
               },
               "d:\\tt\\EhisMB\\API\\Data\\Data.csproj": {
                 "projectPath": "d:\\tt\\EhisMB\\API\\Data\\Data.csproj"
+=======
+              "D:\\EhisSongAn\\EhisMobile\\API\\Common\\Common.csproj": {
+                "projectPath": "D:\\EhisSongAn\\EhisMobile\\API\\Common\\Common.csproj"
+              },
+              "D:\\EhisSongAn\\EhisMobile\\API\\Data\\Data.csproj": {
+                "projectPath": "D:\\EhisSongAn\\EhisMobile\\API\\Data\\Data.csproj"
+>>>>>>> 991201cda0f38e56e298942fa6beb5ab22653af8
               }
             }
           }

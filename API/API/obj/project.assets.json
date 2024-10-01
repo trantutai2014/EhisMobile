@@ -3586,11 +3586,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "d:\\tt\\EhisMB\\API\\API\\API.csproj",
       "projectName": "API",
       "projectPath": "d:\\tt\\EhisMB\\API\\API\\API.csproj",
       "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
       "outputPath": "d:\\tt\\EhisMB\\API\\API\\obj\\",
+=======
+      "projectUniqueName": "D:\\EhisSongAn\\EhisMobile\\API\\API\\API.csproj",
+      "projectName": "API",
+      "projectPath": "D:\\EhisSongAn\\EhisMobile\\API\\API\\API.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "D:\\EhisSongAn\\EhisMobile\\API\\API\\obj\\",
+>>>>>>> 991201cda0f38e56e298942fa6beb5ab22653af8
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3612,6 +3620,7 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
+<<<<<<< HEAD
             "d:\\tt\\EhisMB\\API\\Common\\Common.csproj": {
               "projectPath": "d:\\tt\\EhisMB\\API\\Common\\Common.csproj"
             },
@@ -3620,6 +3629,16 @@
             },
             "d:\\tt\\EhisMB\\API\\Service\\Service.csproj": {
               "projectPath": "d:\\tt\\EhisMB\\API\\Service\\Service.csproj"
+=======
+            "D:\\EhisSongAn\\EhisMobile\\API\\Common\\Common.csproj": {
+              "projectPath": "D:\\EhisSongAn\\EhisMobile\\API\\Common\\Common.csproj"
+            },
+            "D:\\EhisSongAn\\EhisMobile\\API\\Data\\Data.csproj": {
+              "projectPath": "D:\\EhisSongAn\\EhisMobile\\API\\Data\\Data.csproj"
+            },
+            "D:\\EhisSongAn\\EhisMobile\\API\\Service\\Service.csproj": {
+              "projectPath": "D:\\EhisSongAn\\EhisMobile\\API\\Service\\Service.csproj"
+>>>>>>> 991201cda0f38e56e298942fa6beb5ab22653af8
             }
           }
         }
@@ -3699,6 +3718,7 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-rc.1.24452.12/PortableRuntimeIdentifierGraph.json"
       }
     }
+<<<<<<< HEAD
   },
   "logs": [
     {
@@ -3752,4 +3772,7 @@
       ]
     }
   ]
+=======
+  }
+>>>>>>> 991201cda0f38e56e298942fa6beb5ab22653af8
 }

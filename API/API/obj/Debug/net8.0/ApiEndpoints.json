@@ -16,6 +16,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "YourNamespace.Controllers.QRCodeController",
+    "Method": "GetByCCCD",
+    "RelativePath": "api/QRCode/{cccd}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cccd",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "API.Controllers.TrangChuController",
     "Method": "GetHomeData",
     "RelativePath": "api/TrangChu",
@@ -45,7 +61,7 @@
     "Parameters": [
       {
         "Name": "model",
-        "Type": "API.Model.RegisterModel",
+        "Type": "Common.Model.RegisterModel",
         "IsRequired": true
       }
     ],

@@ -1,7 +1,10 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace Common.Model
 {
   public class SKDT_HoSoModel
   {
+    [Key]
     public string CCCD { get; set; }
     public string NgayCap { get; set; }
 

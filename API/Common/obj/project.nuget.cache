@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "uS0+ogdZtXE=",
   "success": true,
   "projectFilePath": "d:\\tt\\EhisMB\\API\\Common\\Common.csproj",
+=======
+  "dgSpecHash": "sfmCg2ZDi/Y=",
+  "success": true,
+  "projectFilePath": "D:\\EhisSongAn\\EhisMobile\\API\\Common\\Common.csproj",
+>>>>>>> 991201cda0f38e56e298942fa6beb5ab22653af8
   "expectedPackageFiles": [
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.0.0\\microsoft.aspnetcore.cryptography.internal.3.0.0.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.0.0\\microsoft.aspnetcore.cryptography.keyderivation.3.0.0.nupkg.sha512",

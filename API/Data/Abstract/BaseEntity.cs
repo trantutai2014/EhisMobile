@@ -1,11 +1,14 @@
-﻿using Common.Constants;
+using Common.Constants;
 using System.ComponentModel.DataAnnotations;
 
 namespace Data.Abstract
 {
-    public abstract class BaseEntity
+  public abstract class BaseEntity
+  {
+    [Key, Required, MaxLength(ValidatorConsts.MaxLengthGuid)]
+    public string Id
     {
-        [Key, Required, MaxLength(ValidatorConsts.MaxLengthGuid)]
-        public string Id { get; set; }
+      get; set;
     }
+  }
 }

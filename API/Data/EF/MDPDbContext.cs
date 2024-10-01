@@ -29,7 +29,6 @@ public class MDPDbContext : DbContext
   public DbSet<UserRole> UserRoles { get; set; }
   public DbSet<NavigationMenu> NavigationMenus { get; set; }
   public DbSet<RoleNavigationMenu> RoleNavigationMenus { get; set; }
-
   public DbSet<DMCoSo> DMCoSos { get; set; }
   public DbSet<ThongTinKhamChuaBenh130> ThongTinKhamChuaBenh130s { get; set; }
   public virtual DbSet<SKDT_HoSo> SKDT_HoSos { get; set; }
