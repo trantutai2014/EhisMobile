@@ -3,60 +3,44 @@
   "WorkspaceRootPath": "D:\\EhisSongAn\\EhisMobile\\API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{13564404-4BC6-45F6-B3D7-042A4D9CC8F2}|API\\API.csproj|d:\\ehissongan\\ehismobile\\api\\api\\controllers\\qrcodecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{13564404-4BC6-45F6-B3D7-042A4D9CC8F2}|API\\API.csproj|solutionrelative:api\\controllers\\qrcodecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C349B7AB-35F2-4E9F-8BBF-92BE7CBCBADF}|Service\\Service.csproj|d:\\ehissongan\\ehismobile\\api\\service\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C349B7AB-35F2-4E9F-8BBF-92BE7CBCBADF}|Service\\Service.csproj|solutionrelative:service\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C349B7AB-35F2-4E9F-8BBF-92BE7CBCBADF}|Service\\Service.csproj|d:\\ehissongan\\ehismobile\\api\\service\\qrcodeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C349B7AB-35F2-4E9F-8BBF-92BE7CBCBADF}|Service\\Service.csproj|solutionrelative:service\\qrcodeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{91273B5C-608A-44D1-A72B-AC346FCDE928}|Common\\Common.csproj|d:\\ehissongan\\ehismobile\\api\\common\\helpers\\keyhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91273B5C-608A-44D1-A72B-AC346FCDE928}|Common\\Common.csproj|solutionrelative:common\\helpers\\keyhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{13564404-4BC6-45F6-B3D7-042A4D9CC8F2}|API\\API.csproj|d:\\ehissongan\\ehismobile\\api\\api\\controllers\\dangnhapcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{13564404-4BC6-45F6-B3D7-042A4D9CC8F2}|API\\API.csproj|solutionrelative:api\\controllers\\dangnhapcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C349B7AB-35F2-4E9F-8BBF-92BE7CBCBADF}|Service\\Service.csproj|d:\\ehissongan\\ehismobile\\api\\service\\dangnhapservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C349B7AB-35F2-4E9F-8BBF-92BE7CBCBADF}|Service\\Service.csproj|solutionrelative:service\\dangnhapservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{13564404-4BC6-45F6-B3D7-042A4D9CC8F2}|API\\API.csproj|d:\\ehissongan\\ehismobile\\api\\api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{13564404-4BC6-45F6-B3D7-042A4D9CC8F2}|API\\API.csproj|solutionrelative:api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B468F22D-8BCC-4C42-A04B-1F40D50731E8}|Data\\Data.csproj|d:\\ehissongan\\ehismobile\\api\\data\\ef\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B468F22D-8BCC-4C42-A04B-1F40D50731E8}|Data\\Data.csproj|solutionrelative:data\\ef\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{13564404-4BC6-45F6-B3D7-042A4D9CC8F2}|API\\API.csproj|d:\\ehissongan\\ehismobile\\api\\api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{13564404-4BC6-45F6-B3D7-042A4D9CC8F2}|API\\API.csproj|solutionrelative:api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B468F22D-8BCC-4C42-A04B-1F40D50731E8}|Data\\Data.csproj|d:\\ehissongan\\ehismobile\\api\\data\\models\\skdt\\skdt_hoso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B468F22D-8BCC-4C42-A04B-1F40D50731E8}|Data\\Data.csproj|solutionrelative:data\\models\\skdt\\skdt_hoso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{91273B5C-608A-44D1-A72B-AC346FCDE928}|Common\\Common.csproj|d:\\ehissongan\\ehismobile\\api\\common\\model\\skdt_hosomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91273B5C-608A-44D1-A72B-AC346FCDE928}|Common\\Common.csproj|solutionrelative:common\\model\\skdt_hosomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B468F22D-8BCC-4C42-A04B-1F40D50731E8}|Data\\Data.csproj|d:\\ehissongan\\ehismobile\\api\\data\\ef\\mdpdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B468F22D-8BCC-4C42-A04B-1F40D50731E8}|Data\\Data.csproj|solutionrelative:data\\ef\\mdpdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{13564404-4BC6-45F6-B3D7-042A4D9CC8F2}|API\\API.csproj|d:\\ehissongan\\ehismobile\\api\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{13564404-4BC6-45F6-B3D7-042A4D9CC8F2}|API\\API.csproj|solutionrelative:api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C349B7AB-35F2-4E9F-8BBF-92BE7CBCBADF}|Service\\Service.csproj|d:\\ehissongan\\ehismobile\\api\\service\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C349B7AB-35F2-4E9F-8BBF-92BE7CBCBADF}|Service\\Service.csproj|solutionrelative:service\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13564404-4BC6-45F6-B3D7-042A4D9CC8F2}|API\\API.csproj|d:\\ehissongan\\ehismobile\\api\\api\\controllers\\qrcodecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{13564404-4BC6-45F6-B3D7-042A4D9CC8F2}|API\\API.csproj|solutionrelative:api\\controllers\\qrcodecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B468F22D-8BCC-4C42-A04B-1F40D50731E8}|Data\\Data.csproj|d:\\ehissongan\\ehismobile\\api\\data\\abstract\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B468F22D-8BCC-4C42-A04B-1F40D50731E8}|Data\\Data.csproj|solutionrelative:data\\abstract\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{13564404-4BC6-45F6-B3D7-042A4D9CC8F2}|API\\API.csproj|d:\\ehissongan\\ehismobile\\api\\api\\controllers\\userrolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{13564404-4BC6-45F6-B3D7-042A4D9CC8F2}|API\\API.csproj|solutionrelative:api\\controllers\\userrolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B468F22D-8BCC-4C42-A04B-1F40D50731E8}|Data\\Data.csproj|d:\\ehissongan\\ehismobile\\api\\data\\ef\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B468F22D-8BCC-4C42-A04B-1F40D50731E8}|Data\\Data.csproj|solutionrelative:data\\ef\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C349B7AB-35F2-4E9F-8BBF-92BE7CBCBADF}|Service\\Service.csproj|d:\\ehissongan\\ehismobile\\api\\service\\userroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C349B7AB-35F2-4E9F-8BBF-92BE7CBCBADF}|Service\\Service.csproj|solutionrelative:service\\userroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{91273B5C-608A-44D1-A72B-AC346FCDE928}|Common\\Common.csproj|d:\\ehissongan\\ehismobile\\api\\common\\model\\skdt_hosomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91273B5C-608A-44D1-A72B-AC346FCDE928}|Common\\Common.csproj|solutionrelative:common\\model\\skdt_hosomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 16,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -86,32 +70,59 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DangNhapController.cs",
+              "DocumentMoniker": "D:\\EhisSongAn\\EhisMobile\\API\\API\\Controllers\\DangNhapController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\DangNhapController.cs",
+              "ToolTip": "D:\\EhisSongAn\\EhisMobile\\API\\API\\Controllers\\DangNhapController.cs",
+              "RelativeToolTip": "API\\Controllers\\DangNhapController.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAIA0wBoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-02T08:49:11.784Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\EhisSongAn\\EhisMobile\\API\\API\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\AuthController.cs",
+              "ToolTip": "D:\\EhisSongAn\\EhisMobile\\API\\API\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "API\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBsAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-02T08:28:47.318Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\EhisSongAn\\EhisMobile\\API\\API\\appsettings.json",
+              "RelativeDocumentMoniker": "API\\appsettings.json",
+              "ToolTip": "D:\\EhisSongAn\\EhisMobile\\API\\API\\appsettings.json",
+              "RelativeToolTip": "API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-02T08:14:58.643Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "TokenService.cs",
               "DocumentMoniker": "D:\\EhisSongAn\\EhisMobile\\API\\Service\\TokenService.cs",
               "RelativeDocumentMoniker": "Service\\TokenService.cs",
               "ToolTip": "D:\\EhisSongAn\\EhisMobile\\API\\Service\\TokenService.cs",
               "RelativeToolTip": "Service\\TokenService.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAYwBIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAgwCQAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-01T09:15:27.183Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "MDPDbContext.cs",
-              "DocumentMoniker": "D:\\EhisSongAn\\EhisMobile\\API\\Data\\EF\\MDPDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\EF\\MDPDbContext.cs",
-              "ToolTip": "D:\\EhisSongAn\\EhisMobile\\API\\Data\\EF\\MDPDbContext.cs",
-              "RelativeToolTip": "Data\\EF\\MDPDbContext.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAD4vz8AAABpAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T07:13:31.593Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 7,
               "Title": "BaseEntity.cs",
               "DocumentMoniker": "D:\\EhisSongAn\\EhisMobile\\API\\Data\\Abstract\\BaseEntity.cs",
               "RelativeDocumentMoniker": "Data\\Abstract\\BaseEntity.cs",
@@ -119,11 +130,12 @@
               "RelativeToolTip": "Data\\Abstract\\BaseEntity.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T07:12:34.024Z"
+              "WhenOpened": "2024-09-30T07:12:34.024Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "SKDT_HoSoModel.cs",
               "DocumentMoniker": "D:\\EhisSongAn\\EhisMobile\\API\\Common\\Model\\SKDT_HoSoModel.cs",
               "RelativeDocumentMoniker": "Common\\Model\\SKDT_HoSoModel.cs",
@@ -135,126 +147,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "SKDT_HoSo.cs",
               "DocumentMoniker": "D:\\EhisSongAn\\EhisMobile\\API\\Data\\Models\\SKDT\\SKDT_HoSo.cs",
               "RelativeDocumentMoniker": "Data\\Models\\SKDT\\SKDT_HoSo.cs",
               "ToolTip": "D:\\EhisSongAn\\EhisMobile\\API\\Data\\Models\\SKDT\\SKDT_HoSo.cs",
               "RelativeToolTip": "Data\\Models\\SKDT\\SKDT_HoSo.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAywD4AAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAADwvz4AAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T04:01:20.909Z"
+              "WhenOpened": "2024-09-30T04:01:20.909Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\EhisSongAn\\EhisMobile\\API\\API\\Program.cs",
               "RelativeDocumentMoniker": "API\\Program.cs",
               "ToolTip": "D:\\EhisSongAn\\EhisMobile\\API\\API\\Program.cs",
               "RelativeToolTip": "API\\Program.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAAAEMAAABEAAAAAAAAAA==",
+              "ViewState": "AgIAADkAAAAAAAAAAAAgwEUAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T03:55:01.546Z"
+              "WhenOpened": "2024-09-30T03:55:01.546Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "Repository.cs",
               "DocumentMoniker": "D:\\EhisSongAn\\EhisMobile\\API\\Data\\EF\\Repository.cs",
               "RelativeDocumentMoniker": "Data\\EF\\Repository.cs",
               "ToolTip": "D:\\EhisSongAn\\EhisMobile\\API\\Data\\EF\\Repository.cs",
               "RelativeToolTip": "Data\\EF\\Repository.cs",
-              "ViewState": "AgIAAF8AAAAAAAAAAAAcwIYAAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIYAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T02:48:51.034Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "UserRoleController.cs",
-              "DocumentMoniker": "D:\\EhisSongAn\\EhisMobile\\API\\API\\Controllers\\UserRoleController.cs",
-              "RelativeDocumentMoniker": "API\\Controllers\\UserRoleController.cs",
-              "ToolTip": "D:\\EhisSongAn\\EhisMobile\\API\\API\\Controllers\\UserRoleController.cs",
-              "RelativeToolTip": "API\\Controllers\\UserRoleController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T02:36:18.178Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "UserRoleService.cs",
-              "DocumentMoniker": "D:\\EhisSongAn\\EhisMobile\\API\\Service\\UserRoleService.cs",
-              "RelativeDocumentMoniker": "Service\\UserRoleService.cs",
-              "ToolTip": "D:\\EhisSongAn\\EhisMobile\\API\\Service\\UserRoleService.cs",
-              "RelativeToolTip": "Service\\UserRoleService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T02:36:14.347Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DangNhapService.cs",
-              "DocumentMoniker": "D:\\EhisSongAn\\EhisMobile\\API\\Service\\DangNhapService.cs",
-              "RelativeDocumentMoniker": "Service\\DangNhapService.cs",
-              "ToolTip": "D:\\EhisSongAn\\EhisMobile\\API\\Service\\DangNhapService.cs",
-              "RelativeToolTip": "Service\\DangNhapService.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBoAAABLAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T02:36:04.878Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DangNhapController.cs",
-              "DocumentMoniker": "D:\\EhisSongAn\\EhisMobile\\API\\API\\Controllers\\DangNhapController.cs",
-              "RelativeDocumentMoniker": "API\\Controllers\\DangNhapController.cs",
-              "ToolTip": "D:\\EhisSongAn\\EhisMobile\\API\\API\\Controllers\\DangNhapController.cs",
-              "RelativeToolTip": "API\\Controllers\\DangNhapController.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAQwB0AAABMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T02:35:56.92Z",
+              "WhenOpened": "2024-09-30T02:48:51.034Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "QRCodeService.cs",
-              "DocumentMoniker": "D:\\EhisSongAn\\EhisMobile\\API\\Service\\QRCodeService.cs",
-              "RelativeDocumentMoniker": "Service\\QRCodeService.cs",
-              "ToolTip": "D:\\EhisSongAn\\EhisMobile\\API\\Service\\QRCodeService.cs",
-              "RelativeToolTip": "Service\\QRCodeService.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAQwCoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T02:19:42.945Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "QRCodeController.cs",
               "DocumentMoniker": "D:\\EhisSongAn\\EhisMobile\\API\\API\\Controllers\\QRCodeController.cs",
               "RelativeDocumentMoniker": "API\\Controllers\\QRCodeController.cs",
               "ToolTip": "D:\\EhisSongAn\\EhisMobile\\API\\API\\Controllers\\QRCodeController.cs",
               "RelativeToolTip": "API\\Controllers\\QRCodeController.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAIAwwCcAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAIA/wB0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-30T02:13:24.779Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "KeyHelper.cs",
-              "DocumentMoniker": "D:\\EhisSongAn\\EhisMobile\\API\\Common\\Helpers\\KeyHelper.cs",
-              "RelativeDocumentMoniker": "Common\\Helpers\\KeyHelper.cs",
-              "ToolTip": "D:\\EhisSongAn\\EhisMobile\\API\\Common\\Helpers\\KeyHelper.cs",
-              "RelativeToolTip": "Common\\Helpers\\KeyHelper.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBIAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T02:19:34.978Z",
               "EditorCaption": ""
             }
           ]

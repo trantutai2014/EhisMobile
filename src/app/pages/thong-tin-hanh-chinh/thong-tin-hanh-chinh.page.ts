@@ -4,6 +4,7 @@ import { UrlConstants } from '../../core/constants/url.constant';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.prod';
+import { AuthService } from 'src/app/core/services/auth.service';
 
 @Component({
   selector: 'app-profile',
@@ -17,13 +18,14 @@ export class ProfilePage implements OnInit {
   cccd: string | null | undefined;
   error: any;
 
-  private apiUrl = `${environment.BASE_API}/api/QRCode/`;
+  private apiUrl = `${environment.BASE_API}/api/ThongTin/`;
 
   constructor(
     private route: ActivatedRoute,
     private http: HttpClient,
     private router: Router,
-    private cdr:ChangeDetectorRef
+    private cdr:ChangeDetectorRef,
+    private authService: AuthService,
   ) {}
 
   ngOnInit() {
@@ -43,8 +45,7 @@ export class ProfilePage implements OnInit {
     this.http.get(`${this.apiUrl}${this.cccd}`).subscribe({
       next: (data:any) => {
         this.loading = false; // Set loading indicator to false
-          this.items=data.qrCodeData;
-         console.log(data);
+          this.items=data.data;
       },
       error: (error) => {
         this.loading = false; // Set loading indicator to false
@@ -52,6 +53,27 @@ export class ProfilePage implements OnInit {
       }
     });
   }
+  refreshToken() {
+    const refreshToken = localStorage.getItem('refreshToken');
+    if (refreshToken) {
+      this.authService.refreshToken()
+        .subscribe(
+          response => {
+            console.log('Token refreshed successfully:', response);
+          },
+          error => {
+            console.error('Error refreshing token:', error);
+            this.authService.logout(); // Đăng xuất nếu không thể làm mới token
+          }
+        );
+    } else {
+      console.error('Không tìm thấy refresh token');
+      this.authService.logout();
+    }
+  }
+  
+  
+  
 
   goToProFile() {
     this.router.navigate([UrlConstants.THONGTINHANHCHINH]);

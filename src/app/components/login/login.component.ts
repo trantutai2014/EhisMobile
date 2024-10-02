@@ -25,6 +25,7 @@ export class LoginComponent implements OnInit {
   qrScannerInstance!: QrScanner;
   private apiUrl = `${environment.BASE_API}/api/QRCode/`;
   cccd: string | undefined;
+  message: any;
 
 
   constructor(
@@ -46,45 +47,45 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
    }
 
-  async login() {
+   async login() {
     if (this.formData.invalid) {
       this.formData.markAllAsTouched();
       return;
     }
-
+  
     const { username, password } = this.formData.value;
     const loading = await this.loadingCtrl.create({
       message: 'Đang tải...',
     });
     await loading.present();
-
-    this.authService.login(username, password)
-      .then((success: boolean) => {
-        if (success) {
-          this.router.navigate([UrlConstants.THONGTINHANHCHINH]);
-        } else {
-          this.error = 'Đăng nhập không thành công';
-        }
-      })
-      .catch((err: any) => {
-        this.error = err.error?.message || 'Đăng nhập không thành công';
-      })
-      .finally(() => {
-        loading.dismiss();
-      });
+  
+    try {
+      const success = await this.authService.login(username, password);
+      if (success) {
+        this.router.navigate([UrlConstants.THONGTINHANHCHINH]);
+      } else {
+        this.error = 'Đăng nhập không thành công';
+      }
+    } catch (err) {
+      // this.error = err?.message || 'Đăng nhập không thành công';
+    } finally {
+      loading.dismiss();
+    }
   }
-
+  
   async loginqr() {
     try {
       this.qrScannerInstance = new QrScanner(this.videoElem.nativeElement, async (result) => {
         this.qrScannerInstance.stop();
-        const cccd = result.data.toString();
-        const response = await firstValueFrom(this.http.get<{ qrCodeData: any, token: string }>(`${this.apiUrl}${cccd}`));
-        if (response) {
+        const code = result.data.toString();
+        const response = await firstValueFrom(this.http.get<{ token: string, cccd: string }>(`${this.apiUrl}${code}`));
+  
+        if (response && response.token && response.cccd) {
           localStorage.setItem('token', response.token);
-          this.router.navigate([UrlConstants.THONGTINHANHCHINH.replace(':cccd', cccd)]);
+          this.cccd = response.cccd;
+          this.router.navigate([UrlConstants.THONGTINHANHCHINH.replace(':cccd', this.cccd)]);
         } else {
-          this.showErrorAlert('No token received from the server');
+          this.showErrorAlert('Dữ liệu không hợp lệ từ máy chủ');
         }
       }, {
         highlightScanRegion: true,
@@ -94,9 +95,10 @@ export class LoginComponent implements OnInit {
       await this.qrScannerInstance.start();
     } catch (error) {
       console.error('Error scanning QR code:', error);
-      this.showErrorAlert('Error scanning QR code. Please try again.');
+      this.showErrorAlert('Có lỗi xảy ra khi quét mã QR. Vui lòng thử lại.');
     }
   }
+  
 
   async showErrorAlert(errorMessage: string) {
     const alert = await this.alertController.create({

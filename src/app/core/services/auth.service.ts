@@ -1,7 +1,8 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { firstValueFrom } from 'rxjs';
-import { Router } from '@angular/router';
+import { HttpClient } from "@angular/common/http";
+import { Injectable } from "@angular/core";
+import { Router } from "@angular/router";
+import { firstValueFrom, Observable, throwError, map, catchError } from "rxjs";
+import { environment } from "src/environments/environment.prod";
 
 @Injectable({
   providedIn: 'root'
@@ -13,31 +14,55 @@ export class AuthService {
 
   async login(username: string, password: string): Promise<boolean> {
     const body = { username, password };
-  
+
     try {
-      const response = await firstValueFrom(this.http.post<{ token: string }>(`https://localhost:7170/api/DangNhap`, body));
+      const response = await firstValueFrom(this.http.post<{ token: string, refreshToken: string }>(`${environment.BASE_API}/api/DangNhap`, body));
       
-      // Nếu nhận được token từ phản hồi
-      if (response.token) {
+      if (response && response.token) {
         this.token = response.token;
-        localStorage.setItem('token', this.token); // Lưu token vào localStorage
-        return true; // Đăng nhập thành công
+        localStorage.setItem('token', this.token); // Lưu access token
+        localStorage.setItem('refreshToken', response.refreshToken); // Lưu refresh token
+        return true;
       }
-  
-      return false; // Nếu không có token, trả về false
+
+      return false;
     } catch (error) {
       console.error("Error during login:", error);
-      return false; // Xử lý lỗi và trả về false
+      return false;
     }
   }
-  
+
   getToken(): string | null {
-    return localStorage.getItem('token'); // Lấy token từ localStorage
+    return localStorage.getItem('token'); // Lấy access token từ localStorage
   }
 
   logout() {
     this.token = null;
     localStorage.removeItem('token'); // Xóa token khi đăng xuất
-    this.router.navigate(['/thong-tin-hanh-chinh']);
+    localStorage.removeItem('refreshToken'); // Xóa refresh token
+    this.router.navigate(['/login']);
+  }
+
+  refreshToken(): Observable<any> {
+    const refreshToken = localStorage.getItem('refreshToken');
+    if (!refreshToken) {
+      console.error('No refresh token found');
+      this.logout(); // Đăng xuất nếu không có refresh token
+      return throwError(() => new Error('No refresh token'));
+    }
+
+    return this.http.post<any>(`${environment.BASE_API}/api/Auth/refresh`, { refreshToken })
+      .pipe(
+        map(response => {
+          localStorage.setItem('token', response.accessToken); // Lưu token mới
+          localStorage.setItem('refreshToken', response.refreshToken); // Lưu refresh token mới
+          return response;
+        }),
+        catchError(error => {
+          console.error('Error refreshing token:', error);
+          this.logout(); // Đăng xuất nếu refresh token không hợp lệ
+          return throwError(() => new Error('Refresh token failed'));
+        })
+      );
   }
 }

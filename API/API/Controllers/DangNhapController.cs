@@ -27,7 +27,7 @@ namespace API.Controllers
 
                 if (user != null)
                 {
-                    var token = _tokenService.GenerateToken(model.Username);
+                    var token = _tokenService.GenerateTokens(model.Username);
                     return Ok(new { token });
                     // return Ok(new { message = "Đăng nhập thành công" });
                 }

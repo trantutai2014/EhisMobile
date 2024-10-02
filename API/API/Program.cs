@@ -67,6 +67,7 @@ builder.Services.AddScoped<IPasswordHasher<UserModel>, PasswordHasher<UserModel>
 builder.Services.AddScoped<PasswordHelper, PasswordHelper>();
 builder.Services.AddScoped(typeof(IRepository), typeof(Repository));
 builder.Services.AddScoped<QRCodeService, QRCodeService>();
+builder.Services.AddScoped<ThongTinService, ThongTinService>();
 var assembliesToScan = new[]
            {
                 Assembly.GetAssembly(typeof(IUserRoleService))

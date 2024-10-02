@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "API.Controllers.AuthController",
+    "Method": "RefreshToken",
+    "RelativePath": "api/Auth/refresh",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "refreshToken",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "API.Controllers.DangNhapController",
     "Method": "Login",
     "RelativePath": "api/DangNhap",
@@ -25,6 +41,22 @@
     "Parameters": [
       {
         "Name": "code",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YourNamespace.Controllers.ThongTinController",
+    "Method": "GetByCode",
+    "RelativePath": "api/ThongTin/{cccd}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cccd",
         "Type": "System.String",
         "IsRequired": true
       }

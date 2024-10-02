@@ -16,37 +16,17 @@ namespace YourNamespace.Controllers
       _qrCodeService = qrCodeService;
       _tokenService = tokenService;
     }
-
-    //[HttpGet("{cccd}")]
-    //public async Task<IActionResult> GetByCCCD(string cccd)
-    //{
-    //  var qrCodeData = await _qrCodeService.GetByCCCD(cccd);
-
-    //  if (qrCodeData != null)
-    //  {
-    //    // Generate the token
-    //    var token = _tokenService.GenerateToken(cccd);
-
-    //    // Return the QR code data and token
-    //    return Ok(new { qrCodeData, token });
-    //  }
-
-    //  return NotFound("Không tìm thấy thông tin.");
-    //}
-
-
     [HttpGet("{code}")]
     public async Task<IActionResult> GetByCode(string code)
     {
       var skdt_HoSo = await _qrCodeService.GetByCode(code);
+
       if (skdt_HoSo != null)
       {
-        var token = _tokenService.GenerateToken(code);
-        return Ok(MapQR.MapLoginQR(skdt_HoSo));
+        var token = _tokenService.GenerateTokens(skdt_HoSo.CCCD);
+        return Ok(new { CCCD = skdt_HoSo.CCCD, Token = token });
       }
-
       return NotFound("Không tìm thấy thông tin.");
     }
-
   }
 }
