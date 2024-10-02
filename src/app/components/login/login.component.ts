@@ -1,4 +1,3 @@
-import * as CryptoJS from 'crypto-js';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -9,6 +8,8 @@ import { LoginService } from 'src/app/core/services/login.service';
 import { AuthService } from 'src/app/core/services/auth.service';
 import QrScanner from 'qr-scanner';
 import { environment } from 'src/environments/environment.prod';
+import { HttpClient } from '@angular/common/http';
+import { firstValueFrom } from 'rxjs';
 
 @Component({
   selector: 'app-login',
@@ -25,9 +26,6 @@ export class LoginComponent implements OnInit {
   private apiUrl = `${environment.BASE_API}/QRCode/`;
   cccd: string | undefined;
 
-  // AES Key and IV (same as backend)
-  private aesKey = CryptoJS.enc.Base64.parse('YFlCfJWXFeZ/NHyLhq0XYNT/Dd/mUpInFxtvWnkj84g=');
-  private aesIv = CryptoJS.enc.Base64.parse('fZz5TQgfUHgS6lwT6q8Q8Q==');
 
   constructor(
     private fb: FormBuilder,
