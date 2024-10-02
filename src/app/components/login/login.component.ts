@@ -1,3 +1,4 @@
+import * as CryptoJS from 'crypto-js';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -6,12 +7,16 @@ import { UrlConstants } from '../../core/constants/url.constant';
 import { ValidatorConstants } from 'src/app/core/constants/validator.constants';
 import { LoginService } from 'src/app/core/services/login.service';
 import { AuthService } from 'src/app/core/services/auth.service';
+<<<<<<< HEAD
 import QrScanner from 'qr-scanner'; // Import thư viện QrScanner
 import { Capacitor } from '@capacitor/core'; // Import Capacitor core để phát hiện nền tảng
 import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
 import { firstValueFrom } from 'rxjs';
+=======
+import QrScanner from 'qr-scanner';
+>>>>>>> d29039f321d24798f27a7c07dbfa6b302da24d83
 
 @Component({
   selector: 'app-login',
@@ -23,10 +28,14 @@ export class LoginComponent implements OnInit {
   public ValidatorConsts = ValidatorConstants;
   loading: boolean = false;
   error: string | undefined;
-  @ViewChild('video', { static: false }) videoElem!: ElementRef; // Liên kết phần tử video trong template
+  @ViewChild('video', { static: false }) videoElem!: ElementRef;
   qrScannerInstance!: QrScanner;
   private apiUrl = `${environment.BASE_API}/QRCode/`;
   cccd: string | undefined;
+
+  // AES Key and IV (same as backend)
+  private aesKey = CryptoJS.enc.Base64.parse('YFlCfJWXFeZ/NHyLhq0XYNT/Dd/mUpInFxtvWnkj84g=');
+  private aesIv = CryptoJS.enc.Base64.parse('fZz5TQgfUHgS6lwT6q8Q8Q==');
 
   constructor(
     private fb: FormBuilder,
@@ -77,6 +86,7 @@ export class LoginComponent implements OnInit {
 
   async loginqr() {
     try {
+<<<<<<< HEAD
       this.qrScannerInstance = new QrScanner(this.videoElem.nativeElement, async (result) => {
         this.qrScannerInstance.stop();
         const cccd = result.data.toString();
@@ -92,18 +102,57 @@ export class LoginComponent implements OnInit {
         highlightCodeOutline: true,
       });
   
+=======
+      this.qrScannerInstance = new QrScanner(this.videoElem.nativeElement, (result) => {
+        console.log('Scanned result:', result);
+
+        // Stop the QR scanner after getting the result
+        this.qrScannerInstance.stop();
+
+        // Decrypt the scanned QR data
+        const decryptedData = this.decryptQrData(result.data);
+        this.showScannedDataAlert(decryptedData);
+      }, {
+        onDecodeError: (error) => console.error('Error decoding QR code:', error),
+        highlightScanRegion: true,
+        highlightCodeOutline: true
+      });
+
+>>>>>>> d29039f321d24798f27a7c07dbfa6b302da24d83
       await this.qrScannerInstance.start();
     } catch (error) {
       console.error('Error scanning QR code:', error);
       this.showErrorAlert('Error scanning QR code. Please try again.');
     }
   }
+<<<<<<< HEAD
   
   
   
   
+=======
 
-  // Hàm hiển thị cảnh báo lỗi
+  decryptQrData(cipherText: string): string {
+    // Decrypt the cipher text using CryptoJS AES decryption
+    const decrypted = CryptoJS.AES.decrypt(cipherText, this.aesKey, {
+      iv: this.aesIv,
+      mode: CryptoJS.mode.CBC,
+      padding: CryptoJS.pad.Pkcs7
+    });
+    return decrypted.toString(CryptoJS.enc.Utf8);
+  }
+
+  async showScannedDataAlert(scannedData: string) {
+    const alert = await this.alertController.create({
+      header: 'Mã QR đã quét',
+      message: `Dữ liệu: ${scannedData}`,
+      buttons: ['OK'],
+    });
+
+    await alert.present();
+  }
+>>>>>>> d29039f321d24798f27a7c07dbfa6b302da24d83
+
   async showErrorAlert(errorMessage: string) {
     const alert = await this.alertController.create({
       header: 'Lỗi',

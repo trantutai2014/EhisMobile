@@ -1,5 +1,24 @@
 {
   "Version": 1,
+<<<<<<< HEAD
+  "WorkspaceRootPath": "D:\\tt\\EhisMB\\API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{91273B5C-608A-44D1-A72B-AC346FCDE928}|Common\\Common.csproj|d:\\tt\\ehismb\\api\\common\\helpers\\keyhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91273B5C-608A-44D1-A72B-AC346FCDE928}|Common\\Common.csproj|solutionrelative:common\\helpers\\keyhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13564404-4BC6-45F6-B3D7-042A4D9CC8F2}|API\\API.csproj|d:\\tt\\ehismb\\api\\api\\controllers\\encryptioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{13564404-4BC6-45F6-B3D7-042A4D9CC8F2}|API\\API.csproj|solutionrelative:api\\controllers\\encryptioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C349B7AB-35F2-4E9F-8BBF-92BE7CBCBADF}|Service\\Service.csproj|d:\\tt\\ehismb\\api\\service\\qrcodeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C349B7AB-35F2-4E9F-8BBF-92BE7CBCBADF}|Service\\Service.csproj|solutionrelative:service\\qrcodeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91273B5C-608A-44D1-A72B-AC346FCDE928}|Common\\Common.csproj|d:\\tt\\ehismb\\api\\common\\common.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{91273B5C-608A-44D1-A72B-AC346FCDE928}|Common\\Common.csproj|solutionrelative:common\\common.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+=======
   "WorkspaceRootPath": "D:\\EhisSongAn\\EhisMobile\\API\\",
   "Documents": [
     {
@@ -57,6 +76,7 @@
     {
       "AbsoluteMoniker": "D:0:0:{C349B7AB-35F2-4E9F-8BBF-92BE7CBCBADF}|Service\\Service.csproj|d:\\ehissongan\\ehismobile\\api\\service\\userroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C349B7AB-35F2-4E9F-8BBF-92BE7CBCBADF}|Service\\Service.csproj|solutionrelative:service\\userroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> 991201cda0f38e56e298942fa6beb5ab22653af8
     }
   ],
   "DocumentGroupContainers": [
@@ -66,9 +86,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< HEAD
           "SelectedChildIndex": 4,
+=======
+<<<<<<< HEAD
+          "SelectedChildIndex": 0,
           "Children": [
             {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "KeyHelper.cs",
+              "DocumentMoniker": "D:\\tt\\EhisMB\\API\\Common\\Helpers\\KeyHelper.cs",
+              "RelativeDocumentMoniker": "Common\\Helpers\\KeyHelper.cs",
+              "ToolTip": "D:\\tt\\EhisMB\\API\\Common\\Helpers\\KeyHelper.cs",
+              "RelativeToolTip": "Common\\Helpers\\KeyHelper.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAQwD0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T08:49:37.546Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EncryptionController.cs",
+              "DocumentMoniker": "D:\\tt\\EhisMB\\API\\API\\Controllers\\EncryptionController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\EncryptionController.cs",
+              "ToolTip": "D:\\tt\\EhisMB\\API\\API\\Controllers\\EncryptionController.cs",
+              "RelativeToolTip": "API\\Controllers\\EncryptionController.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T08:48:37.645Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "QRCodeService.cs",
+              "DocumentMoniker": "D:\\tt\\EhisMB\\API\\Service\\QRCodeService.cs",
+              "RelativeDocumentMoniker": "Service\\QRCodeService.cs",
+              "ToolTip": "D:\\tt\\EhisMB\\API\\Service\\QRCodeService.cs",
+              "RelativeToolTip": "Service\\QRCodeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T08:47:39.024Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Common",
+              "DocumentMoniker": "D:\\tt\\EhisMB\\API\\Common\\Common.csproj",
+              "RelativeDocumentMoniker": "Common\\Common.csproj",
+              "ToolTip": "D:\\tt\\EhisMB\\API\\Common\\Common.csproj",
+              "RelativeToolTip": "Common\\Common.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-09-30T08:47:25.458Z",
+              "EditorCaption": ""
+            },
+            {
+=======
+          "SelectedChildIndex": 14,
+>>>>>>> d29039f321d24798f27a7c07dbfa6b302da24d83
+          "Children": [
+            {
+>>>>>>> 991201cda0f38e56e298942fa6beb5ab22653af8
               "$type": "Bookmark",
               "Name": "ST:0:0:{65ddf8c3-8f89-4077-a6c6-dbb8853aab13}"
             },
@@ -83,6 +165,8 @@
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{809f6ff3-8092-454a-8003-6d4091f9b5bb}"
+<<<<<<< HEAD
+=======
             },
             {
               "$type": "Document",
@@ -254,6 +338,7 @@
               "ViewState": "AgIAACoAAAAAAAAAAAAYwCUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-30T02:19:34.978Z"
+>>>>>>> 991201cda0f38e56e298942fa6beb5ab22653af8
             }
           ]
         }

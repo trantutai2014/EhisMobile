@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -6,58 +6,56 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Common.Helpers
+namespace MDP.Common.Helpers
 {
-  public class KeyHelper
-  {
-
-    private static readonly byte[] Key = new byte[16];
-    // RandomNumberGenerator.GetBytes(Key);
-
-    private static readonly byte[] IV = Convert.FromBase64String("X8T5NlRxAi9e7M+Jjf3eZw==");
-
-    public static string Encrypt(string plainText)
+    public class KeyHelper
     {
-      using (Aes aes = Aes.Create())
-      {
-        aes.Key = Key;
-        aes.IV = IV;
 
-        ICryptoTransform encryptor = aes.CreateEncryptor(aes.Key, aes.IV);
+        private static readonly byte[] Key = Convert.FromBase64String("YFlCfJWXFeZ/NHyLhq0XYNT/Dd/mUpInFxtvWnkj84g=");
+        private static readonly byte[] IV = Convert.FromBase64String("fZz5TQgfUHgS6lwT6q8Q8Q==");
 
-        using (MemoryStream ms = new MemoryStream())
+        public static string Encrypt(string plainText)
         {
-          using (CryptoStream cs = new CryptoStream(ms, encryptor, CryptoStreamMode.Write))
-          {
-            using (StreamWriter sw = new StreamWriter(cs))
+            using (Aes aes = Aes.Create())
             {
-              sw.Write(plainText);
+                aes.Key = Key;
+                aes.IV = IV;
+
+                ICryptoTransform encryptor = aes.CreateEncryptor(aes.Key, aes.IV);
+
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    using (CryptoStream cs = new CryptoStream(ms, encryptor, CryptoStreamMode.Write))
+                    {
+                        using (StreamWriter sw = new StreamWriter(cs))
+                        {
+                            sw.Write(plainText);
+                        }
+                    }
+                    return Convert.ToBase64String(ms.ToArray());
+                }
             }
-          }
-          return Convert.ToBase64String(ms.ToArray());
         }
-      }
-    }
 
-    public static string Decrypt(string cipherText)
-    {
-      using (Aes aes = Aes.Create())
-      {
-        aes.Key = Key;
-        aes.IV = IV;
-
-        ICryptoTransform decryptor = aes.CreateDecryptor(aes.Key, aes.IV);
-        using (MemoryStream ms = new MemoryStream(Convert.FromBase64String(cipherText)))
+        public static string Decrypt(string cipherText)
         {
-          using (CryptoStream cs = new CryptoStream(ms, decryptor, CryptoStreamMode.Read))
-          {
-            using (StreamReader sr = new StreamReader(cs))
+            using (Aes aes = Aes.Create())
             {
-              return sr.ReadToEnd();
+                aes.Key = Key;
+                aes.IV = IV;
+
+                ICryptoTransform decryptor = aes.CreateDecryptor(aes.Key, aes.IV);
+                using (MemoryStream ms = new MemoryStream(Convert.FromBase64String(cipherText)))
+                {
+                    using (CryptoStream cs = new CryptoStream(ms, decryptor, CryptoStreamMode.Read))
+                    {
+                        using (StreamReader sr = new StreamReader(cs))
+                        {
+                            return sr.ReadToEnd();
+                        }
+                    }
+                }
             }
-          }
         }
-      }
     }
-  }
 }

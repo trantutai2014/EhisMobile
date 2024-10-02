@@ -1,5 +1,9 @@
 {
   "Version": 1,
+<<<<<<< HEAD
+  "WorkspaceRootPath": "D:\\tt\\EhisMB\\API\\",
+  "Documents": [],
+=======
   "WorkspaceRootPath": "D:\\EhisSongAn\\EhisMobile\\API\\",
   "Documents": [
     {
@@ -59,6 +63,7 @@
       "RelativeMoniker": "D:0:0:{C349B7AB-35F2-4E9F-8BBF-92BE7CBCBADF}|Service\\Service.csproj|solutionrelative:service\\userroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
+>>>>>>> 991201cda0f38e56e298942fa6beb5ab22653af8
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -66,7 +71,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< HEAD
           "SelectedChildIndex": 4,
+=======
+<<<<<<< HEAD
+          "SelectedChildIndex": -1,
+=======
+          "SelectedChildIndex": 15,
+>>>>>>> 991201cda0f38e56e298942fa6beb5ab22653af8
+>>>>>>> d29039f321d24798f27a7c07dbfa6b302da24d83
           "Children": [
             {
               "$type": "Bookmark",
@@ -83,6 +96,8 @@
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{809f6ff3-8092-454a-8003-6d4091f9b5bb}"
+<<<<<<< HEAD
+=======
             },
             {
               "$type": "Document",
@@ -254,6 +269,7 @@
               "ViewState": "AgIAACoAAAAAAAAAAAAYwCUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-30T02:19:34.978Z"
+>>>>>>> 991201cda0f38e56e298942fa6beb5ab22653af8
             }
           ]
         }
