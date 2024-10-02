@@ -41,7 +41,7 @@ namespace YourNamespace.Controllers
       var skdt_HoSo = await _qrCodeService.GetByCode(code);
       if (skdt_HoSo != null)
       {
-        ///var token = _tokenService.GenerateToken(skdt_HoSo);
+        var token = _tokenService.GenerateToken(code);
         return Ok(MapQR.MapLoginQR(skdt_HoSo));
       }
 

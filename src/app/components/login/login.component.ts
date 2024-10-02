@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
   error: string | undefined;
   @ViewChild('video', { static: false }) videoElem!: ElementRef;
   qrScannerInstance!: QrScanner;
-  private apiUrl = `${environment.BASE_API}/QRCode/`;
+  private apiUrl = `${environment.BASE_API}/api/QRCode/`;
   cccd: string | undefined;
 
 

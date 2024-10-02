@@ -1,10 +1,6 @@
 using Common.Helpers;
-using Common.Model;
 using Data.EF;
-using Data.Models;
 using Data.Models.SKDT;
-using Microsoft.EntityFrameworkCore;
-
 namespace Service
 {
   public interface IQRCodeService
@@ -47,11 +43,11 @@ namespace Service
 
     public async Task<SKDT_HoSo> GetByCode(string code)
     {
-      var decryptCCCD = KeyHelper.Decrypt(code);
-      return await GetByCCC(decryptCCCD);
+      var decryptedCCCD = KeyHelper.Decrypt(code);
+      return await GetByCCCD(decryptedCCCD);
     }
 
-    public async Task<SKDT_HoSo> GetByCCC(string CCCD)
+    public async Task<SKDT_HoSo> GetByCCCD(string CCCD)
     {
       return await _repository.GetByCCCD(CCCD);
     }

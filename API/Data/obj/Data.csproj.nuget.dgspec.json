@@ -1,19 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
-    "d:\\tt\\EhisMB\\API\\Data\\Data.csproj": {}
-  },
-  "projects": {
-    "d:\\tt\\EhisMB\\API\\Common\\Common.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "d:\\tt\\EhisMB\\API\\Common\\Common.csproj",
-        "projectName": "Common",
-        "projectPath": "d:\\tt\\EhisMB\\API\\Common\\Common.csproj",
-        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "d:\\tt\\EhisMB\\API\\Common\\obj\\",
-=======
     "D:\\EhisSongAn\\EhisMobile\\API\\Data\\Data.csproj": {}
   },
   "projects": {
@@ -25,13 +12,12 @@
         "projectPath": "D:\\EhisSongAn\\EhisMobile\\API\\Common\\Common.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
         "outputPath": "D:\\EhisSongAn\\EhisMobile\\API\\Common\\obj\\",
->>>>>>> 991201cda0f38e56e298942fa6beb5ab22653af8
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -57,9 +43,8 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+          "auditMode": "direct"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -90,20 +75,10 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-rc.1.24452.12/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-<<<<<<< HEAD
-    "d:\\tt\\EhisMB\\API\\Data\\Data.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "d:\\tt\\EhisMB\\API\\Data\\Data.csproj",
-        "projectName": "Data",
-        "projectPath": "d:\\tt\\EhisMB\\API\\Data\\Data.csproj",
-        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "d:\\tt\\EhisMB\\API\\Data\\obj\\",
-=======
     "D:\\EhisSongAn\\EhisMobile\\API\\Data\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -112,13 +87,12 @@
         "projectPath": "D:\\EhisSongAn\\EhisMobile\\API\\Data\\Data.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
         "outputPath": "D:\\EhisSongAn\\EhisMobile\\API\\Data\\obj\\",
->>>>>>> 991201cda0f38e56e298942fa6beb5ab22653af8
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -134,13 +108,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-<<<<<<< HEAD
-              "d:\\tt\\EhisMB\\API\\Common\\Common.csproj": {
-                "projectPath": "d:\\tt\\EhisMB\\API\\Common\\Common.csproj"
-=======
               "D:\\EhisSongAn\\EhisMobile\\API\\Common\\Common.csproj": {
                 "projectPath": "D:\\EhisSongAn\\EhisMobile\\API\\Common\\Common.csproj"
->>>>>>> 991201cda0f38e56e298942fa6beb5ab22653af8
               }
             }
           }
@@ -153,9 +122,8 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+          "auditMode": "direct"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -198,7 +166,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-rc.1.24452.12/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

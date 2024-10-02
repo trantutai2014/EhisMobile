@@ -17,14 +17,14 @@
   },
   {
     "ContainingType": "YourNamespace.Controllers.QRCodeController",
-    "Method": "GetByCCCD",
-    "RelativePath": "api/QRCode/{cccd}",
+    "Method": "GetByCode",
+    "RelativePath": "api/QRCode/{code}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "cccd",
+        "Name": "code",
         "Type": "System.String",
         "IsRequired": true
       }
