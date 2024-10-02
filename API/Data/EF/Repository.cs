@@ -132,7 +132,7 @@ namespace Data.EF
         {
             return _dbContext.Set<TEntity>().Find(CCCD);
         }
-    public async Task<SKDT_HoSo> GetByCCCD(string CCCD)
+        public async Task<SKDT_HoSo> GetByCCCD(string CCCD)
         {
             return await _dbContext.Set<SKDT_HoSo>().FirstOrDefaultAsync(x => x.CCCD == CCCD);
         }

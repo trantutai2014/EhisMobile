@@ -7,7 +7,7 @@ export class UrlConstants {
   static readonly TRANGCHU = '/trang-chu';
   static readonly PAY = '/pay';
   static readonly SCAN = '/scan';
-  static readonly THONGTINHANHCHINH = '/thong-tin-hanh-chinh';
+  static readonly THONGTINHANHCHINH = '/thong-tin-hanh-chinh/:cccd';
   static readonly FORGET = '/forget';
   static readonly LICHSU = '/lich-su';
   static readonly SETTING = '/setting';

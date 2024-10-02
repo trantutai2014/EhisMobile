@@ -35,6 +35,7 @@
 
   <!-- Thông tin hồ sơ -->
   <ion-card class="ion-no-margin ion-padding-none" style="margin-top: -50px;">
+
     <ion-grid>
       <ion-row class="ion-justify-content-center" style="margin-top: 20px;">
         <ion-col size="auto">
@@ -43,57 +44,60 @@
       </ion-row>
     </ion-grid>
 
-    <div class="ion-text-center">
-      <p class="ion-no-margin" style="font-size: 24px; font-weight: bold; margin-top: 14px;">Cao Thị Xuân</p>
+  
+    <div *ngIf="items">
+      <div class="ion-text-center">
+        <p class="ion-no-margin" style="font-size: 24px; font-weight: bold; margin-top: 14px;">{{items.hoTen}}</p>
+      </div>
+
+      <!-- Thông tin chi tiết -->
+      <ion-grid class="ion-padding-start ion-padding-end">
+        <ion-row>
+          <ion-col size="6" class="ion-text-left" style="font-weight: bold;">Ngày sinh:</ion-col>
+          <ion-col size="6" class="ion-text-right" style="opacity: 0.8;">{{items.ngaySinh}}</ion-col>
+
+          <ion-col size="6" class="ion-text-left" style="font-weight: bold;">Giới tính:</ion-col>
+          <ion-col size="6" class="ion-text-right" style="opacity: 0.8;">{{items.gioiTinh ===1 ?'Nam' : 'Nữ'}}</ion-col>
+
+          <ion-col size="6" class="ion-text-left" style="font-weight: bold;">Dân tộc:</ion-col>
+          <ion-col size="6" class="ion-text-right" style="opacity: 0.8;">{{items.tenDanToc}}</ion-col>
+
+          <ion-col size="6" class="ion-text-left" style="font-weight: bold;">Quốc tịch:</ion-col>
+          <ion-col size="6" class="ion-text-right" style="opacity: 0.8;">{{items.tenQuocTich}}</ion-col>
+
+          <ion-col size="6" class="ion-text-left" style="font-weight: bold;">Nghề nghiệp:</ion-col>
+          <ion-col size="6" class="ion-text-right" style="opacity: 0.8;">{{items.tenNgheNghiep}}</ion-col>
+
+          <ion-col size="6" class="ion-text-left" style="font-weight: bold;">Điện thoại:</ion-col>
+          <ion-col size="6" class="ion-text-right" style="opacity: 0.8;">{{items.sdt}}</ion-col>
+
+          <ion-col size="6" class="ion-text-left" style="font-weight: bold;">Số ĐDCN/CCCD:</ion-col>
+          <ion-col size="6" class="ion-text-right" style="opacity: 0.8;">{{items.cccd}}</ion-col>
+
+          <ion-col size="6" class="ion-text-left" style="font-weight: bold;">Ngày cấp:</ion-col>
+          <ion-col size="6" class="ion-text-right" style="opacity: 0.8;">{{items.ngayCap}}</ion-col>
+
+          <ion-col size="6" class="ion-text-left" style="font-weight: bold;">Nơi cấp:</ion-col>
+          <ion-col size="6" class="ion-text-right" style="opacity: 0.8;">{{items.noiCap}}</ion-col>
+
+          <ion-col size="6" class="ion-text-left" style="font-weight: bold;">Địa chỉ:</ion-col>
+          <ion-col size="6" class="ion-text-right" style="opacity: 0.8;">{{items.diaChi}}</ion-col>
+
+          <ion-col size="6" class="ion-text-left" style="font-weight: bold;">Nơi tạo:</ion-col>
+          <ion-col size="6" class="ion-text-right" style="opacity: 0.8;">{{items.noiTao}}</ion-col>
+
+          <ion-col size="6" class="ion-text-left" style="font-weight: bold;">Ngày lập hồ sơ:</ion-col>
+          <ion-col size="6" class="ion-text-right" style="opacity: 0.8;">{{items.ngayTao}}</ion-col>
+        </ion-row>
+
+        <!-- Nút Cập Nhật -->
+        <ion-row style="margin-top: 20px;">
+          <ion-col size="12">
+            <ion-button expand="block" color="primary" id="open-modal-cap-nhat">Cập nhật</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
     </div>
-
-    <!-- Thông tin chi tiết -->
-    <ion-grid class="ion-padding-start ion-padding-end">
-      <ion-row>
-        <ion-col size="6" class="ion-text-left" style="font-weight: bold;">Ngày sinh:</ion-col>
-        <ion-col size="6" class="ion-text-right" style="opacity: 0.8;">01/01/1990</ion-col>
-
-        <ion-col size="6" class="ion-text-left" style="font-weight: bold;">Giới tính:</ion-col>
-        <ion-col size="6" class="ion-text-right" style="opacity: 0.8;">Nam</ion-col>
-
-        <ion-col size="6" class="ion-text-left" style="font-weight: bold;">Dân tộc:</ion-col>
-        <ion-col size="6" class="ion-text-right" style="opacity: 0.8;">Kinh</ion-col>
-
-        <ion-col size="6" class="ion-text-left" style="font-weight: bold;">Quốc tịch:</ion-col>
-        <ion-col size="6" class="ion-text-right" style="opacity: 0.8;">Việt Nam</ion-col>
-
-        <ion-col size="6" class="ion-text-left" style="font-weight: bold;">Nghề nghiệp:</ion-col>
-        <ion-col size="6" class="ion-text-right" style="opacity: 0.8;">Kỹ sư</ion-col>
-
-        <ion-col size="6" class="ion-text-left" style="font-weight: bold;">Điện thoại:</ion-col>
-        <ion-col size="6" class="ion-text-right" style="opacity: 0.8;">0123456789</ion-col>
-
-        <ion-col size="6" class="ion-text-left" style="font-weight: bold;">Số ĐDCN/CCCD:</ion-col>
-        <ion-col size="6" class="ion-text-right" style="opacity: 0.8;">123456789</ion-col>
-
-        <ion-col size="6" class="ion-text-left" style="font-weight: bold;">Ngày cấp:</ion-col>
-        <ion-col size="6" class="ion-text-right" style="opacity: 0.8;">01/01/2015</ion-col>
-
-        <ion-col size="6" class="ion-text-left" style="font-weight: bold;">Nơi cấp:</ion-col>
-        <ion-col size="6" class="ion-text-right" style="opacity: 0.8;">Hà Nội</ion-col>
-
-        <ion-col size="6" class="ion-text-left" style="font-weight: bold;">Địa chỉ:</ion-col>
-        <ion-col size="6" class="ion-text-right" style="opacity: 0.8;">123 Đường ABC, Hà Nội</ion-col>
-
-        <ion-col size="6" class="ion-text-left" style="font-weight: bold;">Nơi tạo:</ion-col>
-        <ion-col size="6" class="ion-text-right" style="opacity: 0.8;">Hà Nội</ion-col>
-
-        <ion-col size="6" class="ion-text-left" style="font-weight: bold;">Ngày lập hồ sơ:</ion-col>
-        <ion-col size="6" class="ion-text-right" style="opacity: 0.8;">01/01/2020</ion-col>
-      </ion-row>
-
-      <!-- Nút Cập Nhật -->
-      <ion-row style="margin-top: 20px;">
-        <ion-col size="12">
-          <ion-button expand="block" color="primary" id="open-modal-cap-nhat">Cập nhật</ion-button>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
   </ion-card>
 </ion-content>
 

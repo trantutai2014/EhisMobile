@@ -8,6 +8,10 @@ import { LoginService } from 'src/app/core/services/login.service';
 import { AuthService } from 'src/app/core/services/auth.service';
 import QrScanner from 'qr-scanner'; // Import thư viện QrScanner
 import { Capacitor } from '@capacitor/core'; // Import Capacitor core để phát hiện nền tảng
+import { environment } from 'src/environments/environment';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs/internal/Observable';
+import { firstValueFrom } from 'rxjs';
 
 @Component({
   selector: 'app-login',
@@ -21,6 +25,8 @@ export class LoginComponent implements OnInit {
   error: string | undefined;
   @ViewChild('video', { static: false }) videoElem!: ElementRef; // Liên kết phần tử video trong template
   qrScannerInstance!: QrScanner;
+  private apiUrl = `${environment.BASE_API}/QRCode/`;
+  cccd: string | undefined;
 
   constructor(
     private fb: FormBuilder,
@@ -28,15 +34,18 @@ export class LoginComponent implements OnInit {
     private router: Router,
     private loadingCtrl: LoadingController,
     private authService: AuthService,
-    private alertController: AlertController
+    private alertController: AlertController,
+    private http: HttpClient,
+   
   ) {
     this.formData = this.fb.group({
       username: [null, [Validators.required, Validators.pattern(this.ValidatorConsts.v_username)]],
       password: [null, [Validators.required, Validators.pattern(this.ValidatorConsts.v_password)]],
     });
   }
-
-  ngOnInit() { }
+  
+  ngOnInit() {
+   }
 
   async login() {
     if (this.formData.invalid) {
@@ -68,40 +77,31 @@ export class LoginComponent implements OnInit {
 
   async loginqr() {
     try {
-      // Khởi tạo QR scanner với phần tử video
-      this.qrScannerInstance = new QrScanner(this.videoElem.nativeElement, (result) => {
-        console.log('Scanned result:', result);
-
-        // Dừng scanner sau khi quét thành công
+      this.qrScannerInstance = new QrScanner(this.videoElem.nativeElement, async (result) => {
         this.qrScannerInstance.stop();
-
-        // Hiển thị kết quả mã QR đã quét trong một alert
-        this.showScannedDataAlert(result.data); // Lấy thuộc tính 'data' từ result
+        const cccd = result.data.toString();
+        const response = await firstValueFrom(this.http.get<{ qrCodeData: any, token: string }>(`${this.apiUrl}${cccd}`));
+        if (response) {
+          localStorage.setItem('token', response.token);
+          this.router.navigate([UrlConstants.THONGTINHANHCHINH.replace(':cccd', cccd)]);
+        } else {
+          this.showErrorAlert('No token received from the server');
+        }
       }, {
-        onDecodeError: (error) => console.error('Error decoding QR code:', error),
-        highlightScanRegion: true,  // Đánh dấu vùng quét mã QR
-        highlightCodeOutline: true  // Đánh dấu mã QR đã phát hiện
+        highlightScanRegion: true,
+        highlightCodeOutline: true,
       });
-
-      // Bắt đầu quá trình quét mã QR từ camera
+  
       await this.qrScannerInstance.start();
     } catch (error) {
-      console.error('Lỗi khi quét mã QR:', error);
-      this.showErrorAlert('Lỗi khi quét mã QR. Vui lòng thử lại.');
+      console.error('Error scanning QR code:', error);
+      this.showErrorAlert('Error scanning QR code. Please try again.');
     }
   }
-
-
-  // Hàm hiển thị cảnh báo với dữ liệu mã QR đã quét
-  async showScannedDataAlert(scannedData: string) {
-    const alert = await this.alertController.create({
-      header: 'Mã QR đã quét',
-      message: `Dữ liệu: ${scannedData}`,
-      buttons: ['OK'],
-    });
-
-    await alert.present();
-  }
+  
+  
+  
+  
 
   // Hàm hiển thị cảnh báo lỗi
   async showErrorAlert(errorMessage: string) {

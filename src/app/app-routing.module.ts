@@ -10,7 +10,7 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'thong-tin-hanh-chinh',
+    path: 'thong-tin-hanh-chinh/:cccd',
     loadChildren: () => import('./pages/thong-tin-hanh-chinh/thong-tin-hanh-chinh.module').then(m => m.ProfilePageModule),
     canActivate: [AuthGuard] // Bảo vệ route này
   },
