@@ -2,7 +2,7 @@ import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Router } from "@angular/router";
 import { firstValueFrom, Observable, throwError, map, catchError } from "rxjs";
-import { environment } from "src/environments/environment.prod";
+import { environment } from "../../../environments/environment";
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +16,7 @@ export class AuthService {
     const body = { username, password };
 
     try {
-      const response = await firstValueFrom(this.http.post<{ token: string, refreshToken: string }>(`${environment.BASE_API}/api/DangNhap`, body));
+      const response = await firstValueFrom(this.http.post<{ token: string, refreshToken: string }>(`${environment.BASE_API}/DangNhap`, body));
       
       if (response && response.token) {
         this.token = response.token;

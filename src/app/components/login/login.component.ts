@@ -3,13 +3,14 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AlertController, LoadingController } from '@ionic/angular';
 import { UrlConstants } from '../../core/constants/url.constant';
-import { ValidatorConstants } from 'src/app/core/constants/validator.constants';
-import { LoginService } from 'src/app/core/services/login.service';
-import { AuthService } from 'src/app/core/services/auth.service';
 import QrScanner from 'qr-scanner';
-import { environment } from 'src/environments/environment.prod';
+
 import { HttpClient } from '@angular/common/http';
 import { firstValueFrom } from 'rxjs';
+import { environment } from '../../../environments/environment';
+import { AuthService } from '../../core/services/auth.service';
+import { ValidatorConstants } from 'src/app/core/constants/validator.constants';
+import { LoginService } from 'src/app/core/services/login.service';
 
 @Component({
   selector: 'app-login',

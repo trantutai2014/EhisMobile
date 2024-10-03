@@ -87,11 +87,11 @@ if (app.Environment.IsDevelopment())
 else
 {
     // For mobile apps, allow http traffic.
-    app.UseHttpsRedirection();
+    //app.UseHttpsRedirection();
 }
 
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 // Use CORS
 app.UseCors("AllowAngularApp");
