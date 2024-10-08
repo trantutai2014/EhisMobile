@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "sfmCg2ZDi/Y=",
+  "dgSpecHash": "ompShe5YpP8=",
   "success": true,
   "projectFilePath": "D:\\EhisSongAn\\EhisMobile\\API\\Common\\Common.csproj",
   "expectedPackageFiles": [
@@ -13,12 +13,5 @@
     "C:\\Users\\Admin\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.1\\system.runtime.compilerservices.unsafe.4.5.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file D:\\EhisSongAn\\EhisMobile\\API\\Common\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

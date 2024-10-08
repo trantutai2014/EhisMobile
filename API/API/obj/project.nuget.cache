@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "q7ohLnCpEwY=",
+  "dgSpecHash": "lWQd/9E2+dk=",
   "success": true,
   "projectFilePath": "D:\\EhisSongAn\\EhisMobile\\API\\API\\API.csproj",
   "expectedPackageFiles": [
@@ -76,12 +76,5 @@
     "C:\\Users\\Admin\\.nuget\\packages\\xamarin.forms\\5.0.0.2662\\xamarin.forms.5.0.0.2662.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\z.entityframework.extensions.efcore\\8.103.4\\z.entityframework.extensions.efcore.8.103.4.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file D:\\EhisSongAn\\EhisMobile\\API\\API\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

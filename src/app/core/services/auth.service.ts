@@ -16,7 +16,7 @@ export class AuthService {
     const body = { username, password };
 
     try {
-      const response = await firstValueFrom(this.http.post<{ token: string, refreshToken: string }>(`${environment.BASE_API}/DangNhap`, body));
+      const response = await firstValueFrom(this.http.post<{ token: string, refreshToken: string }>(`${environment.BASE_API}/api/DangNhap`, body));
       
       if (response && response.token) {
         this.token = response.token;

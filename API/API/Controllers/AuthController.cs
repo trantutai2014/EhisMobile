@@ -14,7 +14,11 @@ namespace API.Controllers
     {
       _tokenService = tokenService;
     }
-
+    [HttpGet]
+    public async Task<IActionResult> Get()
+    {
+      return Ok(DateTime.Now);
+    }
     [HttpPost("refresh")]
     public async Task<IActionResult> RefreshToken([FromBody] string refreshToken)
     {
