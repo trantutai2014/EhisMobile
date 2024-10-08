@@ -85,13 +85,17 @@
                 <ion-input type="date" placeholder="Nhập ngày lập hồ sơ"></ion-input>
               </ion-item>
             </ion-list>
-
-            <!-- Nút Lưu -->
-            <ion-button expand="block" color="primary" (click)="confirm()">Lưu Thông Tin</ion-button>
-            <ion-button expand="block" color="primary" (click)="cancel()">Hủy</ion-button>
           </ion-card-content>
         </ion-card>
       </ion-content>
+
+      <!-- Footer with Buttons -->
+      <ion-footer>
+        <div class="ion-padding">
+          <ion-button expand="block" color="primary" (click)="confirm()">Lưu Thông Tin</ion-button>
+          <ion-button expand="block" color="danger" (click)="cancel()">Hủy</ion-button>
+        </div>
+      </ion-footer>
     </ng-template>
   </ion-modal>
 </ion-content>
