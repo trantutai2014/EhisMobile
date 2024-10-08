@@ -1,27 +1,33 @@
-import { HttpClient } from "@angular/common/http";
-import { Injectable } from "@angular/core";
-import { Router } from "@angular/router";
-import { firstValueFrom, Observable, throwError, map, catchError } from "rxjs";
-import { environment } from "../../../environments/environment";
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { BehaviorSubject, Observable, firstValueFrom, tap } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
   private token: string | null = null;
+  private refreshTokenInProgress = false;
+  private accessTokenSubject: BehaviorSubject<string | null> = new BehaviorSubject<string | null>(null);
 
-  constructor(private http: HttpClient, private router: Router) {}
+  constructor(private http: HttpClient, private router: Router) { }
 
   async login(username: string, password: string): Promise<boolean> {
     const body = { username, password };
 
     try {
+<<<<<<< HEAD
       const response = await firstValueFrom(this.http.post<{ token: string, refreshToken: string }>(`${environment.BASE_API}/api/DangNhap`, body));
       
       if (response && response.token) {
+=======
+      const response = await firstValueFrom(this.http.post<{ token: string }>(`https://localhost:7170/api/DangNhap`, body));
+
+      if (response.token) {
+>>>>>>> a918546917967b020258a3f7883e517273396d8c
         this.token = response.token;
-        localStorage.setItem('token', this.token); // Lưu access token
-        localStorage.setItem('refreshToken', response.refreshToken); // Lưu refresh token
+        localStorage.setItem('token', this.token);
         return true;
       }
 
@@ -33,36 +39,55 @@ export class AuthService {
   }
 
   getToken(): string | null {
-    return localStorage.getItem('token'); // Lấy access token từ localStorage
+    return localStorage.getItem('token');
   }
 
   logout() {
     this.token = null;
-    localStorage.removeItem('token'); // Xóa token khi đăng xuất
-    localStorage.removeItem('refreshToken'); // Xóa refresh token
-    this.router.navigate(['/login']);
+    localStorage.removeItem('token');
+    this.router.navigate(['/thong-tin-hanh-chinh']);
+  }
+
+  async getUserById(userId: string): Promise<any> {
+    try {
+      const user = await firstValueFrom(this.http.get<any>(`https://localhost:7170/api/Users/${userId}`));
+      return user;
+    } catch (error) {
+      console.error("Error fetching user by ID:", error);
+      throw error;
+    }
+  }
+
+  getRefreshToken(): string | null {
+    return localStorage.getItem('refreshToken');
+  }
+
+  saveTokens(accessToken: string, refreshToken: string): void {
+    localStorage.setItem('accessToken', accessToken);
+    localStorage.setItem('refreshToken', refreshToken);
   }
 
   refreshToken(): Observable<any> {
-    const refreshToken = localStorage.getItem('refreshToken');
-    if (!refreshToken) {
-      console.error('No refresh token found');
-      this.logout(); // Đăng xuất nếu không có refresh token
-      return throwError(() => new Error('No refresh token'));
-    }
+    return this.http.post('/api/auth/refresh-token', {
+      refreshToken: this.getRefreshToken()
+    }).pipe(
+      tap((response: any) => {
+        this.saveTokens(response.accessToken, response.refreshToken);
+        this.accessTokenSubject.next(response.accessToken);
+      })
+    );
+  }
 
-    return this.http.post<any>(`${environment.BASE_API}/api/Auth/refresh`, { refreshToken })
-      .pipe(
-        map(response => {
-          localStorage.setItem('token', response.accessToken); // Lưu token mới
-          localStorage.setItem('refreshToken', response.refreshToken); // Lưu refresh token mới
-          return response;
-        }),
-        catchError(error => {
-          console.error('Error refreshing token:', error);
-          this.logout(); // Đăng xuất nếu refresh token không hợp lệ
-          return throwError(() => new Error('Refresh token failed'));
-        })
-      );
+  isRefreshTokenInProgress(): boolean {
+    return this.refreshTokenInProgress;
+  }
+
+  setRefreshTokenInProgress(status: boolean): void {
+    this.refreshTokenInProgress = status;
+  }
+
+  getAccessTokenSubject(): BehaviorSubject<string | null> {
+    return this.accessTokenSubject;
   }
 }
+

@@ -7,7 +7,7 @@ import { IonModal } from '@ionic/angular';
   styleUrls: ['./cap-nhat.component.scss'],
 })
 
-export class CapNhatComponent  implements OnInit {
+export class CapNhatComponent implements OnInit {
 
   @ViewChild(IonModal)
   modal!: IonModal;
@@ -20,6 +20,6 @@ export class CapNhatComponent  implements OnInit {
     this.modal.dismiss('confirm');
   }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
 }

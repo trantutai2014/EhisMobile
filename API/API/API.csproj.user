@@ -1,8 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
+<<<<<<< HEAD
     <ActiveDebugProfile>IIS Express</ActiveDebugProfile>
     <NameOfLastUsedPublishProfile>D:\EhisSongAn\EhisMobile\API\API\Properties\PublishProfiles\FolderProfile.pubxml</NameOfLastUsedPublishProfile>
+=======
+    <ActiveDebugProfile>https</ActiveDebugProfile>
+>>>>>>> a918546917967b020258a3f7883e517273396d8c
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>

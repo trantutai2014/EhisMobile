@@ -323,7 +323,6 @@ D:\tt\EhisMB\API\API\bin\Debug\net8.0\Azure.Identity.dll
 D:\tt\EhisMB\API\API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\tt\EhisMB\API\API\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 D:\tt\EhisMB\API\API\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
-D:\tt\EhisMB\API\API\bin\Debug\net8.0\Microsoft.Bcl.TimeProvider.dll
 D:\tt\EhisMB\API\API\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
 D:\tt\EhisMB\API\API\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
 D:\tt\EhisMB\API\API\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
