@@ -10,56 +10,65 @@ using System.Text;
 using Service;
 using Common.Model;
 using Common.Helpers;
+using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
-
-
 
 // Configure CORS to allow credentials
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAngularApp",
-        policy =>
-        {
-            policy.WithOrigins("http://localhost:8100") // Replace with your Angular app's URL
-                  .AllowAnyHeader()
-                  .AllowAnyMethod()
-                  .AllowCredentials();
-        });
+  options.AddPolicy("AllowAngularApp",
+      policy =>
+      {
+        policy.WithOrigins("http://localhost:8100") // Adjust as needed
+                .AllowAnyHeader()
+                .AllowAnyMethod()
+                .AllowCredentials();
+      });
 });
-// Thêm JWT Authentication
-// Khóa bí mật của bạn
+
+// JWT Authentication
 var key = Encoding.UTF8.GetBytes("D8a%6Pz#bQ9x^1vZ3rR4k@tF6vU5eJ7!nM8jH3wD2zQ9bC7uA5eR9gT4wJ1lX8haaaa");
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
-        options.TokenValidationParameters = new TokenValidationParameters
-        {
-            ValidateIssuerSigningKey = true,
-            IssuerSigningKey = new SymmetricSecurityKey(key),
-            ValidateIssuer = false,
-            ValidateAudience = false,
-            RequireExpirationTime = true,
-            ClockSkew = TimeSpan.Zero, // Tùy chọn giảm thiểu độ trễ thời gian
-            ValidAlgorithms = new[] { SecurityAlgorithms.HmacSha512 } // Sử dụng thuật toán HS512
-        };
+      options.TokenValidationParameters = new TokenValidationParameters
+      {
+        ValidateIssuerSigningKey = true,
+        IssuerSigningKey = new SymmetricSecurityKey(key),
+        ValidateIssuer = false,
+        ValidateAudience = false,
+        RequireExpirationTime = true,
+        ClockSkew = TimeSpan.Zero,
+        ValidAlgorithms = new[] { SecurityAlgorithms.HmacSha512 }
+      };
     });
 
-// Đăng ký TokenService với DI container
-builder.Services.AddScoped<TokenService>(); // Hoặc AddSingleton(), AddTransient() tùy theo phạm vi sử dụng
-
+var webSocketOptions = new WebSocketOptions
+{
+  KeepAliveInterval = TimeSpan.FromMinutes(2)
+};
 
 builder.Services.AddAuthorization();
-
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
 
-// Configure Entity Framework and other services
+// Swagger setup
+builder.Services.AddSwaggerGen(c =>
+{
+  c.SwaggerDoc("v1", new OpenApiInfo
+  {
+    Title = "API",
+    Version = "v1"
+  });
+});
+
+// Database configuration
 builder.Services.AddDbContext<MDPDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("MDPDevConnection")));
 
+// Service registration
 builder.Services.AddScoped<UserRoleService, UserRoleService>();
 builder.Services.AddScoped<DangNhapService, DangNhapService>();
 builder.Services.AddScoped<DangKyService, DangKyService>();
@@ -68,37 +77,36 @@ builder.Services.AddScoped<PasswordHelper, PasswordHelper>();
 builder.Services.AddScoped(typeof(IRepository), typeof(Repository));
 builder.Services.AddScoped<QRCodeService, QRCodeService>();
 builder.Services.AddScoped<ThongTinService, ThongTinService>();
+builder.Services.AddScoped<TokenService, TokenService>();
+builder.Services.AddScoped<NotificationService, NotificationService>(); // Fix for NotificationService registration
+
 var assembliesToScan = new[]
-           {
-                Assembly.GetAssembly(typeof(IUserRoleService))
-            };
+{
+    Assembly.GetAssembly(typeof(IUserRoleService))
+};
 
 builder.Services.RegisterAssemblyPublicNonGenericClasses(assembliesToScan)
         .Where(c => c.Name.EndsWith("Service"))
         .AsPublicImplementedInterfaces();
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
-    app.UseDeveloperExceptionPage();
+  app.UseDeveloperExceptionPage();
+  app.UseSwagger();
+  app.UseSwaggerUI();
+
 }
 else
 {
-    // For mobile apps, allow http traffic.
-    //app.UseHttpsRedirection();
+  app.UseWebSockets(webSocketOptions);
 }
 
-
-//app.UseHttpsRedirection();
-
-// Use CORS
 app.UseCors("AllowAngularApp");
-
-// Use Authentication and Authorization
 app.UseAuthentication();
 app.UseAuthorization();
+app.UseWebSockets(webSocketOptions);
 
 app.MapControllers();
 app.Run();

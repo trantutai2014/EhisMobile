@@ -1,47 +1,35 @@
+using System.Net.WebSockets;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
 
-//using System.Collections.Concurrent;
-//using System.Threading.Tasks;
+namespace Service
+{
+  public class NotificationService
+  {
+    public async Task SendNotification(WebSocket webSocket, string notification)
+    {
+      var buffer = Encoding.UTF8.GetBytes(notification);
+      var segment = new ArraySegment<byte>(buffer);
 
-//public class NotificationService
-//{
-//  private readonly SocketIoServer _socketIo;
-//  private readonly ConcurrentDictionary<string, SocketIoSocket> _connectedUsers;
+      await webSocket.SendAsync(segment, WebSocketMessageType.Text, true, CancellationToken.None);
+    }
 
-//  public NotificationService()
-//  {
-//    _socketIo = new SocketIoServer(new ServerOptions());
-//    _connectedUsers = new ConcurrentDictionary<string, SocketIoSocket>();
-//  }
+    public async Task ReceiveAndForwardNotifications(WebSocket webSocket)
+    {
+      var buffer = new byte[1024 * 4];
+      var receiveResult = await webSocket.ReceiveAsync(new ArraySegment<byte>(buffer), CancellationToken.None);
 
-//  public void Configure()
-//  {
-//    _socketIo.OnConnect((socket) =>
-//    {
-//      // Assuming the client sends the user ID immediately after connecting
-//      socket.On("register_user", (userId) =>
-//      {
-//        _connectedUsers.TryAdd(userId, socket);
-//        Console.WriteLine($"User {userId} connected.");
-//      });
+      while (!receiveResult.CloseStatus.HasValue)
+      {
+        // Example: Forwarding the received data back as a notification
+        var receivedMessage = Encoding.UTF8.GetString(buffer, 0, receiveResult.Count);
+        await SendNotification(webSocket, $"Notification: {receivedMessage}");
 
-//      socket.OnDisconnect(() =>
-//      {
-//        var user = _connectedUsers.FirstOrDefault(x => x.Value == socket);
-//        if (user.Key != null)
-//        {
-//          _connectedUsers.TryRemove(user.Key, out _);
-//          Console.WriteLine($"User {user.Key} disconnected.");
-//        }
-//      });
-//    });
-//  }
+        receiveResult = await webSocket.ReceiveAsync(new ArraySegment<byte>(buffer), CancellationToken.None);
+      }
 
-//  // Send notification to a specific user by their ID
-//  public async Task SendNotificationToUser(string userId, string message)
-//  {
-//    if (_connectedUsers.TryGetValue(userId, out var socket))
-//    {
-//      await socket.EmitAsync("notification", message);
-//    }
-//  }
-//}
+      await webSocket.CloseAsync(receiveResult.CloseStatus.Value, receiveResult.CloseStatusDescription, CancellationToken.None);
+    }
+  }
+}

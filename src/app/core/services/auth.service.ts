@@ -17,15 +17,9 @@ export class AuthService {
     const body = { username, password };
 
     try {
-<<<<<<< HEAD
-      const response = await firstValueFrom(this.http.post<{ token: string, refreshToken: string }>(`${environment.BASE_API}/api/DangNhap`, body));
-      
-      if (response && response.token) {
-=======
       const response = await firstValueFrom(this.http.post<{ token: string }>(`https://localhost:7170/api/DangNhap`, body));
 
       if (response.token) {
->>>>>>> a918546917967b020258a3f7883e517273396d8c
         this.token = response.token;
         localStorage.setItem('token', this.token);
         return true;
