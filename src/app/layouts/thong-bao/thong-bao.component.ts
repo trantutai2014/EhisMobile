@@ -1,9 +1,15 @@
 import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { IonModal } from '@ionic/angular';
 import { Subscription } from 'rxjs';
+<<<<<<< HEAD
 import { WebSocketService } from 'src/app/core/services/websocket.service';
 
 
+=======
+import { NotificationService } from 'src/app/core/services/notification.service';
+import { WebSocketService } from 'src/app/core/services/websocket.service';
+
+>>>>>>> bb5dda1161ca0cc37fcdda9b32550d38f0f96b3d
 
 @Component({
   selector: 'app-thongbao',

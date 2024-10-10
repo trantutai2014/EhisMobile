@@ -33,9 +33,9 @@
           <img src="../../assets/img/1.png" alt="">
         </ion-avatar>
       </ion-col>
-      <ion-col>
+      <ion-col *ngIf="items">
         <h3 class="ion-no-margin">Xin chào</h3>
-        <p class="ion-no-margin">User1</p>
+        <p class="ion-no-margin">{{items.hoTen|titlecase}}</p>
       </ion-col>
     </ion-row>
   </ion-grid>

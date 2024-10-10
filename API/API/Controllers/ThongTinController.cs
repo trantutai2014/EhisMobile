@@ -21,7 +21,7 @@ namespace YourNamespace.Controllers
       var skdt_HoSo = await _ThongTinService.GetByCCCD(cccd);
       if (skdt_HoSo != null)
       {
-        return Ok(new { Data = (MapQR.MapLoginQR(skdt_HoSo))});
+        return Ok(new { Data = (MapQR.MapLoginQR(skdt_HoSo)) });
       }
 
       return NotFound("Không tìm thấy thông tin.");

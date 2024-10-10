@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { UrlConstants } from 'src/app/core/constants/url.constant';
+import { CccdService } from 'src/app/core/services/cccd.service';
 
 @Component({
   selector: 'app-menu',
@@ -8,7 +9,14 @@ import { UrlConstants } from 'src/app/core/constants/url.constant';
   styleUrls: ['./menu.component.scss'],
 })
 export class MenuComponent {
-  constructor(private router: Router) {}
+
+
+  constructor(private router: Router,
+    private cccdService: CccdService,
+    
+  ) { }
+
+  
 
   navigateTo(page: string) {
     this.router.navigateByUrl(`/${page}`);
@@ -25,27 +33,64 @@ export class MenuComponent {
   }
 
   ngOnInit() {
+   const cccd = this.cccdService.getCccd(); 
+
   }
 
   goToThongTinHanhChinh() {
-    this.router.navigate([UrlConstants.THONGTINHANHCHINH]);
+    const cccd = localStorage.getItem('cccd');
+    if (cccd !== null) {
+      this.router.navigate([UrlConstants.THONGTINHANHCHINH.replace(':cccd', cccd)]);
+    
+    }
+
+  
+ 
   }
   goToThongTinTiemChung() {
+
+    
+    const cccd = this.cccdService.getCccd(); 
     this.router.navigate([UrlConstants.THONGTINTIEMCHUNG]);
   }
   goToDSKhamChuaBenh() {
-    this.router.navigate([UrlConstants.DSDOTKHAMCHUABENH]);
+    const cccd = localStorage.getItem('cccd');
+    if (cccd !== null) {
+    this.router.navigate([UrlConstants.DSDOTKHAMCHUABENH.replace(':cccd', cccd)]);
+      
+     
+    }
+
+    
   }
   goToThongTinBHYT() {
-    this.router.navigate([UrlConstants.THONGTINBHYT]);
+    const cccd = localStorage.getItem('cccd');
+    if (cccd !== null) {
+      this.router.navigate([UrlConstants.THONGTINBHYT.replace(':cccd', cccd)]);
+
+    }
+
+
+    
   }
 
   goToTrangChu() {
-    this.router.navigate([UrlConstants.TRANGCHU]);
+    const cccd = localStorage.getItem('cccd');
+    if (cccd !== null) {
+      this.router.navigate([UrlConstants.TRANGCHU.replace(':cccd',cccd)]);
+
+
+    }
   }
 
   goToSetting() {
-    this.router.navigate([UrlConstants.SETTING]);
+    const cccd = localStorage.getItem('cccd');
+    if (cccd !== null) {
+      this.router.navigate([UrlConstants.SETTING.replace(':cccd', cccd)]);
+
+
+
+    }
   }
 
   goToHistory() {

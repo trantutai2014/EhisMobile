@@ -1,13 +1,13 @@
 
 <ion-card>
   <ion-card-header>
-    <ion-card-title>Chuẩn đoán xác định khi ra viện</ion-card-title>
+    <ion-card-title>Chỉ số theo dõi chính</ion-card-title>
   </ion-card-header>
 
-  <ion-card-content>
-  <ion-label class="label-left" color="dark">Chuẩn đoán của bác sĩ:  <ion-label color="medium">Viêm phế quản phổi, không đặc hiệu, Tiêu chảy rối loạn chức năng </ion-label> </ion-label>
-    <ion-label class="label-left" color="dark">Bệnh chính:   <ion-label color="medium">J18.0 Viêm phế quản phổi, không đặc hiệu </ion-label> </ion-label>
-    <ion-label class="label-left" color="dark">Mã bệnh kèm theo:  <ion-label color="medium">K59.1</ion-label> </ion-label>
+  <ion-card-content *ngIf="items">
+  <ion-label class="label-left" color="dark">Nhóm máu ABO:  <ion-label color="medium">{{items.nhoM_MAU}} </ion-label> </ion-label>
+    <ion-label class="label-left" color="dark">Chiều cao:   <ion-label color="medium"></ion-label> không có thông tin </ion-label>
+    <ion-label class="label-left" color="dark">Cân nặng:  <ion-label color="medium">{{items.caN_NANG}}kg</ion-label> </ion-label>
   </ion-card-content>
 
 

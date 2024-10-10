@@ -9,11 +9,19 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = API
 build_property.RootNamespace = API
-build_property.ProjectDir = D:\EhisSongAn\EhisMobile\API\API\
+<<<<<<< HEAD
+build_property.ProjectDir = D:\SongAn\EhisMobile\API\API\
+=======
+build_property.ProjectDir = D:\Hocs\developer\SongAn\EhisMobile\test10\EhisMobile\API\API\
+>>>>>>> b6c5cdab1ddf0d3225e469dfb9bb0120217a7777
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\EhisSongAn\EhisMobile\API\API
+<<<<<<< HEAD
+build_property.MSBuildProjectDirectory = D:\SongAn\EhisMobile\API\API
+=======
+build_property.MSBuildProjectDirectory = D:\Hocs\developer\SongAn\EhisMobile\test10\EhisMobile\API\API
+>>>>>>> b6c5cdab1ddf0d3225e469dfb9bb0120217a7777
 build_property._RazorSourceGeneratorDebug = 

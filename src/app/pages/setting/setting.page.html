@@ -26,12 +26,12 @@
 
 <ion-content class="ion-padding">
   <!-- User Information -->
-  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin-top: 20px;">
+  <div *ngIf="items" style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin-top: 20px;">
     <img src="../../assets/img/1.png" alt="Avatar"
       style="border-radius: 50%; margin-bottom: 10px; width: 100px; height: 100px;">
     <div style="text-align: center;">
       <h6 style="margin: 0 0 10px 0;">Xin chào!</h6>
-      <p style="margin: 0; font-size: 20px;"><strong>User1</strong></p>
+      <p style="margin: 0; font-size: 20px;"><strong>{{items.hO_TEN|titlecase}}</strong></p>
     </div>
   </div>
 
