@@ -26,13 +26,13 @@ export class ThongBaoComponent implements OnInit, OnDestroy {
   ) { }
   ngOnInit() {
 
-    this.subscription = this.notificationService.connect()
+    // this.subscription = this.notificationService.connect()
 
-      .subscribe((message: string) => {
+    //   .subscribe((message: string) => {
 
-        this.messages.push(message);
+    //     this.messages.push(message);
 
-      });
+    //   });
 
   }
 

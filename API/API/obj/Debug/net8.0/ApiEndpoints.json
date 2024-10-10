@@ -58,6 +58,16 @@
     ]
   },
   {
+    "ContainingType": "API.Controllers.NotificationController",
+    "Method": "GetWebSocket",
+    "RelativePath": "api/Notification/ws",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "YourNamespace.Controllers.QRCodeController",
     "Method": "GetByCode",
     "RelativePath": "api/QRCode/{code}",

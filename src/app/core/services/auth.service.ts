@@ -37,9 +37,10 @@ export class AuthService {
   }
 
   logout() {
-    this.token = null;
+    this.router.navigate(['/login']);
     localStorage.removeItem('token');
-    this.router.navigate(['/thong-tin-hanh-chinh']);
+    localStorage.removeItem('cccd');
+   
   }
 
   async getUserById(userId: string): Promise<any> {
