@@ -19,6 +19,7 @@ import { UserRoleModule } from './pages/user-role/user-role.module';
 import { UserRoleComponent } from './pages/user-role/user-role.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { JwtInterceptor } from './core/guards/jwt.interceptor';
+import { ApiInterceptor } from './core/interceptor/thong-bao.interceptor';
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   declarations: [
@@ -48,7 +49,13 @@ import { JwtInterceptor } from './core/guards/jwt.interceptor';
     },
     { provide: HTTP_INTERCEPTORS,
        useClass: JwtInterceptor, 
-       multi: true }],
+       multi: true 
+    },
+    {
+       provide: HTTP_INTERCEPTORS, useClass: ApiInterceptor, multi: true 
+    }
+    
+      ],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

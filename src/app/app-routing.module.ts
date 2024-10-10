@@ -15,7 +15,7 @@ const routes: Routes = [
     canActivate: [AuthGuard] // Bảo vệ route này
   },
   {
-    path: 'trang-chu',
+    path: 'trang-chu/:cccd',
     loadChildren: () => import('./pages/trang-chu/trang-chu.module').then(m => m.MainPageModule),
     canActivate: [AuthGuard] // Bảo vệ route này
   },
@@ -60,7 +60,7 @@ const routes: Routes = [
     canActivate: [AuthGuard] // Bảo vệ route này
   },
   {
-    path: 'ds-dot-kham-chua-benh',
+    path: 'ds-dot-kham-chua-benh/:cccd',
     loadChildren: () => import('./pages/ds-dot-kham/ds-dot-kham.module').then(m => m.DotkhamPageModule),
     canActivate: [AuthGuard] // Bảo vệ route này
   },
@@ -70,12 +70,12 @@ const routes: Routes = [
     canActivate: [AuthGuard] // Bảo vệ route này
   },
   {
-    path: 'setting',
+    path: 'setting/:cccd',
     loadChildren: () => import('./pages/setting/setting.module').then(m => m.SettingPageModule),
     canActivate: [AuthGuard] // Bảo vệ route này
   },
   {
-    path: 'thong-tin-bhyt',
+    path: 'thong-tin-bhyt/:cccd',
     loadChildren: () => import('./pages/thong-tin-bhyt/thong-tin-bhyt.module').then(m => m.ThongTinBHYTPageModule),
     canActivate: [AuthGuard] // Bảo vệ route này
   },

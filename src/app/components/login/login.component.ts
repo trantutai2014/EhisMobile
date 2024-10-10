@@ -11,6 +11,7 @@ import { environment } from '../../../environments/environment';
 import { AuthService } from '../../core/services/auth.service';
 import { ValidatorConstants } from 'src/app/core/constants/validator.constants';
 import { LoginService } from 'src/app/core/services/login.service';
+import { CccdService } from 'src/app/core/services/cccd.service';
 
 @Component({
   selector: 'app-login',
@@ -37,6 +38,7 @@ export class LoginComponent implements OnInit {
     private authService: AuthService,
     private alertController: AlertController,
     private http: HttpClient,
+    private cccdService: CccdService,
    
   ) {
     this.formData = this.fb.group({
@@ -83,7 +85,9 @@ export class LoginComponent implements OnInit {
   
         if (response && response.token && response.cccd) {
           localStorage.setItem('token', response.token);
+          localStorage.setItem('cccd', response.cccd);
           this.cccd = response.cccd;
+          this.cccdService.setCccd(this.cccd);
           this.router.navigate([UrlConstants.THONGTINHANHCHINH.replace(':cccd', this.cccd)]);
         } else {
           this.showErrorAlert('Dữ liệu không hợp lệ từ máy chủ');

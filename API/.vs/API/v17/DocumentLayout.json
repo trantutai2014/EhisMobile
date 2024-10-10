@@ -1,50 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\tt\\EhisMB\\API\\",
+  "WorkspaceRootPath": "D:\\SongAn\\EhisMobile\\API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{13564404-4BC6-45F6-B3D7-042A4D9CC8F2}|API\\API.csproj|d:\\tt\\ehismb\\api\\api\\controllers\\thongtincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{13564404-4BC6-45F6-B3D7-042A4D9CC8F2}|API\\API.csproj|solutionrelative:api\\controllers\\thongtincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{13564404-4BC6-45F6-B3D7-042A4D9CC8F2}|API\\API.csproj|d:\\songan\\ehismobile\\api\\api\\controllers\\thongtinbhytcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{13564404-4BC6-45F6-B3D7-042A4D9CC8F2}|API\\API.csproj|solutionrelative:api\\controllers\\thongtinbhytcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B468F22D-8BCC-4C42-A04B-1F40D50731E8}|Data\\Data.csproj|d:\\tt\\ehismb\\api\\data\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B468F22D-8BCC-4C42-A04B-1F40D50731E8}|Data\\Data.csproj|solutionrelative:data\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{13564404-4BC6-45F6-B3D7-042A4D9CC8F2}|API\\API.csproj|d:\\songan\\ehismobile\\api\\api\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{13564404-4BC6-45F6-B3D7-042A4D9CC8F2}|API\\API.csproj|solutionrelative:api\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{13564404-4BC6-45F6-B3D7-042A4D9CC8F2}|API\\API.csproj|d:\\tt\\ehismb\\api\\api\\api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{13564404-4BC6-45F6-B3D7-042A4D9CC8F2}|API\\API.csproj|solutionrelative:api\\api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{C349B7AB-35F2-4E9F-8BBF-92BE7CBCBADF}|Service\\Service.csproj|d:\\songan\\ehismobile\\api\\service\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C349B7AB-35F2-4E9F-8BBF-92BE7CBCBADF}|Service\\Service.csproj|solutionrelative:service\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{13564404-4BC6-45F6-B3D7-042A4D9CC8F2}|API\\API.csproj|d:\\tt\\ehismb\\api\\api\\api.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{13564404-4BC6-45F6-B3D7-042A4D9CC8F2}|API\\API.csproj|solutionrelative:api\\api.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{13564404-4BC6-45F6-B3D7-042A4D9CC8F2}|API\\API.csproj|d:\\tt\\ehismb\\api\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{13564404-4BC6-45F6-B3D7-042A4D9CC8F2}|API\\API.csproj|d:\\songan\\ehismobile\\api\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{13564404-4BC6-45F6-B3D7-042A4D9CC8F2}|API\\API.csproj|solutionrelative:api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{13564404-4BC6-45F6-B3D7-042A4D9CC8F2}|API\\API.csproj|d:\\tt\\ehismb\\api\\api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{13564404-4BC6-45F6-B3D7-042A4D9CC8F2}|API\\API.csproj|solutionrelative:api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B468F22D-8BCC-4C42-A04B-1F40D50731E8}|Data\\Data.csproj|d:\\tt\\ehismb\\api\\data\\models\\skdt\\skdt_hoso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B468F22D-8BCC-4C42-A04B-1F40D50731E8}|Data\\Data.csproj|solutionrelative:data\\models\\skdt\\skdt_hoso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C349B7AB-35F2-4E9F-8BBF-92BE7CBCBADF}|Service\\Service.csproj|d:\\tt\\ehismb\\api\\service\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C349B7AB-35F2-4E9F-8BBF-92BE7CBCBADF}|Service\\Service.csproj|solutionrelative:service\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B468F22D-8BCC-4C42-A04B-1F40D50731E8}|Data\\Data.csproj|d:\\tt\\ehismb\\api\\data\\abstract\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B468F22D-8BCC-4C42-A04B-1F40D50731E8}|Data\\Data.csproj|solutionrelative:data\\abstract\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B468F22D-8BCC-4C42-A04B-1F40D50731E8}|Data\\Data.csproj|d:\\tt\\ehismb\\api\\data\\ef\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B468F22D-8BCC-4C42-A04B-1F40D50731E8}|Data\\Data.csproj|solutionrelative:data\\ef\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{91273B5C-608A-44D1-A72B-AC346FCDE928}|Common\\Common.csproj|d:\\tt\\ehismb\\api\\common\\model\\skdt_hosomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91273B5C-608A-44D1-A72B-AC346FCDE928}|Common\\Common.csproj|solutionrelative:common\\model\\skdt_hosomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -75,137 +47,54 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ThongTinController.cs",
-              "DocumentMoniker": "D:\\tt\\EhisMB\\API\\API\\Controllers\\ThongTinController.cs",
-              "RelativeDocumentMoniker": "API\\Controllers\\ThongTinController.cs",
-              "ToolTip": "D:\\tt\\EhisMB\\API\\API\\Controllers\\ThongTinController.cs",
-              "RelativeToolTip": "API\\Controllers\\ThongTinController.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "ThongTinBhytController.cs",
+              "DocumentMoniker": "D:\\SongAn\\EhisMobile\\API\\API\\Controllers\\ThongTinBhytController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\ThongTinBhytController.cs",
+              "ToolTip": "D:\\SongAn\\EhisMobile\\API\\API\\Controllers\\ThongTinBhytController.cs",
+              "RelativeToolTip": "API\\Controllers\\ThongTinBhytController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T07:41:00.381Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\tt\\EhisMB\\API\\Data\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Data\\Models\\User.cs",
-              "ToolTip": "D:\\tt\\EhisMB\\API\\Data\\Models\\User.cs",
-              "RelativeToolTip": "Data\\Models\\User.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T07:14:26.486Z",
+              "WhenOpened": "2024-10-10T04:48:07.63Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "API.csproj",
-              "DocumentMoniker": "D:\\tt\\EhisMB\\API\\API\\API.csproj",
-              "RelativeDocumentMoniker": "API\\API.csproj",
-              "ToolTip": "D:\\tt\\EhisMB\\API\\API\\API.csproj",
-              "RelativeToolTip": "API\\API.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-10-03T02:16:47.46Z",
+              "Title": "NotificationService.cs",
+              "DocumentMoniker": "D:\\SongAn\\EhisMobile\\API\\Service\\NotificationService.cs",
+              "RelativeDocumentMoniker": "Service\\NotificationService.cs",
+              "ToolTip": "D:\\SongAn\\EhisMobile\\API\\Service\\NotificationService.cs",
+              "RelativeToolTip": "Service\\NotificationService.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAuwCcAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T03:20:56.361Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NotificationController.cs",
+              "DocumentMoniker": "D:\\SongAn\\EhisMobile\\API\\API\\Controllers\\NotificationController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\NotificationController.cs",
+              "ToolTip": "D:\\SongAn\\EhisMobile\\API\\API\\Controllers\\NotificationController.cs",
+              "RelativeToolTip": "API\\Controllers\\NotificationController.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwAoAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T01:58:38.479Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "API",
-              "DocumentMoniker": "D:\\tt\\EhisMB\\API\\API\\API.csproj",
-              "RelativeDocumentMoniker": "API\\API.csproj",
-              "ToolTip": "D:\\tt\\EhisMB\\API\\API\\API.csproj",
-              "RelativeToolTip": "API\\API.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-10-03T02:20:34.718Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\tt\\EhisMB\\API\\API\\Program.cs",
+              "DocumentMoniker": "D:\\SongAn\\EhisMobile\\API\\API\\Program.cs",
               "RelativeDocumentMoniker": "API\\Program.cs",
-              "ToolTip": "D:\\tt\\EhisMB\\API\\API\\Program.cs",
+              "ToolTip": "D:\\SongAn\\EhisMobile\\API\\API\\Program.cs",
               "RelativeToolTip": "API\\Program.cs",
-              "ViewState": "AgIAAE0AAAAAAAAAAIAwwF0AAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T02:16:56.297Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\tt\\EhisMB\\API\\API\\appsettings.json",
-              "RelativeDocumentMoniker": "API\\appsettings.json",
-              "ToolTip": "D:\\tt\\EhisMB\\API\\API\\appsettings.json",
-              "RelativeToolTip": "API\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-10-03T02:16:54.299Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "TokenService.cs",
-              "DocumentMoniker": "D:\\tt\\EhisMB\\API\\Service\\TokenService.cs",
-              "RelativeDocumentMoniker": "Service\\TokenService.cs",
-              "ToolTip": "D:\\tt\\EhisMB\\API\\Service\\TokenService.cs",
-              "RelativeToolTip": "Service\\TokenService.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAgwCQAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T09:15:27.183Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "BaseEntity.cs",
-              "DocumentMoniker": "D:\\tt\\EhisMB\\API\\Data\\Abstract\\BaseEntity.cs",
-              "RelativeDocumentMoniker": "Data\\Abstract\\BaseEntity.cs",
-              "ToolTip": "D:\\tt\\EhisMB\\API\\Data\\Abstract\\BaseEntity.cs",
-              "RelativeToolTip": "Data\\Abstract\\BaseEntity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T07:12:34.024Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "SKDT_HoSoModel.cs",
-              "DocumentMoniker": "D:\\tt\\EhisMB\\API\\Common\\Model\\SKDT_HoSoModel.cs",
-              "RelativeDocumentMoniker": "Common\\Model\\SKDT_HoSoModel.cs",
-              "ToolTip": "D:\\tt\\EhisMB\\API\\Common\\Model\\SKDT_HoSoModel.cs",
-              "RelativeToolTip": "Common\\Model\\SKDT_HoSoModel.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAswBsAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T04:15:24.4Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "SKDT_HoSo.cs",
-              "DocumentMoniker": "D:\\tt\\EhisMB\\API\\Data\\Models\\SKDT\\SKDT_HoSo.cs",
-              "RelativeDocumentMoniker": "Data\\Models\\SKDT\\SKDT_HoSo.cs",
-              "ToolTip": "D:\\tt\\EhisMB\\API\\Data\\Models\\SKDT\\SKDT_HoSo.cs",
-              "RelativeToolTip": "Data\\Models\\SKDT\\SKDT_HoSo.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAADwvz4AAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T04:01:20.909Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Repository.cs",
-              "DocumentMoniker": "D:\\tt\\EhisMB\\API\\Data\\EF\\Repository.cs",
-              "RelativeDocumentMoniker": "Data\\EF\\Repository.cs",
-              "ToolTip": "D:\\tt\\EhisMB\\API\\Data\\EF\\Repository.cs",
-              "RelativeToolTip": "Data\\EF\\Repository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIYAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T02:48:51.034Z"
+              "WhenOpened": "2024-10-09T01:45:04.217Z",
+              "EditorCaption": ""
             }
           ]
         }

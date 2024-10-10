@@ -14,7 +14,7 @@ import { ThongBaoComponent } from './thong-bao.component';
     FormsModule,
     IonicModule,
   ],
-  declarations: [ThongBaoComponent]
+  declarations: []
 })
 export class ThongBaoModule {
   constructor(private router: Router) {}
