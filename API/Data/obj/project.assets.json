@@ -2799,11 +2799,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\EhisSongAn\\EhisMobile\\API\\Data\\Data.csproj",
+      "projectUniqueName": "D:\\SongAn\\EhisMobile\\API\\Data\\Data.csproj",
       "projectName": "Data",
-      "projectPath": "D:\\EhisSongAn\\EhisMobile\\API\\Data\\Data.csproj",
+      "projectPath": "D:\\SongAn\\EhisMobile\\API\\Data\\Data.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "D:\\EhisSongAn\\EhisMobile\\API\\Data\\obj\\",
+      "outputPath": "D:\\SongAn\\EhisMobile\\API\\Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2825,8 +2825,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\EhisSongAn\\EhisMobile\\API\\Common\\Common.csproj": {
-              "projectPath": "D:\\EhisSongAn\\EhisMobile\\API\\Common\\Common.csproj"
+            "D:\\SongAn\\EhisMobile\\API\\Common\\Common.csproj": {
+              "projectPath": "D:\\SongAn\\EhisMobile\\API\\Common\\Common.csproj"
             }
           }
         }
@@ -2886,13 +2886,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file D:\\EhisSongAn\\EhisMobile\\API\\Data\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }

@@ -17,6 +17,12 @@ export interface Notification {
   providedIn: 'root',
 })
 export class NotificationService {
+  connect() {
+    throw new Error('Method not implemented.');
+  }
+  closeConnection() {
+    throw new Error('Method not implemented.');
+  }
   private notifyRequest = new ReplaySubject<Notification>();
   notifyRequest$ = this.notifyRequest.asObservable();
 

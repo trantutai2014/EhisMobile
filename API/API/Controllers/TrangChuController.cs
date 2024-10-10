@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Authorization;
+using API.Mapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Service;
 
 namespace API.Controllers
 {
@@ -8,13 +10,17 @@ namespace API.Controllers
     [Authorize] // Protect all actions in this controller
     public class TrangChuController : ControllerBase
     {
-        // Your protected actions here
+
+
 
         [HttpGet]
         public IActionResult GetHomeData()
         {
             // Return home page data
-            return Ok(new { data = "Protected Home Data" });
+            return Ok(new { data = "Protected Home Data" }); 
         }
+
+
+
     }
 }
