@@ -1,7 +1,0 @@
-{
-  "name": "blankEhisMobile",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
-}
