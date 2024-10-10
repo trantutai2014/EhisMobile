@@ -4,8 +4,6 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 import { Router } from '@angular/router';
-import { UrlConstants } from 'src/app/core/constants/url.constant';
-import { ThongBaoComponent } from './thong-bao.component';
 
 
 @NgModule({
@@ -16,7 +14,7 @@ import { ThongBaoComponent } from './thong-bao.component';
   ],
   declarations: []
 })
-export class ThongBaoModule {
+export class GuiThongBaoModule {
   constructor(private router: Router) {}
 
   ngOnInit() {
