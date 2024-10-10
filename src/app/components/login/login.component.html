@@ -1,0 +1,68 @@
+<ion-content class="ion-padding" [fullscreen]="true">
+  <div style="top: 20%; max-width: 450px; margin: auto;">
+    <div class="text-center">
+      <img src="../../assets/img/logo@2x.png" title="Logo" class="logo" style="max-width: 300px; margin-top: 20%;">
+    </div>
+    <div style="text-align: center; font-weight: bold; font-size: 22px; margin-top: 10px; margin-bottom: 5px;">
+      Đăng Nhập Bằng Tài Khoản
+    </div>
+    <div class="middle">
+      <div class="box">
+        <!-- Sử dụng Reactive Forms -->
+        <form [formGroup]="formData" (ngSubmit)="login()">
+          <ion-item>
+            <ion-label position="floating">Tên Đăng Nhập</ion-label>
+            <ion-input type="text" formControlName="username" name="username"></ion-input>
+          </ion-item>
+          <div *ngIf="formData.get('username')?.invalid && formData.get('username')?.touched" class="help-block">
+            <ion-text color="danger" *ngIf="formData.get('username')?.errors?.['required']">
+              Tên đăng nhập không được để trống
+            </ion-text>
+            <ion-text color="danger" *ngIf="formData.get('username')?.errors?.['pattern']">
+              Tên đăng nhập không hợp lệ
+            </ion-text>
+          </div>
+
+          <ion-item>
+            <ion-label position="floating">Mật Khẩu</ion-label>
+            <ion-input type="password" formControlName="password" name="password"></ion-input>
+          </ion-item>
+          <div *ngIf="formData.get('password')?.invalid && formData.get('password')?.touched" class="help-block">
+            <ion-text color="danger" *ngIf="formData.get('password')?.errors?.['required']">
+              Mật khẩu không được để trống
+            </ion-text>
+            <ion-text color="danger" *ngIf="formData.get('password')?.errors?.['pattern']">
+              Mật khẩu không hợp lệ
+            </ion-text>
+          </div>
+
+          <div style="text-align: right; margin-top: 10px;">
+            <!-- <p id="forgetPassword" (click)="goToForget()" style="cursor: pointer; color: #3880ff;">
+              Quên mật khẩu?
+            </p> -->
+          </div>
+          <div *ngIf="error">
+            <p class="error-message">{{ error }}</p>
+          </div>
+          <ion-button type="submit" [disabled]="formData.invalid || loading" expand="block" style="margin-top: 20px;">
+            Đăng Nhập
+          </ion-button>
+        </form>
+      </div>
+    </div>
+    <div style="top: 20%; max-width: 450px; margin: auto;">
+      <div class="text-center">
+        <ion-button (click)="loginqr()" expand="block" style="margin-top: 10px;">Đăng Nhập Bằng QR</ion-button>
+      </div>
+
+      <!-- Video element for showing the camera feed -->
+      <video #video style="width: 100%; margin-top: 20px;" autoplay></video>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer color="white">
+  <ion-toolbar>
+    <p class="copyright">Create by <a>Song An</a></p>
+  </ion-toolbar>
+</ion-footer>

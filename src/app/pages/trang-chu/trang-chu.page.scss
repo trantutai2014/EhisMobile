@@ -1,0 +1,50 @@
+.custom-searchbar {
+    --background: #f1f1f1;
+    --icon-color: #777;
+    --placeholder-color: #999;
+    --color: #333;
+    border-radius: 8px;
+    padding: 0 10px;
+  }
+  .custom-toolbar {
+    --background: #f8f8f8;
+    --color: #333;
+    border-bottom: 1px solid #ddd;
+    padding: 0 10px;
+  }
+  
+  .custom-searchbar {
+    --background: #ffffff;
+    --placeholder-color: #888;
+    --color: #333;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .ion-buttons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .ion-button {
+    --color: #007bff;
+  }
+  
+  .ion-icon {
+    font-size: 24px;
+  }
+  
+  .ion-col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .ion-menu-button {
+    margin-right: 10px;
+  }
+  
+  #open-modal-thong-bao {
+    margin-left: 10px;
+  }
+  

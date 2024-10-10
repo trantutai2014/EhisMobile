@@ -1,0 +1,19 @@
+ion-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3880ff;
+    color: white;
+    padding: 10px 15px;
+    font-weight: bold;
+}
+
+ion-list-header .header-left {
+    flex: 1;
+    /* Phần tử bên trái chiếm không gian còn lại */
+}
+
+ion-list-header .header-right {
+    text-align: right;
+    /* Căn phải cho phần tử bên phải */
+}

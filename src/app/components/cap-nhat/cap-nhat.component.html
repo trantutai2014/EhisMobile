@@ -1,0 +1,101 @@
+<ion-content class="ion-padding">
+  <ion-modal trigger="open-modal-cap-nhat">
+    <ng-template>
+      <ion-content>
+        <ion-card>
+          <ion-card-header class="ion-no-padding" style="margin-bottom: 14px;">
+            <ion-card-title>Cập nhật thông tin hành chính</ion-card-title>
+          </ion-card-header>
+
+          <ion-card-content>
+            <ion-list lines="inset">
+              <!-- Ngày sinh -->
+              <ion-item>
+                <ion-label position="stacked">Ngày sinh</ion-label>
+                <ion-input type="date" placeholder="Nhập ngày sinh"></ion-input>
+              </ion-item>
+
+              <!-- Giới tính -->
+              <ion-item>
+                <ion-label position="stacked">Giới tính</ion-label>
+                <ion-select placeholder="Chọn giới tính">
+                  <ion-select-option value="Nam">Nam</ion-select-option>
+                  <ion-select-option value="Nữ">Nữ</ion-select-option>
+                  <ion-select-option value="Khác">Khác</ion-select-option>
+                </ion-select>
+              </ion-item>
+
+              <!-- Dân tộc -->
+              <ion-item>
+                <ion-label position="stacked">Dân tộc</ion-label>
+                <ion-input placeholder="Nhập dân tộc"></ion-input>
+              </ion-item>
+
+              <!-- Quốc tịch -->
+              <ion-item>
+                <ion-label position="stacked">Quốc tịch</ion-label>
+                <ion-input placeholder="Nhập quốc tịch"></ion-input>
+              </ion-item>
+
+              <!-- Nghề nghiệp -->
+              <ion-item>
+                <ion-label position="stacked">Nghề nghiệp</ion-label>
+                <ion-input placeholder="Nhập nghề nghiệp"></ion-input>
+              </ion-item>
+
+              <!-- Điện thoại -->
+              <ion-item>
+                <ion-label position="stacked">Điện thoại</ion-label>
+                <ion-input type="tel" placeholder="Nhập số điện thoại"></ion-input>
+              </ion-item>
+
+              <!-- Số ĐDCN/CCCD -->
+              <ion-item>
+                <ion-label position="stacked">Số ĐDCN/CCCD</ion-label>
+                <ion-input placeholder="Nhập số ĐDCN/CCCD"></ion-input>
+              </ion-item>
+
+              <!-- Ngày cấp -->
+              <ion-item>
+                <ion-label position="stacked">Ngày cấp</ion-label>
+                <ion-input type="date" placeholder="Nhập ngày cấp"></ion-input>
+              </ion-item>
+
+              <!-- Nơi cấp -->
+              <ion-item>
+                <ion-label position="stacked">Nơi cấp</ion-label>
+                <ion-input placeholder="Nhập nơi cấp"></ion-input>
+              </ion-item>
+
+              <!-- Địa chỉ -->
+              <ion-item>
+                <ion-label position="stacked">Địa chỉ</ion-label>
+                <ion-input placeholder="Nhập địa chỉ"></ion-input>
+              </ion-item>
+
+              <!-- Nơi tạo -->
+              <ion-item>
+                <ion-label position="stacked">Nơi tạo</ion-label>
+                <ion-input placeholder="Nhập nơi tạo"></ion-input>
+              </ion-item>
+
+              <!-- Ngày lập hồ sơ -->
+              <ion-item>
+                <ion-label position="stacked">Ngày lập hồ sơ</ion-label>
+                <ion-input type="date" placeholder="Nhập ngày lập hồ sơ"></ion-input>
+              </ion-item>
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+      </ion-content>
+
+      <!-- Footer with Buttons -->
+      <ion-footer>
+        <div class="ion-padding">
+          <ion-button expand="block" color="primary" (click)="confirm()">Lưu Thông Tin</ion-button>
+          <ion-button expand="block" color="danger" (click)="cancel()">Hủy</ion-button>
+        </div>
+      </ion-footer>
+    </ng-template>
+  </ion-modal>
+</ion-content>

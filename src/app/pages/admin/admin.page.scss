@@ -1,0 +1,112 @@
+ion-header {
+    ion-toolbar {
+        --background: white;
+
+        ion-badge {
+            position: absolute;
+            top: 0;
+            right: 0;
+            border-radius: 50%;
+            height: 1rem;
+            width: 1rem;
+            margin: 0 -0.3rem 0 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            ion-text {
+                font-size: 0.6rem;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+ion-item {
+    ion-label {
+        font-size: 1.4rem;
+        font-weight: bold;
+
+        p {
+            margin-top: 5px;
+            font-size: 0.9rem;
+            font-weight: normal;
+        }
+    }
+
+    ion-thumbnail {
+        img {
+            border-radius: 10px;
+        }
+    }
+}
+
+ion-list-header {
+    font-size: 1.1rem;
+    font-weight: normal;
+}
+
+ion-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Căn giữa theo chiều ngang */
+    justify-content: center;
+    /* Căn giữa theo chiều dọc */
+    box-shadow: none;
+    margin: 10px 5px;
+    height: 15vh;
+    text-align: center;
+    background: transparent;
+    /* Làm nền trong suốt */
+}
+
+ion-thumbnail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 1.3vh;
+
+}
+
+ion-icon {
+    font-size: 2rem;
+}
+
+ion-label {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+ion-card,
+ion-thumbnail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ion-col {
+    display: flex;
+    justify-content: center;
+    /* Căn giữa theo chiều ngang */
+}
+
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+ion-button ion-icon {
+    margin-right: 8px;
+    /* Khoảng cách giữa icon và chữ */
+}
+
+ion-button ion-label {
+    font-size: 1.5rem;
+    /* Kích thước chữ của label nếu cần điều chỉnh */
+}

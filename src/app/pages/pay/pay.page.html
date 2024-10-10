@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button default-href="main"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Thanh Toán</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      <div class="header-left">Danh sách thuốc</div>
+      <div class="header-right">Số lượng</div>
+    </ion-list-header>
+    <ion-item *ngFor="let item of bill">
+      <ion-label>{{ item.name }}</ion-label>
+      <ion-label slot="end">{{ item.quantity }}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-button color="primary" expand="block" (click)="confirm()">Xác nhận</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button color="primary" expand="block" (click)="huy()">Hủy</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer>
