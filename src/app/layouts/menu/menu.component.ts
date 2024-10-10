@@ -12,7 +12,6 @@ export class MenuComponent {
 
 
   constructor(private router: Router,
-  ,
     
   ) { }
 

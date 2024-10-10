@@ -48,8 +48,8 @@ namespace API.Controllers
                             CHAN_DOAN_RV = s.CHAN_DOAN_RV,
                             NGAY_RA = s.NGAY_RA,
                             NGAY_VAO = s.NGAY_VAO,
-                            TenBV = s.LichSuTuongTac130s.DMCoSo.TenBV,
-                            NgayGio = s.LichSuTuongTac130s.NgayGio,
+                            //TenBV = s.LichSuTuongTac130s.DMCoSo.TenBV,
+                            //NgayGio = s.LichSuTuongTac130s.NgayGio,
                             LoaiHoSo = LoaiHSSKDTEnum.HS130
                         })
                         .ToArray()
