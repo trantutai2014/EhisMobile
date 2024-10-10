@@ -59,6 +59,7 @@
   },
   {
     "ContainingType": "API.Controllers.NotificationController",
+<<<<<<< HEAD
     "Method": "SendNotification",
     "RelativePath": "api/Notification/send",
     "HttpMethod": "POST",
@@ -75,6 +76,8 @@
   },
   {
     "ContainingType": "API.Controllers.NotificationController",
+=======
+>>>>>>> b6c5cdab1ddf0d3225e469dfb9bb0120217a7777
     "Method": "GetWebSocket",
     "RelativePath": "api/Notification/ws",
     "HttpMethod": "GET",

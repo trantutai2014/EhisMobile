@@ -106,6 +106,7 @@ D:\Hocs\developer\SongAn\EhisMobile\test8\EhisMobile\API\Service\obj\Debug\net8.
 D:\Hocs\developer\SongAn\EhisMobile\test8\EhisMobile\API\Service\obj\Debug\net8.0\refint\Service.dll
 D:\Hocs\developer\SongAn\EhisMobile\test8\EhisMobile\API\Service\obj\Debug\net8.0\Service.pdb
 D:\Hocs\developer\SongAn\EhisMobile\test8\EhisMobile\API\Service\obj\Debug\net8.0\ref\Service.dll
+<<<<<<< HEAD
 D:\SongAn\EhisMobile\API\Service\bin\Debug\net8.0\Service.deps.json
 D:\SongAn\EhisMobile\API\Service\bin\Debug\net8.0\Service.dll
 D:\SongAn\EhisMobile\API\Service\bin\Debug\net8.0\Service.pdb
@@ -124,3 +125,23 @@ D:\SongAn\EhisMobile\API\Service\obj\Debug\net8.0\Service.dll
 D:\SongAn\EhisMobile\API\Service\obj\Debug\net8.0\refint\Service.dll
 D:\SongAn\EhisMobile\API\Service\obj\Debug\net8.0\Service.pdb
 D:\SongAn\EhisMobile\API\Service\obj\Debug\net8.0\ref\Service.dll
+=======
+D:\Hocs\developer\SongAn\EhisMobile\test10\EhisMobile\API\Service\bin\Debug\net8.0\Service.deps.json
+D:\Hocs\developer\SongAn\EhisMobile\test10\EhisMobile\API\Service\bin\Debug\net8.0\Service.dll
+D:\Hocs\developer\SongAn\EhisMobile\test10\EhisMobile\API\Service\bin\Debug\net8.0\Service.pdb
+D:\Hocs\developer\SongAn\EhisMobile\test10\EhisMobile\API\Service\bin\Debug\net8.0\Common.dll
+D:\Hocs\developer\SongAn\EhisMobile\test10\EhisMobile\API\Service\bin\Debug\net8.0\Data.dll
+D:\Hocs\developer\SongAn\EhisMobile\test10\EhisMobile\API\Service\bin\Debug\net8.0\Common.pdb
+D:\Hocs\developer\SongAn\EhisMobile\test10\EhisMobile\API\Service\bin\Debug\net8.0\Data.pdb
+D:\Hocs\developer\SongAn\EhisMobile\test10\EhisMobile\API\Service\obj\Debug\net8.0\Service.csproj.AssemblyReference.cache
+D:\Hocs\developer\SongAn\EhisMobile\test10\EhisMobile\API\Service\obj\Debug\net8.0\Service.GeneratedMSBuildEditorConfig.editorconfig
+D:\Hocs\developer\SongAn\EhisMobile\test10\EhisMobile\API\Service\obj\Debug\net8.0\Service.AssemblyInfoInputs.cache
+D:\Hocs\developer\SongAn\EhisMobile\test10\EhisMobile\API\Service\obj\Debug\net8.0\Service.AssemblyInfo.cs
+D:\Hocs\developer\SongAn\EhisMobile\test10\EhisMobile\API\Service\obj\Debug\net8.0\Service.csproj.CoreCompileInputs.cache
+D:\Hocs\developer\SongAn\EhisMobile\test10\EhisMobile\API\Service\obj\Debug\net8.0\Service.sourcelink.json
+D:\Hocs\developer\SongAn\EhisMobile\test10\EhisMobile\API\Service\obj\Debug\net8.0\Service.csproj.Up2Date
+D:\Hocs\developer\SongAn\EhisMobile\test10\EhisMobile\API\Service\obj\Debug\net8.0\Service.dll
+D:\Hocs\developer\SongAn\EhisMobile\test10\EhisMobile\API\Service\obj\Debug\net8.0\refint\Service.dll
+D:\Hocs\developer\SongAn\EhisMobile\test10\EhisMobile\API\Service\obj\Debug\net8.0\Service.pdb
+D:\Hocs\developer\SongAn\EhisMobile\test10\EhisMobile\API\Service\obj\Debug\net8.0\ref\Service.dll
+>>>>>>> b6c5cdab1ddf0d3225e469dfb9bb0120217a7777
