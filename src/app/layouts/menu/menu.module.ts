@@ -14,7 +14,7 @@ import { UrlConstants } from 'src/app/core/constants/url.constant';
     FormsModule,
     IonicModule,
   ],
-  declarations: [MenuComponent]
+  declarations: []
 })
 export class MenuModule {
   constructor(private router: Router) {}
@@ -23,7 +23,7 @@ export class MenuModule {
   }
 
   goToProFile() {
-    this.router.navigate([UrlConstants.PROFILE]);
+    this.router.navigate([UrlConstants.THONGTINHANHCHINH]);
   }
 
   goToMain() {

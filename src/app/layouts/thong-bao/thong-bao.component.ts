@@ -3,8 +3,6 @@ import { IonModal } from '@ionic/angular';
 import { Subscription } from 'rxjs';
 import { WebSocketService } from 'src/app/core/services/websocket.service';
 
-
-
 @Component({
   selector: 'app-thongbao',
   templateUrl: 'thong-bao.component.html',
@@ -15,9 +13,7 @@ export class ThongBaoComponent implements OnInit, OnDestroy {
 
   private subscription!: Subscription;
 
-  constructor(
-    private webSocketService: WebSocketService
-  ) {}
+  constructor(private webSocketService: WebSocketService) {}
 
   ngOnInit() {
     // Subscribe to WebSocket messages
@@ -38,10 +34,12 @@ export class ThongBaoComponent implements OnInit, OnDestroy {
     this.webSocketService.disconnect(); // Disconnect WebSocket
   }
 
-  sendMessage(message: string) {
-    this.webSocketService.sendMessage(message); // Send message to server
+  // Function to clear all notifications
+  clearNotifications() {
+    this.messages = []; // Clear the messages array
   }
 
+  // Function to close the modal
   cancel() {
     this.modal.dismiss(null, 'cancel');
   }
