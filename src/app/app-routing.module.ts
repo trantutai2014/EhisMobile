@@ -84,6 +84,11 @@ const routes: Routes = [
     loadChildren: () => import('./pages/user-role/user-role.module').then(m => m.UserRoleModule),
     canActivate: [AuthGuard] // Bảo vệ route này
   },
+  {
+    path: 'lich-su-benh',
+    loadChildren: () => import('./pages/lich-su-benh/lich-su-benh.module').then( m => m.LichSuBenhPageModule)
+  },
+
 ];
 
 @NgModule({

@@ -1,8 +1,10 @@
 import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { UrlConstants } from 'src/app/core/constants/url.constant';
 
 import { Subscription } from 'rxjs';
+import { environment } from 'src/environments/environment.prod';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-main',
@@ -10,6 +12,12 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./trang-chu.page.scss'],
 })
 export class MainPage implements OnInit, OnDestroy {
+  items: any;
+  itemModel: any = {};
+  loading: boolean = false;
+  cccd: string | null | undefined;
+  error: any;
+
   @ViewChild('swiperContainer') swiperContainer: any;
   username: string = '';
   private subscriptions: Subscription = new Subscription();
@@ -19,9 +27,22 @@ export class MainPage implements OnInit, OnDestroy {
     disableOnInteraction: true
   };
 
-  constructor(private router: Router) { }
+  private apiUrl = `${environment.BASE_API}/api/ThongTin/`;
+  constructor(private router: Router,  
+    private route: ActivatedRoute,   
+    private http: HttpClient) { }
 
   ngOnInit() {
+
+    this.route.paramMap.subscribe(params => {
+      this.cccd = params.get('cccd');
+      if (this.cccd) {
+        this.getUserInfo();
+      } else {
+        // Handle case where CCCD is not found in URL
+        console.error('Không tìm thấy CCCD trong URL');
+      }
+    });
 
 
     setTimeout(() => {
@@ -30,6 +51,21 @@ export class MainPage implements OnInit, OnDestroy {
         swiper.update(); // Update Swiper to ensure images display correctly
       }
     }, 0);
+  }
+
+  //
+  getUserInfo(): void {
+    this.loading = true; // Set loading indicator to true
+    this.http.get(`${this.apiUrl}${this.cccd}`).subscribe({
+      next: (data:any) => {
+        this.loading = false; // Set loading indicator to false
+          this.items=data.data;
+      },
+      error: (error) => {
+        this.loading = false; // Set loading indicator to false
+        this.error = 'Failed to load user roles';
+      }
+    });
   }
 
   ngOnDestroy() {

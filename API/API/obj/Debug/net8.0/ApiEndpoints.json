@@ -1,16 +1,6 @@
 [
   {
     "ContainingType": "API.Controllers.AuthController",
-    "Method": "Get",
-    "RelativePath": "api/Auth",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "API.Controllers.AuthController",
     "Method": "RefreshToken",
     "RelativePath": "api/Auth/refresh",
     "HttpMethod": "POST",
@@ -42,6 +32,56 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "API.Controllers.DSDotKhamChuaBenhController",
+    "Method": "GetThongTinDSDotKhamChuaBenhByCccd",
+    "RelativePath": "api/DSDotKhamChuaBenh/{cccd}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cccd",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Data.Models.ThongTinKhamChuaBenh130",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "API.Controllers.LichSuKhamBenhController",
+    "Method": "GetTienSuBenh",
+    "RelativePath": "api/LichSuKhamBenh/{cccd}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cccd",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Common.Model.TienSuBenhResModel",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "API.Controllers.NotificationController",
     "Method": "SendNotification",
     "RelativePath": "api/Notification/send",
@@ -68,7 +108,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "YourNamespace.Controllers.QRCodeController",
+    "ContainingType": "API.Controllers.QRCodeController",
     "Method": "GetByCode",
     "RelativePath": "api/QRCode/{code}",
     "HttpMethod": "GET",
@@ -98,6 +138,32 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.ThongTinBhytController",
+    "Method": "GetThongTinBhytByCccd",
+    "RelativePath": "api/ThongTinBhyt/{cccd}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cccd",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Data.Models.ThongTinKhamChuaBenh130, Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "API.Controllers.TrangChuController",

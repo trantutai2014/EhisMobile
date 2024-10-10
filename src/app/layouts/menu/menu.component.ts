@@ -2,13 +2,21 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { UrlConstants } from 'src/app/core/constants/url.constant';
 
+
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss'],
 })
 export class MenuComponent {
-  constructor(private router: Router) {}
+
+
+  constructor(private router: Router,
+  ,
+    
+  ) { }
+
+  
 
   navigateTo(page: string) {
     this.router.navigateByUrl(`/${page}`);
@@ -25,27 +33,64 @@ export class MenuComponent {
   }
 
   ngOnInit() {
+  
+
   }
 
   goToThongTinHanhChinh() {
-    this.router.navigate([UrlConstants.THONGTINHANHCHINH]);
+    const cccd = localStorage.getItem('cccd');
+    if (cccd !== null) {
+      this.router.navigate([UrlConstants.THONGTINHANHCHINH.replace(':cccd', cccd)]);
+    
+    }
+
+  
+ 
   }
   goToThongTinTiemChung() {
+
+    
+ 
     this.router.navigate([UrlConstants.THONGTINTIEMCHUNG]);
   }
   goToDSKhamChuaBenh() {
-    this.router.navigate([UrlConstants.DSDOTKHAMCHUABENH]);
+    const cccd = localStorage.getItem('cccd');
+    if (cccd !== null) {
+    this.router.navigate([UrlConstants.DSDOTKHAMCHUABENH.replace(':cccd', cccd)]);
+      
+     
+    }
+
+    
   }
   goToThongTinBHYT() {
-    this.router.navigate([UrlConstants.THONGTINBHYT]);
+    const cccd = localStorage.getItem('cccd');
+    if (cccd !== null) {
+      this.router.navigate([UrlConstants.THONGTINBHYT.replace(':cccd', cccd)]);
+
+    }
+
+
+    
   }
 
   goToTrangChu() {
-    this.router.navigate([UrlConstants.TRANGCHU]);
+    const cccd = localStorage.getItem('cccd');
+    if (cccd !== null) {
+      this.router.navigate([UrlConstants.TRANGCHU.replace(':cccd',cccd)]);
+
+
+    }
   }
 
   goToSetting() {
-    this.router.navigate([UrlConstants.SETTING]);
+    const cccd = localStorage.getItem('cccd');
+    if (cccd !== null) {
+      this.router.navigate([UrlConstants.SETTING.replace(':cccd', cccd)]);
+
+
+
+    }
   }
 
   goToHistory() {

@@ -4,18 +4,18 @@
     <ion-card-title>Thông tin đợt khám chữa bệnh</ion-card-title>
   </ion-card-header>
 
-  <ion-card-content>
-    <ion-card-title>Nơi khám: Trung tâm y tế huyện Điện Biên Đông <ion-label color="primary">11032</ion-label> </ion-card-title>
+  <ion-card-content *ngIf="items" >
+    <ion-card-title>Nơi khám: Không có thông tin <ion-label color="primary">không có thông tin</ion-label> </ion-card-title>
   
-    <ion-label class="label-left" color="dark">Lý do đến khám bệnh:   <ion-label color="medium">Không có </ion-label> </ion-label>
-    <ion-label class="label-left" color="dark">CSKCB đã chuyển người bệnh đi:   <ion-label color="medium">Không có </ion-label> </ion-label>
-    <ion-label class="label-left" color="dark">Ngày đến khám:   <ion-label color="medium">12/10/2024 09:31 </ion-label> </ion-label>
-    <ion-label class="label-left" color="dark">Hình thức khám, chữa bệnh:   <ion-label color="medium">Điều trị nội trú ban ngày</ion-label> </ion-label>
-    <ion-label class="label-left" color="dark">Ngày giờ vào viện:   <ion-label color="medium">12/10/2024 09:31  </ion-label> </ion-label>
-    <ion-label class="label-left" color="dark">Ngày giờ ra viện:   <ion-label color="medium">12/10/2024 09:31  </ion-label> </ion-label>
-    <ion-label class="label-left" color="dark">Kết quả điều trị:  <ion-label color="medium">Khỏi </ion-label> </ion-label>
-    <ion-label class="label-left" color="dark">Tình trạng ra viện:   <ion-label color="medium">Ra viện </ion-label> </ion-label>
-    <ion-label class="label-left" color="dark">CSKCB nơi sẽ chuyển người bệnh đến:  <ion-label color="medium">Không có</ion-label> </ion-label>
+    <ion-label class="label-left" color="dark">Lý do đến khám bệnh:   <ion-label color="medium">{{items.lY_DO_VV}}</ion-label> </ion-label>
+    <ion-label class="label-left" color="dark">CSKCB đã chuyển người bệnh đi:   <ion-label color="medium">Không có thông tin</ion-label> </ion-label>
+    <ion-label class="label-left" color="dark">Ngày đến khám:   <ion-label color="medium">{{items.ngaY_VAO | date:'dd/MM/yyyy' }} </ion-label> </ion-label>
+    <ion-label class="label-left" color="dark">Hình thức khám, chữa bệnh:   <ion-label color="medium">Không có thông tin</ion-label> </ion-label>
+    <ion-label class="label-left" color="dark">Ngày giờ vào viện:   <ion-label color="medium">{{items.ngaY_VAO | date:'dd/MM/yyyy HH:mm' }}   </ion-label> </ion-label>
+    <ion-label class="label-left" color="dark">Ngày giờ ra viện:   <ion-label color="medium">{{items.ngaY_RA | date:'dd/MM/yyyy HH:mm' }}   </ion-label> </ion-label>
+    <ion-label class="label-left" color="dark">Kết quả điều trị:  <ion-label color="medium">{{items.keT_QUA_DTRI ===1 ? 'Khỏi': 'Còn Bệnh'}} </ion-label> </ion-label>
+    <ion-label class="label-left" color="dark">Tình trạng ra viện:   <ion-label color="medium">{{items.mA_LOAI_RV ===1? 'Ra Viện': 'Không Ra Viện'}} </ion-label> </ion-label>
+    <ion-label class="label-left" color="dark">CSKCB nơi sẽ chuyển người bệnh đến:  <ion-label color="medium">Không có thông tin</ion-label> </ion-label>
   </ion-card-content>
 
 
