@@ -2,54 +2,33 @@
 <ion-card>
   <ion-card-header>
     <ion-header>
-      <ion-toolbar class="custom-toolbar">
-        <ion-grid class="ion-no-padding ion-align-items-center ion-justify-content-between" style="max-width: 450px; margin: auto;">
-          <ion-row class="ion-align-items-center">
-            <!-- Cột cho nút menu -->
-            <ion-col size="auto">
-              <ion-buttons>
-                <ion-menu-button></ion-menu-button>
-              </ion-buttons>
-            </ion-col>
-            <!-- Cột cho thanh tìm kiếm -->
-            <ion-col>
-              <ion-searchbar placeholder="Tìm kiếm..." class="custom-searchbar"></ion-searchbar>
-            </ion-col>
-            <!-- Cột cho nút thông báo -->
-            <ion-col size="auto">
-              <ion-button fill="clear" id="open-modal-thong-bao">
-                <ion-icon name="notifications-outline"></ion-icon>
-              </ion-button>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-      </ion-toolbar>
+     
     </ion-header>
     <ion-card-title>Thông tin xét nghiệm</ion-card-title>
   </ion-card-header>
 
-  <ion-card-content>
-  <ion-label class="label-left" color="dark">Họ và tên:  <ion-label color="medium">Nguyễn Văn A </ion-label> </ion-label>
-    <ion-label class="label-left" color="dark">Ngày Sinh:   <ion-label color="medium">15/06/1985 </ion-label> </ion-label>
-    <ion-label class="label-left" color="dark">Loại xét nghiệm:  <ion-label color="medium">Xét nghiệm máu</ion-label> </ion-label>
-    <ion-label class="label-left" color="dark">Ngày thực hiện xét nghiệm:  <ion-label color="medium">10/09/2024</ion-label> </ion-label>
+  <ion-card-content *ngIf="items">
+  <ion-label class="label-left" color="dark">Họ và tên:  <ion-label color="medium">{{items.hO_TEN |titlecase }} </ion-label> </ion-label>
+    <ion-label class="label-left" color="dark">Ngày Sinh:   <ion-label color="medium">{{items.ngaY_SINH |date:'dd/MM/yyyy'}} </ion-label> </ion-label>
+    <ion-label class="label-left" color="dark">Loại xét nghiệm:  <ion-label color="medium">Không có thông tin</ion-label> </ion-label>
+    <ion-label class="label-left" color="dark">Ngày thực hiện xét nghiệm:  <ion-label color="medium">Không có thông tin</ion-label> </ion-label>
     <ion-label class="label-left" color="dark">Kết quả xét nghiệm:  
       <ion-label color="medium">
         <ion-list lines="none" >
           <ion-item>
-            <ion-label>Hồng cầu (RBC): 4.5 triệu/mm³</ion-label>
+            <ion-label>Không có thông tin</ion-label>
           </ion-item>
           <ion-item>
-            <ion-label>Bạch cầu (WBC): 6.0 nghìn/mm³</ion-label>
+            <ion-label>Không có thông tin</ion-label>
           </ion-item>
           <ion-item>
-            <ion-label>Hemoglobin: 14 g/dL</ion-label>
+            <ion-label>Không có thông tin</ion-label>
           </ion-item>
           
         </ion-list>
     </ion-label> </ion-label>
-    <ion-label class="label-left" color="dark">Chuẩn đoán sơ bộ:  <ion-label color="medium">Bình thường</ion-label> </ion-label>
-    <ion-label class="label-left" color="dark">Bác sĩ chỉ định:  <ion-label color="medium">Bác sĩ Trần Thị B</ion-label> </ion-label>
+    <ion-label class="label-left" color="dark">Chuẩn đoán sơ bộ:  <ion-label color="medium">Không có thông tin</ion-label> </ion-label>
+    <ion-label class="label-left" color="dark">Bác sĩ chỉ định:  <ion-label color="medium">Không có thông tin</ion-label> </ion-label>
 
   </ion-card-content>
 

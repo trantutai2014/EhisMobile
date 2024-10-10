@@ -2,7 +2,7 @@ using API.Mapper;
 using Microsoft.AspNetCore.Mvc;
 using Service;
 
-namespace YourNamespace.Controllers
+namespace API.Controllers
 {
   [ApiController]
   [Route("api/[controller]")]

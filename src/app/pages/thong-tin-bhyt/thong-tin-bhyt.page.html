@@ -23,31 +23,27 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <!-- Thẻ thông tin BHYT -->
-  <ion-card class="card-info">
-    <ion-card-header>
-      <ion-card-title class="card-title">Thông tin thẻ BHYT</ion-card-title>
-    </ion-card-header>
-    <ion-card-content class="card-content">
-      <div class="card-details">
-        <p class="card-text">TE1111120833749</p>
-        <p class="card-date">20/10/2022 đến 31/10/2028</p>
-      </div>
-      <ion-badge color="light" class="card-badge">11123</ion-badge>
-    </ion-card-content>
-  </ion-card>
 
-  <!-- Thẻ thông tin BHYT thứ hai -->
-  <ion-card class="card-info">
+
+  <!-- Thẻ thông tin BHYT -->
+   <div *ngIf="items && items.length > 0;">
+  <ion-card class="card-info" *ngFor="let item of items">
     <ion-card-header>
       <ion-card-title class="card-title">Thông tin thẻ BHYT</ion-card-title>
     </ion-card-header>
     <ion-card-content class="card-content">
       <div class="card-details">
-        <p class="card-text">TE1111120833749</p>
-        <p class="card-date">20/10/2022 đến 31/10/2028</p>
+        <p class="card-text">{{item.mA_THE_BHYT}}</p>
+        <p class="card-date">{{item.ngaY_VAO}} đến <span>{{item.ngaY_RA}}</span> </p>
       </div>
-      <ion-badge color="light" class="card-badge">11123</ion-badge>
+      <ion-badge color="light" class="card-badge">{{item.mA_DKBD}} </ion-badge>
     </ion-card-content>
   </ion-card>
+  
+  <div *ngIf="!items || items.length === 0">
+    <p>Không có đối tượng nào để hiển thị.</p>
+  </div>
+</div>
+
+
 </ion-content>
