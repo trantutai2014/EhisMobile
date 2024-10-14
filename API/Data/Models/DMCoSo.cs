@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Data.Models;
 
 namespace Data.Models
 {
@@ -41,8 +42,8 @@ namespace Data.Models
         public DMCoSo Parent { get; set; }
         public ICollection<User> Users { get; set; }
 
-        //public ICollection<LichSuTuongTac> LichSuTuongTacs { get; set; }
-        //public ICollection<LichSuTuongTac130> LichSuTuongTac130s { get; set; }
+        public ICollection<LichSuTuongTac> LichSuTuongTacs { get; set; }
+        public ICollection<LichSuTuongTac130> LichSuTuongTac130s { get; set; }
 
-    }
+  }
 }

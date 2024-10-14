@@ -6,9 +6,9 @@ using Common.Helpers;
 using Common.Model;
 using Data.EF;
 using Data.Models;
-using MDP.Common.Enums;
-using MDP.Common.Models;
-using MDP.Data.Models;
+using Common.Enums;
+using Common.Models;
+using Data.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -48,8 +48,8 @@ namespace API.Controllers
                             CHAN_DOAN_RV = s.CHAN_DOAN_RV,
                             NGAY_RA = s.NGAY_RA,
                             NGAY_VAO = s.NGAY_VAO,
-                            //TenBV = s.LichSuTuongTac130s.DMCoSo.TenBV,
-                            //NgayGio = s.LichSuTuongTac130s.NgayGio,
+                            TenBV = s.LichSuTuongTac130s.DMCoSo.TenBV,
+                            NgayGio = s.LichSuTuongTac130s.NgayGio,
                             LoaiHoSo = LoaiHSSKDTEnum.HS130
                         })
                         .ToArray()

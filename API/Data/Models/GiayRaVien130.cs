@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 using Data.Models;
 
 
-namespace MDP.Data.Models
+namespace Data.Models
 {
     [Table("DS_GiayRaVien130")]
     public class DS_GiayRaVien130 : BaseEntity

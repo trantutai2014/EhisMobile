@@ -1,4 +1,28 @@
-
+<ion-header>
+  <ion-toolbar class="custom-toolbar">
+    <ion-grid class="ion-no-padding ion-align-items-center ion-justify-content-between"
+      style="max-width: 450px; margin: auto;">
+      <ion-row class="ion-align-items-center">
+        <!-- Cột cho nút menu -->
+        <ion-col size="auto">
+          <ion-buttons>
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+        </ion-col>
+        <!-- Cột cho thanh tìm kiếm -->
+        <ion-col>
+          <ion-searchbar (click)="goToDV()" placeholder="Tìm kiếm..." class="custom-searchbar"></ion-searchbar>
+        </ion-col>
+        <!-- Cột cho nút thông báo -->
+        <ion-col size="auto">
+          <ion-button fill="clear" id="open-modal-thong-bao">
+            <ion-icon name="notifications-outline"></ion-icon>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
 
 <ion-content class="ion-padding">
   <!-- Main Content -->

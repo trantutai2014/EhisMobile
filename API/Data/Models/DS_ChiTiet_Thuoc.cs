@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using Data.Abstract;
 using Common.Constants;
 
-namespace MDP.Data.Models
+namespace Data.Models
 {
     [Table("DS_ChiTiet_Thuoc")]
     public class DS_ChiTiet_Thuoc : BaseEntity

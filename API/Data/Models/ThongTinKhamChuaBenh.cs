@@ -1,13 +1,13 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
-using MDP.Common.Enums;
+using Common.Enums;
 
 using Data.Abstract;
 using Common.Constants;
 
-namespace MDP.Data.Models
+namespace Data.Models
 {
     [Table("ThongTinKhamChuaBenh")]
     public class ThongTinKhamChuaBenh : BaseEntity

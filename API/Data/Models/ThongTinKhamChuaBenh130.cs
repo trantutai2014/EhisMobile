@@ -2,8 +2,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using Common.Constants;
 using Data.Abstract;
-using MDP.Data.Models;
-using MDP.Common.Enums;
+using Data.Models;
+using Common.Enums;
 
 namespace Data.Models
 {
@@ -13,24 +13,25 @@ namespace Data.Models
     public ThongTinKhamChuaBenh130()
     {
       Id = Guid.NewGuid().ToString();
-      //DS_ChiTiet_Thuoc130s = new HashSet<DS_ChiTiet_Thuoc130>();
-      //DS_ChiTiet_DVKT130s = new HashSet<DS_ChiTiet_DVKT130>();
-      //DS_DVCLS130s = new HashSet<DS_DVCLS130>();
-      //DS_DienBien_LamSang130s = new HashSet<DS_DienBien_LamSang130>();
-      //DS_CSDT_ARV130s = new HashSet<DS_CSDT_ARV130>();
+      DS_ChiTiet_Thuoc130s = new HashSet<DS_ChiTiet_Thuoc130>();
+      DS_ChiTiet_DVKT130s = new HashSet<DS_ChiTiet_DVKT130>();
+      DS_DVCLS130s = new HashSet<DS_DVCLS130>();
+      DS_DienBien_LamSang130s = new HashSet<DS_DienBien_LamSang130>();
+      DS_CSDT_ARV130s = new HashSet<DS_CSDT_ARV130>();
       //DS_GiayRaVien130s = new HashSet<DS_GiayRaVien130>();
       // DS_TomTat_HoSoBA130s = new HashSet<DS_TomTat_HoSoBA130>();
-      //DS_GiayChungSinh130s = new HashSet<DS_GiayChungSinh130>();
+      DS_GiayChungSinh130s = new HashSet<DS_GiayChungSinh130>();
       //DS_ChungNhan_NghiDuongThai130s = new HashSet<DS_ChungNhan_NghiDuongThai130>();
       //DS_GiayChungNhan_NghiViec_HBHXH130s = new HashSet<DS_GiayChungNhan_NghiViec_HBHXH130>();
-      //DS_GiamDinhYKhoa130s = new HashSet<DS_GiamDinhYKhoa130>();
+      DS_GiamDinhYKhoa130s = new HashSet<DS_GiamDinhYKhoa130>();
       // DS_GiayChuyenTuyen130s = new HashSet<DS_GiayChuyenTuyen130>();
       // DS_GiayHenKhamLai130s = new HashSet<DS_GiayHenKhamLai130>();
       // DS_DieuTriBenhLao130s = new HashSet<DS_DieuTriBenhLao130>();
     }
 
-    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-    public int ThongTinKhamChuaBenhID { get; set; }
+    //[Key]
+    //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+    //public int ThongTinKhamChuaBenhID { get; set; }
     [Required]
     [MaxLength(100)]
     public string MA_LK { set; get; }
@@ -177,6 +178,21 @@ namespace Data.Models
     [MaxLength(10)]
     public string? BHXHID { set; get; }
 
+    public LichSuTuongTac130 LichSuTuongTac130s { get; set; }
+    public ICollection<DS_ChiTiet_DVKT130> DS_ChiTiet_DVKT130s { get; set; }
+    public ICollection<DS_ChiTiet_Thuoc130> DS_ChiTiet_Thuoc130s { get; set; }
+    public ICollection<DS_DVCLS130> DS_DVCLS130s { get; set; }
+    public ICollection<DS_DienBien_LamSang130> DS_DienBien_LamSang130s { get; set; }
+    public ICollection<DS_CSDT_ARV130> DS_CSDT_ARV130s { get; set; }
+    public DS_GiayRaVien130 DS_GiayRaVien130s { get; set; }
+    public DS_TomTat_HoSoBA130 DS_TomTat_HoSoBA130s { get; set; }
+    public ICollection<DS_GiayChungSinh130> DS_GiayChungSinh130s { get; set; }
+    public DS_ChungNhan_NghiDuongThai130 DS_ChungNhan_NghiDuongThai130s { get; set; }
+    public DS_GiayChungNhan_NghiViec_HBHXH130 DS_GiayChungNhan_NghiViec_HBHXH130s { get; set; }
+    public ICollection<DS_GiamDinhYKhoa130> DS_GiamDinhYKhoa130s { get; set; }
+    public DS_GiayChuyenTuyen130 DS_GiayChuyenTuyen130s { get; set; }
+    public DS_GiayHenKhamLai130 DS_GiayHenKhamLai130s { get; set; }
+    public DS_DieuTriBenhLao130 DS_DieuTriBenhLao130s { get; set; }
 
 
 

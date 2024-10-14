@@ -12,7 +12,6 @@ import { AuthService } from '../../core/services/auth.service';
 import { ValidatorConstants } from 'src/app/core/constants/validator.constants';
 import { LoginService } from 'src/app/core/services/login.service';
 
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',

@@ -1,4 +1,4 @@
-﻿namespace MDP.Common.Enums
+﻿namespace Common.Enums
 {
     public enum TrangThaiHSEnum
     {
