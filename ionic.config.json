@@ -1,7 +1,12 @@
 {
-  "name": "blankEhisMobile",
+  "name": "EhisMobile",
   "integrations": {
     "capacitor": {}
   },
-  "type": "angular"
+  "type": "angular",
+  "server": {
+       "androidScheme": "https",
+       "cleartext": true,
+      "allowNavigation": ["http://beplus-web-api-beta.eba-uw2jvq2f.ap-south-1.elasticbeanstalk.com/*"  ]   
+    }
 }

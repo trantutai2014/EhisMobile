@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable, firstValueFrom, tap } from 'rxjs';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +18,7 @@ export class AuthService {
     const body = { username, password };
 
     try {
-      const response = await firstValueFrom(this.http.post<{ token: string }>(`https://localhost:7170/api/DangNhap`, body));
+      const response = await firstValueFrom(this.http.post<{ token: string }>(environment.BASE_API+`/api/DangNhap`, body));
 
       if (response.token) {
         this.token = response.token;

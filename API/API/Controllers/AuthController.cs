@@ -15,6 +15,13 @@ namespace API.Controllers
       _tokenService = tokenService;
     }
 
+    [HttpGet("time")]
+    public IActionResult GetCurrentTime()
+    {
+      var currentTime = DateTime.Now;
+      return Ok(currentTime);
+    }
+
     [HttpPost("refresh")]
     public async Task<IActionResult> RefreshToken([FromBody] string refreshToken)
     {

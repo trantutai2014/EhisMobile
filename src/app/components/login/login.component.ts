@@ -64,6 +64,7 @@ export class LoginComponent implements OnInit {
       const success = await this.authService.login(username, password);
       if (success) {
         this.router.navigate([UrlConstants.THONGTINHANHCHINH]);
+        window.location.reload();
       } else {
         this.error = 'Đăng nhập không thành công';
       }

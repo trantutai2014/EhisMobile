@@ -16,6 +16,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "API.Controllers.AuthController",
+    "Method": "GetCurrentTime",
+    "RelativePath": "api/Auth/time",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "API.Controllers.DangNhapController",
     "Method": "Login",
     "RelativePath": "api/DangNhap",

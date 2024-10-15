@@ -20,6 +20,7 @@ import { UserRoleComponent } from './pages/user-role/user-role.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { JwtInterceptor } from './core/guards/jwt.interceptor';
 import { ApiInterceptor } from './core/interceptor/thong-bao.interceptor';
+import { HeadMenuComponent } from './layouts/head-menu/head-menu.component';
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   declarations: [
@@ -28,6 +29,7 @@ import { ApiInterceptor } from './core/interceptor/thong-bao.interceptor';
     ThongBaoComponent,
     CapNhatComponent,
     UserRoleComponent,
+    HeadMenuComponent,
   
    
   ],
