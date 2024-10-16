@@ -15,7 +15,7 @@ export class WebSocketService {
   constructor() {}
 
   connect(): Observable<string> {
-    this.socket = new WebSocket('ws://192.168.0.106/api/Notification/ws');
+    this.socket = new WebSocket('http://192.168.0.106/api/Notification/ws');
 
     this.socket.onopen = () => {
       console.log('Connected to WebSocket server');

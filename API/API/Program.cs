@@ -20,7 +20,7 @@ builder.Services.AddCors(options =>
 {
   options.AddPolicy("AllowLocalNetwork", policy =>
   {
-    policy.WithOrigins("http://localhost:8100", "http://192.168.0.106:7170")
+    policy.WithOrigins("http://localhost:8100", "https://192.168.0.106")
           .AllowAnyHeader()
           .AllowAnyMethod()
           .SetIsOriginAllowed(_ => true) // Allow any origin
@@ -50,7 +50,8 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 // WebSocket Configuration
 var webSocketOptions = new WebSocketOptions
 {
-  KeepAliveInterval = TimeSpan.FromMinutes(2)
+  KeepAliveInterval = TimeSpan.FromMinutes(2),
+  AllowedOrigins = { "http://localhost:8100", "https://192.168.0.106" }
 };
 
 // Authorization and Controllers Setup
