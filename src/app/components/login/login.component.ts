@@ -37,7 +37,6 @@ export class LoginComponent implements OnInit {
     private authService: AuthService,
     private alertController: AlertController,
     private http: HttpClient,
-   
   ) {
     this.formData = this.fb.group({
       username: [null, [Validators.required, Validators.pattern(this.ValidatorConsts.v_username)]],

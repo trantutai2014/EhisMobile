@@ -12,10 +12,7 @@ export class MenuComponent {
 
 
   constructor(private router: Router,
-    
   ) { }
-
-  
 
   navigateTo(page: string) {
     this.router.navigateByUrl(`/${page}`);
@@ -55,7 +52,7 @@ export class MenuComponent {
   goToDSKhamChuaBenh() {
     const cccd = localStorage.getItem('cccd');
     if (cccd !== null) {
-    this.router.navigate([UrlConstants.DSDOTKHAMCHUABENH.replace(':cccd', cccd)]);
+    this.router.navigate([UrlConstants.LICHSUBENH.replace(':cccd', cccd)]);
       
      
     }

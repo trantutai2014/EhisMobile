@@ -80,7 +80,6 @@ builder.Services.AddScoped<QRCodeService, QRCodeService>();
 builder.Services.AddScoped<ThongTinService, ThongTinService>();
 builder.Services.AddScoped<TokenService, TokenService>();
 builder.Services.AddScoped<NotificationService, NotificationService>();
-
 var assembliesToScan = new[] { Assembly.GetAssembly(typeof(IUserRoleService)) };
 
 builder.Services.RegisterAssemblyPublicNonGenericClasses(assembliesToScan)

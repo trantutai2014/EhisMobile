@@ -1,14 +1,14 @@
 
-<ion-card>
-  <ion-card-header>
-    <ion-card-title>Lịch sử bệnh</ion-card-title>
-  </ion-card-header>
+<ion-card *ngFor="let item of items; let i = index">
+  <div button (click)="goToDSKhamChuaBenh(i)">
+  <ion-card-content  >
+    <ion-badge slot="start">{{i+1}}</ion-badge>
+  <ion-label  class="label-left" color="dark" >{{item.ngayVao | date:'dd/MM/yyyy'}} - {{item.ngayRa |  date:'dd/MM/yyyy'}}  </ion-label>
 
-  <ion-card-content >
-  <ion-label class="label-left" color="dark">ngày - ngày <ion-label color="medium">Ghi nhận lúc: </ion-label> </ion-label>
-    <ion-label class="label-left" color="dark">Nơi khám chữa bệnh:   <ion-label color="medium"></ion-label> không có thông tin </ion-label>
-    <ion-label class="label-left" color="dark">Chuẩn đoán xác định khi ra viện:  <ion-label color="medium">không có thông tin</ion-label> </ion-label>
+  <ion-label color="medium">Ghi nhận lúc: {{item.ngayVao | date:'dd/MM/yyyy HH:mm'}} </ion-label>
+    <ion-label class="label-left" color="dark">Nơi khám chữa bệnh:   <ion-label color="medium"></ion-label>{{item.noiKham}} </ion-label>
+    <ion-label class="label-left" color="dark">Chuẩn đoán xác định khi ra viện:   <ion-label color="tertiary" style="text-decoration: underline;">A123 </ion-label> <ion-label color="medium"> {{item.chanDoan}}</ion-label> </ion-label>
   </ion-card-content>
-
+</div>
 
 </ion-card>

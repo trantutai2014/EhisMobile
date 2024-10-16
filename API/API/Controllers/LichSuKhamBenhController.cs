@@ -2,8 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Common.Enums;
 using Common.Helpers;
 using Common.Model;
+using Common.Models;
 using Data.EF;
 using Data.Models;
 using Common.Enums;
@@ -16,7 +18,7 @@ namespace API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class LichSuKhamBenhController : BaseController
+    public class LichSuKhamBenhController : ControllerBase
     {
         private readonly MDPDbContext _context;
 
@@ -119,4 +121,6 @@ namespace API.Controllers
             return await Task.FromResult(result);
         }
     }
+
+
 }
