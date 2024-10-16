@@ -16,6 +16,162 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "API.Controllers.ChiTietTienSuBenhController",
+    "Method": "GetCDHA_TDCNKCB",
+    "RelativePath": "api/ChiTietTienSuBenh/cdha-tdcn",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "loai",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "p",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.ChiTietTienSuBenhController",
+    "Method": "GetLichSuKCB",
+    "RelativePath": "api/ChiTietTienSuBenh/lich-su-kcb",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "loai",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "p",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.ChiTietTienSuBenhController",
+    "Method": "GetPTTTKCB",
+    "RelativePath": "api/ChiTietTienSuBenh/pttt",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "loai",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "p",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.ChiTietTienSuBenhController",
+    "Method": "GetThuocKCB",
+    "RelativePath": "api/ChiTietTienSuBenh/thuoc",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "loai",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "p",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.ChiTietTienSuBenhController",
+    "Method": "GetTomTatKCB",
+    "RelativePath": "api/ChiTietTienSuBenh/tom-tat",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "loai",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "p",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.ChiTietTienSuBenhController",
+    "Method": "GetXetNghiemKCB",
+    "RelativePath": "api/ChiTietTienSuBenh/xet-nghiem",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "loai",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "p",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "API.Controllers.DangNhapController",
     "Method": "Login",
     "RelativePath": "api/DangNhap",
@@ -75,7 +231,9 @@
       {
         "Type": "Common.Model.TienSuBenhResModel",
         "MediaTypes": [
-          "application/json"
+          "text/plain",
+          "application/json",
+          "text/json"
         ],
         "StatusCode": 200
       }

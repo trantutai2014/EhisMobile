@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Data.Models;
 
-namespace MDP.Data.Models
+namespace Data.Models
 {
     [Table("DS_ChiTiet_Thuoc130")]
     public class DS_ChiTiet_Thuoc130 : BaseEntity

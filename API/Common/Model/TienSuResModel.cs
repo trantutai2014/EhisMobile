@@ -1,4 +1,4 @@
-using MDP.Common.Enums;
+using Common.Enums;
 namespace Common.Model
 {
     public class TienSuBenhResModel

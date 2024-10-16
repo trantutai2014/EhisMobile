@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2OdgZYe/aTM=",
+  "dgSpecHash": "8e1vHQTR0F8=",
   "success": true,
-  "projectFilePath": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test12\\EhisMobile\\API\\Common\\Common.csproj",
+  "projectFilePath": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test15\\EhisMobile\\API\\Common\\Common.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\admin\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.0.0\\microsoft.aspnetcore.cryptography.internal.3.0.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.0.0\\microsoft.aspnetcore.cryptography.keyderivation.3.0.0.nupkg.sha512",

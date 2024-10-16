@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test12\\EhisMobile\\API\\Common\\Common.csproj": {}
+    "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test15\\EhisMobile\\API\\Common\\Common.csproj": {}
   },
   "projects": {
-    "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test12\\EhisMobile\\API\\Common\\Common.csproj": {
+    "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test15\\EhisMobile\\API\\Common\\Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test12\\EhisMobile\\API\\Common\\Common.csproj",
+        "projectUniqueName": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test15\\EhisMobile\\API\\Common\\Common.csproj",
         "projectName": "Common",
-        "projectPath": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test12\\EhisMobile\\API\\Common\\Common.csproj",
+        "projectPath": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test15\\EhisMobile\\API\\Common\\Common.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test12\\EhisMobile\\API\\Common\\obj\\",
+        "outputPath": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test15\\EhisMobile\\API\\Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

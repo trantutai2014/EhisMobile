@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MDP.Data.Models
+namespace Data.Models
 {
     [Table("DS_CSDT_ARV130")]
     public class DS_CSDT_ARV130 : BaseEntity

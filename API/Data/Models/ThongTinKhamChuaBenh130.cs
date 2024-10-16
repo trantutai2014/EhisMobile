@@ -2,8 +2,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using Common.Constants;
 using Data.Abstract;
-using MDP.Data.Models;
-using MDP.Common.Enums;
+using Data.Models;
+using Common.Enums;
 
 namespace Data.Models
 {
@@ -29,9 +29,9 @@ namespace Data.Models
       // DS_DieuTriBenhLao130s = new HashSet<DS_DieuTriBenhLao130>();
     }
 
-    [Key]
-    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-    public int ThongTinKhamChuaBenhID { get; set; }
+    //[Key]
+    //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+    //public int ThongTinKhamChuaBenhID { get; set; }
     [Required]
     [MaxLength(100)]
     public string MA_LK { set; get; }
@@ -80,17 +80,17 @@ namespace Data.Models
     public string? GT_THE_DEN { set; get; }
     public DateTime? NGAY_MIEN_CCT { set; get; }
     [Required]
-    public string LY_DO_VV { set; get; }
+    public string? LY_DO_VV { set; get; }
     public string? LY_DO_VNT { set; get; }
     [MaxLength(5)]
     public string? MA_LY_DO_VNT { set; get; }
     [Required]
     public string CHAN_DOAN_VAO { set; get; }
     [Required]
-    public string CHAN_DOAN_RV { set; get; }
+    public string CHAN_DOAN_RV { set; get; } = null!;
     [MaxLength(7)]
     [Required]
-    public string MA_BENH_CHINH { set; get; }
+    public string? MA_BENH_CHINH { set; get; } = null!;
     [MaxLength(100)]
     public string? MA_BENH_KT { set; get; }
     [MaxLength(255)]
@@ -106,10 +106,10 @@ namespace Data.Models
     public string? MA_NOI_DEN { set; get; }
     public int MA_TAI_NAN { set; get; }
     [Required]
-    public DateTime NGAY_VAO { set; get; }
+    public DateTime NGAY_VAO { set; get; } = DateTime.MinValue;
     public DateTime? NGAY_VAO_NOI_TRU { set; get; }
     [Required]
-    public DateTime NGAY_RA { set; get; }
+    public DateTime NGAY_RA { set; get; } = DateTime.MinValue;
     [MaxLength(50)]
     public string? GIAY_CHUYEN_TUYEN { set; get; }
     public int SO_NGAY_DTRI { set; get; }
@@ -143,18 +143,18 @@ namespace Data.Models
     public int THANG_QT { set; get; }
     [MaxLength(2)]
     [Required]
-    public string MA_LOAI_KCB { set; get; }
+    public string MA_LOAI_KCB { set; get; } = null!;
     [MaxLength(50)]
     [Required]
     public string MA_KHOA { set; get; }
     [MaxLength(5)]
     [Required]
-    public string MA_CSKCB { set; get; }
+    public string MA_CSKCB { set; get; } = null!;
     [MaxLength(2)]
     public string? MA_KHUVUC { set; get; }
     [MaxLength(6)]
     [Required]
-    public string CAN_NANG { set; get; }
+    public string CAN_NANG { set; get; } = null!;
     [MaxLength(100)]
     public string? CAN_NANG_CON { set; get; }
     [MaxLength(8)]

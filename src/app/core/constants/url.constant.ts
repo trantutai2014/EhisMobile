@@ -17,4 +17,5 @@ export class UrlConstants {
   static readonly THONGTINTIEMCHUNG = '/thong-tin-tiem-chung';
   static readonly DSDOTKHAMCHUABENH = '/ds-dot-kham-chua-benh/:cccd';
   static readonly THONGTINBHYT = '/thong-tin-bhyt/:cccd';
+  static readonly LICHSUBENH = '/lich-su-benh/:cccd';
 }

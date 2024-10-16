@@ -79,6 +79,9 @@ builder.Services.AddScoped<QRCodeService, QRCodeService>();
 builder.Services.AddScoped<ThongTinService, ThongTinService>();
 builder.Services.AddScoped<TokenService, TokenService>();
 builder.Services.AddScoped<NotificationService, NotificationService>(); // Fix for NotificationService registration
+builder.Services.AddScoped<SkdtHoSoService4210>();
+builder.Services.AddScoped<SkdtHoSo130Service>();
+
 
 var assembliesToScan = new[]
 {

@@ -11,7 +11,7 @@ using Data.Abstract;
 using Common.Constants;
 using Data.Models;
 
-namespace MDP.Data.Models
+namespace Data.Models
 {
     [Table("DS_ChiTiet_DVKT130")]
     public class DS_ChiTiet_DVKT130 : BaseEntity

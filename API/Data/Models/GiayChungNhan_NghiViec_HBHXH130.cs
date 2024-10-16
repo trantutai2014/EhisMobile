@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using Data.Models;
 
 
-namespace MDP.Data.Models
+namespace Data.Models
 {
     [Table("DS_GiayChungNhan_NghiViec_HBHXH130")]
     public class DS_GiayChungNhan_NghiViec_HBHXH130 : BaseEntity

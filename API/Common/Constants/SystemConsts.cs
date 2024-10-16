@@ -7,7 +7,7 @@
         public const string SigningKey = "12112019syt@ehis.vn";
         public const string Swagger = "Swagger";
         public const string OpenApiSecurity = "OpenApiSecurity";
-        public const string MigrationsAssembly = "MDP.Data";
+        public const string MigrationsAssembly = "Data";
         public const string UploadConfiguration = "UploadConfiguration";
         public const string CacheDurationInHours = "CacheDurationInHours";
 

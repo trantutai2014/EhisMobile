@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MDP.Common.Enums
+namespace Common.Enums
 {
     public enum LoaiHSSKDTEnum
     {

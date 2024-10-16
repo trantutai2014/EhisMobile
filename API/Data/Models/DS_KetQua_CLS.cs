@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using Data.Abstract;
 using Common.Constants;
 
-namespace MDP.Data.Models
+namespace Data.Models
 {
     [Table("DS_KetQua_CLS")]
     public class DS_KetQua_CLS : BaseEntity

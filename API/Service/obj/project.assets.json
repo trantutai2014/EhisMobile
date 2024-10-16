@@ -2817,11 +2817,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test12\\EhisMobile\\API\\Service\\Service.csproj",
+      "projectUniqueName": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test15\\EhisMobile\\API\\Service\\Service.csproj",
       "projectName": "Service",
-      "projectPath": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test12\\EhisMobile\\API\\Service\\Service.csproj",
+      "projectPath": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test15\\EhisMobile\\API\\Service\\Service.csproj",
       "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test12\\EhisMobile\\API\\Service\\obj\\",
+      "outputPath": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test15\\EhisMobile\\API\\Service\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2839,11 +2839,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test12\\EhisMobile\\API\\Common\\Common.csproj": {
-              "projectPath": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test12\\EhisMobile\\API\\Common\\Common.csproj"
+            "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test15\\EhisMobile\\API\\Common\\Common.csproj": {
+              "projectPath": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test15\\EhisMobile\\API\\Common\\Common.csproj"
             },
-            "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test12\\EhisMobile\\API\\Data\\Data.csproj": {
-              "projectPath": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test12\\EhisMobile\\API\\Data\\Data.csproj"
+            "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test15\\EhisMobile\\API\\Data\\Data.csproj": {
+              "projectPath": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test15\\EhisMobile\\API\\Data\\Data.csproj"
             }
           }
         }

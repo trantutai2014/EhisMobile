@@ -1,5 +1,5 @@
 ﻿
-using MDP.Common.Enums;
+using Common.Enums;
 
 using System;
 using System.Collections.Generic;
@@ -12,7 +12,7 @@ using Data.Abstract;
 using Data.Models;
 using Common.Constants;
 
-namespace MDP.Data.Models
+namespace Data.Models
 {
     [Table("LichSuTuongTac130")]
     public class LichSuTuongTac130 : BaseEntity
