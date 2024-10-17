@@ -1,87 +1,139 @@
-
-
 <ion-content class="ion-padding">
-  <!-- Allergy History Section -->
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title style="font-family: 'Times New Roman', Times, serif;">Tiền sử dị ứng</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <ion-text color="medium">Không có thông tin</ion-text>
-    </ion-card-content>
-  </ion-card>
+  <!-- Accordion Group for all sections -->
+  <ion-accordion-group>
 
-  <!-- Medical History Section -->
-  <ion-card *ngIf="items">
-    <ion-card-header>
-      <ion-card-title style="font-family: 'Times New Roman', Times, serif;">Tiền sử bệnh tật</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <ion-list>
-        <ion-item lines="full">
-          <ion-label>
-            {{ items.ngaY_VAO | date:'dd/MM/yyyy' }} - {{ items.ngaY_RA | date:'dd/MM/yyyy' }}
-          </ion-label>
-        </ion-item>
-        <ion-item lines="full">
-          <ion-label>Ghi nhận lúc:  <span style="color: rgb(3, 117, 117);">{{ items.ngaY_VAO | date:'dd/MM/yyyy HH:mm' }} </span> </ion-label>
-        </ion-item>
-        <ion-item lines="full">
-          <ion-label>Nơi khám chữa bệnh: Không có thông tin</ion-label>
-        </ion-item>
-        <ion-item lines="none">
-          <ion-label>Chẩn đoán xác định khi ra viện: <span style="color: rgb(3, 117, 117);">{{items.chaN_DOAN_RV}}</span> </ion-label>
-        </ion-item>
-      </ion-list>
-    </ion-card-content>
-  </ion-card>
+    <!-- Allergy History Section -->
+    <ion-accordion>
+      <ion-item slot="header">
+        <ion-label style="font-family: 'Times New Roman', Times, serif; font-size: 20px; font-weight: bold;">
+          Tiền sử dị ứng
+        </ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <ion-text color="medium">Không có thông tin</ion-text>
+      </div>
+    </ion-accordion>
 
-  <!-- Vaccination History Section -->
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title style="font-family: 'Times New Roman', Times, serif;">Tiền sử tiêm chủng</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <ion-text color="medium">Không có thông tin</ion-text>
-    </ion-card-content>
-  </ion-card>
+    <!-- Medical History Section -->
+    <ion-accordion *ngIf="items">
+      <ion-item slot="header">
+        <ion-label style="font-family: 'Times New Roman', Times, serif; font-size: 20px; font-weight: bold;">
+          Tiền sử bệnh tật
+        </ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <ion-list>
+          <ion-item lines="full">
+            <ion-label>
+              {{ items.ngaY_VAO | date:'dd/MM/yyyy' }} - {{ items.ngaY_RA | date:'dd/MM/yyyy' }}
+            </ion-label>
+          </ion-item>
+          <ion-item lines="full">
+            <ion-label>Ghi nhận lúc:
+              <span style="color: rgb(3, 117, 117);">{{ items.ngaY_VAO | date:'dd/MM/yyyy HH:mm' }}</span>
+            </ion-label>
+          </ion-item>
+          <ion-item lines="full">
+            <ion-label>Nơi khám chữa bệnh: Không có thông tin</ion-label>
+          </ion-item>
+          <ion-item lines="none">
+            <ion-label>Chẩn đoán xác định khi ra viện:
+              <span style="color: rgb(3, 117, 117);">{{ items.chaN_DOAN_RV }}</span>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </div>
+    </ion-accordion>
 
-  <!-- thông tin đợt khám chữa bệnh -->
-<app-thong-tin-dot-kham-chua-benh>
+    <!-- Vaccination History Section -->
+    <ion-accordion>
+      <ion-item slot="header">
+        <ion-label style="font-family: 'Times New Roman', Times, serif; font-size: 20px; font-weight: bold;">
+          Tiền sử tiêm chủng
+        </ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <ion-text color="medium">Không có thông tin</ion-text>
+      </div>
+    </ion-accordion>
 
-</app-thong-tin-dot-kham-chua-benh>
+    <!-- Additional Sections -->
+    <ion-accordion>
+      <ion-item slot="header">
+        <ion-label style="font-family: 'Times New Roman', Times, serif; font-size: 20px; font-weight: bold;">
+          Thông tin đợt khám chữa bệnh
+        </ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <app-thong-tin-dot-kham-chua-benh></app-thong-tin-dot-kham-chua-benh>
+      </div>
+    </ion-accordion>
 
- <!-- chuẩn đoán xác định khi ra viện -->
- <app-chuan-doan-xac-dinh-khi-ra-vien>
+    <ion-accordion>
+      <ion-item slot="header">
+        <ion-label style="font-family: 'Times New Roman', Times, serif; font-size: 20px; font-weight: bold;">
+          Chuẩn đoán xác định khi ra viện
+        </ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <app-chuan-doan-xac-dinh-khi-ra-vien></app-chuan-doan-xac-dinh-khi-ra-vien>
+      </div>
+    </ion-accordion>
 
- </app-chuan-doan-xac-dinh-khi-ra-vien>
+    <ion-accordion>
+      <ion-item slot="header">
+        <ion-label style="font-family: 'Times New Roman', Times, serif; font-size: 20px; font-weight: bold;">
+          Chỉ số theo dõi chính
+        </ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <app-chi-so-theo-doi-chinh></app-chi-so-theo-doi-chinh>
+      </div>
+    </ion-accordion>
 
-<!--  chỉ số theo dõi chính -->
- <app-chi-so-theo-doi-chinh>
+    <ion-accordion>
+      <ion-item slot="header">
+        <ion-label style="font-family: 'Times New Roman', Times, serif; font-size: 20px; font-weight: bold;">
+          Tóm tắt hồ sơ bệnh án tình trạng người bệnh
+        </ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <app-tom-tat-ho-so-benh-an-tinh-trang-nguoi-benh></app-tom-tat-ho-so-benh-an-tinh-trang-nguoi-benh>
+      </div>
+    </ion-accordion>
 
- </app-chi-so-theo-doi-chinh>
+    <ion-accordion>
+      <ion-item slot="header">
+        <ion-label style="font-family: 'Times New Roman', Times, serif; font-size: 20px; font-weight: bold;">
+          Thông tin xét nghiệm
+        </ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <app-thong-tin-xet-nghiem></app-thong-tin-xet-nghiem>
+      </div>
+    </ion-accordion>
 
- <!-- tóm tắt hồ sơ bệnh án tình trạng người bệnh -->
- <app-tom-tat-ho-so-benh-an-tinh-trang-nguoi-benh>
+    <ion-accordion>
+      <ion-item slot="header">
+        <ion-label style="font-family: 'Times New Roman', Times, serif; font-size: 20px; font-weight: bold;">
+          Phẫu thuật thủ thuật đã thực hiện
+        </ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <app-phau-thuat-thu-thuat-da-thuc-hien></app-phau-thuat-thu-thuat-da-thuc-hien>
+      </div>
+    </ion-accordion>
 
- </app-tom-tat-ho-so-benh-an-tinh-trang-nguoi-benh>
+    <ion-accordion>
+      <ion-item slot="header">
+        <ion-label style="font-family: 'Times New Roman', Times, serif; font-size: 20px; font-weight: bold;">
+          Chuẩn đoán hình ảnh thăm dò chức năng
+        </ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <app-chuan-doan-hinh-anh-tham-do-chuc-nang></app-chuan-doan-hinh-anh-tham-do-chuc-nang>
+      </div>
+    </ion-accordion>
 
- <!-- thông tin xét nghiệm -->
- <app-thong-tin-xet-nghiem>
-
- </app-thong-tin-xet-nghiem>
-
- <!-- phẩu thuật thủ thuật đã thực hiện -->
- <app-phau-thuat-thu-thuat-da-thuc-hien>
-
- </app-phau-thuat-thu-thuat-da-thuc-hien>
- 
-<!-- chuẩn đoán hình ảnh thăm dò chức năng -->
- <app-chuan-doan-hinh-anh-tham-do-chuc-nang>
-
- </app-chuan-doan-hinh-anh-tham-do-chuc-nang>
+  </ion-accordion-group>
 </ion-content>
-
-
-
-

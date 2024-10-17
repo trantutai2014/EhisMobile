@@ -1,9 +1,12 @@
 <ion-menu side="start" menuId="first" contentId="main-content">
   <ion-header>
-    <ion-toolbar color="primary">
-      <ion-title>Menu </ion-title>
+    <ion-toolbar>
+      <div class="text-center" style="width: 100%; display: flex; justify-content: center;">
+        <img src="../../assets/img/logo@2x.png" title="Logo" class="logo" style="max-width: 150px;">
+      </div>
     </ion-toolbar>
   </ion-header>
+
   <ion-content>
     <ion-list>
 
@@ -16,12 +19,12 @@
           <ion-icon name="bag-add-outline" slot="start"></ion-icon>
           <ion-label>Thông tin BHYT</ion-label>
         </ion-item>
-        <ion-item button (click)="goToDSKhamChuaBenh()">  
-          <ion-icon name="list-circle-outline"  slot="start"></ion-icon>
+        <ion-item button (click)="goToDSKhamChuaBenh()">
+          <ion-icon name="list-circle-outline" slot="start"></ion-icon>
           <ion-label>DS Đợt khám chữa bệnh</ion-label>
         </ion-item>
         <ion-item button (click)="goToThongTinTiemChung()">
-          <ion-icon name="eyedrop-outline"  slot="start"></ion-icon>
+          <ion-icon name="eyedrop-outline" slot="start"></ion-icon>
           <ion-label>Thông tin tiêm chủng</ion-label>
         </ion-item>
         <ion-item button (click)="goToThongTinHanhChinh()">
@@ -33,7 +36,6 @@
           <ion-label>Cài đặt</ion-label>
         </ion-item>
       </ion-menu-toggle>
-      
 
     </ion-list>
   </ion-content>
