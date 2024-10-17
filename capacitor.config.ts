@@ -10,6 +10,10 @@ const config: CapacitorConfig = {
       enabled: true,
     },
   },
+  server: {
+    url: 'http://192.168.0.106', // Địa chỉ IP của máy chủ API/WebSocket
+    cleartext: true // Cần thiết nếu bạn đang dùng HTTP không bảo mật trên Android
+  }
 };
 
 import { CapacitorHttp, HttpResponse } from '@capacitor/core';
@@ -17,7 +21,7 @@ import { CapacitorHttp, HttpResponse } from '@capacitor/core';
 // Example of a GET request
 const doGet = async () => {
   const options = {
-    url: 'http://192.168.0.110/',
+    url: 'http://192.168.0.106/',
     headers: {},
     params: {},
   };
@@ -32,7 +36,7 @@ const doGet = async () => {
 // can be passed as a raw JS Object (must be JSON serializable)
 const doPost = async () => {
   const options = {
-    url: 'http://192.168.0.110/',
+    url: 'http://192.168.0.106/',
     headers: { },
     data: {},
   };
