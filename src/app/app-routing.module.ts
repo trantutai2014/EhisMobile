@@ -86,7 +86,8 @@ const routes: Routes = [
   },
   {
     path: 'lich-su-benh/:cccd',
-    loadChildren: () => import('./pages/lich-su-benh/lich-su-benh.module').then( m => m.LichSuBenhPageModule)
+    loadChildren: () => import('./pages/lich-su-benh/lich-su-benh.module').then( m => m.LichSuBenhPageModule),
+    canActivate: [AuthGuard] // Bảo vệ route này
   },
 
 ];

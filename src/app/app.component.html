@@ -1,13 +1,12 @@
-
 <ion-app>
   <ion-header>
-    <app-head-menu></app-head-menu>
+    <!-- Show the header menu only if not on the login page -->
+    <app-head-menu *ngIf="!isLoginPage()"></app-head-menu>
   </ion-header>
   <ion-content>
-    <app-menu></app-menu> <!-- Thêm component menu -->
-    <app-thongbao></app-thongbao> <!-- Thêm component thông báo -->
+    <app-menu></app-menu>
+    <app-thongbao></app-thongbao>
     <app-capnhat></app-capnhat>
-   <!-- Thêm component cập nhật -->
-  <ion-router-outlet id="main-content"></ion-router-outlet>
-</ion-content>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-content>
 </ion-app>

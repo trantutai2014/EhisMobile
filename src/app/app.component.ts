@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { catchError } from 'rxjs/operators'; // For handling errors
 import { UrlConstants } from './core/constants/url.constant';
 import { of } from 'rxjs';
+import { Router } from '@angular/router';
 
 interface Data {
   // Define the expected structure of your data here (optional)
@@ -19,10 +20,13 @@ export class AppComponent implements OnInit {
   cccd: any;
 
   // Inject HttpClient via constructor
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private router: Router) {}
 
   ngOnInit() {
     // Optional: Initial data fetch if needed
+  }
+  isLoginPage(): boolean {
+    return this.router.url === '/login'; // Adjust the path if needed
   }
 
 }
