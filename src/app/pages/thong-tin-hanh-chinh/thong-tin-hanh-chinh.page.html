@@ -23,54 +23,66 @@
   
     <div *ngIf="items">
       <div class="ion-text-center">
-        <p class="ion-no-margin" style="font-size: 24px; font-weight: bold; margin-top: 14px;">{{items.hoTen}}</p>
+        <p class="ion-no-margin" style="font-size: 24px; font-weight: bold; margin-top: 14px;">{{items.hoTen|titlecase}}</p>
       </div>
 
       <!-- Thông tin chi tiết -->
       <ion-grid class="ion-padding-start ion-padding-end">
         <ion-row>
           <ion-col size="6" class="ion-text-left" style="font-weight: bold;">Ngày sinh:</ion-col>
-          <ion-col size="6" class="ion-text-right" style="opacity: 0.8;">{{items.ngaySinh}}</ion-col>
-
+          <ion-col size="6" class="ion-text-right" style="opacity: 0.8;" 
+                    [ngClass]="{'highlight': items.ngaySinh === 'Chưa cập nhật'}">{{ items.ngaySinh }}</ion-col>
+      
           <ion-col size="6" class="ion-text-left" style="font-weight: bold;">Giới tính:</ion-col>
-          <ion-col size="6" class="ion-text-right" style="opacity: 0.8;">{{items.gioiTinh ===1 ?'Nam' : 'Nữ'}}</ion-col>
-
+          <ion-col size="6" class="ion-text-right" style="opacity: 0.8;" 
+                    >
+                    {{ items.gioiTinh === 1 ? 'Nam' : 'Nữ' }}</ion-col>
+      
           <ion-col size="6" class="ion-text-left" style="font-weight: bold;">Dân tộc:</ion-col>
-          <ion-col size="6" class="ion-text-right" style="opacity: 0.8;">{{items.tenDanToc}}</ion-col>
-
+          <ion-col size="6" class="ion-text-right" style="opacity: 0.8;" 
+                    [ngClass]="{'highlight': items.tenDanToc === 'Chưa cập nhật'}">{{ items.tenDanToc }}</ion-col>
+      
           <ion-col size="6" class="ion-text-left" style="font-weight: bold;">Quốc tịch:</ion-col>
-          <ion-col size="6" class="ion-text-right" style="opacity: 0.8;">{{items.tenQuocTich}}</ion-col>
-
+          <ion-col size="6" class="ion-text-right" style="opacity: 0.8;" 
+                    [ngClass]="{'highlight': items.tenQuocTich === 'Chưa cập nhật'}">{{ items.tenQuocTich }}</ion-col>
+      
           <ion-col size="6" class="ion-text-left" style="font-weight: bold;">Nghề nghiệp:</ion-col>
-          <ion-col size="6" class="ion-text-right" style="opacity: 0.8;">{{items.tenNgheNghiep}}</ion-col>
-
+          <ion-col size="6" class="ion-text-right" style="opacity: 0.8;" 
+                    [ngClass]="{'highlight': items.tenNgheNghiep === 'Chưa cập nhật'}">{{ items.tenNgheNghiep }}</ion-col>
+      
           <ion-col size="6" class="ion-text-left" style="font-weight: bold;">Điện thoại:</ion-col>
-          <ion-col size="6" class="ion-text-right" style="opacity: 0.8;">{{items.sdt}}</ion-col>
-
+          <ion-col size="6" class="ion-text-right" style="opacity: 0.8;" 
+                    [ngClass]="{'highlight': items.sdt === 'Chưa cập nhật'}">{{ items.sdt }}</ion-col>
+      
           <ion-col size="6" class="ion-text-left" style="font-weight: bold;">Số ĐDCN/CCCD:</ion-col>
-          <ion-col size="6" class="ion-text-right" style="opacity: 0.8;">{{items.cccd}}</ion-col>
-
+          <ion-col size="6" class="ion-text-right" style="opacity: 0.8;" 
+                    [ngClass]="{'highlight': items.cccd === 'Chưa cập nhật'}">{{ items.cccd }}</ion-col>
+      
           <ion-col size="6" class="ion-text-left" style="font-weight: bold;">Ngày cấp:</ion-col>
-          <ion-col size="6" class="ion-text-right" style="opacity: 0.8;">{{items.ngayCap}}</ion-col>
-
+          <ion-col size="6" class="ion-text-right" style="opacity: 0.8;" 
+                    [ngClass]="{'highlight': items.ngayCap === 'Chưa cập nhật'}">{{ items.ngayCap }}</ion-col>
+      
           <ion-col size="6" class="ion-text-left" style="font-weight: bold;">Nơi cấp:</ion-col>
-          <ion-col size="6" class="ion-text-right" style="opacity: 0.8;">{{items.noiCap}}</ion-col>
-
+          <ion-col size="6" class="ion-text-right" style="opacity: 0.8;" 
+                    [ngClass]="{'highlight': items.noiCap === 'Chưa cập nhật'}">{{ items.noiCap }}</ion-col>
+      
           <ion-col size="6" class="ion-text-left" style="font-weight: bold;">Địa chỉ:</ion-col>
-          <ion-col size="6" class="ion-text-right" style="opacity: 0.8;">{{items.diaChi}}</ion-col>
-
+          <ion-col size="6" class="ion-text-right" style="opacity: 0.8;" 
+                    [ngClass]="{'highlight': items.diaChi === 'Chưa cập nhật'}">{{ items.diaChi }}</ion-col>
+      
           <ion-col size="6" class="ion-text-left" style="font-weight: bold;">Nơi tạo:</ion-col>
-          <ion-col size="6" class="ion-text-right" style="opacity: 0.8;">{{items.noiTao}}</ion-col>
-
+          <ion-col size="6" class="ion-text-right" style="opacity: 0.8;" 
+                    [ngClass]="{'highlight': items.noiTao === 'Chưa cập nhật'}">{{ items.noiTao }}</ion-col>
+      
           <ion-col size="6" class="ion-text-left" style="font-weight: bold;">Ngày lập hồ sơ:</ion-col>
-          <ion-col size="6" class="ion-text-right" style="opacity: 0.8;">{{items.ngayTao | date:'dd/MM/yyyy'}}</ion-col>
-        </ion-row>
+          <ion-col size="6" class="ion-text-right" style="opacity: 0.8;" 
+                    [ngClass]="{'highlight': items.ngayTao === 'Chưa cập nhật'}">{{ items.ngayTao }}</ion-col>
+      </ion-row>
+      
 
         <!-- Nút Cập Nhật -->
         <ion-row style="margin-top: 20px;">
-          <ion-col size="12">
-            <ion-button expand="block" color="primary" id="open-modal-cap-nhat">Cập nhật</ion-button>
-          </ion-col>
+          
         </ion-row>
       </ion-grid>
     </div>

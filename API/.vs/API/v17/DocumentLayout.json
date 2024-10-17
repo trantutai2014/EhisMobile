@@ -36,11 +36,19 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "launchSettings.json",
+<<<<<<< HEAD
               "DocumentMoniker": "D:\\tt\\EhisMobile\\API\\API\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "API\\Properties\\launchSettings.json",
               "ToolTip": "D:\\tt\\EhisMobile\\API\\API\\Properties\\launchSettings.json",
               "RelativeToolTip": "API\\Properties\\launchSettings.json",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAABcAAAAiAAAAAAAAAA==",
+=======
+              "DocumentMoniker": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test18\\EhisMobile\\API\\API\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "API\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test18\\EhisMobile\\API\\API\\Properties\\launchSettings.json",
+              "RelativeToolTip": "API\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABoAAAAfAAAAAAAAAA==",
+>>>>>>> 75174151d962349be970084d8d9cee6b1cd70150
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-10-17T03:42:22.902Z",
               "EditorCaption": ""

@@ -3,8 +3,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { UrlConstants } from '../../core/constants/url.constant';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { environment } from 'src/environments/environment';
 import { AuthService } from 'src/app/core/services/auth.service';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-profile',
