@@ -14,21 +14,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test18\\EhisMobile\\API\\API\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "API\\Properties\\launchSettings.json",
-              "ToolTip": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test18\\EhisMobile\\API\\API\\Properties\\launchSettings.json",
-              "RelativeToolTip": "API\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABcAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-10-17T03:42:22.902Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{65ddf8c3-8f89-4077-a6c6-dbb8853aab13}"
@@ -44,6 +31,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{809f6ff3-8092-454a-8003-6d4091f9b5bb}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test18\\EhisMobile\\API\\API\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "API\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test18\\EhisMobile\\API\\API\\Properties\\launchSettings.json",
+              "RelativeToolTip": "API\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABoAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-17T03:42:22.902Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -14,6 +14,7 @@ namespace Data.Models.SKDT
     public string? NoiCap { set; get; }
     [MaxLength(15)]
     public string? SDT { set; get; }
+    public string SDTHienThi => string.IsNullOrWhiteSpace(SDT) ? "Chưa cập nhật" : SDT;
     [MaxLength(255)]
     [Required]
     public string HoTen { set; get; }

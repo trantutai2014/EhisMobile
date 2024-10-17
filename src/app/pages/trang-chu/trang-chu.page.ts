@@ -3,8 +3,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { UrlConstants } from 'src/app/core/constants/url.constant';
 
 import { Subscription } from 'rxjs';
-import { environment } from 'src/environments/environment.prod';
+
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-main',

@@ -7,10 +7,11 @@ import QrScanner from 'qr-scanner';
 
 import { HttpClient } from '@angular/common/http';
 import { firstValueFrom } from 'rxjs';
-import { environment } from '../../../environments/environment';
+
 import { AuthService } from '../../core/services/auth.service';
 import { ValidatorConstants } from 'src/app/core/constants/validator.constants';
 import { LoginService } from 'src/app/core/services/login.service';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-login',
