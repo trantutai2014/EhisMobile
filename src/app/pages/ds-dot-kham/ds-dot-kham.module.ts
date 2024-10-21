@@ -10,7 +10,7 @@ import {ChuanDoanXacDinhKhiRaVienPage} from '../chuan-doan-xac-dinh-khi-ra-vien/
 import { DotkhamPage } from './ds-dot-kham.page';
 import{ChiSoTheoDoiChinhPage} from '../chi-so-theo-doi-chinh/chi-so-theo-doi-chinh.page';
 import{TomTatHoSoBenhAnTinhTrangNguoiBenhPage} from '../tom-tat-ho-so-benh-an-tinh-trang-nguoi-benh/tom-tat-ho-so-benh-an-tinh-trang-nguoi-benh.page';
-import{ThongTinXetNghiemPage} from '../thong-tin-xet-nghiem/thong-tin-xet-nghiem.page';
+import{ThongTinXetNghiemPage} from '../ket-qua-xet-nghiem/ket-qua-xet-nghiem.page';
 import{PhauThuatThuThuatDaThucHienPage} from '../phau-thuat-thu-thuat-da-thuc-hien/phau-thuat-thu-thuat-da-thuc-hien.page';
 import { ChuanDoanHinhAnhThamDoChucNangPage } from '../chuan-doan-hinh-anh-tham-do-chuc-nang/chuan-doan-hinh-anh-tham-do-chuc-nang.page';
 import { ThuocDaDieuTriDonThuocDaKePage } from '../thuoc-da-dieu-tri-don-thuoc-da-ke/thuoc-da-dieu-tri-don-thuoc-da-ke.page';

@@ -3,9 +3,9 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
-import { Router } from '@angular/router';
-import { UrlConstants } from 'src/app/core/constants/url.constant';
-import { ThongBaoComponent } from './thong-bao.component';
+
+import { ThongTinXetNghiemPageRoutingModule } from './ket-qua-xet-nghiem-routing.module';
+
 
 
 @NgModule({
@@ -13,13 +13,8 @@ import { ThongBaoComponent } from './thong-bao.component';
     CommonModule,
     FormsModule,
     IonicModule,
+    ThongTinXetNghiemPageRoutingModule
   ],
   declarations: []
 })
-export class ThongBaoModule {
-  constructor(private router: Router) {}
-
-  ngOnInit() {
-  }
-
- }
+export class ThongTinXetNghiemPageModule {}

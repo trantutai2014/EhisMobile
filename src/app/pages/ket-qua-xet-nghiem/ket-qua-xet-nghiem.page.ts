@@ -5,8 +5,8 @@ import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-thong-tin-xet-nghiem',
-  templateUrl: './thong-tin-xet-nghiem.page.html',
-  styleUrls: ['./thong-tin-xet-nghiem.page.scss'],
+  templateUrl: './ket-qua-xet-nghiem.page.html',
+  styleUrls: ['./ket-qua-xet-nghiem.page.scss'],
 })
 export class ThongTinXetNghiemPage implements OnInit {
 

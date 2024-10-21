@@ -9,7 +9,6 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { MenuComponent } from './layouts/menu/menu.component';
 import { ProfilePage } from './pages/thong-tin-hanh-chinh/thong-tin-hanh-chinh.page';
-import { ThongBaoComponent } from './layouts/thong-bao/thong-bao.component';
 import { CapNhatComponent } from './components/cap-nhat/cap-nhat.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -26,7 +25,6 @@ import { HeadMenuComponent } from './layouts/head-menu/head-menu.component';
   declarations: [
     AppComponent,
     MenuComponent,
-    ThongBaoComponent,
     CapNhatComponent,
     UserRoleComponent,
     HeadMenuComponent,

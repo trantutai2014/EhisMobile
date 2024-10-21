@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { ThongTinXetNghiemPage } from './thong-tin-xet-nghiem.page';
+import { ThongTinXetNghiemPage } from './ket-qua-xet-nghiem.page';
 
 const routes: Routes = [
   {

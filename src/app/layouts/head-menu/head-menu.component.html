@@ -3,21 +3,45 @@
     <ion-grid class="ion-no-padding ion-align-items-center ion-justify-content-between"
       style="max-width: 450px; margin: auto;">
       <ion-row class="ion-align-items-center">
-        <!-- Cột cho nút menu -->
         <ion-col size="auto">
           <ion-buttons>
             <ion-menu-button></ion-menu-button>
           </ion-buttons>
         </ion-col>
-        <!-- Cột cho thanh tìm kiếm -->
         <ion-col>
           <ion-searchbar (click)="goToDV()" placeholder="Tìm kiếm..." class="custom-searchbar"></ion-searchbar>
         </ion-col>
-        <!-- Cột cho nút thông báo -->
         <ion-col size="auto">
           <ion-button fill="clear" id="open-modal-thong-bao">
             <ion-icon name="notifications-outline"></ion-icon>
+            <ion-badge color="danger" *ngIf="messages?.length > 0">{{ messages?.length }}</ion-badge>
           </ion-button>
+          <ion-content class="ion-padding">
+            <ion-modal trigger="open-modal-thong-bao">
+              <ng-template>
+                <ion-header>
+                  <ion-toolbar>
+                    <ion-title>Thông báo</ion-title>
+                    <ion-buttons slot="end">
+                      <ion-button (click)="cancel()" class="ion-">Cancel</ion-button>
+                    </ion-buttons>
+                  </ion-toolbar>
+                </ion-header>
+                <ion-content class="ion-padding">
+                  <ion-content color="light">
+                    <ion-list [inset]="true">
+                      <ion-item>
+                        <ion-label>Thông báo: Từ ngày 10/9/2024 đến 10/10/2024 bắt đầu đăng ký.....</ion-label>
+                      </ion-item>
+                      <ion-item *ngFor="let message of messages">
+                        <ion-label>{{ message }}</ion-label>
+                      </ion-item>
+                    </ion-list>
+                  </ion-content>
+                </ion-content>
+              </ng-template>
+            </ion-modal>
+          </ion-content>
         </ion-col>
       </ion-row>
     </ion-grid>

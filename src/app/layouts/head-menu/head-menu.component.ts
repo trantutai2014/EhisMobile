@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { UrlConstants } from 'src/app/core/constants/url.constant';
 
 import { Subscription } from 'rxjs';
+import { WebSocketService } from 'src/app/core/services/websocket.service';
+import { IonModal } from '@ionic/angular';
 
 @Component({
   selector: 'app-head-menu',
@@ -11,6 +13,7 @@ import { Subscription } from 'rxjs';
 })
 export class HeadMenuComponent implements OnInit, OnDestroy {
   @ViewChild('swiperContainer') swiperContainer: any;
+  @ViewChild(IonModal) modal!: IonModal;
   username: string = '';
   private subscriptions: Subscription = new Subscription();
 
@@ -18,12 +21,22 @@ export class HeadMenuComponent implements OnInit, OnDestroy {
     delay: 1000,
     disableOnInteraction: true
   };
+  messages: any;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,private webSocketService: WebSocketService) { }
 
   ngOnInit() {
-
-
+    
+        this.messages = [];
+        // Subscribe to WebSocket messages
+        this.subscriptions = this.webSocketService.connect().subscribe(
+          (message: string) => {
+            this.messages.push(message); // Add message to the list
+          },
+          (error) => {
+            console.error('WebSocket error:', error);
+          }
+        );
     setTimeout(() => {
       if (this.swiperContainer && this.swiperContainer.swiperRef) {
         const swiper = this.swiperContainer.swiperRef;
@@ -31,8 +44,19 @@ export class HeadMenuComponent implements OnInit, OnDestroy {
       }
     }, 0);
   }
+  sendMessage(message: string) {
+    this.webSocketService.sendMessage(message); // Send message to server
+  }
+
+  cancel() {
+    this.modal.dismiss(null, 'cancel');
+  }
 
   ngOnDestroy() {
+    if (this.subscriptions) {
+      this.subscriptions.unsubscribe();
+    }
+    this.webSocketService.disconnect(); // Disconnect WebSocket
     this.subscriptions.unsubscribe();
   }
   // ... rest of your navigation methods

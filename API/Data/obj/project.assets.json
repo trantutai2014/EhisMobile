@@ -2793,19 +2793,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\admin\\.nuget\\packages\\": {}
+    "C:\\Users\\Admin\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test20\\EhisMobile\\API\\Data\\Data.csproj",
+      "projectUniqueName": "D:\\SongAn\\EhisMobile\\API\\Data\\Data.csproj",
       "projectName": "Data",
-      "projectPath": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test20\\EhisMobile\\API\\Data\\Data.csproj",
-      "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test20\\EhisMobile\\API\\Data\\obj\\",
+      "projectPath": "D:\\SongAn\\EhisMobile\\API\\Data\\Data.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "D:\\SongAn\\EhisMobile\\API\\Data\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2820,8 +2825,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test20\\EhisMobile\\API\\Common\\Common.csproj": {
-              "projectPath": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test20\\EhisMobile\\API\\Common\\Common.csproj"
+            "D:\\SongAn\\EhisMobile\\API\\Common\\Common.csproj": {
+              "projectPath": "D:\\SongAn\\EhisMobile\\API\\Common\\Common.csproj"
             }
           }
         }
