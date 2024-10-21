@@ -13,9 +13,6 @@
     <div class="search-section">
       <ion-searchbar (ionInput)="onSearch($event)" placeholder="Tìm kiếm tiêm chủng..."></ion-searchbar>
       <ion-list>
-        <ion-item *ngFor="let item of displayedItems" (click)="addToSelected(item)">
-          <ion-label>{{ item.name }}</ion-label>
-        </ion-item>
       </ion-list>
     </div>
 

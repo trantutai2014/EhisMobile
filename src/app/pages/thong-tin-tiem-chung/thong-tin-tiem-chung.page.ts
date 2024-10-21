@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { NavController, ToastController } from '@ionic/angular';
-import { itemsWithPrices } from 'src/data/profile';
 
 @Component({
   selector: 'app-thuoc',
@@ -9,8 +8,6 @@ import { itemsWithPrices } from 'src/data/profile';
   styleUrls: ['./thong-tin-tiem-chung.page.scss'],
 })
 export class ThongTinTiemChungPage {
-  items = itemsWithPrices; // Sử dụng dữ liệu từ tệp
-  displayedItems = this.items.slice(0, 5); // Hiển thị 5 mục đầu tiên
   selectedItems: { [key: string]: number } = {};
   selectedItemKeys: string[] = [];
   maxItems = 10;
@@ -22,10 +19,7 @@ export class ThongTinTiemChungPage {
   ) { }
 
   onSearch(event: any) {
-    const searchTerm = event.target.value.toLowerCase();
-    this.displayedItems = this.items.filter(item =>
-      item.name.toLowerCase().includes(searchTerm)
-    );
+
   }
 
   async addToSelected(item: any) {

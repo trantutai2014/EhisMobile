@@ -14,7 +14,7 @@
         <ion-col size="auto">
           <ion-button fill="clear" id="open-modal-thong-bao">
             <ion-icon name="notifications-outline"></ion-icon>
-            <ion-badge color="danger" *ngIf="messages?.length > 0">{{ messages?.length }}</ion-badge>
+            <ion-badge color="danger" *ngIf="unreadCount > 0">{{ unreadCount }}</ion-badge>          
           </ion-button>
           <ion-content class="ion-padding">
             <ion-modal trigger="open-modal-thong-bao">
@@ -28,15 +28,17 @@
                   </ion-toolbar>
                 </ion-header>
                 <ion-content class="ion-padding">
+
                   <ion-content color="light">
                     <ion-list [inset]="true">
-                      <ion-item>
-                        <ion-label>Thông báo: Từ ngày 10/9/2024 đến 10/10/2024 bắt đầu đăng ký.....</ion-label>
-                      </ion-item>
                       <ion-item *ngFor="let message of messages">
-                        <ion-label>{{ message }}</ion-label>
+                        <ion-label>{{ message.content }}({{ message.isRead ? 'Đã đọc' : 'Chưa đọc' }})</ion-label>
                       </ion-item>
                     </ion-list>
+                    <div class="button-container">
+                      <ion-button fill="clear" (click)="markAllAsRead()" expand="full">Đánh dấu đã đọc tất cả</ion-button>
+                      <ion-button fill="clear" color="danger" (click)="deleteAllMessages()" expand="full">Xóa tất cả</ion-button>
+                    </div>
                   </ion-content>
                 </ion-content>
               </ng-template>

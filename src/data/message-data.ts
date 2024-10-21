@@ -1,0 +1,4 @@
+interface Message {
+
+    isRead:boolean;
+}

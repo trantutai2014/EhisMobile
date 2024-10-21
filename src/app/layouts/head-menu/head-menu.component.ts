@@ -11,6 +11,7 @@ import { IonModal } from '@ionic/angular';
   templateUrl: './head-menu.component.html',
   styleUrls: ['./head-menu.component.scss'],
 })
+
 export class HeadMenuComponent implements OnInit, OnDestroy {
   @ViewChild('swiperContainer') swiperContainer: any;
   @ViewChild(IonModal) modal!: IonModal;
@@ -21,22 +22,25 @@ export class HeadMenuComponent implements OnInit, OnDestroy {
     delay: 1000,
     disableOnInteraction: true
   };
-  messages: any;
+  
+  
+  messages: { content: string; isRead: boolean }[] = [];
+  unreadCount: number = 0;
 
   constructor(private router: Router,private webSocketService: WebSocketService) { }
 
   ngOnInit() {
-    
-        this.messages = [];
-        // Subscribe to WebSocket messages
-        this.subscriptions = this.webSocketService.connect().subscribe(
-          (message: string) => {
-            this.messages.push(message); // Add message to the list
-          },
-          (error) => {
-            console.error('WebSocket error:', error);
-          }
-        );
+    this.updateUnreadCount();
+    this.subscriptions = this.webSocketService.connect().subscribe(
+      (message: string) => {
+        // Tạo đối tượng với thuộc tính content và isRead
+        this.messages.push({ content: message, isRead: false });
+        this.updateUnreadCount(); // Cập nhật số thông báo chưa đọc
+      },
+      (error) => {
+        console.error('WebSocket error:', error);
+      }
+    );
     setTimeout(() => {
       if (this.swiperContainer && this.swiperContainer.swiperRef) {
         const swiper = this.swiperContainer.swiperRef;
@@ -47,7 +51,23 @@ export class HeadMenuComponent implements OnInit, OnDestroy {
   sendMessage(message: string) {
     this.webSocketService.sendMessage(message); // Send message to server
   }
-
+  markAllAsRead() {
+    this.messages.forEach(message => {
+      message.isRead = true; // Đánh dấu tất cả thông báo là đã đọc
+    });
+    
+    // Cập nhật số lượng tin nhắn chưa đọc
+    this.updateUnreadCount();
+  }
+  
+  updateUnreadCount() {
+    const unreadMessages = this.messages.filter(message => !message.isRead);
+    this.unreadCount = unreadMessages.length; // Cập nhật số lượng tin nhắn chưa đọc
+  }
+  deleteAllMessages() {
+    this.messages = []; // Xóa tất cả tin nhắn
+    this.updateUnreadCount(); // Cập nhật số lượng tin nhắn chưa đọc (nên là 0)
+  }
   cancel() {
     this.modal.dismiss(null, 'cancel');
   }
@@ -56,8 +76,6 @@ export class HeadMenuComponent implements OnInit, OnDestroy {
     if (this.subscriptions) {
       this.subscriptions.unsubscribe();
     }
-    this.webSocketService.disconnect(); // Disconnect WebSocket
-    this.subscriptions.unsubscribe();
   }
   // ... rest of your navigation methods
 
