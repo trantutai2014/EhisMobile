@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\SongAn\\EhisMobile\\API\\",
+  "WorkspaceRootPath": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test20\\EhisMobile\\API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{13564404-4BC6-45F6-B3D7-042A4D9CC8F2}|API\\API.csproj|d:\\songan\\ehismobile\\api\\api\\controllers\\chitiettiensubenhcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{13564404-4BC6-45F6-B3D7-042A4D9CC8F2}|API\\API.csproj|d:\\hocs\\developer\\songan\\ehismobile\\test20\\ehismobile\\api\\api\\controllers\\chitiettiensubenhcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{13564404-4BC6-45F6-B3D7-042A4D9CC8F2}|API\\API.csproj|solutionrelative:api\\controllers\\chitiettiensubenhcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{13564404-4BC6-45F6-B3D7-042A4D9CC8F2}|API\\API.csproj|d:\\songan\\ehismobile\\api\\api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{13564404-4BC6-45F6-B3D7-042A4D9CC8F2}|API\\API.csproj|d:\\hocs\\developer\\songan\\ehismobile\\test20\\ehismobile\\api\\api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{13564404-4BC6-45F6-B3D7-042A4D9CC8F2}|API\\API.csproj|solutionrelative:api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
@@ -40,9 +40,9 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "ChiTietTienSuBenhController.cs",
-              "DocumentMoniker": "D:\\SongAn\\EhisMobile\\API\\API\\Controllers\\ChiTietTienSuBenhController.cs",
+              "DocumentMoniker": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test20\\EhisMobile\\API\\API\\Controllers\\ChiTietTienSuBenhController.cs",
               "RelativeDocumentMoniker": "API\\Controllers\\ChiTietTienSuBenhController.cs",
-              "ToolTip": "D:\\SongAn\\EhisMobile\\API\\API\\Controllers\\ChiTietTienSuBenhController.cs",
+              "ToolTip": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test20\\EhisMobile\\API\\API\\Controllers\\ChiTietTienSuBenhController.cs",
               "RelativeToolTip": "API\\Controllers\\ChiTietTienSuBenhController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -53,14 +53,13 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "launchSettings.json",
-              "DocumentMoniker": "D:\\SongAn\\EhisMobile\\API\\API\\Properties\\launchSettings.json",
+              "DocumentMoniker": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test20\\EhisMobile\\API\\API\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "API\\Properties\\launchSettings.json",
-              "ToolTip": "D:\\SongAn\\EhisMobile\\API\\API\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test20\\EhisMobile\\API\\API\\Properties\\launchSettings.json",
               "RelativeToolTip": "API\\Properties\\launchSettings.json",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-10-17T10:34:52.609Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-17T10:34:52.609Z"
             }
           ]
         }
