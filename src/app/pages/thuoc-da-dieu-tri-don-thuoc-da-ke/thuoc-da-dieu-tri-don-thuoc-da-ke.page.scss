@@ -1,0 +1,35 @@
+.label-left {
+    display: block;
+ padding-top: 10px;
+ font-weight: bold;
+
+}
+
+ion-card-title {
+    font-weight: bold;
+}
+
+
+.heading1 {
+   
+    font-weight: bolder;
+  }
+
+  ion-col{
+    color: #000000;
+
+
+  }
+
+  .date-time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .date-time span {
+    margin-left: auto; /* Đẩy thẻ span sang bên phải*/
+    color:#1c1f24;
+ 
+  }
+

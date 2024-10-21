@@ -13,7 +13,7 @@ import{TomTatHoSoBenhAnTinhTrangNguoiBenhPage} from '../tom-tat-ho-so-benh-an-ti
 import{ThongTinXetNghiemPage} from '../thong-tin-xet-nghiem/thong-tin-xet-nghiem.page';
 import{PhauThuatThuThuatDaThucHienPage} from '../phau-thuat-thu-thuat-da-thuc-hien/phau-thuat-thu-thuat-da-thuc-hien.page';
 import { ChuanDoanHinhAnhThamDoChucNangPage } from '../chuan-doan-hinh-anh-tham-do-chuc-nang/chuan-doan-hinh-anh-tham-do-chuc-nang.page';
-
+import { ThuocDaDieuTriDonThuocDaKePage } from '../thuoc-da-dieu-tri-don-thuoc-da-ke/thuoc-da-dieu-tri-don-thuoc-da-ke.page';
 @NgModule({
   imports: [
     CommonModule,
@@ -29,7 +29,8 @@ import { ChuanDoanHinhAnhThamDoChucNangPage } from '../chuan-doan-hinh-anh-tham-
     TomTatHoSoBenhAnTinhTrangNguoiBenhPage,
     ThongTinXetNghiemPage,
     PhauThuatThuThuatDaThucHienPage,
-    ChuanDoanHinhAnhThamDoChucNangPage],
+    ChuanDoanHinhAnhThamDoChucNangPage,
+    ThuocDaDieuTriDonThuocDaKePage],
 
 })
 export class DotkhamPageModule { }

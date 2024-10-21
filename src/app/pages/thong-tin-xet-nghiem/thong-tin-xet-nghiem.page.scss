@@ -21,3 +21,27 @@ ion-list{
     }
     
 }
+
+.heading1 {
+    background-color: #cbdad9;
+    font-weight: bolder;
+  }
+
+  ion-col{
+    color: #000000;
+    border: solid 1px #e3e9f0;
+
+  }
+
+  .date-time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .date-time span {
+    margin-left: auto; /* Đẩy thẻ span sang bên phải*/
+    color:#1c1f24;
+    font-weight: lighter;
+  }
+  
