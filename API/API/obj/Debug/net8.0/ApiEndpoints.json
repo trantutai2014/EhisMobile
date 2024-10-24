@@ -251,6 +251,22 @@
   },
   {
     "ContainingType": "API.Controllers.NotificationController",
+    "Method": "DeleteThongBaoByCccd",
+    "RelativePath": "api/Notification/{cccd}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cccd",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.NotificationController",
     "Method": "GetThongBaoByCccd",
     "RelativePath": "api/Notification/{cccd}",
     "HttpMethod": "GET",

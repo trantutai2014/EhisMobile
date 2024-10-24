@@ -24,6 +24,20 @@ namespace API.Controllers
 
     }
 
+    [HttpDelete]
+    [Route("{cccd}")]
+    public async Task<IActionResult> DeleteThongBaoByCccd( string cccd)
+    {
+      var thongBaos = await _context.ThongBaos
+          .Where(tb => tb.UserId == cccd)
+          .ToListAsync();
+
+      // removeRange để xóa danh sách
+      _context.RemoveRange(thongBaos);
+      _context.SaveChangesAsync();
+
+      return Ok("xóa thành công!");
+    }
 
     [HttpGet("{cccd}")]
     public async Task<IActionResult> GetThongBaoByCccd([FromRoute] string cccd)

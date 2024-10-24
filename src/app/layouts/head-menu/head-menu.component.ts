@@ -5,6 +5,8 @@ import { UrlConstants } from 'src/app/core/constants/url.constant';
 import { Subscription } from 'rxjs';
 import { WebSocketService } from 'src/app/core/services/websocket.service';
 import { IonModal } from '@ionic/angular';
+import { environment } from 'src/environments/environment.prod';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-head-menu',
@@ -17,6 +19,11 @@ export class HeadMenuComponent implements OnInit, OnDestroy {
   @ViewChild(IonModal) modal!: IonModal;
   username: string = '';
   private subscriptions: Subscription = new Subscription();
+  private apiUrl = `${environment.BASE_API}/api/Notification/`;
+
+  items: any;
+  error: any;
+  loading: boolean = false;
 
   autoplayConfig = {
     delay: 1000,
@@ -27,10 +34,15 @@ export class HeadMenuComponent implements OnInit, OnDestroy {
   messages: { content: string; isRead: boolean }[] = [];
   unreadCount: number = 0;
 
-  constructor(private router: Router,private webSocketService: WebSocketService) { }
+  constructor(private router: Router,private webSocketService: WebSocketService,
+    private http: HttpClient
+  ) { }
 
   ngOnInit() {
+this.getThongBaoByCccd();
+
     this.updateUnreadCount();
+
     this.subscriptions = this.webSocketService.connect().subscribe(
       (message: string) => {
         // Tạo đối tượng với thuộc tính content và isRead
@@ -41,13 +53,33 @@ export class HeadMenuComponent implements OnInit, OnDestroy {
         console.error('WebSocket error:', error);
       }
     );
+
     setTimeout(() => {
       if (this.swiperContainer && this.swiperContainer.swiperRef) {
         const swiper = this.swiperContainer.swiperRef;
         swiper.update(); // Update Swiper to ensure images display correctly
       }
     }, 0);
+
   }
+
+  async getThongBaoByCccd(): Promise<void> {
+    const cccd = localStorage.getItem('cccd');
+    this.loading = true; // Set loading indicator to true
+  
+    try {
+      const data: any = await this.http.get(`${this.apiUrl}${cccd}`).toPromise();
+      
+       this.items = await data;
+       console.log(this.items);
+    } catch (error) {
+      this.error = 'Failed to load user roles';
+      console.error('Error fetching user info:', error);
+    } finally {
+      this.loading = false; // Set loading indicator to false in all cases
+    }
+  }
+
   sendMessage(message: string) {
     this.webSocketService.sendMessage(message); // Send message to server
   }
@@ -65,9 +97,21 @@ export class HeadMenuComponent implements OnInit, OnDestroy {
     this.unreadCount = unreadMessages.length; // Cập nhật số lượng tin nhắn chưa đọc
   }
   deleteAllMessages() {
-    this.messages = []; // Xóa tất cả tin nhắn
-    this.updateUnreadCount(); // Cập nhật số lượng tin nhắn chưa đọc (nên là 0)
+    const cccd = localStorage.getItem('cccd');
+  
+    this.http.delete(`${this.apiUrl}${cccd}`).subscribe({
+      next: () => {
+        this.getThongBaoByCccd();
+        // Xóa tất cả tin nhắn từ giao diện sau khi API xóa thành công
+        this.messages = [];
+        this.updateUnreadCount(); // Cập nhật số lượng tin nhắn chưa đọc (nên là 0)
+      },
+      error: (err) => {
+        console.error('Lỗi khi xóa thông báo:', err);
+      }
+    });
   }
+  
   cancel() {
     this.modal.dismiss(null, 'cancel');
   }
