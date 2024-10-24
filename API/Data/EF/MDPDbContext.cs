@@ -21,6 +21,9 @@ public class MDPDbContext : DbContext
   {
   }
 
+  public DbSet<DMICD10> DMICD10 { get; set; }
+
+
   //public DbSet<UserRoleModel> UserRoles { get; set; }
   //public DbSet<UserModel> Users { get; set; }
   //public DbSet<RegisterModel> Register { get; set; }

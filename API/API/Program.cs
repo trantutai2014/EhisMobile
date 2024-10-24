@@ -70,6 +70,8 @@ builder.Services.AddDbContext<MDPDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("MDPDevConnection")));
 
 // Service Registration
+builder.Services.AddScoped<SkdtHoSoService4210>();
+builder.Services.AddScoped<SkdtHoSo130Service>();
 builder.Services.AddScoped<UserRoleService, UserRoleService>();
 builder.Services.AddScoped<DangNhapService, DangNhapService>();
 builder.Services.AddScoped<DangKyService, DangKyService>();
