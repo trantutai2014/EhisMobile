@@ -1,4 +1,4 @@
-﻿using Common.Constants;
+using Common.Constants;
 using Data.Abstract;
 using System;
 using System.Collections.Generic;
@@ -19,7 +19,7 @@ namespace Data.Models
         public bool Hide { get; set; } = false;
         [Required]
         public string Title { get; set; } = null!;
-        public string Description { get; set; }
+        public string? Description { get; set; }
         [Required]
         public string Content { get; set; } = null!;
         public int? type { get; set; }
