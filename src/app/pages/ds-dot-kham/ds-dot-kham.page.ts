@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UrlConstants } from 'src/app/core/constants/url.constant';
 import { environment } from 'src/environments/environment.prod';
+import { ThongTinDotKhamChuaBenhPage } from '../thong-tin-dot-kham-chua-benh/thong-tin-dot-kham-chua-benh.page';
 
 @Component({
   selector: 'app-dotkham',
@@ -15,6 +16,7 @@ export class DotkhamPage implements OnInit {
   loading: boolean = false;
   cccd: string | null | undefined;
   error: any;
+  component = ThongTinDotKhamChuaBenhPage;
 
   private apiUrl = `${environment.BASE_API}/api/DSDotKhamChuaBenh/`;
 

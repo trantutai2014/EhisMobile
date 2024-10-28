@@ -1,8 +1,62 @@
- <ion-card-header>
-    <ion-card-title style="font-size: larger;">Phẫu thuật, thủ thuật đã thực hiện (không có thông tin)</ion-card-title>
- </ion-card-header>
+<ng-template #noInfo>
+  <ion-label class="label-left" color="dark">Không có thông tin</ion-label>
+</ng-template>
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title style="font-size: larger;">Thông tin phẫu thuật</ion-title>
+  </ion-toolbar>
+</ion-header>
 
-  <ion-card-content >
-   <ion-label color="dark"> Không có thực hiện phẫu thuật, thủ thuật!</ion-label> 
-   </ion-card-content>
+<ion-content class="ion-padding">
+  <ng-container *ngIf="items && items.length > 0; else noInfo">
+    <ion-label class="label-left" color="dark">Lý do đến khám bệnh: 
+      <ion-label color="medium">{{ items.lyDoDenKham || 'Không có thông tin' }}</ion-label>
+    </ion-label>
+
+    <ion-label class="label-left" color="dark">CSKCB đã chuyển người bệnh đi: 
+      <ion-label color="medium">{{ items.tenCSKCBChuyenDi || 'Không có thông tin' }}</ion-label>
+    </ion-label>
+
+    <ion-label class="label-left" color="dark">Ngày đến khám: 
+      <ion-label color="medium">{{ items.ngayKham ? (items.ngayKham | date:'dd/MM/yyyy') : 'Không có thông tin' }}</ion-label>
+    </ion-label>
+
+    <ion-label class="label-left" color="dark">Hình thức khám, chữa bệnh: 
+      <ion-label color="medium">{{ items.hinhThucKham || 'Không có thông tin' }}</ion-label>
+    </ion-label>
+
+    <ion-label class="label-left" color="dark">Ngày giờ vào viện: 
+      <ion-label color="medium">{{ items.ngayVaoVien ? (items.ngayVaoVien | date:'dd/MM/yyyy HH:mm') : 'Không có thông tin' }}</ion-label>
+    </ion-label>
+
+    <ion-label class="label-left" color="dark">Ngày giờ ra viện: 
+      <ion-label color="medium">{{ items.ngayRa ? (items.ngayRa | date:'dd/MM/yyyy HH:mm') : 'Không có thông tin' }}</ion-label>
+    </ion-label>
+
+    <ion-label class="label-left" color="dark">Kết quả điều trị:  
+      <ion-label color="medium">{{ items.ketQua || 'Không có thông tin' }}</ion-label>
+    </ion-label>
+
+    <ion-label class="label-left" color="dark">Tình trạng ra viện: 
+      <ion-label color="medium">{{ items.tinhTrang || 'Không có thông tin' }}</ion-label>
+    </ion-label>
+
+    <ion-label class="label-left" color="dark">CSKCB nơi sẽ chuyển người bệnh đến:  
+      <ion-label color="medium">{{ items.tenCSKCBChuyenDen || 'Không có thông tin' }}</ion-label>
+    </ion-label>
+
+
+  </ng-container>
+
+  <ng-template #noInfo>
+    <ion-label color="medium">(Không có thông tin)</ion-label>
+  </ng-template>
+
+  <ion-nav-link router-direction="forward" [component]="component">
+    <ion-button expand="block" color="primary" style="margin-top: 20px;">Chuẩn đoán hình ảnh thăm dò chức năng</ion-button>
+  </ion-nav-link>
+</ion-content>
 

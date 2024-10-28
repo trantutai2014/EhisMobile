@@ -1,10 +1,17 @@
 <div *ngIf="loading">Loading...</div>
-
-<ion-card-header *ngIf="!loading && items.length > 0">
-  <ion-card-title style="font-size: larger;">Thuốc đã điều trị, đơn thuốc đã kê</ion-card-title>
-</ion-card-header>
-
-<ion-card-content *ngIf="!loading && items.length > 0">
+<ion-item-divider *ngIf="!loading && items.length === 0">
+  Không có dữ liệu thuốc.
+</ion-item-divider>
+<div *ngIf="error">{{ error }}</div>
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title style="font-size: larger;">Thuốc đã điều trị</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding"  *ngIf="!loading && items.length > 0">
   <ion-grid>
     <ion-row *ngFor="let item of items; let i = index">
       <ion-col size="12">
@@ -21,10 +28,8 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-</ion-card-content>
+  <ion-nav-link router-direction="forward" [component]="component">
+    <ion-button expand="block" color="primary" style="margin-top: 20px;">Tóm tắt hồ sơ bệnh án</ion-button>
+  </ion-nav-link>
+</ion-content>
 
-<ion-item-divider *ngIf="!loading && items.length === 0">
-  Không có dữ liệu thuốc.
-</ion-item-divider>
-
-<div *ngIf="error">{{ error }}</div>

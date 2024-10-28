@@ -154,15 +154,14 @@ namespace Service
 
 
         //
-        public async Task<IEnumerable<LichSuKham_PTTT_ResModel>> GetPTTTKCB(string id, DateTime ngayRa)
+        public async Task<IEnumerable<LichSuKham_PTTT_ResModel>> GetPTTTKCB(string id)
         {
-            var part = DateHelper.GetPartion(ngayRa);
+
             var query = from s in _repository.GetAll<DS_ChiTiet_DVKT130>()
                         join kq in _repository.GetAll<DS_DienBien_LamSang130>()
                         on s.NGAY_KQ equals kq.THOI_DIEM_DBLS
                         where s.ThongTinKhamChuaBenhID == id && kq.ThongTinKhamChuaBenhID == id
-                            && s.NgayRa >= part.StartDate && s.NgayRa <= part.EndDate && kq.NgayRa >= part.StartDate && kq.NgayRa <= part.EndDate
-                            && (s.MA_NHOM == (int)NhomDVKTEnum.PT || s.MA_NHOM == (int)NhomDVKTEnum.TT)
+                           && (s.MA_NHOM == (int)NhomDVKTEnum.PT || s.MA_NHOM == (int)NhomDVKTEnum.TT)
                         orderby s.STT, kq.STT
                         select new
                         {

@@ -1,11 +1,19 @@
-<ion-card-header>
-  <ion-card-title style="font-size: larger;">Chuẩn đoán xác định khi ra viện</ion-card-title>
-</ion-card-header>
-<ion-card-content *ngIf="items">
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title style="font-size: larger;">Chuẩn đoán xác định</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding" *ngIf="items">
   <ion-label class="label-left" color="dark">Chuẩn đoán của bác sĩ: <ion-label color="medium"> {{items.chaN_DOAN_RV}}
     </ion-label> </ion-label>
   <ion-label class="label-left" color="dark">Bệnh chính: <ion-label color="medium"> {{items.mA_BENH_CHINH}} </ion-label>
   </ion-label>
   <ion-label class="label-left" color="dark">Mã bệnh kèm theo: <ion-label
       color="medium">{{items.mA_BENH_KT}}</ion-label> </ion-label>
-</ion-card-content>
+  <ion-nav-link router-direction="forward" [component]="component">
+    <ion-button expand="block" color="primary" style="margin-top: 20px;">Kết quả xét nghiệm </ion-button>
+  </ion-nav-link>
+</ion-content>

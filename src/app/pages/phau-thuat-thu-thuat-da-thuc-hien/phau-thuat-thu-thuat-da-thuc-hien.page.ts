@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
+import { ChuanDoanHinhAnhThamDoChucNangPage } from '../chuan-doan-hinh-anh-tham-do-chuc-nang/chuan-doan-hinh-anh-tham-do-chuc-nang.page';
 
 @Component({
   selector: 'app-phau-thuat-thu-thuat-da-thuc-hien',
@@ -13,39 +14,38 @@ export class PhauThuatThuThuatDaThucHienPage implements OnInit {
   items: any;
   itemModel: any = {};
   loading: boolean = false;
-  cccd: string | null | undefined;
   error: any;
-  private apiUrl = `${environment.BASE_API}/api/DSDotKhamChuaBenh/`;
+  private apiUrl = `${environment.BASE_API}/api/ChiTietTienSuBenh/pttt/`;
+  component = ChuanDoanHinhAnhThamDoChucNangPage;
 
   constructor(private router: Router,  
-    private route: ActivatedRoute,   
-    private http: HttpClient) { }
+              private route: ActivatedRoute,   
+              private http: HttpClient) { }
 
-  ngOnInit() {
-    this.route.paramMap.subscribe(params => {
-      this.cccd = params.get('cccd');
-      if (this.cccd) {
-        this.getUserInfo();
+  ngOnInit(): void {
+    this.route.queryParams.subscribe(params => {
+      const id = params['id'];
+      const loaiHoSo = params['loaiHoSo'];
+  
+      if (id && loaiHoSo) {
+        this.getPTTTData(id, loaiHoSo);
       } else {
-        // Handle case where CCCD is not found in URL
-        console.error('Không tìm thấy CCCD trong URL');
+        console.error('Missing required parameters: id and loaiHoSo');
       }
     });
   }
-
   
-
-
-  getUserInfo(): void {
-    this.loading = true; // Set loading indicator to true
-    this.http.get(`${this.apiUrl}${this.cccd}`).subscribe({
-      next: (data:any) => {
-        this.loading = false; // Set loading indicator to false
-          this.items=data.data;
+  getPTTTData(id: string, loaiHoSo: string): void {
+    this.loading = true;
+    this.http.get<any[]>(`${this.apiUrl}?id=${id}&loai=${loaiHoSo}`).subscribe({
+      next: (data) => {
+        this.loading = false;
+        this.items = data; // Save the data from API response
       },
       error: (error) => {
-        this.loading = false; // Set loading indicator to false
-        this.error = 'Failed to load user roles';
+        this.loading = false;
+        this.error = 'Failed to load data';
+        console.error('Error fetching data:', error);
       }
     });
   }

@@ -73,17 +73,17 @@ namespace API.Controllers
             }
         }
         [HttpGet("pttt")]
-        public async Task<IActionResult> GetPTTTKCB([FromQuery] string id, [FromQuery] LoaiHSSKDTEnum loai, [FromQuery] DateTime p)
+        public async Task<IActionResult> GetPTTTKCB([FromQuery] string id, [FromQuery] LoaiHSSKDTEnum loai)
         {
             id = KeyHelper.Decrypt(id);
             if (loai == LoaiHSSKDTEnum.HS4210)
             {
-                var data = await _skdtHoSo4210service.GetPTTTKCB(id, p);
+                var data = await _skdtHoSo4210service.GetPTTTKCB(id);
                 return Ok(data);
             }
             else
             {
-                var data = await _skdtHoSoservice.GetPTTTKCB(id, p);
+                var data = await _skdtHoSoservice.GetPTTTKCB(id);
                 return Ok(data);
             }
         }

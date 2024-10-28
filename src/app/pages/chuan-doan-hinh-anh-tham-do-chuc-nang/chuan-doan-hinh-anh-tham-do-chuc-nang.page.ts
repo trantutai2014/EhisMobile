@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
+import { ThuocDaDieuTriDonThuocDaKePage } from '../thuoc-da-dieu-tri-don-thuoc-da-ke/thuoc-da-dieu-tri-don-thuoc-da-ke.page';
 
 @Component({
   selector: 'app-chuan-doan-hinh-anh-tham-do-chuc-nang',
@@ -14,6 +15,7 @@ export class ChuanDoanHinhAnhThamDoChucNangPage implements OnInit {
   loading: boolean = false;
   error: any;
   private apiUrl = `${environment.BASE_API}/api/ChiTietTienSuBenh/cdha-tdcn/`;
+  component = ThuocDaDieuTriDonThuocDaKePage;
 
   constructor(private router: Router,
               private route: ActivatedRoute,

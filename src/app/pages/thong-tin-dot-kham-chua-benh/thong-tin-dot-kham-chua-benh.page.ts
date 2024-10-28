@@ -2,6 +2,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
+import { ChiSoTheoDoiChinhPage } from '../chi-so-theo-doi-chinh/chi-so-theo-doi-chinh.page';
 
 @Component({
   selector: 'app-thong-tin-dot-kham-chua-benh',
@@ -16,6 +17,7 @@ export class ThongTinDotKhamChuaBenhPage implements OnInit {
   private apiUrl = `${environment.BASE_API}/api/ChiTietTienSuBenh/lich-su-kcb`; // Updated endpoint
   ngayRa: Date = new Date(); // You can update this as per the actual date to send
   loai: any;
+  component = ChiSoTheoDoiChinhPage;
 
   constructor(
     private router: Router,  

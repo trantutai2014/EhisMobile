@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
+import { TomTatHoSoBenhAnTinhTrangNguoiBenhPage } from '../tom-tat-ho-so-benh-an-tinh-trang-nguoi-benh/tom-tat-ho-so-benh-an-tinh-trang-nguoi-benh.page';
 
 @Component({
   selector: 'app-thuoc-da-dieu-tri-don-thuoc-da-ke',
@@ -13,6 +14,7 @@ export class ThuocDaDieuTriDonThuocDaKePage implements OnInit {
   items: any[] = []; // Updated to an array to handle the list of drugs
   error: string | undefined;
   private apiUrl = `${environment.BASE_API}/api/ChiTietTienSuBenh/thuoc/`;
+  component = TomTatHoSoBenhAnTinhTrangNguoiBenhPage;
 
   constructor(private http: HttpClient, private route: ActivatedRoute) {}
 

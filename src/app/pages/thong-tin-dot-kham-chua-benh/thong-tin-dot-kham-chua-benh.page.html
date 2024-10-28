@@ -1,10 +1,12 @@
-<div>
-  <ion-card-header>
-    <ion-card-title style="font-size: larger;">Thông tin đợt khám chữa bệnh</ion-card-title>
-  </ion-card-header>
 
-  <ion-card-content *ngIf="items">
-    <ion-card-title style="font-size: larger;">Nơi khám: {{ items.tenCSKCB || 'Không có thông tin' }} </ion-card-title>
+  <ion-header>
+    <ion-toolbar>
+      <ion-title style="font-size: larger;">Thông tin đợt khám</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="ion-padding" *ngIf="items">
+    <h2 style="font-size: larger; margin-bottom: 10px;">Nơi khám: {{ items.tenCSKCB || 'Không có thông tin' }}</h2>
 
     <ion-label class="label-left" color="dark">Lý do đến khám bệnh: 
       <ion-label color="medium">{{ items.lyDoDenKham || 'Không có thông tin' }}</ion-label>
@@ -31,7 +33,7 @@
     </ion-label>
 
     <ion-label class="label-left" color="dark">Kết quả điều trị:  
-      <ion-label color="medium">{{ items.ketQua }}</ion-label>
+      <ion-label color="medium">{{ items.ketQua || 'Không có thông tin' }}</ion-label>
     </ion-label>
 
     <ion-label class="label-left" color="dark">Tình trạng ra viện: 
@@ -41,5 +43,7 @@
     <ion-label class="label-left" color="dark">CSKCB nơi sẽ chuyển người bệnh đến:  
       <ion-label color="medium">{{ items.tenCSKCBChuyenDen || 'Không có thông tin' }}</ion-label>
     </ion-label>
-  </ion-card-content>
-</div>
+    <ion-nav-link router-direction="forward" [component]="component">
+      <ion-button expand="block" color="primary" style="margin-top: 20px;">Chỉ số theo dõi chính</ion-button>
+    </ion-nav-link>
+  </ion-content>
