@@ -5,7 +5,7 @@ import { ThongTinDotKhamChuaBenhPage } from './thong-tin-dot-kham-chua-benh.page
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'thong-tin-dot-kham-chua-benh/:id',
     component: ThongTinDotKhamChuaBenhPage
   }
 ];

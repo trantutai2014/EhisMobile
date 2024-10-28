@@ -114,6 +114,7 @@ namespace API.Controllers
                 NoiKham = s.TenBV
             }).OrderByDescending(s => s.NgayRa).ToArray();
             var result = new TienSuBenhResModel()
+
             {
                 TheBHYT = theBHYT,
                 TienSu = tienSuBenh

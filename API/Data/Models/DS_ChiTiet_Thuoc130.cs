@@ -1,4 +1,4 @@
-﻿using Common.Constants;
+using Common.Constants;
 using Data.Abstract;
 using System;
 using System.Collections.Generic;

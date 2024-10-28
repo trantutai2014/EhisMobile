@@ -1,21 +1,30 @@
-<div>
-  <ion-card-header>
-      <ion-card-title style="font-size: larger;">Thuốc đã điều trị, đơn thuốc đã kê</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <!-- 1 dòng thuốc -->
-      <ion-grid>
-        <ion-row class="heading1">
-          <ion-col class="date-time">
-            1. Tên thuốc
-            <span><ion-icon name="close-outline"></ion-icon>6 Viên</span>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-item-divider>
-            Không xác định
-          </ion-item-divider>
-        </ion-row>
-      </ion-grid>
-    </ion-card-content>
-</div>
+<div *ngIf="loading">Loading...</div>
+
+<ion-card-header *ngIf="!loading && items.length > 0">
+  <ion-card-title style="font-size: larger;">Thuốc đã điều trị, đơn thuốc đã kê</ion-card-title>
+</ion-card-header>
+
+<ion-card-content *ngIf="!loading && items.length > 0">
+  <ion-grid>
+    <ion-row *ngFor="let item of items; let i = index">
+      <ion-col size="12">
+        <ion-item lines="none">
+          <ion-label>
+            <h2>{{ i + 1 }}. {{ item.ten }} {{ item.hamLuong }}</h2>
+            <p class="sub-text">Không xác định</p>
+          </ion-label>
+          <ion-note slot="end" class="quantity">
+            <span>{{ item.soLuong }} {{ item.donViTinh }}</span>
+            <ion-icon name="close-outline"></ion-icon>
+          </ion-note>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-card-content>
+
+<ion-item-divider *ngIf="!loading && items.length === 0">
+  Không có dữ liệu thuốc.
+</ion-item-divider>
+
+<div *ngIf="error">{{ error }}</div>

@@ -51,26 +51,26 @@ namespace Service
                 }).FirstOrDefault();
             if (data != null)
             {
-                  result.MaCSKCB = data.MA_CSKCB;
-                  result.TenCSKCB = _skdt_HoSoService.GetTenBV(data.MA_CSKCB);
-                  result.LyDoDenKham = data.LY_DO_VV;
-                  result.MaCSKCBChuyenDi = data.MA_NOI_DI;
-                  result.TenCSKCBChuyenDi = _skdt_HoSoService.GetTenBV(data.MA_NOI_DI);
-                  result.NgayKham = data.NGAY_VAO;
-                  result.HinhThucKham = LoaiKCBHelper.LoaiKCBArray[data.MA_LOAI_KCB];
-                  result.NgayVaoVien = data.NGAY_VAO_NOI_TRU;
-                  result.NgayRa = data.NGAY_RA;
-                  result.KetQua = Descriptions.KetQuaDieuTri[data.KET_QUA_DTRI];
-                  result.TinhTrang = Descriptions.MaLoaiRaVien[data.MA_LOAI_RV];
-                  result.MaCSKCBChuyenDen = data.MA_NOI_DEN;
-                  result.TenCSKCBChuyenDen = _skdt_HoSoService.GetTenBV(data.MA_NOI_DEN);
-                  result.ChanDoan = data.CHAN_DOAN_RV;
-                  result.MaICD10 = data.MA_BENH_CHINH;
-                  result.TenTheoICD10 = _skdt_HoSoService.GetTenICD10(data.MA_BENH_CHINH);
-                  result.MaICD10KemTheo = data.MA_BENH_KT;
-                  result.NhomMau = data.NHOM_MAU;
-                  result.CanNang = data.CAN_NANG;
-            }
+                    result.MaCSKCB = data.MA_CSKCB;
+                    result.TenCSKCB = _skdt_HoSoService.GetTenBV(data.MA_CSKCB);
+                    result.LyDoDenKham = data.LY_DO_VV;
+                    result.MaCSKCBChuyenDi = data.MA_NOI_DI;
+                    result.TenCSKCBChuyenDi = _skdt_HoSoService.GetTenBV(data.MA_NOI_DI);
+                    result.NgayKham = data.NGAY_VAO;
+                    result.HinhThucKham = LoaiKCBHelper.LoaiKCBArray[data.MA_LOAI_KCB];
+                    result.NgayVaoVien = data.NGAY_VAO_NOI_TRU;
+                    result.NgayRa = data.NGAY_RA;
+                    result.KetQua = Descriptions.KetQuaDieuTri[data.KET_QUA_DTRI];
+                    result.TinhTrang = Descriptions.MaLoaiRaVien[data.MA_LOAI_RV];
+                    result.MaCSKCBChuyenDen = data.MA_NOI_DEN;
+                    result.TenCSKCBChuyenDen = _skdt_HoSoService.GetTenBV(data.MA_NOI_DEN);
+                    result.ChanDoan = data.CHAN_DOAN_RV;
+                    result.MaICD10 = data.MA_BENH_CHINH;
+                    result.TenTheoICD10 = _skdt_HoSoService.GetTenICD10(data.MA_BENH_CHINH);
+                    result.MaICD10KemTheo = data.MA_BENH_KT;
+                    result.NhomMau = data.NHOM_MAU;
+                    result.CanNang = data.CAN_NANG;
+      }
             return await Task.FromResult(result);
     }
 
@@ -177,15 +177,10 @@ namespace Service
 
 
         ////
-        public async Task<IEnumerable<LichSuKham_Thuoc_ResModel>> GetThuocKCB(string id, DateTime ngayRa)
+        public async Task<IEnumerable<LichSuKham_Thuoc_ResModel>> GetThuocKCB(string id)
         {
-            var part = DateHelper.GetPartion(ngayRa);
+         
             var query = _repository.GetAll<DS_ChiTiet_Thuoc>(s => s.ThongTinKhamChuaBenhID == id);
-            if (part.BeforePartion)
-                query = query.Where(s => s.NgayRa == null);
-            else
-                query = query.Where(s => s.NgayRa >= part.StartDate && s.NgayRa <= part.EndDate);
-
             var result = query
                   .OrderBy(s => s.STT).Select(s => new LichSuKham_Thuoc_ResModel
                   {

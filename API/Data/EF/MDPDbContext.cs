@@ -7,6 +7,7 @@ using Data.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Z.EntityFramework.Extensions;
+using Common.Model;
 
 public class MDPDbContext : DbContext
 {
@@ -33,6 +34,8 @@ public class MDPDbContext : DbContext
   public DbSet<DMCoSo> DMCoSos { get; set; }
 
   public virtual DbSet<SKDT_HoSo> SKDT_HoSos { get; set; }
+  public DbSet<SKDT_HoSoModel> SKDT_HoSoModels { get; set; }
+
   public virtual DbSet<SKDT_DMNgheNghiep> SKDT_DMNgheNghieps { get; set; }
   public virtual DbSet<SKDT_DMPhuongXa> SKDT_DMPhuongXas { get; set; }
   public virtual DbSet<SKDT_DMQuanHuyen> SKDT_DMQuanHuyens { get; set; }
@@ -61,6 +64,7 @@ public class MDPDbContext : DbContext
   public DbSet<DS_GiayChuyenTuyen130> DS_GiayChuyenTuyen130s { get; set; }
   public DbSet<DS_GiayHenKhamLai130> DS_GiayHenKhamLai130s { get; set; }
   public DbSet<DS_DieuTriBenhLao130> DS_DieuTriBenhLao130s { get; set; }
+  public DbSet<DMICD10> DMICD10s { get; set; }
   protected override void OnModelCreating(ModelBuilder modelBuilder)
   {
     ConfigureModel(modelBuilder);

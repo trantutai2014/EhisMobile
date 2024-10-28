@@ -81,6 +81,8 @@ builder.Services.AddScoped<ThongTinService, ThongTinService>();
 builder.Services.AddScoped<TokenService, TokenService>();
 builder.Services.AddScoped<NotificationService, NotificationService>();
 builder.Services.AddScoped<HoSoService, HoSoService>();
+builder.Services.AddScoped<SkdtHoSoService4210, SkdtHoSoService4210>();
+builder.Services.AddScoped<SkdtHoSo130Service, SkdtHoSo130Service>();
 var assembliesToScan = new[] { Assembly.GetAssembly(typeof(IUserRoleService)) };
 
 builder.Services.RegisterAssemblyPublicNonGenericClasses(assembliesToScan)

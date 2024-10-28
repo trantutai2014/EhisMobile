@@ -33,9 +33,8 @@ export class HeadMenuComponent implements OnInit, OnDestroy {
     this.updateUnreadCount();
     this.subscriptions = this.webSocketService.connect().subscribe(
       (message: string) => {
-        // Tạo đối tượng với thuộc tính content và isRead
         this.messages.push({ content: message, isRead: false });
-        this.updateUnreadCount(); // Cập nhật số thông báo chưa đọc
+        this.updateUnreadCount();
       },
       (error) => {
         console.error('WebSocket error:', error);
@@ -53,10 +52,9 @@ export class HeadMenuComponent implements OnInit, OnDestroy {
   }
   markAllAsRead() {
     this.messages.forEach(message => {
-      message.isRead = true; // Đánh dấu tất cả thông báo là đã đọc
+      message.isRead = true;
     });
-    
-    // Cập nhật số lượng tin nhắn chưa đọc
+
     this.updateUnreadCount();
   }
   

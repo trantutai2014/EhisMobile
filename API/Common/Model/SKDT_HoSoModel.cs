@@ -17,21 +17,15 @@ namespace Common.Model
     public string NgaySinh { get; set; }
 
     public int GioiTinh { get; set; }
-
-    public SKDT_DMDanTocModel MaDanToc { get; set; }
-
-    public SKDT_DMNgheNghiepModel MaNgheNghiep { get; set; }
     public string? NoiTao { set; get; }
     public string TenDanToc { get; set; }
     public string TenNgheNghiep { get; set; }
     public string TenQuocTich { get; set; }
-    public string TenNoiTao { get; set; }
 
     public string DiaChi { get; set; }
 
-
-
     public string NgayTao { get; set; }
+    public string ThongTinKhamChuaBenhID { get; set; }
 
   }
 }

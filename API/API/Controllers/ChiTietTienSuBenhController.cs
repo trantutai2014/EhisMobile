@@ -88,17 +88,17 @@ namespace API.Controllers
             }
         }
         [HttpGet("thuoc")]
-        public async Task<IActionResult> GetThuocKCB([FromQuery] string id, [FromQuery] LoaiHSSKDTEnum loai, [FromQuery] DateTime p)
+        public async Task<IActionResult> GetThuocKCB([FromQuery] string id, [FromQuery] LoaiHSSKDTEnum loai)
         {
             id = KeyHelper.Decrypt(id);
             if (loai == LoaiHSSKDTEnum.HS4210)
             {
-                var data = await _skdtHoSo4210service.GetThuocKCB(id, p);
+                var data = await _skdtHoSo4210service.GetThuocKCB(id);
                 return Ok(data);
             }
             else
             {
-                var data = await _skdtHoSoservice.GetThuocKCB(id, p);
+                var data = await _skdtHoSoservice.GetThuocKCB(id);
                 return Ok(data);
             }
         }

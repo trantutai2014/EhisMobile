@@ -24,8 +24,9 @@ namespace Data.EF
     Task<TEntity> GetAsync<TEntity>(string id, params Expression<Func<TEntity, object>>[] propertySelectors) where TEntity : BaseEntity;
 
     Task<TEntity> GetAsync<TEntity>(Expression<Func<TEntity, bool>> predicate, params Expression<Func<TEntity, object>>[] propertySelectors) where TEntity : BaseEntity;
-
+    Task<List<TEntity>> GetListAsync<TEntity>(Expression<Func<TEntity, bool>> predicate) where TEntity : class;
     TEntity GetFirt<TEntity>(Expression<Func<TEntity, bool>> predicate, params Expression<Func<TEntity, object>>[] propertySelectors) where TEntity : class;
+    //TEntity GetFirt<TEntity>(string id, params Expression<Func<TEntity, object>>[] propertySelectors) where TEntity : class;
 
     TEntity GetByCCCD<TEntity>(string CCCD) where TEntity : class;
     Task<SKDT_HoSo> GetByCCCD(string CCCD);
@@ -118,8 +119,12 @@ namespace Data.EF
         {
           return GetAllNoBase(predicate, propertySelectors).FirstOrDefault();
         }
+        //public TEntity GetFirt<TEntity>(string id, params Expression<Func<TEntity, object>>[] propertySelectors) where TEntity : class
+        //{   
+        //   return GetAllNoBase(propertySelectors).SingleOrDefault(x => x. == id);
+        //}
 
-        public async Task<TEntity> GetAsync<TEntity>(string id, params Expression<Func<TEntity, object>>[] propertySelectors) where TEntity : BaseEntity
+    public async Task<TEntity> GetAsync<TEntity>(string id, params Expression<Func<TEntity, object>>[] propertySelectors) where TEntity : BaseEntity
         {
             return await GetAll(propertySelectors).SingleOrDefaultAsync(x => x.Id == id);
         }
@@ -136,6 +141,10 @@ namespace Data.EF
         {
             return await _dbContext.Set<SKDT_HoSo>().FirstOrDefaultAsync(x => x.CCCD == CCCD);
         }
+    public async Task<List<TEntity>> GetListAsync<TEntity>(Expression<Func<TEntity, bool>> predicate) where TEntity : class
+    {
+      return await _dbContext.Set<TEntity>().Where(predicate).ToListAsync();
+    }
 
     #endregion Get
 

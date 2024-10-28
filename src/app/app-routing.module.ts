@@ -71,7 +71,7 @@ const routes: Routes = [
   },
   {
     path: 'setting/:cccd',
-    loadChildren: () => import('./pages/setting/setting.module').then(m => m.SettingPageModule),
+    loadChildren: () => import('./pages/cai-dat/setting.module').then(m => m.SettingPageModule),
     canActivate: [AuthGuard] // Bảo vệ route này
   },
   {
@@ -88,8 +88,9 @@ const routes: Routes = [
     path: 'lich-su-benh/:cccd',
     loadChildren: () => import('./pages/lich-su-benh/lich-su-benh.module').then( m => m.LichSuBenhPageModule),
     canActivate: [AuthGuard] // Bảo vệ route này
-  },  {
-    path: 'thuoc-da-dieu-tri-don-thuoc-da-ke',
+  },
+  {
+    path: 'thuoc-da-dieu-tri:/cccd',
     loadChildren: () => import('./pages/thuoc-da-dieu-tri-don-thuoc-da-ke/thuoc-da-dieu-tri-don-thuoc-da-ke.module').then( m => m.ThuocDaDieuTriDonThuocDaKePageModule)
   },
 

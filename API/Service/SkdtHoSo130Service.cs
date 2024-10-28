@@ -51,10 +51,10 @@ namespace Service
                 }).FirstOrDefault();
             if (data != null)
             {
-                result.MaCSKCB = data.MA_CSKCB;
+                //result.thongTinKhamChuaBenhID = data.MA_CSKCB;
                 result.TenCSKCB = GetTenBV(data.MA_CSKCB);
                 result.LyDoDenKham = data.LY_DO_VV;
-                result.MaCSKCBChuyenDi = data.MA_NOI_DI;
+                //result.thongTinKhamChuaBenhIDChuyenDi = data.MA_NOI_DI;
                 result.TenCSKCBChuyenDi = GetTenBV(data.MA_NOI_DI);
                 result.NgayKham = data.NGAY_VAO;
                 result.HinhThucKham = Descriptions.MaLoaiKCB[data.MA_LOAI_KCB];
@@ -62,7 +62,7 @@ namespace Service
                 result.NgayRa = data.NGAY_RA;
                 result.KetQua = Descriptions.KetQuaDieuTri[data.KET_QUA_DTRI];
                 result.TinhTrang = Descriptions.MaLoaiRaVien[data.MA_LOAI_RV];
-                result.MaCSKCBChuyenDen = data.MA_NOI_DEN;
+                //result.thongTinKhamChuaBenhIDChuyenDen = data.MA_NOI_DEN;
                 result.TenCSKCBChuyenDen = GetTenBV(data.MA_NOI_DEN);
                 result.ChanDoan = data.CHAN_DOAN_RV;
                 result.MaICD10 = data.MA_BENH_CHINH;
@@ -192,11 +192,9 @@ namespace Service
 
 
         //
-        public async Task<IEnumerable<LichSuKham_Thuoc_ResModel>> GetThuocKCB(string id, DateTime ngayRa)
+        public async Task<IEnumerable<LichSuKham_Thuoc_ResModel>> GetThuocKCB(string id)
         {
-            var part = DateHelper.GetPartion(ngayRa);
-            var result = _repository.GetAll<DS_ChiTiet_Thuoc130>(s => s.ThongTinKhamChuaBenhID == id
-            && s.NgayRa >= part.StartDate && s.NgayRa <= part.EndDate)
+            var result = _repository.GetAll<DS_ChiTiet_Thuoc130>(s => s.ThongTinKhamChuaBenhID == id)
                   .OrderBy(s => s.STT).Select(s => new LichSuKham_Thuoc_ResModel
                   {
                       Ma = s.MA_THUOC,
@@ -229,11 +227,11 @@ namespace Service
         }
 
         ///
-        public string GetTenBV(string maCSKCB)
+        public string GetTenBV(string thongTinKhamChuaBenhID)
         {
-            if (string.IsNullOrEmpty(maCSKCB))
+            if (string.IsNullOrEmpty(thongTinKhamChuaBenhID))
                 return null;
-            var data = _repository.Get<DMCoSo>(maCSKCB);
+            var data = _repository.Get<DMCoSo>(thongTinKhamChuaBenhID);
             return data?.TenBV ?? "Không có tên bệnh viện";
         }
         public string GetTenICD10(string maICD10)

@@ -1,10 +1,12 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using Data.Abstract;
+using Data.Interfaces;
 
 namespace Data.Models.SKDT
 {
   [Table("SKDT_DMDanToc")]
-  public class SKDT_DMDanToc
+  public class SKDT_DMDanToc 
   {
     public SKDT_DMDanToc()
     {
