@@ -43,32 +43,32 @@ namespace API.Controllers
 
 
         [HttpGet("xet-nghiem")]
-        public async Task<IActionResult> GetXetNghiemKCB([FromQuery] string id, [FromQuery] LoaiHSSKDTEnum loai, [FromQuery] DateTime p)
+        public async Task<IActionResult> GetXetNghiemKCB([FromQuery] string id, [FromQuery] LoaiHSSKDTEnum loai)
         {
             id = KeyHelper.Decrypt(id);
             if (loai == LoaiHSSKDTEnum.HS4210)
             {
-                var data = await _skdtHoSo4210service.GetXetNghiemKCB(id, p);
+                var data = await _skdtHoSo4210service.GetXetNghiemKCB(id);
                 return Ok(data);
             }
             else
             {
-                var data = await _skdtHoSoservice.GetXetNghiemKCB(id, p);
+                var data = await _skdtHoSoservice.GetXetNghiemKCB(id);
                 return Ok(data);
             }
         }
         [HttpGet("cdha-tdcn")]
-        public async Task<IActionResult> GetCDHA_TDCNKCB([FromQuery] string id, [FromQuery] LoaiHSSKDTEnum loai, [FromQuery] DateTime p)
+        public async Task<IActionResult> GetCDHA_TDCNKCB([FromQuery] string id, [FromQuery] LoaiHSSKDTEnum loai)
         {
             id = KeyHelper.Decrypt(id);
             if (loai == LoaiHSSKDTEnum.HS4210)
             {
-                var data = await _skdtHoSo4210service.GetCDHAKCB(id, p);
+                var data = await _skdtHoSo4210service.GetCDHAKCB(id);
                 return Ok(data);
             }
             else
             {
-                var data = await _skdtHoSoservice.GetCDHAKCB(id, p);
+                var data = await _skdtHoSoservice.GetCDHAKCB(id);
                 return Ok(data);
             }
         }

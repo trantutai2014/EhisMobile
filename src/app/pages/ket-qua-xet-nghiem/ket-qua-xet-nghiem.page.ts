@@ -10,44 +10,43 @@ import { environment } from 'src/environments/environment.prod';
 })
 export class ThongTinXetNghiemPage implements OnInit {
 
-  items: any;
-  itemModel: any = {};
+  items: any[] = []; // Array to store the result from API
   loading: boolean = false;
   cccd: string | null | undefined;
   error: any;
-  private apiUrl = `${environment.BASE_API}/api/DSDotKhamChuaBenh/`;
+  private apiUrl = `${environment.BASE_API}/api/ChiTietTienSuBenh/xet-nghiem/`;
 
-  constructor(private router: Router,  
+  constructor(
+    private router: Router,  
     private route: ActivatedRoute,   
-    private http: HttpClient) { }
+    private http: HttpClient
+  ) { }
 
-  ngOnInit() {
-    this.route.paramMap.subscribe(params => {
-      this.cccd = params.get('cccd');
-      if (this.cccd) {
-        this.getUserInfo();
+  ngOnInit(): void {
+    this.route.queryParams.subscribe(params => {
+      const id = params['id'];
+      const loaiHoSo = params['loaiHoSo'];
+  
+      if (id && loaiHoSo) {
+        this.getXetNghiemData(id, loaiHoSo);
       } else {
-        // Handle case where CCCD is not found in URL
-        console.error('Không tìm thấy CCCD trong URL');
+        console.error('Missing required parameters: id and loaiHoSo');
       }
     });
   }
-
   
-
-
-  getUserInfo(): void {
-    this.loading = true; // Set loading indicator to true
-    this.http.get(`${this.apiUrl}${this.cccd}`).subscribe({
-      next: (data:any) => {
-        this.loading = false; // Set loading indicator to false
-          this.items=data.data;
+  getXetNghiemData(id: string, loaiHoSo: string): void {
+    this.loading = true;
+    this.http.get<any[]>(`${this.apiUrl}?id=${id}&loai=${loaiHoSo}`).subscribe({
+      next: (data) => {
+        this.loading = false;
+        this.items = data; // Save the data from API response
       },
       error: (error) => {
-        this.loading = false; // Set loading indicator to false
-        this.error = 'Failed to load user roles';
+        this.loading = false;
+        this.error = 'Failed to load data';
+        console.error('Error fetching data:', error);
       }
     });
   }
-
 }

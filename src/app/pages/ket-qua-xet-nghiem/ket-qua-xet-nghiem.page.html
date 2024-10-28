@@ -1,103 +1,40 @@
 <ion-card-header>
   <ion-card-title style="font-size: larger;">Kết quả xét nghiệm có giá trị</ion-card-title>
 </ion-card-header>
-<ion-grid>
+
+<ion-grid *ngIf="items && items.length">
+  <!-- Header row for the table -->
   <ion-row>
     <ion-col>STT</ion-col>
     <ion-col>Mã</ion-col>
-    <ion-col>Tên xét nghiệm </ion-col>
+    <ion-col>Tên xét nghiệm</ion-col>
     <ion-col>Kết quả</ion-col>
   </ion-row>
 
-  <ion-row class="heading1">
-    <ion-col class="date-time">
-      1. Đo hoạt độ AST (GOT)[Máu]
-      <span>21/10/2024 00:00</span>
-    </ion-col>
-  </ion-row>
+  <!-- Loop through each item in items array -->
+  <ng-container *ngFor="let item of items; let i = index">
+    <ion-row class="heading1">
+      <ion-col class="date-time">
+        {{ i + 1 }}. {{ item.Ten }} [{{ item.LoaiMau }}]
+        <span>{{ item.NgayKetQua | date: 'dd/MM/yyyy HH:mm' }}</span>
+      </ion-col>
+    </ion-row>
 
-  <ion-row>
-    <ion-col>a</ion-col>
-    <ion-col>b</ion-col>
-    <ion-col>c</ion-col>
-    <ion-col>d</ion-col>
-  </ion-row>
-
-  <ion-row class="heading1">
-    <ion-col class="date-time">
-      2. Định lượng Creatinin (máu)
-      <span>21/10/2024 00:00</span>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>a</ion-col>
-    <ion-col>b</ion-col>
-    <ion-col>c</ion-col>
-    <ion-col>d</ion-col>
-  </ion-row>
-
-  <ion-row class="heading1">
-    <ion-col class="date-time">
-      3. Định lượng Urê máu [Máu]
-      <span>21/10/2024 00:00</span>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>a</ion-col>
-    <ion-col>b</ion-col>
-    <ion-col>c</ion-col>
-    <ion-col>d</ion-col>
-  </ion-row>
-
-  <ion-row class="heading1">
-    <ion-col class="date-time">
-      4. Đo hoạt độ ALT (GPT) [Máu]
-      <span>21/10/2024 00:00</span>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>a</ion-col>
-    <ion-col>b</ion-col>
-    <ion-col>c</ion-col>
-    <ion-col>d</ion-col>
-  </ion-row>
-
-  <ion-row class="heading1">
-    <ion-col class="date-time">
-      5. Định lượng Glucose [Máu]
-      <span>21/10/2024 00:00</span>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>a</ion-col>
-    <ion-col>b</ion-col>
-    <ion-col>c</ion-col>
-    <ion-col>d</ion-col>
-  </ion-row>
-
-  <ion-row class="heading1">
-    <ion-col class="date-time">
-      6. Tổng phân tích nước tiêu (Bằng máy tự động)
-      <span>21/10/2024 00:00</span>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>a</ion-col>
-    <ion-col>b</ion-col>
-    <ion-col>c</ion-col>
-    <ion-col>d</ion-col>
-  </ion-row>
-
-  <ion-row class="heading1">
-    <ion-col class="date-time">
-      7. Tổng phân tích tế bào máu ngoại vi (bằng máy đếm tổng trở)
-      <span>21/10/2024 00:00</span>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>a</ion-col>
-    <ion-col>b</ion-col>
-    <ion-col>c</ion-col>
-    <ion-col>d</ion-col>
-  </ion-row>
+    <!-- Nested loop for each KetQua in current item -->
+    <ion-row *ngFor="let ketQua of item.KetQua">
+      <ion-col>{{ ketQua.Ma }}</ion-col>
+      <ion-col>{{ ketQua.Ten }}</ion-col>
+      <ion-col>{{ ketQua.KetQua }}</ion-col>
+      <ion-col>{{ ketQua.DonVi }}</ion-col>
+    </ion-row>
+  </ng-container>
 </ion-grid>
+
+<!-- Message if no data is found -->
+<ion-item *ngIf="!loading && (!items || items.length === 0)">
+  Không có thông tin.
+</ion-item>
+
+<!-- Loading and error messages -->
+<ion-item *ngIf="loading">Loading...</ion-item>
+<ion-item *ngIf="error">{{ error }}</ion-item>

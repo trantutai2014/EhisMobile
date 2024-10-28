@@ -62,9 +62,6 @@ export class LichSuBenhPage implements OnInit {
       this.router.navigate([UrlConstants.DSDOTKHAMCHUABENH.replace(':cccd', cccd)], {
         queryParams
       });
-      this.router.navigate([UrlConstants.THUOC], {
-        queryParams
-      });
     }
   }
 }

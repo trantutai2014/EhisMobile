@@ -75,18 +75,14 @@ namespace Service
     }
 
     ////
-    public async Task<IEnumerable<LichSuKham_XN_ResModel>> GetXetNghiemKCB(string id, DateTime ngayRa)
+    public async Task<IEnumerable<LichSuKham_XN_ResModel>> GetXetNghiemKCB(string id)
         {
-            var part = DateHelper.GetPartion(ngayRa);
             var query = from s in _repository.GetAll<DS_ChiTiet_DVKT>()
                         join kq in _repository.GetAll<DS_KetQua_CLS>()
                         on s.MA_DICH_VU equals kq.MA_DICH_VU
                          into s_kq
                         from kq in s_kq.DefaultIfEmpty()
-                        where s.ThongTinKhamChuaBenhID == id && kq.ThongTinKhamChuaBenhID == id
-                         && (part.BeforePartion
-                                ? (s.NgayRa == null && kq.NgayRa == null)
-                                : (s.NgayRa >= part.StartDate && s.NgayRa <= part.EndDate && kq.NgayRa >= part.StartDate && kq.NgayRa <= part.EndDate))
+                        where s.ThongTinKhamChuaBenhID == id && kq.ThongTinKhamChuaBenhID == id   
                         && s.MA_NHOM == (int)NhomDVKTEnum.XetNghiem
                         orderby s.STT, kq.STT
                         select new
@@ -121,18 +117,14 @@ namespace Service
 
 
         //////
-        public async Task<IEnumerable<LichSuKham_CDHA_TDCN_ResModel>> GetCDHAKCB(string id, DateTime ngayRa)
+        public async Task<IEnumerable<LichSuKham_CDHA_TDCN_ResModel>> GetCDHAKCB(string id)
         {
-            var part = DateHelper.GetPartion(ngayRa);
             var result = from s in _repository.GetAll<DS_ChiTiet_DVKT>()
                          join kq in _repository.GetAll<DS_KetQua_CLS>()
                          on s.MA_DICH_VU equals kq.MA_DICH_VU
                          into s_kq
                          from kq in s_kq.DefaultIfEmpty()
                          where s.ThongTinKhamChuaBenhID == id && kq.ThongTinKhamChuaBenhID == id
-                             && (part.BeforePartion
-                                ? (s.NgayRa == null && kq.NgayRa == null)
-                                : (s.NgayRa >= part.StartDate && s.NgayRa <= part.EndDate && kq.NgayRa >= part.StartDate && kq.NgayRa <= part.EndDate))
                               && (s.MA_NHOM == (int)NhomDVKTEnum.CDHA || s.MA_NHOM == (int)NhomDVKTEnum.TDCN)
                          orderby s.STT, kq.STT
                          select new LichSuKham_CDHA_TDCN_ResModel
@@ -140,7 +132,6 @@ namespace Service
 
                              Ma = s.MA_DICH_VU,
                              Ten = s.TEN_DICH_VU,
-                             NgayKetQua = s.NGAY_KQ,
                              MoTa = kq.MO_TA ?? string.Empty,
                              KetLuan = kq.KET_LUAN ?? string.Empty
                          };
@@ -201,22 +192,21 @@ namespace Service
         /// không sài
         public async Task<LichSuKham_TomTat_ResModel> GetTomTatKCB(string id, DateTime ngayRa)
         {
-            //todo 4210 chưa có thông tin tóm tắt
-            return null;
-            //var result= _repository.GetAll<DS_TomTat_HoSoBA>(s => s.ThongTinKhamChuaBenhID == id)
-            //    .Select(s => new LichSuKham_TomTat_ResModel()
-            //    {
-            //        TomTatTienSu = s.QT_BENHLY,
-            //        TomTatCLS = s.TOMTAT_KQ,
-            //        PhuongPhapDieuTri = s.PP_DIEUTRI,
-            //        HuongDieuTri = s.GHI_CHU,
-            //        BacSi = s.MA_TTDV,
-            //        SDTBacSi = string.Empty,
-            //    }).FirstOrDefault();
-            //return await Task.FromResult(result);
-        }
-
+      return null;
+      var result= _repository.GetAll<DS_TomTat_HoSoBA130>(s => s.ThongTinKhamChuaBenhID == id)
+          .Select(s => new LichSuKham_TomTat_ResModel()
+          {
+              TomTatTienSu = s.QT_BENHLY,
+              TomTatCLS = s.TOMTAT_KQ,
+              PhuongPhapDieuTri = s.PP_DIEUTRI,
+              HuongDieuTri = s.GHI_CHU,
+              BacSi = s.MA_TTDV,
+             SDTBacSi = string.Empty,
+          }).FirstOrDefault();
+      return await Task.FromResult(result);
     }
+
+  }
 
 
 

@@ -1,15 +1,36 @@
-<ion-card-header>
+<ion-card-header style="padding: 0%;">
   <ion-card-title style="font-size: larger;">Tóm tắt hồ sơ bệnh án, tình trạng người bệnh</ion-card-title>
 </ion-card-header>
-<ion-card-content *ngIf="items">
-  <ion-label class="label-left" color="dark">Tóm tắt tiền sử, bệnh sử và diễn biến lâm sàng: <ion-label
-      color="medium">Không có thông tin </ion-label> </ion-label>
-  <ion-label class="label-left" color="dark">Tóm tắt kết quả cận lâm sàng có giá trị: <ion-label color="medium">Không có
-      thông tin </ion-label> </ion-label>
-  <ion-label class="label-left" color="dark">Phương pháp điều trị đã thực hiện: <ion-label
-      color="medium">K59.1</ion-label> {{items.pP_DIEU_TRI}}</ion-label>
-  <ion-label class="label-left" color="dark">Hướng điều trị tiếp theo, đơn thuốc, lời dặn, lịch tái khám: <ion-label
-      color="medium">Không có thông tin</ion-label> </ion-label>
-  <ion-label class="label-left" color="dark">Bác sĩ điều trị: <ion-label color="medium">Không có thông tin</ion-label>
+
+<ion-card-content *ngIf="items; else noData">
+  <ion-label class="label-left" color="dark">
+    Tóm tắt tiền sử, bệnh sử và diễn biến lâm sàng: 
+    <ion-label color="medium">{{ items.TomTatTienSu || 'Không có thông tin' }}</ion-label>
   </ion-label>
+
+  <ion-label class="label-left" color="dark">
+    Tóm tắt kết quả cận lâm sàng có giá trị: 
+    <ion-label color="medium">{{ items.TomTatCLS || 'Không có thông tin' }}</ion-label>
+  </ion-label>
+
+  <ion-label class="label-left" color="dark">
+    Phương pháp điều trị đã thực hiện: 
+    <ion-label color="medium">{{ items.PhuongPhapDieuTri || 'Không có thông tin' }}</ion-label>
+  </ion-label>
+
+  <ion-label class="label-left" color="dark">
+    Hướng điều trị tiếp theo, đơn thuốc, lời dặn, lịch tái khám: 
+    <ion-label color="medium">{{ items.HuongDieuTri || 'Không có thông tin' }}</ion-label>
+  </ion-label>
+
+  <ion-label class="label-left" color="dark">
+    Bác sĩ điều trị: 
+    <ion-label color="medium">{{ items.BacSi || 'Không có thông tin' }}</ion-label>
+  </ion-label>
+  
 </ion-card-content>
+<!-- Nếu không có dữ liệu thì hiển thị thông báo -->
+<ng-template #noData>
+  <ion-label color="medium">Không có thông tin</ion-label>
+</ng-template>
+

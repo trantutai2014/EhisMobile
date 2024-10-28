@@ -42,11 +42,6 @@
         "Name": "loai",
         "Type": "System.String",
         "IsRequired": false
-      },
-      {
-        "Name": "p",
-        "Type": "System.DateTime",
-        "IsRequired": false
       }
     ],
     "ReturnTypes": []

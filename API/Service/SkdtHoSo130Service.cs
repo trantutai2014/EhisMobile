@@ -78,16 +78,14 @@ namespace Service
 
 
         ////
-        public async Task<IEnumerable<LichSuKham_XN_ResModel>> GetXetNghiemKCB(string id, DateTime ngayRa)
+        public async Task<IEnumerable<LichSuKham_XN_ResModel>> GetXetNghiemKCB(string id)
         {
-            var part = DateHelper.GetPartion(ngayRa);
             var query = from s in _repository.GetAll<DS_ChiTiet_DVKT130>()
                         join kq in _repository.GetAll<DS_DVCLS130>()
                         on s.MA_DICH_VU equals kq.MA_DICH_VU
                         into s_kq
                         from kq in s_kq.DefaultIfEmpty()
                         where s.ThongTinKhamChuaBenhID == id && kq.ThongTinKhamChuaBenhID == id
-                            && s.NgayRa >= part.StartDate && s.NgayRa <= part.EndDate && kq.NgayRa >= part.StartDate && kq.NgayRa <= part.EndDate
                         && s.MA_NHOM == (int)NhomDVKTEnum.XetNghiem
                         orderby s.STT, kq.STT
                         select new
@@ -121,16 +119,15 @@ namespace Service
 
 
         ///
-        public async Task<IEnumerable<LichSuKham_CDHA_TDCN_ResModel>> GetCDHAKCB(string id, DateTime ngayRa)
+        public async Task<IEnumerable<LichSuKham_CDHA_TDCN_ResModel>> GetCDHAKCB(string id)
         {
-            var part = DateHelper.GetPartion(ngayRa);
             var query = from s in _repository.GetAll<DS_ChiTiet_DVKT130>()
                         join kq in _repository.GetAll<DS_DVCLS130>()
                         on s.MA_DICH_VU equals kq.MA_DICH_VU
                          into s_kq
                         from kq in s_kq.DefaultIfEmpty()
                         where s.ThongTinKhamChuaBenhID == id && kq.ThongTinKhamChuaBenhID == id
-                            && s.NgayRa >= part.StartDate && s.NgayRa <= part.EndDate && kq.NgayRa >= part.StartDate && kq.NgayRa <= part.EndDate
+   
                             && (s.MA_NHOM == (int)NhomDVKTEnum.CDHA || s.MA_NHOM == (int)NhomDVKTEnum.TDCN)
                         orderby s.STT, kq.STT
                         select new
