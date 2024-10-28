@@ -7,7 +7,7 @@ import { Observable, Subject } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class WebSocketService {
+export class WebSocketService { 
   private socket!: WebSocket;
   private messageSubject = new Subject<string>();
   public message$ = this.messageSubject.asObservable();
@@ -15,7 +15,8 @@ export class WebSocketService {
   constructor() {}
 
   connect(): Observable<string> {
-    this.socket = new WebSocket('wss://localhost:7170/api/Notification/ws');
+    const cccd = localStorage.getItem('cccd');
+    this.socket = new WebSocket('wss://localhost:7170/api/Notification/ws/'+cccd);
 
     this.socket.onopen = () => {
       console.log('Connected to WebSocket server');

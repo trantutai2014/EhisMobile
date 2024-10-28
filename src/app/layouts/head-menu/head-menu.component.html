@@ -30,10 +30,30 @@
                 <ion-content class="ion-padding">
 
                   <ion-content color="light">
+
+                    <ion-card *ngFor="let item of items">
+                      <ion-card-header>
+                        <ion-card-subtitle>{{item.dateCreated | date:'dd/MM/yyyy HH:mm'}}</ion-card-subtitle>
+                        <ion-card-subtitle>{{item.isView ? 'Đã đọc' : 'Chưa đọc' }}    </ion-card-subtitle>
+                      </ion-card-header>
+                     <ion-card-content>
+                      {{item.content}}
+                      </ion-card-content>
+                    </ion-card>
                     <ion-list [inset]="true">
+                      <!-- từ websocket -->
                       <ion-item *ngFor="let message of messages">
                         <ion-label>{{ message.content }}({{ message.isRead ? 'Đã đọc' : 'Chưa đọc' }})</ion-label>
                       </ion-item>
+
+                      <!-- từ database -->
+                      <ion-item >
+                        <ion-label></ion-label>
+                    
+                        <ion-label></ion-label>
+                     <ion-label> </ion-label>
+                      </ion-item>
+
                     </ion-list>
                     <div class="button-container">
                       <ion-button fill="clear" (click)="markAllAsRead()" expand="full">Đánh dấu đã đọc tất cả</ion-button>

@@ -246,6 +246,38 @@
   },
   {
     "ContainingType": "API.Controllers.NotificationController",
+    "Method": "DeleteThongBaoByCccd",
+    "RelativePath": "api/Notification/{cccd}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cccd",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.NotificationController",
+    "Method": "GetThongBaoByCccd",
+    "RelativePath": "api/Notification/{cccd}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cccd",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.NotificationController",
     "Method": "SendNotification",
     "RelativePath": "api/Notification/send",
     "HttpMethod": "POST",
@@ -262,12 +294,34 @@
   },
   {
     "ContainingType": "API.Controllers.NotificationController",
+    "Method": "SendNotificationByCccd",
+    "RelativePath": "api/Notification/sendByCccd",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "API.Controllers.NotificationRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.NotificationController",
     "Method": "GetWebSocket",
-    "RelativePath": "api/Notification/ws",
+    "RelativePath": "api/Notification/ws/{cccd}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "cccd",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {

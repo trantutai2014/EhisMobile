@@ -22,6 +22,9 @@ public class MDPDbContext : DbContext
   {
   }
 
+  public DbSet<DMICD10> DMICD10 { get; set; }
+
+
   //public DbSet<UserRoleModel> UserRoles { get; set; }
   //public DbSet<UserModel> Users { get; set; }
   //public DbSet<RegisterModel> Register { get; set; }
@@ -33,6 +36,7 @@ public class MDPDbContext : DbContext
   public DbSet<RoleNavigationMenu> RoleNavigationMenus { get; set; }
   public DbSet<DMCoSo> DMCoSos { get; set; }
 
+  public virtual DbSet<ThongBao> ThongBaos { get; set; }
   public virtual DbSet<SKDT_HoSo> SKDT_HoSos { get; set; }
   public DbSet<SKDT_HoSoModel> SKDT_HoSoModels { get; set; }
 

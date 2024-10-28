@@ -8,10 +8,10 @@ namespace Service
 {
   public class NotificationService
   {
-    // Store all connected WebSocket clients
-    private static ConcurrentBag<WebSocket> _clients = new ConcurrentBag<WebSocket>();
+    // Tạo một từ điển để lưu trữ mối quan hệ giữa CCCD và WebSocket
+    private static ConcurrentDictionary<string, WebSocket> _clientSockets = new ConcurrentDictionary<string, WebSocket>();
 
-    // Send notification to a specific WebSocket client
+    // Gửi thông báo đến một client WebSocket cụ thể
     public async Task SendNotification(WebSocket webSocket, string notification)
     {
       var buffer = Encoding.UTF8.GetBytes(notification);
@@ -19,13 +19,13 @@ namespace Service
       await webSocket.SendAsync(segment, WebSocketMessageType.Text, true, CancellationToken.None);
     }
 
-    // Send notification to all connected clients
+    // Gửi thông báo tới tất cả các client đã kết nối
     public async Task<bool> SendNotificationToAllClients(string message)
     {
       var buffer = Encoding.UTF8.GetBytes(message);
       var segment = new ArraySegment<byte>(buffer);
 
-      foreach (var client in _clients)
+      foreach (var client in _clientSockets.Values)
       {
         if (client.State == WebSocketState.Open)
         {
@@ -36,10 +36,35 @@ namespace Service
       return true;
     }
 
-    // Receive and forward notifications for each WebSocket connection
-    public async Task ReceiveAndForwardNotifications(WebSocket webSocket)
+    // Thêm một client vào từ điển với CCCD
+    public void AddClient(string cccd, WebSocket client)
     {
-      _clients.Add(webSocket); // Add new WebSocket client to the list
+      _clientSockets.TryAdd(cccd, client);
+    }
+
+    // Gửi thông báo đến client theo CCCD
+    public async Task<bool> SendNotificationToClientByCCCD(string cccd, string message)
+    {
+      // Kiểm tra xem client có tồn tại trong từ điển không
+      if (_clientSockets.TryGetValue(cccd, out WebSocket client))
+      {
+        if (client.State == WebSocketState.Open)
+        {
+          var buffer = Encoding.UTF8.GetBytes(message);
+          var segment = new ArraySegment<byte>(buffer);
+          await client.SendAsync(segment, WebSocketMessageType.Text, true, CancellationToken.None);
+          return true;
+        }
+      }
+      // Trả về false nếu không tìm thấy client hoặc kết nối không mở
+      return false;
+    }
+
+    // Nhận và chuyển tiếp thông báo cho mỗi kết nối WebSocket
+    public async Task ReceiveAndForwardNotifications(WebSocket webSocket, string cccd)
+    {
+      // Thêm WebSocket vào từ điển với CCCD
+      AddClient(cccd, webSocket);
 
       var buffer = new byte[1024 * 4];
       WebSocketReceiveResult receiveResult;
@@ -59,7 +84,8 @@ namespace Service
         }
       }
 
-      _clients.TryTake(out webSocket); // Remove client when closed
+      // Xóa WebSocket khỏi từ điển khi kết nối đóng
+      _clientSockets.TryRemove(cccd, out _);
     }
   }
 }
