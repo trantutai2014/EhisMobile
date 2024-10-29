@@ -34,7 +34,9 @@
                     <ion-card *ngFor="let item of items">
                       <ion-card-header>
                         <ion-card-subtitle>{{item.dateCreated | date:'dd/MM/yyyy HH:mm'}}</ion-card-subtitle>
-                        <ion-card-subtitle>{{item.isView ? 'Đã đọc' : 'Chưa đọc' }}    </ion-card-subtitle>
+                        <ion-card-subtitle  [ngClass]="{'highlight': item.isView === false,  'read': item.isView === true}">
+                          {{item.isView ? 'Đã đọc' : 'Chưa đọc' }}  
+                          </ion-card-subtitle>
                       </ion-card-header>
                      <ion-card-content>
                       {{item.content}}
@@ -42,8 +44,9 @@
                     </ion-card>
                     <ion-list [inset]="true">
                       <!-- từ websocket -->
-                      <ion-item *ngFor="let message of messages">
-                        <ion-label>{{ message.content }}({{ message.isRead ? 'Đã đọc' : 'Chưa đọc' }})</ion-label>
+                      <ion-item *ngFor="let message of messages" >
+                        <ion-label  [ngClass]="{'highlight': message.isRead === false}">
+                          {{ message.content }} ({{ message.isRead ? 'Đã đọc' : 'Chưa đọc' }})</ion-label>
                       </ion-item>
 
                       <!-- từ database -->

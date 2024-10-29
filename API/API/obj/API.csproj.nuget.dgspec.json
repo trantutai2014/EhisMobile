@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\SongAn\\EhisMobile\\API\\API\\API.csproj": {}
+    "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test23\\EhisMobile\\API\\API\\API.csproj": {}
   },
   "projects": {
-    "D:\\SongAn\\EhisMobile\\API\\API\\API.csproj": {
+    "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test23\\EhisMobile\\API\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SongAn\\EhisMobile\\API\\API\\API.csproj",
+        "projectUniqueName": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test23\\EhisMobile\\API\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "D:\\SongAn\\EhisMobile\\API\\API\\API.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\SongAn\\EhisMobile\\API\\API\\obj\\",
+        "projectPath": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test23\\EhisMobile\\API\\API\\API.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test23\\EhisMobile\\API\\API\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -33,14 +29,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\SongAn\\EhisMobile\\API\\Common\\Common.csproj": {
-                "projectPath": "D:\\SongAn\\EhisMobile\\API\\Common\\Common.csproj"
+              "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test23\\EhisMobile\\API\\Common\\Common.csproj": {
+                "projectPath": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test23\\EhisMobile\\API\\Common\\Common.csproj"
               },
-              "D:\\SongAn\\EhisMobile\\API\\Data\\Data.csproj": {
-                "projectPath": "D:\\SongAn\\EhisMobile\\API\\Data\\Data.csproj"
+              "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test23\\EhisMobile\\API\\Data\\Data.csproj": {
+                "projectPath": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test23\\EhisMobile\\API\\Data\\Data.csproj"
               },
-              "D:\\SongAn\\EhisMobile\\API\\Service\\Service.csproj": {
-                "projectPath": "D:\\SongAn\\EhisMobile\\API\\Service\\Service.csproj"
+              "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test23\\EhisMobile\\API\\Service\\Service.csproj": {
+                "projectPath": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test23\\EhisMobile\\API\\Service\\Service.csproj"
               }
             }
           }
@@ -120,21 +116,17 @@
         }
       }
     },
-    "D:\\SongAn\\EhisMobile\\API\\Common\\Common.csproj": {
+    "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test23\\EhisMobile\\API\\Common\\Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SongAn\\EhisMobile\\API\\Common\\Common.csproj",
+        "projectUniqueName": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test23\\EhisMobile\\API\\Common\\Common.csproj",
         "projectName": "Common",
-        "projectPath": "D:\\SongAn\\EhisMobile\\API\\Common\\Common.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\SongAn\\EhisMobile\\API\\Common\\obj\\",
+        "projectPath": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test23\\EhisMobile\\API\\Common\\Common.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test23\\EhisMobile\\API\\Common\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -195,21 +187,17 @@
         }
       }
     },
-    "D:\\SongAn\\EhisMobile\\API\\Data\\Data.csproj": {
+    "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test23\\EhisMobile\\API\\Data\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SongAn\\EhisMobile\\API\\Data\\Data.csproj",
+        "projectUniqueName": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test23\\EhisMobile\\API\\Data\\Data.csproj",
         "projectName": "Data",
-        "projectPath": "D:\\SongAn\\EhisMobile\\API\\Data\\Data.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\SongAn\\EhisMobile\\API\\Data\\obj\\",
+        "projectPath": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test23\\EhisMobile\\API\\Data\\Data.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test23\\EhisMobile\\API\\Data\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -224,8 +212,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\SongAn\\EhisMobile\\API\\Common\\Common.csproj": {
-                "projectPath": "D:\\SongAn\\EhisMobile\\API\\Common\\Common.csproj"
+              "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test23\\EhisMobile\\API\\Common\\Common.csproj": {
+                "projectPath": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test23\\EhisMobile\\API\\Common\\Common.csproj"
               }
             }
           }
@@ -286,21 +274,17 @@
         }
       }
     },
-    "D:\\SongAn\\EhisMobile\\API\\Service\\Service.csproj": {
+    "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test23\\EhisMobile\\API\\Service\\Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SongAn\\EhisMobile\\API\\Service\\Service.csproj",
+        "projectUniqueName": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test23\\EhisMobile\\API\\Service\\Service.csproj",
         "projectName": "Service",
-        "projectPath": "D:\\SongAn\\EhisMobile\\API\\Service\\Service.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\SongAn\\EhisMobile\\API\\Service\\obj\\",
+        "projectPath": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test23\\EhisMobile\\API\\Service\\Service.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test23\\EhisMobile\\API\\Service\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -315,11 +299,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\SongAn\\EhisMobile\\API\\Common\\Common.csproj": {
-                "projectPath": "D:\\SongAn\\EhisMobile\\API\\Common\\Common.csproj"
+              "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test23\\EhisMobile\\API\\Common\\Common.csproj": {
+                "projectPath": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test23\\EhisMobile\\API\\Common\\Common.csproj"
               },
-              "D:\\SongAn\\EhisMobile\\API\\Data\\Data.csproj": {
-                "projectPath": "D:\\SongAn\\EhisMobile\\API\\Data\\Data.csproj"
+              "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test23\\EhisMobile\\API\\Data\\Data.csproj": {
+                "projectPath": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test23\\EhisMobile\\API\\Data\\Data.csproj"
               }
             }
           }

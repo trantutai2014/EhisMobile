@@ -1,30 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\SongAn\\EhisMobile\\API\\",
+  "WorkspaceRootPath": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test23\\EhisMobile\\API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{13564404-4BC6-45F6-B3D7-042A4D9CC8F2}|API\\API.csproj|d:\\songan\\ehismobile\\api\\api\\controllers\\chitiettiensubenhcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{13564404-4BC6-45F6-B3D7-042A4D9CC8F2}|API\\API.csproj|solutionrelative:api\\controllers\\chitiettiensubenhcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C349B7AB-35F2-4E9F-8BBF-92BE7CBCBADF}|Service\\Service.csproj|d:\\songan\\ehismobile\\api\\service\\skdthoso130service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C349B7AB-35F2-4E9F-8BBF-92BE7CBCBADF}|Service\\Service.csproj|solutionrelative:service\\skdthoso130service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C349B7AB-35F2-4E9F-8BBF-92BE7CBCBADF}|Service\\Service.csproj|d:\\songan\\ehismobile\\api\\service\\skdthoso4210service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C349B7AB-35F2-4E9F-8BBF-92BE7CBCBADF}|Service\\Service.csproj|solutionrelative:service\\skdthoso4210service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B468F22D-8BCC-4C42-A04B-1F40D50731E8}|Data\\Data.csproj|d:\\songan\\ehismobile\\api\\data\\ef\\mdpdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B468F22D-8BCC-4C42-A04B-1F40D50731E8}|Data\\Data.csproj|solutionrelative:data\\ef\\mdpdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{13564404-4BC6-45F6-B3D7-042A4D9CC8F2}|API\\API.csproj|d:\\songan\\ehismobile\\api\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{13564404-4BC6-45F6-B3D7-042A4D9CC8F2}|API\\API.csproj|solutionrelative:api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B468F22D-8BCC-4C42-A04B-1F40D50731E8}|Data\\Data.csproj|d:\\songan\\ehismobile\\api\\data\\ef\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B468F22D-8BCC-4C42-A04B-1F40D50731E8}|Data\\Data.csproj|solutionrelative:data\\ef\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{13564404-4BC6-45F6-B3D7-042A4D9CC8F2}|API\\API.csproj|d:\\hocs\\developer\\songan\\ehismobile\\test23\\ehismobile\\api\\api\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{13564404-4BC6-45F6-B3D7-042A4D9CC8F2}|API\\API.csproj|solutionrelative:api\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,78 +34,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SkdtHoSo130Service.cs",
-              "DocumentMoniker": "D:\\SongAn\\EhisMobile\\API\\Service\\SkdtHoSo130Service.cs",
-              "RelativeDocumentMoniker": "Service\\SkdtHoSo130Service.cs",
-              "ToolTip": "D:\\SongAn\\EhisMobile\\API\\Service\\SkdtHoSo130Service.cs",
-              "RelativeToolTip": "Service\\SkdtHoSo130Service.cs",
-              "ViewState": "AgIAAJ4AAAAAAAAAAAArwLoAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T07:32:09.056Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ChiTietTienSuBenhController.cs",
-              "DocumentMoniker": "D:\\SongAn\\EhisMobile\\API\\API\\Controllers\\ChiTietTienSuBenhController.cs",
-              "RelativeDocumentMoniker": "API\\Controllers\\ChiTietTienSuBenhController.cs",
-              "ToolTip": "D:\\SongAn\\EhisMobile\\API\\API\\Controllers\\ChiTietTienSuBenhController.cs",
-              "RelativeToolTip": "API\\Controllers\\ChiTietTienSuBenhController.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAkwEoAAAAAAAAAAAAAAA==",
+              "Title": "NotificationController.cs",
+              "DocumentMoniker": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test23\\EhisMobile\\API\\API\\Controllers\\NotificationController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\NotificationController.cs",
+              "ToolTip": "D:\\Hocs\\developer\\SongAn\\EhisMobile\\test23\\EhisMobile\\API\\API\\Controllers\\NotificationController.cs",
+              "RelativeToolTip": "API\\Controllers\\NotificationController.cs",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAkwHsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T03:45:53.258Z",
+              "WhenOpened": "2024-10-29T03:16:13.683Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SkdtHoSo4210Service.cs",
-              "DocumentMoniker": "D:\\SongAn\\EhisMobile\\API\\Service\\SkdtHoSo4210Service.cs",
-              "RelativeDocumentMoniker": "Service\\SkdtHoSo4210Service.cs",
-              "ToolTip": "D:\\SongAn\\EhisMobile\\API\\Service\\SkdtHoSo4210Service.cs",
-              "RelativeToolTip": "Service\\SkdtHoSo4210Service.cs",
-              "ViewState": "AgIAAIoAAAAAAAAAAAAjwJsAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T04:39:30.164Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MDPDbContext.cs",
-              "DocumentMoniker": "D:\\SongAn\\EhisMobile\\API\\Data\\EF\\MDPDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\EF\\MDPDbContext.cs",
-              "ToolTip": "D:\\SongAn\\EhisMobile\\API\\Data\\EF\\MDPDbContext.cs",
-              "RelativeToolTip": "Data\\EF\\MDPDbContext.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAxwEMAAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T04:29:17.693Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\SongAn\\EhisMobile\\API\\API\\Program.cs",
-              "RelativeDocumentMoniker": "API\\Program.cs",
-              "ToolTip": "D:\\SongAn\\EhisMobile\\API\\API\\Program.cs",
-              "RelativeToolTip": "API\\Program.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAAAFQAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T08:41:24.337Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Repository.cs",
-              "DocumentMoniker": "D:\\SongAn\\EhisMobile\\API\\Data\\EF\\Repository.cs",
-              "RelativeDocumentMoniker": "Data\\EF\\Repository.cs",
-              "ToolTip": "D:\\SongAn\\EhisMobile\\API\\Data\\EF\\Repository.cs",
-              "RelativeToolTip": "Data\\EF\\Repository.cs",
-              "ViewState": "AgIAAH8AAAAAAAAAAAAYwJEAAABMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-22T03:40:49.049Z"
             }
           ]
         }

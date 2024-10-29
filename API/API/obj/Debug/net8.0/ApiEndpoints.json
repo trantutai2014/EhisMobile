@@ -89,11 +89,6 @@
         "Name": "loai",
         "Type": "System.String",
         "IsRequired": false
-      },
-      {
-        "Name": "p",
-        "Type": "System.DateTime",
-        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -296,6 +291,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.NotificationController",
+    "Method": "UpdateAllIsView",
+    "RelativePath": "api/Notification/updateAllIsView",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
