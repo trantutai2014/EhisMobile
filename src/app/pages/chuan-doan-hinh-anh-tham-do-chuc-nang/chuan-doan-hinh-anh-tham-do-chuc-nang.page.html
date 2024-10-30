@@ -3,41 +3,27 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title style="font-size: larger;"> Chuẩn đoán hình ảnh </ion-title>
+    <ion-title>Chuẩn đoán hình ảnh</ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content class="ion-padding">
-  <ng-container *ngIf="items && items.length > 0; else noInfo">
-    <ion-grid *ngFor="let item of items">
-      <ion-row>
-        <ion-col>
-          <ion-label class="tieu-de-mo-ta">Mã:</ion-label>
-          <ion-label *ngIf="item.ma">{{ item.ma }}</ion-label>
-          <ion-label *ngIf="!item.ma">Không có thông tin</ion-label>
-        </ion-col>
-        <ion-col>
-          <ion-label class="tieu-de-mo-ta">Tên:</ion-label>
-          <ion-label *ngIf="item.ten">{{ item.ten }}</ion-label>
-          <ion-label *ngIf="!item.ten">Không có thông tin</ion-label>
-        </ion-col>
-        <ion-col>
-          <ion-label class="tieu-de-mo-ta">Mô tả:</ion-label>
-          <ion-label *ngIf="item.moTa">{{ item.moTa }}</ion-label>
-          <ion-label *ngIf="!item.moTa">Không có thông tin</ion-label>
-        </ion-col>
-        <ion-col>
-          <ion-label class="tieu-de-mo-ta">Kết luận:</ion-label>
-          <ion-label *ngIf="item.ketLuan">{{ item.ketLuan }}</ion-label>
-          <ion-label *ngIf="!item.ketLuan">Không có thông tin</ion-label>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+  <ng-container *ngFor="let item of items">
+    <ion-label class="label-left" color="dark">Mã: 
+      <ion-label color="medium">{{ item.ma|| 'Không có thông tin' }}</ion-label>
+    </ion-label>
+    <ion-label class="label-left" color="dark">Tên: 
+      <ion-label color="medium">{{ item.ten|| 'Không có thông tin' }}</ion-label>
+    </ion-label>
+    <ion-label class="label-left" color="dark">Ngày: 
+      <ion-label color="medium">{{ item.ngayKetQua|| 'Không có thông tin' }}</ion-label>
+    </ion-label>
+    <ion-label class="label-left" color="dark">Mô tả: 
+      <ion-label color="medium">{{ item.moTa|| 'Không có thông tin' }}</ion-label>
+    </ion-label>
+    <ion-label class="label-left" color="dark">Kết Luận: 
+      <ion-label color="medium">{{ item.ketLuan|| 'Không có thông tin' }}</ion-label>
+    </ion-label>
   </ng-container>
-
-  <ng-template #noInfo>
-    <ion-label color="medium">(Không có thông tin)</ion-label>
-  </ng-template>
 
   <ion-nav-link router-direction="forward" [component]="component">
     <ion-button expand="block" color="primary" style="margin-top: 20px;">Thuốc đã điều trị, đơn thuốc đã kê</ion-button>

@@ -36,7 +36,7 @@ namespace API.Controllers
       _context.RemoveRange(thongBaos);
       _context.SaveChangesAsync();
 
-      return Ok("xóa thành công!");
+      return Ok();
     }
 
     [HttpGet("{cccd}")]
@@ -103,6 +103,33 @@ namespace API.Controllers
 
       }
     }
+
+    // cập nhật trạng thái xem thông báo
+    [HttpPost("updateAllIsView")]
+    public async Task<IActionResult> UpdateAllIsView()
+    {
+      // Lấy tất cả các bản ghi trong bảng ThongBaos
+      var thongBaos = await _context.ThongBaos.ToListAsync();
+
+      if (thongBaos.Count > 0)
+      {
+        // Cập nhật IsView = true cho tất cả các bản ghi
+        foreach (var thongBao in thongBaos)
+        {
+          thongBao.IsView = true;
+        }
+
+        // Lưu thay đổi vào cơ sở dữ liệu
+        await _context.SaveChangesAsync();
+
+        return Ok();
+      }
+      else
+      {
+        return NotFound("No records found to update.");
+      }
+    }
+
   }
 
   // Class để nhận dữ liệu từ yêu cầu POST

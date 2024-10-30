@@ -185,7 +185,7 @@ namespace Service
 
 
         /// không sài
-        public async Task<LichSuKham_TomTat_ResModel> GetTomTatKCB(string id, DateTime ngayRa)
+        public async Task<LichSuKham_TomTat_ResModel> GetTomTatKCB(string id)
         {
       return null;
       var result= _repository.GetAll<DS_TomTat_HoSoBA130>(s => s.ThongTinKhamChuaBenhID == id)

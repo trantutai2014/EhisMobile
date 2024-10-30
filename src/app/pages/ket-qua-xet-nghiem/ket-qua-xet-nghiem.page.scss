@@ -1,47 +1,21 @@
-.label-left {
-    display: block;
- padding-top: 10px;
- font-weight: bold;
-
+.table-header {
+  background-color: #f1f1f1;
+  font-weight: bold;
+  text-align: center;
 }
 
-ion-card-title {
-    font-weight: bold;
+.test-info {
+  background-color: #e9ecef;
+  font-weight: bold;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
-ion-list{
-    padding: 0;
-    ion-item{
-        min-height: 30px;
-        ion-label{
-            margin: 0;
-            padding-bottom: 5px;
-
-        }
-    }
-    
+.sub-item {
+  color: #666;
 }
 
-.heading1 {
-    background-color: #cbdad9;
-    font-weight: bolder;
-  }
-
-  ion-col{
-    color: #000000;
-    border: solid 1px #e3e9f0;
-
-  }
-
-  .date-time {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .date-time span {
-    margin-left: auto; /* Đẩy thẻ span sang bên phải*/
-    color:#1c1f24;
-    font-weight: lighter;
-  }
-  
+ion-col {
+  border-bottom: 1px solid #ddd;
+  padding: 8px 0;
+}

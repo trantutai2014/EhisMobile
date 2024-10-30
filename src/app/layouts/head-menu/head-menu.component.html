@@ -12,8 +12,8 @@
           <ion-searchbar (click)="goToDV()" placeholder="Tìm kiếm..." class="custom-searchbar"></ion-searchbar>
         </ion-col>
         <ion-col size="auto">
-          <ion-button fill="clear" id="open-modal-thong-bao">
-            <ion-icon name="notifications-outline"></ion-icon>
+          <ion-button (click)="reLoadData()" fill="clear" id="open-modal-thong-bao">
+            <ion-icon name="notifications-outline" ></ion-icon>
             <ion-badge color="danger" *ngIf="unreadCount > 0">{{ unreadCount }}</ion-badge>          
           </ion-button>
           <ion-content class="ion-padding">
@@ -34,7 +34,9 @@
                     <ion-card *ngFor="let item of items">
                       <ion-card-header>
                         <ion-card-subtitle>{{item.dateCreated | date:'dd/MM/yyyy HH:mm'}}</ion-card-subtitle>
-                        <ion-card-subtitle>{{item.isView ? 'Đã đọc' : 'Chưa đọc' }}    </ion-card-subtitle>
+                        <ion-card-subtitle  [ngClass]="{'highlight': item.isView === false,  'read': item.isView === true}">
+                          {{item.isView ? 'Đã đọc' : 'Chưa đọc' }}  
+                          </ion-card-subtitle>
                       </ion-card-header>
                      <ion-card-content>
                       {{item.content}}
@@ -42,9 +44,10 @@
                     </ion-card>
                     <ion-list [inset]="true">
                       <!-- từ websocket -->
-                      <ion-item *ngFor="let message of messages">
-                        <ion-label>{{ message.content }}({{ message.isRead ? 'Đã đọc' : 'Chưa đọc' }})</ion-label>
-                      </ion-item>
+                      <!-- <ion-item *ngFor="let message of messages" >
+                        <ion-label  [ngClass]="{'highlight': message.isRead === false}">
+                          {{ message.content }} ({{ message.isRead ? 'Đã đọc' : 'Chưa đọc' }})</ion-label>
+                      </ion-item> -->
 
                       <!-- từ database -->
                       <ion-item >

@@ -103,17 +103,17 @@ namespace API.Controllers
             }
         }
         [HttpGet("tom-tat")]
-        public async Task<IActionResult> GetTomTatKCB([FromQuery] string id, [FromQuery] LoaiHSSKDTEnum loai, [FromQuery] DateTime p)
+        public async Task<IActionResult> GetTomTatKCB([FromQuery] string id, [FromQuery] LoaiHSSKDTEnum loai)
         {
             id = KeyHelper.Decrypt(id);
             if (loai == LoaiHSSKDTEnum.HS4210)
             {
-                var data = await _skdtHoSo4210service.GetTomTatKCB(id, p);
+                var data = await _skdtHoSo4210service.GetTomTatKCB(id);
                 return Ok(data);
             }
             else
             {
-                var data = await _skdtHoSoservice.GetTomTatKCB(id, p);
+                var data = await _skdtHoSoservice.GetTomTatKCB(id);
                 return Ok(data);
             }
         }

@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
@@ -18,35 +18,60 @@ export class PhauThuatThuThuatDaThucHienPage implements OnInit {
   private apiUrl = `${environment.BASE_API}/api/ChiTietTienSuBenh/pttt/`;
   component = ChuanDoanHinhAnhThamDoChucNangPage;
 
-  constructor(private router: Router,  
-              private route: ActivatedRoute,   
-              private http: HttpClient) { }
+  ngayRa: Date = new Date();
+  id: any;
+  loai: any;
 
-  ngOnInit(): void {
+  constructor(
+    private router: Router,  
+    private route: ActivatedRoute,   
+    private http: HttpClient
+  ) {}
+
+  ngOnInit() {
     this.route.queryParams.subscribe(params => {
-      const id = params['id'];
-      const loaiHoSo = params['loaiHoSo'];
-  
-      if (id && loaiHoSo) {
-        this.getPTTTData(id, loaiHoSo);
+      this.id = params['id']; // Get 'id' from the queryParams
+      this.loai = params['loaiHoSo']; // Get 'loaiHoSo' from the queryParams
+      if (this.id && this.loai) {
+        this.getUserInfo(); // Call the API with correct id and loaiHoSo
       } else {
-        console.error('Missing required parameters: id and loaiHoSo');
+        console.error('ID or loaiHoSo not found in URL');
       }
     });
   }
   
-  getPTTTData(id: string, loaiHoSo: string): void {
+  getUserInfo(): void {
     this.loading = true;
-    this.http.get<any[]>(`${this.apiUrl}?id=${id}&loai=${loaiHoSo}`).subscribe({
-      next: (data) => {
+  
+    if (!this.id || !this.loai) {
+      this.loading = false;
+      console.error('ID or loaiHoSo is missing');
+      return;
+    }
+  
+    const queryParams = {
+      id: this.id,          // Use the id
+      loai: this.loai,      // Use the loaiHoSo from lich-su-kham
+      p: this.ngayRa.toISOString()  // Date formatted as string
+    };
+  
+    const params = new HttpParams()
+      .set('id', queryParams.id)
+      .set('loai', queryParams.loai)
+      .set('p', queryParams.p);
+  
+    this.http.get(this.apiUrl, { params }).subscribe({
+      next: (data: any) => {
         this.loading = false;
-        this.items = data; // Save the data from API response
+        this.items = data; // Handle API response
+        console.log(data);
       },
       error: (error) => {
         this.loading = false;
-        this.error = 'Failed to load data';
-        console.error('Error fetching data:', error);
+        this.error = 'Failed to load user data';
+        console.error('Error:', error);
       }
     });
   }
+  
 }

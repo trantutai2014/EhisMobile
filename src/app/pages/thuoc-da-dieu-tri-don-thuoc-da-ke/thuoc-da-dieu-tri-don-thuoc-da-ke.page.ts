@@ -1,6 +1,6 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { TomTatHoSoBenhAnTinhTrangNguoiBenhPage } from '../tom-tat-ho-so-benh-an-tinh-trang-nguoi-benh/tom-tat-ho-so-benh-an-tinh-trang-nguoi-benh.page';
 
@@ -16,34 +16,60 @@ export class ThuocDaDieuTriDonThuocDaKePage implements OnInit {
   private apiUrl = `${environment.BASE_API}/api/ChiTietTienSuBenh/thuoc/`;
   component = TomTatHoSoBenhAnTinhTrangNguoiBenhPage;
 
-  constructor(private http: HttpClient, private route: ActivatedRoute) {}
+  ngayRa: Date = new Date();
+  id: any;
+  loai: any;
 
-  ngOnInit(): void {
+  constructor(
+    private router: Router,  
+    private route: ActivatedRoute,   
+    private http: HttpClient
+  ) {}
+
+  ngOnInit() {
     this.route.queryParams.subscribe(params => {
-      const id = params['id']; // Retrieve 'id' from query params
-      const loaiHoSo = params['loaiHoSo']; // Retrieve 'loaiHoSo' from query params
-
-      if (id && loaiHoSo) {
-        this.getThuocData(id, loaiHoSo);
+      this.id = params['id']; // Get 'id' from the queryParams
+      this.loai = params['loaiHoSo']; // Get 'loaiHoSo' from the queryParams
+      if (this.id && this.loai) {
+        this.getUserInfo(); // Call the API with correct id and loaiHoSo
       } else {
-        console.error('Missing required parameters: id and loaiHoSo');
+        console.error('ID or loaiHoSo not found in URL');
       }
     });
   }
-
-  getThuocData(id: string, loaiHoSo: string): void {
+  
+  getUserInfo(): void {
     this.loading = true;
-
-    this.http.get(`${this.apiUrl}?id=${id}&loai=${loaiHoSo}`).subscribe({
+  
+    if (!this.id || !this.loai) {
+      this.loading = false;
+      console.error('ID or loaiHoSo is missing');
+      return;
+    }
+  
+    const queryParams = {
+      id: this.id,          // Use the id
+      loai: this.loai,      // Use the loaiHoSo from lich-su-kham
+      p: this.ngayRa.toISOString()  // Date formatted as string
+    };
+  
+    const params = new HttpParams()
+      .set('id', queryParams.id)
+      .set('loai', queryParams.loai)
+      .set('p', queryParams.p);
+  
+    this.http.get(this.apiUrl, { params }).subscribe({
       next: (data: any) => {
         this.loading = false;
-        this.items = data; // Assuming the API directly returns the array of drugs
+        this.items = data; // Handle API response
+        console.log(data);
       },
       error: (error) => {
         this.loading = false;
-        this.error = 'Failed to load drug data';
-        console.error('Error fetching drug data:', error);
+        this.error = 'Failed to load user data';
+        console.error('Error:', error);
       }
     });
   }
+  
 }

@@ -83,12 +83,22 @@ this.getThongBaoByCccd();
     this.webSocketService.sendMessage(message); // Send message to server
   }
   markAllAsRead() {
-    this.messages.forEach(message => {
-      message.isRead = true;
+    this.http.post(`${this.apiUrl}updateAllIsView`, {}).subscribe({
+      next: () => {
+        this.getThongBaoByCccd();  // Tải lại danh sách thông báo sau khi cập nhật
+      },
+      error: (err) => {
+        console.error('Error marking all as read:', err);
+        alert('Có lỗi xảy ra khi đánh dấu tất cả là đã đọc.');
+      }
     });
-
-    this.updateUnreadCount();
   }
+  
+  reLoadData(){
+    this.getThongBaoByCccd();
+    console.log("dsd");
+  }
+  
   
   updateUnreadCount() {
     const unreadMessages = this.messages.filter(message => !message.isRead);
@@ -100,13 +110,9 @@ this.getThongBaoByCccd();
     this.http.delete(`${this.apiUrl}${cccd}`).subscribe({
       next: () => {
         this.getThongBaoByCccd();
-        // Xóa tất cả tin nhắn từ giao diện sau khi API xóa thành công
-        this.messages = [];
-        this.updateUnreadCount(); // Cập nhật số lượng tin nhắn chưa đọc (nên là 0)
+      
       },
-      error: (err) => {
-        console.error('Lỗi khi xóa thông báo:', err);
-      }
+     
     });
   }
   

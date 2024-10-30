@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "D:\\SongAn\\EhisMobile\\API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{13564404-4BC6-45F6-B3D7-042A4D9CC8F2}|API\\API.csproj|d:\\songan\\ehismobile\\api\\api\\controllers\\chitiettiensubenhcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{13564404-4BC6-45F6-B3D7-042A4D9CC8F2}|API\\API.csproj|solutionrelative:api\\controllers\\chitiettiensubenhcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C349B7AB-35F2-4E9F-8BBF-92BE7CBCBADF}|Service\\Service.csproj|d:\\songan\\ehismobile\\api\\service\\skdthoso130service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C349B7AB-35F2-4E9F-8BBF-92BE7CBCBADF}|Service\\Service.csproj|solutionrelative:service\\skdthoso130service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C349B7AB-35F2-4E9F-8BBF-92BE7CBCBADF}|Service\\Service.csproj|d:\\songan\\ehismobile\\api\\service\\skdthoso4210service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C349B7AB-35F2-4E9F-8BBF-92BE7CBCBADF}|Service\\Service.csproj|solutionrelative:service\\skdthoso4210service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{13564404-4BC6-45F6-B3D7-042A4D9CC8F2}|API\\API.csproj|d:\\songan\\ehismobile\\api\\api\\controllers\\chitiettiensubenhcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{13564404-4BC6-45F6-B3D7-042A4D9CC8F2}|API\\API.csproj|solutionrelative:api\\controllers\\chitiettiensubenhcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B468F22D-8BCC-4C42-A04B-1F40D50731E8}|Data\\Data.csproj|d:\\songan\\ehismobile\\api\\data\\models\\giayravien130.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B468F22D-8BCC-4C42-A04B-1F40D50731E8}|Data\\Data.csproj|solutionrelative:data\\models\\giayravien130.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B468F22D-8BCC-4C42-A04B-1F40D50731E8}|Data\\Data.csproj|d:\\songan\\ehismobile\\api\\data\\models\\giayhenkhamlai130.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B468F22D-8BCC-4C42-A04B-1F40D50731E8}|Data\\Data.csproj|solutionrelative:data\\models\\giayhenkhamlai130.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B468F22D-8BCC-4C42-A04B-1F40D50731E8}|Data\\Data.csproj|d:\\songan\\ehismobile\\api\\data\\ef\\mdpdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,46 +58,56 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "GiayRaVien130.cs",
+              "DocumentMoniker": "D:\\SongAn\\EhisMobile\\API\\Data\\Models\\GiayRaVien130.cs",
+              "RelativeDocumentMoniker": "Data\\Models\\GiayRaVien130.cs",
+              "ToolTip": "D:\\SongAn\\EhisMobile\\API\\Data\\Models\\GiayRaVien130.cs",
+              "RelativeToolTip": "Data\\Models\\GiayRaVien130.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAYwBAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T07:43:46.083Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GiayHenKhamLai130.cs",
+              "DocumentMoniker": "D:\\SongAn\\EhisMobile\\API\\Data\\Models\\GiayHenKhamLai130.cs",
+              "RelativeDocumentMoniker": "Data\\Models\\GiayHenKhamLai130.cs",
+              "ToolTip": "D:\\SongAn\\EhisMobile\\API\\Data\\Models\\GiayHenKhamLai130.cs",
+              "RelativeToolTip": "Data\\Models\\GiayHenKhamLai130.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T07:43:45.173Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "SkdtHoSo130Service.cs",
               "DocumentMoniker": "D:\\SongAn\\EhisMobile\\API\\Service\\SkdtHoSo130Service.cs",
               "RelativeDocumentMoniker": "Service\\SkdtHoSo130Service.cs",
               "ToolTip": "D:\\SongAn\\EhisMobile\\API\\Service\\SkdtHoSo130Service.cs",
               "RelativeToolTip": "Service\\SkdtHoSo130Service.cs",
-              "ViewState": "AgIAAJ4AAAAAAAAAAAArwLoAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAMkAAAAAAAAAAAAAAOEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-28T07:32:09.056Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ChiTietTienSuBenhController.cs",
               "DocumentMoniker": "D:\\SongAn\\EhisMobile\\API\\API\\Controllers\\ChiTietTienSuBenhController.cs",
               "RelativeDocumentMoniker": "API\\Controllers\\ChiTietTienSuBenhController.cs",
               "ToolTip": "D:\\SongAn\\EhisMobile\\API\\API\\Controllers\\ChiTietTienSuBenhController.cs",
               "RelativeToolTip": "API\\Controllers\\ChiTietTienSuBenhController.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAkwEoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAowHMAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T03:45:53.258Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-28T03:45:53.258Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SkdtHoSo4210Service.cs",
-              "DocumentMoniker": "D:\\SongAn\\EhisMobile\\API\\Service\\SkdtHoSo4210Service.cs",
-              "RelativeDocumentMoniker": "Service\\SkdtHoSo4210Service.cs",
-              "ToolTip": "D:\\SongAn\\EhisMobile\\API\\Service\\SkdtHoSo4210Service.cs",
-              "RelativeToolTip": "Service\\SkdtHoSo4210Service.cs",
-              "ViewState": "AgIAAIoAAAAAAAAAAAAjwJsAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T04:39:30.164Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "MDPDbContext.cs",
               "DocumentMoniker": "D:\\SongAn\\EhisMobile\\API\\Data\\EF\\MDPDbContext.cs",
               "RelativeDocumentMoniker": "Data\\EF\\MDPDbContext.cs",
@@ -105,7 +119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\SongAn\\EhisMobile\\API\\API\\Program.cs",
               "RelativeDocumentMoniker": "API\\Program.cs",
@@ -117,7 +131,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Repository.cs",
               "DocumentMoniker": "D:\\SongAn\\EhisMobile\\API\\Data\\EF\\Repository.cs",
               "RelativeDocumentMoniker": "Data\\EF\\Repository.cs",

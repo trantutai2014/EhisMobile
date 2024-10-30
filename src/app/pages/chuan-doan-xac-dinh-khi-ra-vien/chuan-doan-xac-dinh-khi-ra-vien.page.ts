@@ -43,12 +43,15 @@ export class ChuanDoanXacDinhKhiRaVienPage implements OnInit {
       next: (data:any) => {
         this.loading = false; // Set loading indicator to false
           this.items=data.data;
+          console.log(data);
       },
       error: (error) => {
         this.loading = false; // Set loading indicator to false
         this.error = 'Failed to load user roles';
       }
+      
     });
+   
   }
 
 }

@@ -1,66 +1,25 @@
-
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title style="font-size: larger;">Tóm tắt hồ sơ bệnh án </ion-title>
+    <ion-title style="font-size: larger;">Tóm tắt hồ sơ bệnh án</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
-  <ng-container *ngIf="items && items.length > 0; else noInfo">
-    <ion-list>
-      <ion-item>
-        <ion-label color="dark">Lý do đến khám bệnh:</ion-label>
-        <ion-text color="medium">{{ items.lyDoDenKham || 'Không có thông tin' }}</ion-text>
-      </ion-item>
-  
-      <ion-item>
-        <ion-label color="dark">CSKCB đã chuyển người bệnh đi:</ion-label>
-        <ion-text color="medium">{{ items.tenCSKCBChuyenDi || 'Không có thông tin' }}</ion-text>
-      </ion-item>
-  
-      <ion-item>
-        <ion-label color="dark">Ngày đến khám:</ion-label>
-        <ion-text color="medium">{{ items.ngayKham ? (items.ngayKham | date:'dd/MM/yyyy') : 'Không có thông tin' }}</ion-text>
-      </ion-item>
-  
-      <ion-item>
-        <ion-label color="dark">Hình thức khám, chữa bệnh:</ion-label>
-        <ion-text color="medium">{{ items.hinhThucKham || 'Không có thông tin' }}</ion-text>
-      </ion-item>
-  
-      <ion-item>
-        <ion-label color="dark">Ngày giờ vào viện:</ion-label>
-        <ion-text color="medium">{{ items.ngayVaoVien ? (items.ngayVaoVien | date:'dd/MM/yyyy HH:mm') : 'Không có thông tin' }}</ion-text>
-      </ion-item>
-  
-      <ion-item>
-        <ion-label color="dark">Ngày giờ ra viện:</ion-label>
-        <ion-text color="medium">{{ items.ngayRa ? (items.ngayRa | date:'dd/MM/yyyy HH:mm') : 'Không có thông tin' }}</ion-text>
-      </ion-item>
-  
-      <ion-item>
-        <ion-label color="dark">Kết quả điều trị:</ion-label>
-        <ion-text color="medium">{{ items.ketQua || 'Không có thông tin' }}</ion-text>
-      </ion-item>
-  
-      <ion-item>
-        <ion-label color="dark">Tình trạng ra viện:</ion-label>
-        <ion-text color="medium">{{ items.tinhTrang || 'Không có thông tin' }}</ion-text>
-      </ion-item>
-  
-      <ion-item>
-        <ion-label color="dark">CSKCB nơi sẽ chuyển người bệnh đến:</ion-label>
-        <ion-text color="medium">{{ items.tenCSKCBChuyenDen || 'Không có thông tin' }}</ion-text>
-      </ion-item>
-    </ion-list>
+    <ng-container *ngFor="let item of items">
+    <ion-label class="label-left" color="dark">Tóm tắt tiền sử, bệnh sử và diễn biến lâm sàng:
+      <ion-label color="medium">{{ item.tomTatTienSu || 'Không có thông tin' }}</ion-label>
+    </ion-label>
+    <ion-label class="label-left" color="dark">Tóm tắt kết quả cận lâm sàng có giá trị:
+      <ion-label color="medium">{{ item.tomTatCLS|| 'Không có thông tin' }}</ion-label>
+    </ion-label>
+    <ion-label class="label-left" color="dark">Phương pháp điều trị đã thực hiện:
+      <ion-label color="medium">{{ item.phuongPhapDieuTri|| 'Không có thông tin' }}</ion-label>
+    </ion-label>
+    <ion-label class="label-left" color="dark">Hướng điều trị tiếp theo, đơn thuốc, lịch dặn tái khám:
+      <ion-label color="medium">{{ item.bacSi|| 'Không có thông tin' }}</ion-label>
+    </ion-label>
   </ng-container>
-  <ng-template #noInfo>
-    <ion-label color="medium">(Không có thông tin)</ion-label>
-  </ng-template>
-</ion-content> 
-
-
-
+</ion-content>

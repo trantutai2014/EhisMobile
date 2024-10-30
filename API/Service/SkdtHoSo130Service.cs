@@ -206,10 +206,9 @@ namespace Service
         }
 
         //
-        public async Task<LichSuKham_TomTat_ResModel> GetTomTatKCB(string id, DateTime ngayRa)
+        public async Task<LichSuKham_TomTat_ResModel> GetTomTatKCB(string id)
         {
-            var part = DateHelper.GetPartion(ngayRa);
-            var result = _repository.GetAll<DS_TomTat_HoSoBA130>(s => s.ThongTinKhamChuaBenhID == id && s.NgayRa >= part.StartDate && s.NgayRa <= part.EndDate)
+            var result = _repository.GetAll<DS_TomTat_HoSoBA130>(s => s.ThongTinKhamChuaBenhID == id)
                 .Select(s => new LichSuKham_TomTat_ResModel()
                 {
                     TomTatTienSu = s.QT_BENHLY,

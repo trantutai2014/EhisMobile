@@ -1,0 +1,13 @@
+D:\SongAn\EhisMobile\API\Common\bin\Release\net8.0\Common.deps.json
+D:\SongAn\EhisMobile\API\Common\bin\Release\net8.0\Common.dll
+D:\SongAn\EhisMobile\API\Common\bin\Release\net8.0\Common.pdb
+D:\SongAn\EhisMobile\API\Common\obj\Release\net8.0\Common.csproj.AssemblyReference.cache
+D:\SongAn\EhisMobile\API\Common\obj\Release\net8.0\Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\SongAn\EhisMobile\API\Common\obj\Release\net8.0\Common.AssemblyInfoInputs.cache
+D:\SongAn\EhisMobile\API\Common\obj\Release\net8.0\Common.AssemblyInfo.cs
+D:\SongAn\EhisMobile\API\Common\obj\Release\net8.0\Common.csproj.CoreCompileInputs.cache
+D:\SongAn\EhisMobile\API\Common\obj\Release\net8.0\Common.sourcelink.json
+D:\SongAn\EhisMobile\API\Common\obj\Release\net8.0\Common.dll
+D:\SongAn\EhisMobile\API\Common\obj\Release\net8.0\refint\Common.dll
+D:\SongAn\EhisMobile\API\Common\obj\Release\net8.0\Common.pdb
+D:\SongAn\EhisMobile\API\Common\obj\Release\net8.0\ref\Common.dll
