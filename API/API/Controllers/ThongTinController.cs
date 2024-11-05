@@ -1,4 +1,5 @@
 using API.Mapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Service;
 
@@ -6,6 +7,7 @@ namespace YourNamespace.Controllers
 {
   [ApiController]
   [Route("api/[controller]")]
+  [Authorize]
   public class ThongTinController : ControllerBase
   {
     private readonly IThongTinService _ThongTinService;

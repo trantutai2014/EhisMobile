@@ -58,9 +58,10 @@ namespace Service
       var tokenDescriptor = new SecurityTokenDescriptor
       {
         Subject = new ClaimsIdentity(new[] { new Claim(ClaimTypes.Name, userId) }),
-        Expires = DateTime.UtcNow.AddMinutes(_accessTokenExpiration),
-        SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
+        Expires = DateTime.Now.AddHours(_accessTokenExpiration),
+        SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha512Signature) // Adjust to match JwtBearer settings
       };
+
       var token = tokenHandler.CreateToken(tokenDescriptor);
       return tokenHandler.WriteToken(token);
     }

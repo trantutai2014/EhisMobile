@@ -2,7 +2,11 @@
   <ion-card *ngFor="let item of items; let i = index">
     <div button (click)="goToDSKhamChuaBenh(i)">
     <ion-card-content  >
-      <ion-badge slot="start">{{i+1}}</ion-badge>
+      <ion-card-header style="padding-left: 0px">
+        <ion-card-title class="" style="  align-items: center ; display: flex; ">
+          <div>Lần khám:</div> <ion-badge color="primary">{{i + 1}}</ion-badge>
+        </ion-card-title>
+      </ion-card-header>
     <ion-label  class="label-left" color="primary" >{{item.ngayVao | date:'dd/MM/yyyy'}} - {{item.ngayRa |  date:'dd/MM/yyyy'}}  </ion-label>
     <ion-label color="medium">Ghi nhận lúc: {{item.ngayVao | date:'dd/MM/yyyy HH:mm'}} </ion-label>
       <ion-label class="label-left" color="dark">Nơi khám chữa bệnh:   <ion-label color="medium"></ion-label>{{item.noiKham}} </ion-label>

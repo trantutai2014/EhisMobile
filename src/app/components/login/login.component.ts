@@ -81,10 +81,10 @@ export class LoginComponent implements OnInit {
       this.qrScannerInstance = new QrScanner(this.videoElem.nativeElement, async (result) => {
         this.qrScannerInstance.stop();
         const code = result.data.toString();
-        const response = await firstValueFrom(this.http.get<{ token: string, cccd: string }>(`${this.apiUrl}${code}`));
-  
+        const response = await firstValueFrom(this.http.get<{ token: any, cccd: string }>(`${this.apiUrl}${code}`));
+  console.log(response)
         if (response && response.token && response.cccd) {
-          localStorage.setItem('token', response.token);
+          localStorage.setItem('token', response.token.result.accessToken);
           localStorage.setItem('cccd', response.cccd);
           this.cccd = response.cccd;
           this.router.navigate([UrlConstants.THONGTINHANHCHINH.replace(':cccd', this.cccd)]);

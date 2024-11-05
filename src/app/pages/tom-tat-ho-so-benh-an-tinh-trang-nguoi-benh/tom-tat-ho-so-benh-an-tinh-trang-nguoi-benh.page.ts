@@ -2,6 +2,13 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
+import { ChiSoTheoDoiChinhPage } from '../chi-so-theo-doi-chinh/chi-so-theo-doi-chinh.page';
+import { ChuanDoanHinhAnhThamDoChucNangPage } from '../chuan-doan-hinh-anh-tham-do-chuc-nang/chuan-doan-hinh-anh-tham-do-chuc-nang.page';
+import { ChuanDoanXacDinhKhiRaVienPage } from '../chuan-doan-xac-dinh-khi-ra-vien/chuan-doan-xac-dinh-khi-ra-vien.page';
+import { ThongTinXetNghiemPage } from '../ket-qua-xet-nghiem/ket-qua-xet-nghiem.page';
+import { PhauThuatThuThuatDaThucHienPage } from '../phau-thuat-thu-thuat-da-thuc-hien/phau-thuat-thu-thuat-da-thuc-hien.page';
+import { ThongTinDotKhamChuaBenhPage } from '../thong-tin-dot-kham-chua-benh/thong-tin-dot-kham-chua-benh.page';
+import { ThuocDaDieuTriDonThuocDaKePage } from '../thuoc-da-dieu-tri-don-thuoc-da-ke/thuoc-da-dieu-tri-don-thuoc-da-ke.page';
 
 @Component({
   selector: 'app-tom-tat-ho-so-benh-an-tinh-trang-nguoi-benh',
@@ -17,6 +24,13 @@ export class TomTatHoSoBenhAnTinhTrangNguoiBenhPage implements OnInit {
   ngayRa: Date = new Date();
   id: any;
   loai: any;
+  component1 = ThongTinDotKhamChuaBenhPage;
+  component2 = ChuanDoanXacDinhKhiRaVienPage;
+  component3 = ChiSoTheoDoiChinhPage;
+  component4 = ThongTinXetNghiemPage;
+  component5 = ChuanDoanHinhAnhThamDoChucNangPage;
+  component6 = PhauThuatThuThuatDaThucHienPage;
+  component7 = ThuocDaDieuTriDonThuocDaKePage
 
   constructor(
     private router: Router,  

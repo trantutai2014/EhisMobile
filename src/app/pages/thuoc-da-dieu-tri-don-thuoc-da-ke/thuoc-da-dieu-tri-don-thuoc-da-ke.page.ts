@@ -3,6 +3,12 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { TomTatHoSoBenhAnTinhTrangNguoiBenhPage } from '../tom-tat-ho-so-benh-an-tinh-trang-nguoi-benh/tom-tat-ho-so-benh-an-tinh-trang-nguoi-benh.page';
+import { ChiSoTheoDoiChinhPage } from '../chi-so-theo-doi-chinh/chi-so-theo-doi-chinh.page';
+import { ChuanDoanHinhAnhThamDoChucNangPage } from '../chuan-doan-hinh-anh-tham-do-chuc-nang/chuan-doan-hinh-anh-tham-do-chuc-nang.page';
+import { ChuanDoanXacDinhKhiRaVienPage } from '../chuan-doan-xac-dinh-khi-ra-vien/chuan-doan-xac-dinh-khi-ra-vien.page';
+import { ThongTinXetNghiemPage } from '../ket-qua-xet-nghiem/ket-qua-xet-nghiem.page';
+import { ThongTinDotKhamChuaBenhPage } from '../thong-tin-dot-kham-chua-benh/thong-tin-dot-kham-chua-benh.page';
+import { PhauThuatThuThuatDaThucHienPage } from '../phau-thuat-thu-thuat-da-thuc-hien/phau-thuat-thu-thuat-da-thuc-hien.page';
 
 @Component({
   selector: 'app-thuoc-da-dieu-tri-don-thuoc-da-ke',
@@ -14,7 +20,13 @@ export class ThuocDaDieuTriDonThuocDaKePage implements OnInit {
   items: any[] = []; // Updated to an array to handle the list of drugs
   error: string | undefined;
   private apiUrl = `${environment.BASE_API}/api/ChiTietTienSuBenh/thuoc/`;
-  component = TomTatHoSoBenhAnTinhTrangNguoiBenhPage;
+  component1 = ThongTinDotKhamChuaBenhPage;
+  component2 = ChuanDoanXacDinhKhiRaVienPage;
+  component3 = ChiSoTheoDoiChinhPage;
+  component4 = ThongTinXetNghiemPage;
+  component5 = ChuanDoanHinhAnhThamDoChucNangPage;
+  component6 = PhauThuatThuThuatDaThucHienPage;
+  component7 = TomTatHoSoBenhAnTinhTrangNguoiBenhPage;
 
   ngayRa: Date = new Date();
   id: any;

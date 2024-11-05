@@ -25,7 +25,44 @@
     </ion-label>
   </ng-container>
 
-  <ion-nav-link router-direction="forward" [component]="component">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <ion-nav-link router-direction="forward" [component]="component1">
+          <ion-button expand="block" color="primary" style="margin-top: 20px;">Thông tin đợt khám chữa bệnh</ion-button>
+        </ion-nav-link>
+        </ion-col>
+      <ion-col size="6">
+  <ion-nav-link router-direction="forward" [component]="component2">
+    <ion-button expand="block" color="primary" style="margin-top: 20px;">Chỉ số theo dõi chính</ion-button>
+  </ion-nav-link>
+  </ion-col>
+  <ion-col size="6">
+  <ion-nav-link router-direction="forward" [component]="component3">
+    <ion-button expand="block" color="primary" style="margin-top: 20px;">Chuẩn đoán xác định khi ra viện</ion-button>
+  </ion-nav-link>
+  </ion-col>
+  <ion-col size="6">
+  <ion-nav-link router-direction="forward" [component]="component4">
+    <ion-button expand="block" color="primary" style="margin-top: 20px;">Kết quả xét nghiệm</ion-button>
+  </ion-nav-link>
+  </ion-col>
+  <ion-col size="6">
+  <ion-nav-link router-direction="forward" [component]="component5">
+    <ion-button expand="block" color="primary" style="margin-top: 20px;">Phẩu thuật đã thực hiện</ion-button>
+  </ion-nav-link>
+  </ion-col>
+  <ion-col size="6">
+  <ion-nav-link router-direction="forward" [component]="component6">
     <ion-button expand="block" color="primary" style="margin-top: 20px;">Thuốc đã điều trị, đơn thuốc đã kê</ion-button>
   </ion-nav-link>
+  </ion-col>
+  <ion-col size="12">
+  <ion-nav-link>
+    <ion-nav-link router-direction="forward" [component]="component7"></ion-nav-link>
+    <ion-button expand="block" color="primary" style="margin-top: 20px;">Tóm tắt hồ sơ bệnh án</ion-button>
+  </ion-nav-link>
+  </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

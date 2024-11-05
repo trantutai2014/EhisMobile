@@ -3,6 +3,12 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { ThuocDaDieuTriDonThuocDaKePage } from '../thuoc-da-dieu-tri-don-thuoc-da-ke/thuoc-da-dieu-tri-don-thuoc-da-ke.page';
+import { ChiSoTheoDoiChinhPage } from '../chi-so-theo-doi-chinh/chi-so-theo-doi-chinh.page';
+import { ChuanDoanXacDinhKhiRaVienPage } from '../chuan-doan-xac-dinh-khi-ra-vien/chuan-doan-xac-dinh-khi-ra-vien.page';
+import { ThongTinXetNghiemPage } from '../ket-qua-xet-nghiem/ket-qua-xet-nghiem.page';
+import { ThongTinDotKhamChuaBenhPage } from '../thong-tin-dot-kham-chua-benh/thong-tin-dot-kham-chua-benh.page';
+import { TomTatHoSoBenhAnTinhTrangNguoiBenhPage } from '../tom-tat-ho-so-benh-an-tinh-trang-nguoi-benh/tom-tat-ho-so-benh-an-tinh-trang-nguoi-benh.page';
+import { PhauThuatThuThuatDaThucHienPage } from '../phau-thuat-thu-thuat-da-thuc-hien/phau-thuat-thu-thuat-da-thuc-hien.page';
 
 @Component({
   selector: 'app-chuan-doan-hinh-anh-tham-do-chuc-nang',
@@ -15,7 +21,13 @@ export class ChuanDoanHinhAnhThamDoChucNangPage implements OnInit {
   loading: boolean = false;
   error: any;
   private apiUrl = `${environment.BASE_API}/api/ChiTietTienSuBenh/cdha-tdcn/`;
-  component = ThuocDaDieuTriDonThuocDaKePage;
+  component1 = ThongTinDotKhamChuaBenhPage;
+  component2 = ChuanDoanXacDinhKhiRaVienPage;
+  component3 = ChiSoTheoDoiChinhPage;
+  component4 = ThongTinXetNghiemPage;
+  component5 = PhauThuatThuThuatDaThucHienPage;
+  component6 = ThuocDaDieuTriDonThuocDaKePage;
+  component7 = TomTatHoSoBenhAnTinhTrangNguoiBenhPage;
 
   ngayRa: Date = new Date();
   id: any;

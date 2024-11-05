@@ -20,7 +20,7 @@ builder.Services.AddCors(options =>
 {
   options.AddPolicy("AllowLocalNetwork", policy =>
   {
-    policy.WithOrigins("http://localhost:8100", "https://192.168.0.106")
+    policy.WithOrigins("http://localhost:8100")
           .AllowAnyHeader()
           .AllowAnyMethod()
           .SetIsOriginAllowed(_ => true) // Allow any origin
@@ -43,15 +43,17 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         ValidateAudience = false,
         RequireExpirationTime = true,
         ClockSkew = TimeSpan.Zero,
-        ValidAlgorithms = new[] { SecurityAlgorithms.HmacSha512 }
+        ValidAlgorithms = new[] { SecurityAlgorithms.HmacSha512 } // Ensure matching algorithm
       };
     });
+
+
 
 // WebSocket Configuration
 var webSocketOptions = new WebSocketOptions
 {
   KeepAliveInterval = TimeSpan.FromMinutes(2),
-  AllowedOrigins = { "http://localhost:8100", "https://192.168.0.106" }
+  AllowedOrigins = { "http://localhost:8100" }
 };
 
 // Authorization and Controllers Setup
@@ -85,6 +87,9 @@ builder.Services.AddScoped<NotificationService, NotificationService>();
 builder.Services.AddScoped<HoSoService, HoSoService>();
 builder.Services.AddScoped<SkdtHoSoService4210, SkdtHoSoService4210>();
 builder.Services.AddScoped<SkdtHoSo130Service, SkdtHoSo130Service>();
+builder.Services.AddScoped<ThongTinkhamChuaBenh130Service, ThongTinkhamChuaBenh130Service>();
+builder.Services.AddScoped<IThongTinkhamChuaBenh130Service, ThongTinkhamChuaBenh130Service>();
+
 var assembliesToScan = new[] { Assembly.GetAssembly(typeof(IUserRoleService)) };
 
 builder.Services.RegisterAssemblyPublicNonGenericClasses(assembliesToScan)

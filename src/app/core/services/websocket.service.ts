@@ -16,7 +16,7 @@ export class WebSocketService {
 
   connect(): Observable<string> {
     const cccd = localStorage.getItem('cccd');
-    this.socket = new WebSocket('http://192.168.0.110/api/Notification/ws/'+cccd);
+    this.socket = new WebSocket('http://localhost:5245/api/Notification/ws/'+cccd);
 
     this.socket.onopen = () => {
       console.log('Connected to WebSocket server');
